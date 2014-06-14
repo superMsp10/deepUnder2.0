@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
+  - 58: {fileID: 5800000}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -55,26 +56,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &100006
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400006}
-  - 114: {fileID: 11400010}
-  - 114: {fileID: 11400008}
-  - 114: {fileID: 11400006}
-  - 82: {fileID: 8200000}
-  - 114: {fileID: 11400004}
-  m_Layer: 0
-  m_Name: Inventory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -87,7 +68,6 @@ Transform:
   m_Children:
   - {fileID: 400002}
   - {fileID: 400004}
-  - {fileID: 400006}
   m_Father: {fileID: 0}
 --- !u!4 &400002
 Transform:
@@ -109,17 +89,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.000947332359, y: -.0136792464, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400000}
---- !u!4 &400006
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .00249999994, z: 0}
-  m_LocalScale: {x: .00499999989, y: .00499999989, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
 --- !u!20 &2000000
@@ -166,6 +135,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!58 &5800000
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Radius: .0599999987
+  m_Center: {x: 0, y: 0}
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -184,64 +164,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
---- !u!82 &8200000
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: .75
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!92 &9200000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -296,113 +218,6 @@ MonoBehaviour:
   thisRigid: {fileID: 0}
   level: 1
   pos: {x: 0, y: 0, z: 0}
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f782fed1f9e534ef19a6a16f9f9bc6c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openSound: {fileID: 0}
-  closeSound: {fileID: 0}
-  equipSound: {fileID: 0}
-  pickUpSound: {fileID: 0}
-  dropItemSound: {fileID: 0}
---- !u!114 &11400006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 082f7696a8429884cabbdee854d1afd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponSlot: {fileID: 400000}
-  ArmorSlotName:
-  - Head
-  - Chest
-  - Leg
-  - Weapon
-  - Weapon
-  - Weapon
-  buttonPositions:
-  - serializedVersion: 2
-    x: 12
-    y: 34
-    width: 80
-    height: 80
-  - serializedVersion: 2
-    x: 12
-    y: 120
-    width: 80
-    height: 80
-  - serializedVersion: 2
-    x: 12
-    y: 206
-    width: 80
-    height: 80
-  - serializedVersion: 2
-    x: 99
-    y: 34
-    width: 80
-    height: 80
-  - serializedVersion: 2
-    x: 99
-    y: 120
-    width: 80
-    height: 80
-  - serializedVersion: 2
-    x: 99
-    y: 206
-    width: 80
-    height: 80
-  windowSize: {x: 375, y: 300}
-  useCustomPosition: 0
-  customPosition: {x: 70, y: 70}
-  cSheetSkin: {fileID: 11400000, guid: 683a06e8611614482b8182db772cfcdf, type: 2}
-  canBeDragged: 1
-  onOffButton: 113
-  DebugMode: 0
---- !u!114 &11400008
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5f9189089feb6438aaf600f5b169f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windowSize: {x: 700, y: 100}
-  useCustomPosition: 0
-  customPosition: {x: 70, y: 400}
-  itemIconSize: {x: 60, y: 60}
-  updateListDelay: 9999
-  invSkin: {fileID: 11400000, guid: 683a06e8611614482b8182db772cfcdf, type: 2}
-  Offset: {x: 7, y: 12}
-  canBeDragged: 1
-  onOffButton: 101
---- !u!114 &11400010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f103a62fa8acd0a4b9f2c8f38dfcde1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Contents: []
-  MaxContent: 20
-  DebugMode: 0
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
