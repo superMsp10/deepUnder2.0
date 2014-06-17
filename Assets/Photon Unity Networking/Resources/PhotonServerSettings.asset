@@ -25,4 +25,11 @@ MonoBehaviour:
   - InstantiateRpc
   - OnAwakeRPC
   - DestroyRpc
+  - changeLvl
+  - addChatMassage_RPC
+  - playerJoin
+  - vote
+  - SniperLaser
+  - takeDamage
+  - Die
   DisableAutoOpenWizard: 0
