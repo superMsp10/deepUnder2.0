@@ -124,7 +124,6 @@
      <Compile Include="Assets\myAssets\scripts\effectsManager.cs" />
      <Compile Include="Assets\myAssets\scripts\health.cs" />
      <Compile Include="Assets\myAssets\scripts\level.cs" />
-     <Compile Include="Assets\myAssets\scripts\playerShooter.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\Photon Unity Networking\Demos\MarcoPolo-Tutorial\marcopolo-readme.txt" />

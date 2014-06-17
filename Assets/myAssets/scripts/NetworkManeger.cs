@@ -310,9 +310,8 @@ public class NetworkManeger : MonoBehaviour
 		{
 				connecting = false;
 				if (firstPlayer) {
-						int rLevel = Random.Range (0, levels.Length);
-						changeLvl (rLevel);
-						thisView.RPC ("changeLvl", PhotonTargets.OthersBuffered, rLevel);
+					
+						thisView.RPC ("changeLvl", PhotonTargets.OthersBuffered, "Level1");
 				}
 		}
 
@@ -404,7 +403,7 @@ public class NetworkManeger : MonoBehaviour
 						}
 
 				} else if (PhotonNetwork.connected)
-						changeLvl ("cottage");		
+						changeLvl ("cottage");	
 		}
 	
 		public void addChatMassage (string message)
@@ -416,7 +415,7 @@ public class NetworkManeger : MonoBehaviour
 		{
 
 				MySS = SS [Random.Range (0, SS.Length)];
-				myPlayer = (GameObject)PhotonNetwork.Instantiate ("plYER", MySS.transform.position, MySS.transform.rotation, 0);
+				myPlayer = (GameObject)PhotonNetwork.Instantiate ("player", MySS.transform.position, MySS.transform.rotation, 0);
 				myPlayer.name = PhotonNetwork.player.name;
 				myHp = myPlayer.GetComponent <health> ();
 				

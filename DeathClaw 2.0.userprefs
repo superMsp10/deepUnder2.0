@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\health.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\NetworkManeger.cs">
     <Files>
-      <File FileName="Assets\myAssets\scripts\NetworkManeger.cs" Line="44" Column="40" />
-      <File FileName="Assets\myAssets\scripts\health.cs" Line="3" Column="1" />
+      <File FileName="Assets\myAssets\scripts\NetworkManeger.cs" Line="315" Column="6" />
+      <File FileName="Assets\myAssets\scripts\health.cs" Line="36" Column="8" />
+      <File FileName="Assets\myAssets\scripts\level.cs" Line="5" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
