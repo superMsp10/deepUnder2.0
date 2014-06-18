@@ -247,7 +247,7 @@ public class NetworkManeger : MonoBehaviour
 								PhotonNetwork.offlineMode = true;
 								offline = true;
 								OnJoinedLobby ();
-								gameMode = "freeRoam";
+								gameMode = "freedom";
 								changeLvl (Random.Range (0, levels.Length));
 								inGame = true;
 
@@ -264,7 +264,7 @@ public class NetworkManeger : MonoBehaviour
 								}
 								Connect ();
 
-								gameMode = "freeRoam";
+								gameMode = "freedom";
 								inGame = true;
 
 						}
@@ -311,7 +311,8 @@ public class NetworkManeger : MonoBehaviour
 				connecting = false;
 				if (firstPlayer) {
 					
-						thisView.RPC ("changeLvl", PhotonTargets.OthersBuffered, "Level1");
+						thisView.RPC ("changeLvl", PhotonTargets.OthersBuffered, "1" +
+							"");
 				}
 		}
 
@@ -388,7 +389,6 @@ public class NetworkManeger : MonoBehaviour
 								
 				}
 				currentLevel = lev;
-				
 				currentLevel.gameObject.SetActive (true);
 				
 				if (currentLevel.spawnable) {
