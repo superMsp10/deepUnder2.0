@@ -7,7 +7,6 @@ public class character : MonoBehaviour
 		public int maxSpeed = 100;
 		public int moveForce = 100;
 		public int jumpForce = 100;
-		public GUIText Level;
 		private health HP;
 		public Rigidbody2D thisRigid;
 		private string preLevel = " Version 1.1 Level : ";
@@ -18,13 +17,12 @@ public class character : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
+	
 				feets = this.gameObject.transform.FindChild ("feets");
 				if (feets == null) {
 
 						Debug.LogError ("nooo feets");
 				}
-				Level.color = Color.magenta;
-				Level.text = preLevel + level.ToString ();
 				HP = this.GetComponent <health> ();
 				thisRigid = GetComponent<Rigidbody2D> ();
 				pos = transform.position;
@@ -52,11 +50,6 @@ public class character : MonoBehaviour
 			                                      teleTo.y - teleSpot.yOff, teleTo.z - teleSpot.zOff);
 						if (teleSpot.nextLevel) {
 								level = teleSpot.level;
-								if (level == 100)
-										Level.text = "YOU WON!!!!!";
-								else
-										Level.text = preLevel + level.ToString ();
-
 						}
 				}
 

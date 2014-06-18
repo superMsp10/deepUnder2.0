@@ -112,23 +112,23 @@ public class NetworkManeger : MonoBehaviour
 								}
 								if (status == "[admin]") {
 
-					if (GUILayout.Button ("Random level")) {
-						int rLevel = Random.Range (0, levels.Length);
-						changeLvl (rLevel);
+										if (GUILayout.Button ("Random level")) {
+												int rLevel = Random.Range (0, levels.Length);
+												changeLvl (rLevel);
 						
-					}
-					foreach (level l in levels) {
-						if (l.spawnable) {
-							if (GUILayout.Button (l.name)) {
-								voted = true;
-								changeLvl (l.name);
-								//addChatMassage(myPlayer.name + " has voted to change the level into " + l.name);
-								//thisView.RPC ("vote", PhotonTargets.All, l.name);
+										}
+										foreach (level l in levels) {
+												if (l.spawnable) {
+														if (GUILayout.Button (l.name)) {
+																voted = true;
+																changeLvl (l.name);
+																//addChatMassage(myPlayer.name + " has voted to change the level into " + l.name);
+																//thisView.RPC ("vote", PhotonTargets.All, l.name);
 								
-							}
+														}
 							
-						}
-					}
+												}
+										}
 
 
 								}
@@ -188,7 +188,7 @@ public class NetworkManeger : MonoBehaviour
 												player.transform.FindChild ("soldier").FindChild ("Hips").
 							FindChild ("Camera").gameObject.SetActive (true);
 												specPlayer = player;
-						spec = true;
+												spec = true;
 										}
 								}
 								if (GUILayout.Button ("Standby")) {
@@ -246,9 +246,8 @@ public class NetworkManeger : MonoBehaviour
 								status = "[admin]";
 								PhotonNetwork.offlineMode = true;
 								offline = true;
-								OnJoinedLobby ();
 								gameMode = "freedom";
-								changeLvl (Random.Range (0, levels.Length));
+								changeLvl ("1");
 								inGame = true;
 
 						}
@@ -312,7 +311,7 @@ public class NetworkManeger : MonoBehaviour
 				if (firstPlayer) {
 					
 						thisView.RPC ("changeLvl", PhotonTargets.OthersBuffered, "1" +
-							"");
+								"");
 				}
 		}
 
@@ -416,7 +415,7 @@ public class NetworkManeger : MonoBehaviour
 
 				MySS = SS [Random.Range (0, SS.Length)];
 				myPlayer = (GameObject)PhotonNetwork.Instantiate ("player", MySS.transform.position, MySS.transform.rotation, 0);
-				myPlayer.name = PhotonNetwork.player.name;
+				if(!offline)myPlayer.name = PhotonNetwork.player.name;
 				myHp = myPlayer.GetComponent <health> ();
 				
 	
@@ -426,6 +425,7 @@ public class NetworkManeger : MonoBehaviour
 						addChatMassage ("Hail the mighty developer " + PhotonNetwork.player.name);
 				}
 				players.Add (myPlayer);
+				currentLevel.camera1.SetActive (false);
 				GetComponent <PhotonView> ().RPC ("playerJoin", PhotonTargets.OthersBuffered, PhotonNetwork.player.name, PhotonNetwork.player.ID);
 		}
 
