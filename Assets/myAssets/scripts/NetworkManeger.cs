@@ -68,9 +68,6 @@ public class NetworkManeger : MonoBehaviour
 						currMenu = "null";
 						
 				} else {
-						if (offline) {
-								Time.timeScale = 0;
-						}
 						if (currMenu == "null") {
 								currMenu = "escape";
 						}
@@ -166,12 +163,13 @@ public class NetworkManeger : MonoBehaviour
 
 						GUILayout.BeginHorizontal ();
 
-						if (GUILayout.Button ("Spawn")) {
+						if (GUILayout.Button ("Spawn") && PhotonNetwork.connected) {
 								dead = false;
-								CreatePlayer ();
 								if (spec && specPlayer != null)
 										specPlayer.transform.FindChild ("soldier").FindChild ("Hips")
 						.FindChild ("Camera").gameObject.SetActive (false);
+
+								CreatePlayer ();
 					
 								
 						}
@@ -245,6 +243,7 @@ public class NetworkManeger : MonoBehaviour
 								connecting = true;
 								status = "[admin]";
 								PhotonNetwork.offlineMode = true;
+								OnJoinedLobby ();
 								offline = true;
 								gameMode = "freedom";
 								changeLvl ("1");
@@ -389,6 +388,7 @@ public class NetworkManeger : MonoBehaviour
 				}
 				currentLevel = lev;
 				currentLevel.gameObject.SetActive (true);
+				currentLevel.camera1.SetActive (true);
 				
 				if (currentLevel.spawnable) {
 						dead = true;
@@ -414,10 +414,14 @@ public class NetworkManeger : MonoBehaviour
 		{
 
 				MySS = SS [Random.Range (0, SS.Length)];
+				if (!offline) {
+						myPlayer.name = PhotonNetwork.player.name;
+				}
 				myPlayer = (GameObject)PhotonNetwork.Instantiate ("player", MySS.transform.position, MySS.transform.rotation, 0);
-				if(!offline)myPlayer.name = PhotonNetwork.player.name;
 				myHp = myPlayer.GetComponent <health> ();
-				
+		myHp.enabled = true;
+		myPlayer.GetComponent<character> ().enabled = true;
+		myPlayer.transform.FindChild ("Camera").gameObject.SetActive(true);
 	
 				 
 				addChatMassage (PhotonNetwork.player.name + " has joined!");

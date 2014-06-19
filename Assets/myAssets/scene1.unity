@@ -14044,7 +14044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d730adb64f2cbc84380be8847a8c2b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera1: {fileID: 0}
+  camera1: {fileID: 88673107}
   spawnable: 0
   votes: 0
 --- !u!1 &1463101137
@@ -17643,7 +17643,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1839506551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -500, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2004608031}
@@ -17652,6 +17652,7 @@ Transform:
   - {fileID: 512606127}
   - {fileID: 1809930510}
   - {fileID: 960364196}
+  - {fileID: 1965235182}
   m_Father: {fileID: 2003565161}
 --- !u!114 &1839506553
 MonoBehaviour:
@@ -18782,10 +18783,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1965235177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.1189671, y: -67.4543839, z: 0}
+  m_LocalPosition: {x: 0, y: -11.9491577, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1839506552}
 --- !u!1 &1968262883
 GameObject:
   m_ObjectHideFlags: 0
@@ -19292,7 +19293,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2004608030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 150, z: -35}
+  m_LocalPosition: {x: 79.1520386, y: -120.04866, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1839506552}
@@ -19335,9 +19336,9 @@ Camera:
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  field of view: 155
+  orthographic: 1
+  orthographic size: 169.671494
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
