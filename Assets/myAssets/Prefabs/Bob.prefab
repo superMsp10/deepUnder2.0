@@ -153,7 +153,6 @@ MonoBehaviour:
   thisRigid: {fileID: 5000000}
   blab: 0
   greeting1: Hello
-  thisText: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -175,7 +174,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 97efc1adf173cac4bb5ea0530471ac18, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b14df055ffe4e6b469cc76cf7fa7269c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

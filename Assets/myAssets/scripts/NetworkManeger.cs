@@ -46,9 +46,8 @@ public class NetworkManeger : MonoBehaviour
 				}
 				changeLvl ("startMenu");
 				MaxChatMess = 5;
-				Screen.showCursor = true;
-				inGame = false;
-			
+		inGame = false;
+				
 
 		}
 
@@ -60,12 +59,14 @@ public class NetworkManeger : MonoBehaviour
 						MySS = SS [Random.Range (0, SS.Length)];
 						myPlayer.transform.position = MySS.transform.position;
 				}
-				if (inGame) {
+				/*if (inGame) {
 
 						Screen.lockCursor = true;
 						Screen.showCursor = false;
 						Time.timeScale = 1;
 						currMenu = "null";
+			Debug.Log("Ingame");
+
 						
 				} else {
 						if (currMenu == "null") {
@@ -74,12 +75,11 @@ public class NetworkManeger : MonoBehaviour
 
 						Screen.lockCursor = false;
 						Screen.showCursor = true;
-						
 
 
-				}
-				if (Input.GetKeyDown (KeyCode.Escape))
-						inGame = !inGame;
+
+				}*/
+				
 				
 
 		}
@@ -223,7 +223,7 @@ public class NetworkManeger : MonoBehaviour
 						GUILayout.BeginHorizontal ();
 						GUILayout.FlexibleSpace ();
 						GUILayout.BeginVertical ();
-						GUILayout.FlexibleSpace ();
+						GUILayout.Space (20);
 						
 						GUILayout.BeginHorizontal ();
 						GUILayout.Label ("UserName: ");
@@ -239,7 +239,7 @@ public class NetworkManeger : MonoBehaviour
 						GUILayout.EndHorizontal ();
 			
 			
-						if (GUILayout.Button ("SinglePlayer")) {
+						if (GUILayout.Button ("Play!")) {
 								connecting = true;
 								status = "[admin]";
 								PhotonNetwork.offlineMode = true;
@@ -252,20 +252,7 @@ public class NetworkManeger : MonoBehaviour
 						}
 			
 			
-						if (GUILayout.Button ("MultiPlayer")) {
-								connecting = true;
-								if (code == "ms10") {
-										status = "[admin]";
-								}
-								if (code == "supermsp10") {
-										status = "[Dev]";
-								}
-								Connect ();
-
-								gameMode = "freedom";
-								inGame = true;
-
-						}
+					
 						GUILayout.FlexibleSpace ();
 						GUILayout.EndVertical ();
 						GUILayout.FlexibleSpace ();
@@ -323,24 +310,25 @@ public class NetworkManeger : MonoBehaviour
 		}
 
 		//MyStuff
-	
-		[RPC]	
-		public void changeLvl (int i)
-		{
-				levelex (levels [i]);
-		
-		}
-	
-		[RPC]
-		public void changeLvl (string i)
-		{
-				foreach (level l in levels) {
-						if (l.name == i) {
-								levelex (l);
-						}
-				}
-		}
 
+	
+	public void changeLvl (int i)
+	{
+		levelex (levels [i]);
+		
+	}
+	
+	
+	public void changeLvl (string i)
+	{
+		foreach (level l in levels) {
+			if (l.name == i) {
+				levelex (l);
+			}
+		}
+	}
+	
+		
 		[RPC]
 		void addChatMassage_RPC (string message)
 		{
@@ -424,13 +412,9 @@ public class NetworkManeger : MonoBehaviour
 		myPlayer.transform.FindChild ("Camera").gameObject.SetActive(true);
 	
 				 
-				addChatMassage (PhotonNetwork.player.name + " has joined!");
-				if (status == "[Dev]") {
-						addChatMassage ("Hail the mighty developer " + PhotonNetwork.player.name);
-				}
+				
 				players.Add (myPlayer);
 				currentLevel.camera1.SetActive (false);
-				GetComponent <PhotonView> ().RPC ("playerJoin", PhotonTargets.OthersBuffered, PhotonNetwork.player.name, PhotonNetwork.player.ID);
 		}
 
 }
