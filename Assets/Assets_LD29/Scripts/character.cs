@@ -61,7 +61,8 @@ public class character : MonoBehaviour
 				if (other.gameObject.tag == "Enemy") {
 
 				}
-		}
+
+	}
 	
 		void FixedUpdate ()
 		{ 
