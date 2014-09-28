@@ -61,6 +61,10 @@ public class character : MonoBehaviour
 				if (other.gameObject.tag == "Enemy") {
 
 				}
+		if (other.gameObject.tag == "Destroyable") {
+			Material temp = other.GetComponent<Material>();
+			temp.dropMadeOf(2);
+		}
 
 	}
 	
