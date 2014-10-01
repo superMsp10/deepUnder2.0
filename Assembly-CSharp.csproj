@@ -50,29 +50,6 @@
      <Compile Include="Assets\Assets_LD29\Scripts\character.cs" />
      <Compile Include="Assets\Assets_LD29\Scripts\playerconteoller.cs" />
      <Compile Include="Assets\Assets_LD29\Scripts\tilegen.cs" />
-     <Compile Include="Assets\GameJoltAPI\API\Core\GJAPI.cs" />
-     <Compile Include="Assets\GameJoltAPI\API\Methods Groups\GJDataMehods.cs" />
-     <Compile Include="Assets\GameJoltAPI\API\Methods Groups\GJScoresMethods.cs" />
-     <Compile Include="Assets\GameJoltAPI\API\Methods Groups\GJSessionsMethods.cs" />
-     <Compile Include="Assets\GameJoltAPI\API\Methods Groups\GJTrophiesMethods.cs" />
-     <Compile Include="Assets\GameJoltAPI\API\Methods Groups\GJUsersMethods.cs" />
-     <Compile Include="Assets\GameJoltAPI\API\Objects\GJObject.cs" />
-     <Compile Include="Assets\GameJoltAPI\API\Objects\GJScore.cs" />
-     <Compile Include="Assets\GameJoltAPI\API\Objects\GJTable.cs" />
-     <Compile Include="Assets\GameJoltAPI\API\Objects\GJTrophy.cs" />
-     <Compile Include="Assets\GameJoltAPI\API\Objects\GJUser.cs" />
-     <Compile Include="Assets\GameJoltAPI\Helper\Core\GJAPIHelper.cs" />
-     <Compile Include="Assets\GameJoltAPI\Helper\Core\GJHNotificationsManager.cs" />
-     <Compile Include="Assets\GameJoltAPI\Helper\Core\GJHWindowsManager.cs" />
-     <Compile Include="Assets\GameJoltAPI\Helper\Methods Groups\GJHScoresMethods.cs" />
-     <Compile Include="Assets\GameJoltAPI\Helper\Methods Groups\GJHTrophiesMethods.cs" />
-     <Compile Include="Assets\GameJoltAPI\Helper\Methods Groups\GJHUsersMethods.cs" />
-     <Compile Include="Assets\GameJoltAPI\Helper\Objects\GJHNotification.cs" />
-     <Compile Include="Assets\GameJoltAPI\Helper\Objects\GJHWindow.cs" />
-     <Compile Include="Assets\GameJoltAPI\Helper\Windows\GJHLoginWindow.cs" />
-     <Compile Include="Assets\GameJoltAPI\Helper\Windows\GJHScoresWindow.cs" />
-     <Compile Include="Assets\GameJoltAPI\Helper\Windows\GJHTrophiesWindow.cs" />
-     <Compile Include="Assets\GameJoltAPI\Libraries\MD5.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\CustomTypes.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Enums.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Extensions.cs" />
@@ -117,6 +94,7 @@
      <Compile Include="Assets\myAssets\scripts\gameManager.cs" />
      <Compile Include="Assets\myAssets\scripts\health.cs" />
      <Compile Include="Assets\myAssets\scripts\level.cs" />
+     <Compile Include="Assets\tree.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\GameJoltAPI\README.txt" />
@@ -133,6 +111,10 @@
  <Reference Include="Photon3Unity3D">
  <HintPath>Assets\Plugins\Photon3Unity3D.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{DACDC1BF-E6F4-58A3-AE85-7C252C3E76A0}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

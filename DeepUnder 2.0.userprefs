@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Assets_LD29\Scripts\character.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\tree.cs">
     <Files>
-      <File FileName="Assets\myAssets\scripts\Material.cs" Line="25" Column="72" />
-      <File FileName="Assets\Assets_LD29\Scripts\character.cs" Line="66" Column="21" />
+      <File FileName="Assets\myAssets\scripts\gameManager.cs" Line="194" Column="1" />
+      <File FileName="Assets\tree.cs" Line="15" Column="63" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

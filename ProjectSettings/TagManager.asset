@@ -9,7 +9,7 @@ TagManager:
   - boost
   - Obstacle
   - Bullet
-  - BombPickup
+  - treePart
   - ExplosionFX
   - teleport
   - NPC

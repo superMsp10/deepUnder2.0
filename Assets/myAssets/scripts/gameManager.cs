@@ -178,14 +178,17 @@ public class gameManager : MonoBehaviour
 				if (currentLevel.spawnable) {
 						dead = true;
 						SS = FindObjectsOfType<SpawnSpot> ();
+						
+
 						if (PhotonNetwork.connected) {
+
+				}
 								foreach (level l in levels) {
 										l.votes = 0;
-					
 								}
 				
 						}
 			
 				} 
-		}
+		
 }

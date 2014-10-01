@@ -22,7 +22,9 @@ public class Material : MonoBehaviour {
 
 	 public void dropMadeOf(int howMuch){
 		for(int i = 0;i < howMuch;i++){
-		Instantiate (madeOf,gameObject.transform.position,Quaternion.identity);
+			Vector3 pos = new Vector3(gameObject.transform.position.x+Random.Range(0,10)
+			                          ,gameObject.transform.position.y);
+		Instantiate (madeOf,pos,Quaternion.identity);
 		}
 		if (destroyOnDrop)
 						Destroy (this.gameObject);

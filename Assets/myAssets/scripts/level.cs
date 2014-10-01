@@ -9,9 +9,13 @@ public class level : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-	
+				if (spawnable) {
+						GameObject[] Trees = GameObject.FindGameObjectsWithTag ("treePart");
+						foreach (GameObject i in Trees) {
+								i.GetComponent<tree> ().growTree ();
+						}
+				}
 		}
-	
 		// Update is called once per frame
 		void Update ()
 		{
