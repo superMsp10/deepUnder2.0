@@ -11,8 +11,14 @@ public class level : MonoBehaviour
 		{
 				if (spawnable) {
 						GameObject[] Trees = GameObject.FindGameObjectsWithTag ("treePart");
+
 						foreach (GameObject i in Trees) {
-								i.GetComponent<tree> ().growTree ();
+								if (i.GetComponent<tree> () != null)
+										i.GetComponent<tree> ().growTree ();
+								else
+										Debug.LogError ("no tree component");
+				
+
 						}
 				}
 		}
