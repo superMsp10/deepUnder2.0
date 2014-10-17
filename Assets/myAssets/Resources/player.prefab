@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: feets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 124: {fileID: 12400000}
   - 92: {fileID: 9200000}
   - 81: {fileID: 8100000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,17 +45,18 @@ GameObject:
   - 212: {fileID: 21200000}
   - 50: {fileID: 5000000}
   - 95: {fileID: 9500000}
-  - 114: {fileID: 11400000}
-  - 61: {fileID: 6100000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
-  m_Layer: 0
+  - 114: {fileID: 11400000}
+  - 60: {fileID: 6000000}
+  - 58: {fileID: 5800000}
+  m_Layer: 9
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -63,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0009765625, y: -.36070329, z: 0}
+  m_LocalPosition: {x: -.0947814956, y: -.563948452, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -85,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -528.200195, y: -37.192215, z: 0}
+  m_LocalPosition: {x: -527.652832, y: -27.068346, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -126,8 +127,8 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_Mass: 2
-  m_LinearDrag: 0
+  m_Mass: 3
+  m_LinearDrag: .300000012
   m_AngularDrag: 0
   m_GravityScale: 2
   m_FixedAngle: 1
@@ -135,8 +136,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 0
---- !u!61 &6100000
-BoxCollider2D:
+--- !u!58 &5800000
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -144,8 +145,35 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .330000013, y: .589999974}
-  m_Center: {x: 0, y: 0}
+  m_Radius: .150000006
+  m_Center: {x: 0, y: -.340000004}
+--- !u!60 &6000000
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Poly:
+    m_Paths:
+    - - {x: .249743655, y: .191052631}
+      - {x: .129931644, y: .183058932}
+      - {x: .129999995, y: .439999998}
+      - {x: .0199999996, y: .5}
+      - {x: -.189999998, y: .479999989}
+      - {x: -.229999989, y: .409999996}
+      - {x: -.084570311, y: .185386285}
+      - {x: -.280000001, y: .209999993}
+      - {x: -.266772479, y: -.295590967}
+      - {x: -.187976077, y: -.297684282}
+      - {x: -.11400757, y: -.198856935}
+      - {x: -.112316899, y: -.438723385}
+      - {x: .0675354004, y: -.433955401}
+      - {x: .124511719, y: -.0417785645}
+      - {x: .167266846, y: -.300032049}
+      - {x: .246551514, y: -.296048552}
 --- !u!81 &8100000
 AudioListener:
   m_ObjectHideFlags: 1
@@ -169,10 +197,10 @@ Animator:
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d922bd26a4f18a649997aa0f341c5690, type: 2}
   m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
+  m_ApplyRootMotion: 0
+  m_AnimatePhysics: 1
   m_HasTransformHierarchy: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -182,14 +210,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3de2d2bc3e41844ba4700b216eaaca7, type: 3}
+  m_Script: {fileID: 11500000, guid: babc2ea23344cc84096ab01762e2c8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 100
-  moveForce: 100
-  jumpForce: 2000
+  maxSped: 40
+  groundCheck: {fileID: 400000}
+  whatGround:
+    serializedVersion: 2
+    m_Bits: 4294966783
+  jump: 5000
   thisRigid: {fileID: 0}
-  level: 1
+  level: 0
   pos: {x: 0, y: 0, z: 0}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -218,7 +249,7 @@ MonoBehaviour:
   ownerId: 0
   group: 0
   prefixBackup: -1
-  observed: {fileID: 11400000}
+  observed: {fileID: 0}
   synchronization: 3
   onSerializeTransformOption: 0
   onSerializeRigidBodyOption: 2
@@ -248,10 +279,10 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
+  m_SortingLayer: 4
   m_SortingOrder: 5
-  m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 46bc376868782d34f99a68100b263283, type: 3}
+  m_SortingLayerID: 1024582385
+  m_Sprite: {fileID: 21300002, guid: 9801291854d78fc4eb5ff3981707a400, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

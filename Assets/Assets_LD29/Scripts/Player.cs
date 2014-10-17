@@ -4,15 +4,15 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
 		public float maxSped = 10f;
-		bool turnR = true;
+		public float moveForce = 5;
+		bool turnR = false;
 		Animator anim;
 		bool grounded = false;
 		public Transform groundCheck;
-		float groundRad = 2f;
+		float groundRad = 0.16f;
 		public LayerMask whatGround;
 		public float jump = 100;
 		private health HP;
-		public Rigidbody2D thisRigid;
 		private string preLevel = " Version 1.1 Level : ";
 		public int level = 0;
 		public Vector3 pos;
@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 		
 		void Update ()
 		{
+
 				if (grounded && Input.GetKeyDown (KeyCode.Space)) {
 						anim.SetBool ("ground", false);
 						rigidbody2D.AddForce (new Vector2 (0, jump));
@@ -39,14 +40,17 @@ public class Player : MonoBehaviour
 				grounded = Physics2D.OverlapCircle (groundCheck.position, groundRad, whatGround);
 				anim.SetBool ("ground", grounded);
 				anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
+
 				float move = Input.GetAxis ("Horizontal");
-				anim.SetFloat ("speed", Mathf.Abs (move));
-				rigidbody2D.velocity = new Vector2 (move * maxSped, rigidbody2D.velocity.y);
-				if (move > 0 && !turnR) {
+				if (move < 0 && turnR) {
 						flip ();
-				} else if (move < 0 && turnR) {
+				} else if (move > 0 && !turnR) {
 						flip ();
 				}
+				anim.SetFloat ("speed", Mathf.Abs (move));
+				if (rigidbody2D.velocity.x < maxSped)
+						rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x + (move * moveForce), rigidbody2D.velocity.y);
+				
 		}
 
 		void flip ()
@@ -72,7 +76,9 @@ public class Player : MonoBehaviour
 	
 				if (other.gameObject.tag == "boost") {
 						collisionBoost thisBoost = other.GetComponent<collisionBoost> ();
-						thisRigid.AddForce (this.transform.position * (-1 * thisBoost.boostAmount));
+						Vector2 force = new Vector2 (rigidbody2D.velocity.x * (-1 * thisBoost.boostAmount)
+			                             , rigidbody2D.velocity.y * (-2 * thisBoost.boostAmount));
+						rigidbody2D.AddForce (force);
 				}
 	
 				if (other.gameObject.tag == "Enemy") {
