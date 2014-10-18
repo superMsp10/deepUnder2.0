@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
 				if (other.gameObject.tag == "boost") {
 						collisionBoost thisBoost = other.GetComponent<collisionBoost> ();
 						Vector2 force = new Vector2 (rigidbody2D.velocity.x * (-1 * thisBoost.boostAmount)
-			                             , rigidbody2D.velocity.y * (-2 * thisBoost.boostAmount));
+			                             , rigidbody2D.velocity.y * (-20 * thisBoost.boostAmount));
 						rigidbody2D.AddForce (force);
 				}
 	

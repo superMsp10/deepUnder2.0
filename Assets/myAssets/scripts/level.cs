@@ -16,7 +16,7 @@ public class level : MonoBehaviour
 								if (i.GetComponent<tree> () != null)
 										i.GetComponent<tree> ().growTree ();
 								else
-										Debug.LogError ("no tree component");
+										Debug.LogError ("no tree component  : "+name);
 				
 
 						}

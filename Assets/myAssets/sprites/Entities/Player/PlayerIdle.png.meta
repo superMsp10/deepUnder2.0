@@ -1,6 +1,32 @@
 fileFormatVersion: 2
 guid: 9801291854d78fc4eb5ff3981707a400
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlayerIdle_0
+    21300002: PlayerIdle_1
+    21300004: PlayerIdle_2
+    21300006: PlayerIdle_3
+    21300008: PlayerIdle_4
+    21300010: PlayerIdle_5
+    21300012: PlayerIdle_6
+    21300014: PlayerIdle_7
+    21300016: PlayerIdle_8
+    21300018: PlayerIdle_9
+    21300020: PlayerIdle_10
+    21300022: PlayerIdle_11
+    21300024: PlayerIdle_12
+    21300026: PlayerIdle_13
+    21300028: PlayerIdle_14
+    21300030: PlayerIdle_15
+    21300032: PlayerIdle_16
+    21300034: PlayerIdle_17
+    21300036: PlayerIdle_18
+    21300038: PlayerIdle_19
+    21300040: PlayerIdle_20
+    21300042: PlayerIdle_21
+    21300044: PlayerIdle_22
+    21300046: PlayerIdle_23
+    21300048: PlayerIdle_24
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -54,6 +81,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_1
       rect:
         serializedVersion: 2
@@ -63,6 +91,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_2
       rect:
         serializedVersion: 2
@@ -72,6 +101,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_3
       rect:
         serializedVersion: 2
@@ -81,6 +111,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_4
       rect:
         serializedVersion: 2
@@ -90,6 +121,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_5
       rect:
         serializedVersion: 2
@@ -99,6 +131,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_6
       rect:
         serializedVersion: 2
@@ -108,6 +141,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_7
       rect:
         serializedVersion: 2
@@ -117,6 +151,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_8
       rect:
         serializedVersion: 2
@@ -126,6 +161,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_9
       rect:
         serializedVersion: 2
@@ -135,6 +171,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_10
       rect:
         serializedVersion: 2
@@ -144,6 +181,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_11
       rect:
         serializedVersion: 2
@@ -153,6 +191,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_12
       rect:
         serializedVersion: 2
@@ -162,6 +201,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_13
       rect:
         serializedVersion: 2
@@ -171,6 +211,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_14
       rect:
         serializedVersion: 2
@@ -180,6 +221,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_15
       rect:
         serializedVersion: 2
@@ -189,6 +231,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_16
       rect:
         serializedVersion: 2
@@ -198,6 +241,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_17
       rect:
         serializedVersion: 2
@@ -207,6 +251,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_18
       rect:
         serializedVersion: 2
@@ -216,6 +261,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_19
       rect:
         serializedVersion: 2
@@ -225,6 +271,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_20
       rect:
         serializedVersion: 2
@@ -234,6 +281,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_21
       rect:
         serializedVersion: 2
@@ -243,6 +291,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_22
       rect:
         serializedVersion: 2
@@ -252,6 +301,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_23
       rect:
         serializedVersion: 2
@@ -261,6 +311,7 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: PlayerIdle_24
       rect:
         serializedVersion: 2
@@ -270,5 +321,6 @@ TextureImporter:
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
