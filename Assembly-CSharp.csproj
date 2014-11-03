@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{00C34FAF-E0A5-8D67-DC51-1C8E117F1137}</ProjectGuid>
+	<ProjectGuid>{706AB78F-9343-E861-7DBA-403C4EACEAEE}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Users/Mahan/Documents/MahanWorkspace/3D dev/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Users/Mahan/Documents/MahanWorkspace/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Users/Mahan/Documents/MahanWorkspace/3D dev/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Users/Mahan/Documents/MahanWorkspace/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +51,23 @@
      <Compile Include="Assets\Assets_LD29\Scripts\character.cs" />
      <Compile Include="Assets\Assets_LD29\Scripts\playerconteoller.cs" />
      <Compile Include="Assets\Assets_LD29\Scripts\tilegen.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\Sample Supporting Emitters\DetonatorSprayHelper.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\Detonator.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorBurstEmitter.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorCloudRing.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorComponent.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorFireball.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorForce.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorGlow.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorHeatwave.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorLight.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorShockwave.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSmoke.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSound.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSparks.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSpray.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\TestScene\DetonatorTest.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\CustomTypes.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Enums.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Extensions.cs" />
@@ -86,10 +103,11 @@
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TestDontDestroyOnLoad.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
      <Compile Include="Assets\myAssets\scripts\Branch.cs" />
-     <Compile Include="Assets\myAssets\scripts\Material.cs" />
+     <Compile Include="Assets\myAssets\scripts\Destroy.cs" />
      <Compile Include="Assets\myAssets\scripts\Mob.cs" />
      <Compile Include="Assets\myAssets\scripts\NPC.cs" />
      <Compile Include="Assets\myAssets\scripts\NetworkManeger.cs" />
+     <Compile Include="Assets\myAssets\scripts\Resource.cs" />
      <Compile Include="Assets\myAssets\scripts\SpawnSpot.cs" />
      <Compile Include="Assets\myAssets\scripts\collisionBoost.cs" />
      <Compile Include="Assets\myAssets\scripts\effectsManager.cs" />
@@ -97,26 +115,25 @@
      <Compile Include="Assets\myAssets\scripts\health.cs" />
      <Compile Include="Assets\myAssets\scripts\level.cs" />
      <Compile Include="Assets\myAssets\scripts\tree.cs" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
-     <None Include="Assets\GameJoltAPI\README.txt" />
      <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Plugins\release_history.txt" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
+     <None Include="Assets\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Mahan/Documents/MahanWorkspace/Unity/SaveFileUnity/Unity Projects/DeepUnder 2.0/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>M:/Games/ProducedGames/DeepUnder2.0/deepUnder2.0/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{DACDC1BF-E6F4-58A3-AE85-7C252C3E76A0}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{49564D5C-9626-8F7F-5F4E-C2716F7900A1}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{55D6D4D0-FEF5-1F1B-D29F-C6B6EEB218C7}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

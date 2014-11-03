@@ -1,37 +1,8 @@
-Base path: C:/Users/Mahan/Documents/MahanWorkspace/3D dev/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-1-9532
+Base path: C:/Users/Mahan/Documents/MahanWorkspace/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-1-6060
 Cmd: getPlatforms
-Cmd: preprocess
-  insize=447 outsize=447 ok=1
-Cmd: preprocess
-  insize=1048 outsize=887 ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=4871 outsize=595 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+  api=0 type=0 insize=1623 outsize=652 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=4871 outsize=345 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=2847 outsize=383 kw=POINT ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=2847 outsize=538 kw=POINT ok=1
-Cmd: preprocess
-  insize=1654 outsize=1035 ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=867 outsize=316 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=867 outsize=29 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=834 outsize=316 kw= ok=1
-Cmd: preprocess
-  insize=1101 outsize=904 ok=1
-Cmd: preprocess
-  insize=1576 outsize=991 ok=1
-Cmd: preprocess
-  insize=1500 outsize=667 ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=1135 outsize=272 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=1135 outsize=192 kw= ok=1
-Cmd: preprocess
-  insize=464 outsize=464 ok=1
-Cmd: preprocess
-  insize=1574 outsize=702 ok=1
+  error: 2 plat 4 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)
+  api=4 type=1 insize=1623 outsize=0 kw= ok=0

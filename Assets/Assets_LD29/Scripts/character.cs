@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class character : MonoBehaviour
@@ -7,9 +7,9 @@ public class character : MonoBehaviour
 		public int maxSpeed = 100;
 		public int moveForce = 100;
 		public int jumpForce = 100;
-		private health HP;
+		public health HP;
 		public Rigidbody2D thisRigid;
-		private string preLevel = " Version 1.1 Level : ";
+		//private string preLevel = " Version 1.1 Level : ";
 		public int level = 0;
 		public Vector3 pos;
 		private bool grounded = false;
@@ -35,7 +35,7 @@ public class character : MonoBehaviour
 				grounded = Physics2D.Linecast (transform.position, feets.position, 1 << LayerMask.NameToLayer ("Ground"));  
 		
 				// If the jump button is pressed and the player is grounded then the player should jump.
-			if (Input.GetKeyDown (KeyCode.Space) && grounded) {
+				if (Input.GetKeyDown (KeyCode.Space) && grounded) {
 						jump = true;
 				}
 		}
@@ -61,12 +61,12 @@ public class character : MonoBehaviour
 				if (other.gameObject.tag == "Enemy") {
 
 				}
-		if (other.gameObject.tag == "Destroyable") {
-			Material temp = other.GetComponent<Material>();
-			temp.dropMadeOf(2);
-		}
+				if (other.gameObject.tag == "Destroyable") {
+						Resource temp = other.GetComponent<Resource> ();
+						temp.dropMadeOf (2);
+				}
 
-	}
+		}
 	
 		void FixedUpdate ()
 		{ 

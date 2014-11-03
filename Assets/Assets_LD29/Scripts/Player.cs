@@ -1,26 +1,30 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Player : MonoBehaviour
 {
 		public float maxSped = 10f;
 		public float moveForce = 5;
+		public Transform groundCheck;
+		public LayerMask whatGround;
+		public float jump = 100;
+		public int level = 0;
+		public Vector3 pos;
+		public GameObject landedParticles;
 		bool turnR = false;
 		Animator anim;
 		bool grounded = false;
-		public Transform groundCheck;
 		float groundRad = 0.16f;
-		public LayerMask whatGround;
-		public float jump = 100;
+		bool landed = false;
+		Vector3 particlePos;
 		private health HP;
-		private string preLevel = " Version 1.1 Level : ";
-		public int level = 0;
-		public Vector3 pos;
+		//private string preLevel = " Version 1.1 Level : ";
 
-		// Use this for initialization
+
 		void Start ()
 		{
 				anim = GetComponent <Animator> ();
+				
 		}
 		
 		void Update ()
@@ -31,13 +35,37 @@ public class Player : MonoBehaviour
 						rigidbody2D.AddForce (new Vector2 (0, jump));
 				}
 
+				if (landed) {
+						particlePos = new Vector3 (transform.position.x, transform.position.y-5, -10);
+						Instantiate (landedParticles, particlePos, Quaternion.identity);
+
+				}
 		}
 	
 		// Update is called once per frame
 		void FixedUpdate ()
 		{
 
-				grounded = Physics2D.OverlapCircle (groundCheck.position, groundRad, whatGround);
+				bool ground = Physics2D.OverlapCircle (groundCheck.position, groundRad, whatGround);
+				if (!grounded && ground) {
+						landed = true;
+						grounded = true;
+
+
+				} else if (!ground) {
+						grounded = false;
+						landed = false;
+
+
+				} else {
+						landed = false;
+
+
+				}
+					
+					
+		
+				
 				anim.SetBool ("ground", grounded);
 				anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 
@@ -47,6 +75,7 @@ public class Player : MonoBehaviour
 				} else if (move > 0 && !turnR) {
 						flip ();
 				}
+				
 				anim.SetFloat ("speed", Mathf.Abs (move));
 				if (rigidbody2D.velocity.x < maxSped)
 						rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x + (move * moveForce), rigidbody2D.velocity.y);
@@ -85,8 +114,8 @@ public class Player : MonoBehaviour
 		
 				}
 				if (other.gameObject.tag == "Destroyable") {
-						Material temp = other.GetComponent<Material> ();
-						temp.dropMadeOf (2);
+						Resource temp = other.GetComponent<Resource> ();
+						temp.dropMadeOf (1);
 				}
 	
 		}

@@ -13,10 +13,11 @@ public class gameManager : MonoBehaviour
 		public bool dead = false;
 		public string currMenu = "null";
 		public bool voted = false;
+		public Camera currCamera;
 		// public
 	
 		private string version;
-		private bool offline = false;
+	//	private bool offline = false;
 		public GameObject myPlayer;
 		private SpawnSpot[] SS;
 		private SpawnSpot MySS;
@@ -45,7 +46,7 @@ public class gameManager : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-	
+
 		}
 
 		void OnGUI ()
@@ -98,7 +99,8 @@ public class gameManager : MonoBehaviour
 										inGame = true;
 
 										myPlayer.SetActive (true);
-											
+										currCamera = myPlayer.GetComponentInChildren<Camera>();
+									
 								}
 							
 
@@ -173,6 +175,7 @@ public class gameManager : MonoBehaviour
 				currentLevel = lev;
 				currentLevel.gameObject.SetActive (true);
 				currentLevel.camera1.SetActive (true);
+				currCamera = currentLevel.camera1.camera;
 				
 		
 				if (currentLevel.spawnable) {
@@ -182,13 +185,13 @@ public class gameManager : MonoBehaviour
 
 						if (PhotonNetwork.connected) {
 
-				}
-								foreach (level l in levels) {
-										l.votes = 0;
-								}
-				
 						}
+						foreach (level l in levels) {
+								l.votes = 0;
+						}
+				
+				}
 			
-				} 
+		} 
 		
 }

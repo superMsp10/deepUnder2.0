@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{BC585F81-93E7-FA79-2D2B-C6155CBEAE3F}</ProjectGuid>
+	<ProjectGuid>{BCC70296-A5BD-F2F3-7E2B-11F94EECA018}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -39,17 +39,13 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Users/Mahan/Documents/MahanWorkspace/3D dev/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Users/Mahan/Documents/MahanWorkspace/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Users/Mahan/Documents/MahanWorkspace/3D dev/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Users/Mahan/Documents/MahanWorkspace/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GameJoltAPI\Editor\GJAPIEditor.cs" />
-     <Compile Include="Assets\GameJoltAPI\Editor\GJAPIHelperEditor.cs" />
-     <Compile Include="Assets\GameJoltAPI\Editor\GJHNotificationsManagerEditor.cs" />
-     <Compile Include="Assets\GameJoltAPI\Editor\GJHWindowsManagerEditor.cs" />
      <Compile Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\AccountService.cs" />
      <Compile Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\PhotonConverter.cs" />
      <Compile Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\PhotonEditor.cs" />
@@ -57,34 +53,33 @@
      <Compile Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\PhotonViewInspector.cs" />
      <Compile Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\PhotonViewPrefabApply.cs" />
      <Compile Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\ServerSettingsInspector.cs" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
-     <None Include="Assets\GameJoltAPI\README.txt" />
      <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Plugins\release_history.txt" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
+     <None Include="Assets\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/Mahan/Documents/MahanWorkspace/Unity/SaveFileUnity/Unity Projects/DeepUnder 2.0/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
+ <HintPath>M:/Games/ProducedGames/DeepUnder2.0/deepUnder2.0/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Mahan/Documents/MahanWorkspace/Unity/SaveFileUnity/Unity Projects/DeepUnder 2.0/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>M:/Games/ProducedGames/DeepUnder2.0/deepUnder2.0/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
- <HintPath>C:/Users/Mahan/Documents/MahanWorkspace/3D dev/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ <HintPath>C:/Users/Mahan/Documents/MahanWorkspace/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{DACDC1BF-E6F4-58A3-AE85-7C252C3E76A0}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{49564D5C-9626-8F7F-5F4E-C2716F7900A1}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{55D6D4D0-FEF5-1F1B-D29F-C6B6EEB218C7}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{00C34FAF-E0A5-8D67-DC51-1C8E117F1137}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{706AB78F-9343-E861-7DBA-403C4EACEAEE}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
