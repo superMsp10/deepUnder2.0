@@ -17,7 +17,8 @@ public class gameManager : MonoBehaviour
 		// public
 	
 		private string version;
-	//	private bool offline = false;
+		//	private bool offline = false;
+		public GameObject myPlayerIns;
 		public GameObject myPlayer;
 		private SpawnSpot[] SS;
 		private SpawnSpot MySS;
@@ -46,7 +47,9 @@ public class gameManager : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-
+				if (Input.GetKeyDown (KeyCode.Escape)) {
+						inGame = !inGame;
+				}
 		}
 
 		void OnGUI ()
@@ -76,7 +79,7 @@ public class gameManager : MonoBehaviour
 				
 								if (GUILayout.Button ("Play!")) {
 										changeLvl (1);
-										myHp = myPlayer.GetComponent<health> ();
+										
 										currMenu = "spawn";
 									
 					
@@ -97,55 +100,43 @@ public class gameManager : MonoBehaviour
 								if (GUILayout.Button ("Appcept Level")) {
 										currentLevel.camera1.SetActive (false);
 										inGame = true;
-
+										MySS = SS [Random.Range (0, SS.Length)];
+										myPlayer = (GameObject)Instantiate
+						(myPlayerIns, MySS.transform.position, MySS.transform.rotation);
 										myPlayer.SetActive (true);
-										currCamera = myPlayer.GetComponentInChildren<Camera>();
+										currCamera = myPlayer.GetComponentInChildren<Camera> ();
+										myHp = myPlayer.GetComponent<health> ();
+										currMenu = "escape";
 									
 								}
 							
 
+			
+						}
+						if (currMenu == "escape") {
+								if (GUILayout.Button ("respawn")) {
+										myHp.Die ();
+										currentLevel.camera1.SetActive (true);
+										currMenu = "spawn";
+								}
+								if (GUILayout.Button ("jumpBoost")) {
+										myPlayer.rigidbody2D.AddForce 
+						(new Vector2 (0, 500), ForceMode2D.Impulse);
+								}
 						}
 				}
-				/*
-						if (currMenu == "escape") {
-								if (GUILayout.Button (status + " Status Powers")) {
-										currMenu = "statusPower";
-								}
-						}
-						if (currMenu == "statusPower") {
-								if (status == "[newbie]") {
+				
+			
 					
 					
 					
-								}
-								if (status == "[admin]") {
-					
-										if (GUILayout.Button ("Random level")) {
-												int rLevel = Random.Range (0, levels.Length);
-												changeLvl (rLevel);
-						
-										}
-										foreach (level l in levels) {
-												if (l.spawnable) {
-														if (GUILayout.Button (l.name)) {
-																voted = true;
-																changeLvl (l.name);
-																//addChatMassage(myPlayer.name + " has voted to change the level into " + l.name);
-																//thisView.RPC ("vote", PhotonTargets.All, l.name);
 								
-														}
-							
-												}
-										}
-					
-					
-								}
 
 								
-						}
+						
 			
 				
-					*/
+					
 		}
 
 		public void changeLvl (int i)
@@ -167,9 +158,6 @@ public class gameManager : MonoBehaviour
 		{
 				voted = false;
 				if (currentLevel != null) {
-			
-						myPlayer.SetActive (false);
-						dead = true;
 						currentLevel.gameObject.SetActive (false);
 				}
 				currentLevel = lev;

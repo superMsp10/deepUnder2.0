@@ -7,6 +7,7 @@ public class health : MonoBehaviour
 		private float currHP;
 		private NetworkManeger thisManage;
 		private Animator anim;
+		public bool deathDestroy = true;
 
 		// Use this for initialization
 		void Start ()
@@ -16,7 +17,7 @@ public class health : MonoBehaviour
 				anim = GetComponent<Animator> ();
 		}
 
-		[RPC]
+		//[RPC]
 		public void takeDamage (float dmg)
 		{
 				currHP -= dmg;
@@ -25,7 +26,7 @@ public class health : MonoBehaviour
 				}
 		}
 
-		[RPC]
+		//[RPC]
 		public void Die ()
 		{
 				
@@ -41,9 +42,10 @@ public class health : MonoBehaviour
 				//thisManage.dead = true;
 				//}
 				//}
-
-				Destroy (this.gameObject);
-
+				if (deathDestroy) {
+						Destroy (gameObject);
+				} else
+						gameObject.SetActive (false);
 
 		}
 

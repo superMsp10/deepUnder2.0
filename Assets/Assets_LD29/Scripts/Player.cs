@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 		public int level = 0;
 		public Vector3 pos;
 		public GameObject landedParticles;
+		public GameObject sideParticles;
 		bool turnR = false;
 		Animator anim;
 		bool grounded = false;
@@ -29,18 +30,25 @@ public class Player : MonoBehaviour
 		
 		void Update ()
 		{
-
 				if (grounded && Input.GetKeyDown (KeyCode.Space)) {
 						anim.SetBool ("ground", false);
 						rigidbody2D.AddForce (new Vector2 (0, jump));
 				}
 
-				if (landed) {
-						particlePos = new Vector3 (transform.position.x, transform.position.y-5, -10);
+			
+				if (rigidbody2D.velocity.y > 100) {
+						Debug.Log ("boomFall");
+						particlePos = new Vector3 (transform.position.x, transform.position.y - 5, -10);
 						Instantiate (landedParticles, particlePos, Quaternion.identity);
+				}
+				if (rigidbody2D.velocity.y > 100) {
+						Debug.Log ("boomRise");
 
+						particlePos = new Vector3 (transform.position.x, transform.position.y + 5, -10);
+						Instantiate (landedParticles, particlePos, Quaternion.identity);
 				}
 		}
+		
 	
 		// Update is called once per frame
 		void FixedUpdate ()
@@ -119,4 +127,6 @@ public class Player : MonoBehaviour
 				}
 	
 		}
+
+
 }
