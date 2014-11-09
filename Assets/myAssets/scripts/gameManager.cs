@@ -56,7 +56,7 @@ public class gameManager : MonoBehaviour
 		{
 
 				if (!inGame) {
-						if (currMenu == "null") {
+						/*if (currMenu == "null") {
 								GUILayout.BeginArea (new Rect (0, 0, Screen.width, Screen.height));
 								GUILayout.BeginHorizontal ();
 								GUILayout.FlexibleSpace ();
@@ -94,7 +94,7 @@ public class gameManager : MonoBehaviour
 				
 				
 								
-						}
+						}*/
 						if (currMenu == "spawn") {
 						
 								if (GUILayout.Button ("Appcept Level")) {
