@@ -52,6 +52,12 @@ public class gameManager : MonoBehaviour
 				}
 		}
 
+		public void changeMenu (string menu)
+		{
+
+				currMenu = menu;
+		}
+
 		void OnGUI ()
 		{
 
@@ -94,36 +100,37 @@ public class gameManager : MonoBehaviour
 				
 				
 								
-						}*/
-						if (currMenu == "spawn") {
+						}
+			if (currMenu == "spawn") {
 						
-								if (GUILayout.Button ("Appcept Level")) {
-										currentLevel.camera1.SetActive (false);
-										inGame = true;
-										MySS = SS [Random.Range (0, SS.Length)];
-										myPlayer = (GameObject)Instantiate
+				if (GUILayout.Button ("Appcept Level")) {
+					currentLevel.camera1.SetActive (false);
+					inGame = true;
+					MySS = SS [Random.Range (0, SS.Length)];
+					myPlayer = (GameObject)Instantiate
 						(myPlayerIns, MySS.transform.position, MySS.transform.rotation);
-										myPlayer.SetActive (true);
-										currCamera = myPlayer.GetComponentInChildren<Camera> ();
-										myHp = myPlayer.GetComponent<health> ();
-										currMenu = "escape";
+					myPlayer.SetActive (true);
+					currCamera = myPlayer.GetComponentInChildren<Camera> ();
+					myHp = myPlayer.GetComponent<health> ();
+					currMenu = "escape";
 									
-								}
+				}
 							
 
 			
-						}
-						if (currMenu == "escape") {
-								if (GUILayout.Button ("respawn")) {
-										myHp.Die ();
-										currentLevel.camera1.SetActive (true);
-										currMenu = "spawn";
-								}
-								if (GUILayout.Button ("jumpBoost")) {
-										myPlayer.rigidbody2D.AddForce 
+			}
+			if (currMenu == "escape") {
+				if (GUILayout.Button ("respawn")) {
+					myHp.Die ();
+					currentLevel.camera1.SetActive (true);
+					currMenu = "spawn";
+				}
+				if (GUILayout.Button ("jumpBoost")) {
+					myPlayer.rigidbody2D.AddForce 
 						(new Vector2 (0, 500), ForceMode2D.Impulse);
-								}
-						}
+				}
+			}
+			 */
 				}
 				
 			
@@ -135,8 +142,22 @@ public class gameManager : MonoBehaviour
 								
 						
 			
-				
 					
+		}
+
+		public void spawn ()
+		{
+				currentLevel.camera1.SetActive (false);
+				inGame = true;
+				MySS = SS [Random.Range (0, SS.Length)];
+				myPlayer = (GameObject)Instantiate
+			(myPlayerIns, MySS.transform.position, MySS.transform.rotation);
+				myPlayer.SetActive (true);
+				currCamera = myPlayer.GetComponentInChildren<Camera> ();
+				myHp = myPlayer.GetComponent<health> ();
+
+
+
 		}
 
 		public void changeLvl (int i)
@@ -170,7 +191,7 @@ public class gameManager : MonoBehaviour
 						dead = true;
 						SS = FindObjectsOfType<SpawnSpot> ();
 						
-
+						currMenu = "spawn";
 						if (PhotonNetwork.connected) {
 
 						}

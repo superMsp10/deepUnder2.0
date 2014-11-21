@@ -214,6 +214,7 @@ MonoBehaviour:
   level: 0
   pos: {x: 0, y: 0, z: 0}
   landedParticles: {fileID: 100000, guid: 2a6951ec14b27ed4da27d13818dbebd2, type: 2}
+  sideParticles: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,6 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
+  deathDestroy: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
