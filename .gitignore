@@ -13,7 +13,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-*.csproj
+
 
 # =========================
 # Operating System Files
@@ -21,6 +21,9 @@ $RECYCLE.BIN/
 
 # OSX
 # =========================
+
+# Editor Files
+*.csproj
 
 .DS_Store
 .AppleDouble
