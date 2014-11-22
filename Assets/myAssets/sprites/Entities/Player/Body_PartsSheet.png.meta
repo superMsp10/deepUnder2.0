@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: f709d546e3dcf304b97fd355842e17e2
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Head
+    21300002: HeadSide
+    21300004: SideHand
+    21300006: FrontHand
+    21300008: frontBody
+    21300010: SideBody
+    21300012: FrontLeg-1
+    21300014: sideLeg-1
+    21300016: sideLeg-2
+    21300018: FrontLeg-2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 10
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Head
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 155
+        width: 41
+        height: 41
+      alignment: 9
+      pivot: {x: .590485096, y: .108582288}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HeadSide
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 157
+        width: 37
+        height: 34
+      alignment: 9
+      pivot: {x: .63034761, y: .107188508}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SideHand
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 84
+        width: 9
+        height: 50
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FrontHand
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 85
+        width: 10
+        height: 49
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: frontBody
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 93
+        width: 33
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SideBody
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 93
+        width: 29
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FrontLeg-1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 47
+        width: 11
+        height: 26
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sideLeg-1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 47
+        width: 12
+        height: 26
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sideLeg-2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 47
+        width: 12
+        height: 26
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FrontLeg-2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 47
+        width: 12
+        height: 26
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
