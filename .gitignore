@@ -23,7 +23,16 @@ $RECYCLE.BIN/
 # =========================
 
 # Editor Files
+*.svd
+*.userprefs
 *.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+
 
 .DS_Store
 .AppleDouble
