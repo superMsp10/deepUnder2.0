@@ -1,30 +1,40 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class level : MonoBehaviour
 {
 		public GameObject camera1;
 		public bool spawnable = true;
 		public int votes;
+		public Material skybox;
+		public List<Entity> entities;
 		// Use this for initialization
 		void Start ()
 		{
-				if (spawnable) {
-						GameObject[] Trees = GameObject.FindGameObjectsWithTag ("treePart");
-
-						foreach (GameObject i in Trees) {
-								if (i.GetComponent<tree> () != null)
-										i.GetComponent<tree> ().growTree ();
-								else
-										Debug.LogError ("no tree component  : "+name);
-				
-
-						}
-				}
+			
 		}
 		// Update is called once per frame
+		public void addEntity (Entity e)
+		{
+
+				e.gameObject.transform.parent = transform.FindChild ("Entities");
+				entities.Add (e);
+
+
+		}
+
+		public void removeEntity (Entity e)
+		{
+				entities.Remove (e);
+
+		
+		
+		}
+
 		void Update ()
 		{
 	
 		}
 }
+
