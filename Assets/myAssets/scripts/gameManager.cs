@@ -7,13 +7,15 @@ public class gameManager : MonoBehaviour
 
 
 		public bool inGame = false;
-		public level currentLevel;
-		public level start;
+		protected level currentLevel;
+		protected level start;
 		public level[] levels;
+		public bool loadTest = false;
 		public bool dead = false;
 		public string currMenu = "null";
-		public bool voted = false;
 		public Camera currCamera;
+		
+		// bool voted = false;
 		// public
 	
 		private string version;
@@ -38,8 +40,10 @@ public class gameManager : MonoBehaviour
 				foreach (level l in levels) {
 						l.gameObject.SetActive (false);
 				}
-
-				changeLvl ("startMenu");
+				if (loadTest)
+						changeLvl ("testLevel");
+				else
+						changeLvl ("startMenu");
 
 				inGame = false;
 		}
@@ -177,7 +181,7 @@ public class gameManager : MonoBehaviour
 
 		private void levelex (level lev)
 		{
-				voted = false;
+				//voted = false;
 				if (currentLevel != null) {
 						currentLevel.gameObject.SetActive (false);
 				}
@@ -185,7 +189,8 @@ public class gameManager : MonoBehaviour
 				currentLevel.gameObject.SetActive (true);
 				currentLevel.camera1.SetActive (true);
 				currCamera = currentLevel.camera1.camera;
-				
+				RenderSettings.skybox = currentLevel.skybox;
+
 		
 				if (currentLevel.spawnable) {
 						dead = true;

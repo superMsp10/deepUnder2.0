@@ -101,10 +101,13 @@
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SmoothSyncMovement.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TestDontDestroyOnLoad.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
+     <Compile Include="Assets\myAssets\scripts\BodyParts.cs" />
      <Compile Include="Assets\myAssets\scripts\Branch.cs" />
      <Compile Include="Assets\myAssets\scripts\Destroy.cs" />
      <Compile Include="Assets\myAssets\scripts\DupliCator.cs" />
+     <Compile Include="Assets\myAssets\scripts\Entity.cs" />
      <Compile Include="Assets\myAssets\scripts\Mob.cs" />
+     <Compile Include="Assets\myAssets\scripts\Mob1.cs" />
      <Compile Include="Assets\myAssets\scripts\NPC.cs" />
      <Compile Include="Assets\myAssets\scripts\NetworkManeger.cs" />
      <Compile Include="Assets\myAssets\scripts\Resource.cs" />
