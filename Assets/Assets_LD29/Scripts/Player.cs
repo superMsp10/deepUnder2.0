@@ -123,7 +123,7 @@ public class Player : MonoBehaviour
 				}
 				if (other.gameObject.tag == "Destroyable") {
 						Resource temp = other.GetComponent<Resource> ();
-						temp.dropMadeOf (1);
+						temp.dropMadeOf (Random.Range(0,5));
 				}
 	
 		}

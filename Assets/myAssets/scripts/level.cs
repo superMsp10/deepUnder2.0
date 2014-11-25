@@ -36,5 +36,16 @@ public class level : MonoBehaviour
 		{
 	
 		}
+
+		public void clearAllEntities ()
+		{
+		
+				foreach (Entity e in entities) {
+						e.DestroyEntity (0);
+
+
+				}
+		
+		}
 }
 

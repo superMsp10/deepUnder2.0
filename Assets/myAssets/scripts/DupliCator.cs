@@ -16,9 +16,9 @@ public class DupliCator : Entity
 				if (auto)
 						InvokeRepeating ("duplicate", 0, autoTime);
 				else
-						for (int i = 0; i < dupAmount; i++) {
-								Invoke ("duplicate", 5);
-						}
+						duplicate ();
+				
+					
 		}
 	
 		// Update is called once per frame
@@ -29,15 +29,26 @@ public class DupliCator : Entity
 
 		public void duplicate ()
 		{
-		Vector3 dupPos = new Vector3 (location.position.x + Random.Range (0, randomOff)
+				for (int i = 0; i < dupAmount; i++) {
+						Invoke ("dupli", 0);
+				}
+
+		}
+
+		public void dupli ()
+		{
+
+
+
+				Vector3 dupPos = new Vector3 (location.position.x + Random.Range (0, randomOff)
 		                              , location.position.y + Random.Range (0, randomOff));
 				
-		Quaternion dupRot = new Quaternion (location.rotation.x + Random.Range (0, ranRot)
-		                               ,location.rotation.y + Random.Range (0, ranRot),0,0);
-		GameObject g = (GameObject) GameObject.Instantiate (dup, dupPos,dupRot);
-		Entity e = g.GetComponent<Entity>();
-		e.thisManage = thisManage;
-		e.thisLevel = thisLevel;
+				Quaternion dupRot = new Quaternion (location.rotation.x + Random.Range (0, ranRot)
+		                               , location.rotation.y + Random.Range (0, ranRot), 0, 0);
+				GameObject g = (GameObject)GameObject.Instantiate (dup, dupPos, dupRot);
+				Entity e = g.GetComponent<Entity> ();
+				e.thisManage = thisManage;
+				e.thisLevel = thisLevel;
 
 		
 		
