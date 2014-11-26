@@ -22,7 +22,6 @@ public class Entity : MonoBehaviour
 
 		void Start ()
 		{
-
 				thisLevel.addEntity (this);
 
 		}

@@ -128,6 +128,7 @@
      <Compile Include="Assets\myAssets\scripts\Branch.cs" />
      <Compile Include="Assets\myAssets\scripts\Destroy.cs" />
      <Compile Include="Assets\myAssets\scripts\DupliCator.cs" />
+     <Compile Include="Assets\myAssets\scripts\Enemy.cs" />
      <Compile Include="Assets\myAssets\scripts\Entity.cs" />
      <Compile Include="Assets\myAssets\scripts\Mob.cs" />
      <Compile Include="Assets\myAssets\scripts\Mob1.cs" />
