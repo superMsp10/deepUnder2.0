@@ -7,18 +7,6 @@ public class Enemy : Mob1
 		public GameObject target;
 		public float sight;
 
-		void Update ()
-		{
-				if (target == null) {
-						selectTarget ();
-
-				}
-				if (grounded) {
-				}
-
-
-		}
-		
 		public void selectTarget ()
 		{
 				Collider2D[] enemies = Physics2D.OverlapCircleAll (transform.position, sight, whatEnemy);
@@ -26,10 +14,63 @@ public class Enemy : Mob1
 				foreach (Collider2D e in enemies) {
 						if (e.gameObject != gameObject) {
 								target = e.gameObject;
-								Debug.Log (e.name);
+								return;
 						}
 
 				}
 
 		}
+
+		void FixedUpdate ()
+		{
+		
+				bool ground = Physics2D.OverlapCircle (groundCheck.position, groundRad, whatGround);
+		
+				if (!grounded && ground) {
+						landed = true;
+						thisAttributes.jumped = 0;
+						grounded = true;
+			
+			
+				} else if (!ground) {
+						grounded = false;
+						landed = false;
+			
+			
+				} else {
+						landed = false;
+				}
+				
+				if (target != null) {
+						moveAi ();
+				} else
+						selectTarget ();
+
+
+
+			
+		}
+		
+		public void moveAi ()
+		{
+				float move = 0;
+				if (target.transform.position.x < transform.position.x) {
+						move = (Vector2.right.x * -1);
+				} else if (target.transform.position.x > transform.position.x) {
+						move = (Vector2.right.x);
+				} else
+						Debug.Log ("there!");
+			
+				if (move < 0 && turnR) {
+						flip ();
+				} else if (move > 0 && !turnR) {
+						flip ();
+				}
+				moveX (move);
+				
+
+
+
+		}
+
 }

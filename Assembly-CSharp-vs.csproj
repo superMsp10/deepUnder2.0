@@ -124,6 +124,7 @@
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SmoothSyncMovement.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TestDontDestroyOnLoad.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
+     <Compile Include="Assets\myAssets\Mobs\Dummy\Dummy.cs" />
      <Compile Include="Assets\myAssets\scripts\BodyParts.cs" />
      <Compile Include="Assets\myAssets\scripts\Branch.cs" />
      <Compile Include="Assets\myAssets\scripts\Destroy.cs" />

@@ -14,6 +14,8 @@ public class level : MonoBehaviour
 		{
 			
 		}
+		
+
 		// Update is called once per frame
 		public void addEntity (Entity e)
 		{
