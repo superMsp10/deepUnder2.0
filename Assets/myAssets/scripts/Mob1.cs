@@ -10,9 +10,10 @@ public class mobAtributes
 		public float maxSped = 10f;
 		public float moveForce = 5;
 		public int blunt, point, slash;
-		public float jump = 100;
-		public int jumpLimit = 1;
+		public int jump = 100;
+		public int jumpLimit = 10;
 		public int jumped = 0;
+		public int optTargetRange = 30;
 		public bool canFly = false;
 
 	
@@ -111,17 +112,20 @@ public class Mob1 : Entity
 		public void moveX (float moveX)
 		{
 		
-				if (rigidbody2D.velocity.x < thisAttributes.maxSped)
+				if (Mathf.Abs (rigidbody2D.velocity.x) < thisAttributes.maxSped)
 						rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x + 
 								(moveX * thisAttributes.moveForce), rigidbody2D.velocity.y);
-		
+
 		}
 			
-		public void jump ()
+		public void jump (int jumpF)
 		{
 				if (thisAttributes.jumped < thisAttributes.jumpLimit) {
-						rigidbody2D.AddForce (new Vector2 (0, thisAttributes.jump));
+						rigidbody2D.AddForce (new Vector2 (0, jumpF));
 						thisAttributes.jumped++;
+				} else {
+
+
 				}
 
 

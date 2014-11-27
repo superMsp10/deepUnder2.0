@@ -23,7 +23,6 @@ public class Enemy : Mob1
 
 		void FixedUpdate ()
 		{
-		
 				bool ground = Physics2D.OverlapCircle (groundCheck.position, groundRad, whatGround);
 		
 				if (!grounded && ground) {
@@ -42,10 +41,13 @@ public class Enemy : Mob1
 				}
 				
 				if (target != null) {
-						moveAi ();
+						if (Vector2.Distance (target.transform.position, transform.position)
+								> thisAttributes.optTargetRange) {
+								moveAi ();
+						}
+								
 				} else
 						selectTarget ();
-
 
 
 			
@@ -53,22 +55,29 @@ public class Enemy : Mob1
 		
 		public void moveAi ()
 		{
-				float move = 0;
-				if (target.transform.position.x < transform.position.x) {
-						move = (Vector2.right.x * -1);
-				} else if (target.transform.position.x > transform.position.x) {
-						move = (Vector2.right.x);
-				} else
-						Debug.Log ("there!");
-			
-				if (move < 0 && turnR) {
-						flip ();
-				} else if (move > 0 && !turnR) {
-						flip ();
-				}
-				moveX (move);
-				
 
+				if (Mathf.Abs (target.transform.position.x - transform.position.x) > 1) {
+						float move = 0;
+						if (target.transform.position.x < transform.position.x) {
+								move = (Vector2.right.x * -1);
+						} else if (target.transform.position.x > transform.position.x) {
+								move = (Vector2.right.x);
+						}
+			
+						if (move < 0 && turnR) {
+								flip ();
+						} else if (move > 0 && !turnR) {
+								flip ();
+						}
+						moveX (move);
+				
+				}
+				if (target.transform.position.y > transform.position.y) {
+
+						jump (thisAttributes.jump);
+
+
+				}
 
 
 		}
