@@ -9,8 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 50: {fileID: 5000000}
+  - 61: {fileID: 6100004}
   - 114: {fileID: 11400000}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: maab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -150,7 +151,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.36159992, z: 0}
+  m_LocalPosition: {x: -47.9970093, y: 6.36159897, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400010}
@@ -178,8 +179,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2802, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
+  m_LocalPosition: {x: 1.28021431, y: -9.53674316e-07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
@@ -268,7 +269,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: .5
+  m_GravityScale: 1
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -307,6 +308,17 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: 4.9000001}
   m_Center: {x: 0, y: -2.45000005}
+--- !u!61 &6100004
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,7 +327,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 776271619f4dd234d89751a4e7e1a9a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 85ea93ada9e9cfb4bb975ea70c24669c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   desD:
@@ -323,7 +335,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
-  thisDmgDetails:
+  thisAttributes:
     HP: 0
     Dmg: 0
     maxSped: 10
@@ -331,6 +343,12 @@ MonoBehaviour:
     blunt: 0
     point: 0
     slash: 0
+    jump: 100
+    jumpLimit: 10
+    jumped: 0
+    optTargetRange: 30
+    canFly: 0
+  grounded: 0
   groundRad: .159999996
   groundCheck: {fileID: 400012}
   centerOfMass: {x: 0, y: 0}
@@ -341,7 +359,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   target: {fileID: 0}
-  sight: 100
+  sight: 50
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

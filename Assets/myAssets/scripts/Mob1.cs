@@ -11,7 +11,7 @@ public class mobAtributes
 		public float moveForce = 5;
 		public int blunt, point, slash;
 		public int jump = 100;
-		public int jumpLimit = 10;
+		public int jumpLimit = 1;
 		public int jumped = 0;
 		public int optTargetRange = 30;
 		public bool canFly = false;
@@ -29,7 +29,7 @@ public class Mob1 : Entity
 
 		//---------------------------------------
 		protected bool landed = false;
-		protected bool grounded = false;
+		public bool grounded = false;
 		protected bool turnR = false;
 		//---------------------------------------
 		public float groundRad = 0.16f;
@@ -51,6 +51,8 @@ public class Mob1 : Entity
 
 				if (thisAttributes.HP < 0)
 						DestroyEntity (0);
+				if (grounded)
+						thisAttributes.jumped = 0;
 
 		}
 		
@@ -61,7 +63,6 @@ public class Mob1 : Entity
 
 				if (!grounded && ground) {
 						landed = true;
-						thisAttributes.jumped = 0;
 						grounded = true;
 			
 			
@@ -111,11 +112,11 @@ public class Mob1 : Entity
 		
 		public void moveX (float moveX)
 		{
-		
-				if (Mathf.Abs (rigidbody2D.velocity.x) < thisAttributes.maxSped)
-						rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x + 
-								(moveX * thisAttributes.moveForce), rigidbody2D.velocity.y);
-
+				if (grounded) {
+						if (Mathf.Abs (rigidbody2D.velocity.x) < thisAttributes.maxSped)
+								rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x + 
+										(moveX * thisAttributes.moveForce), rigidbody2D.velocity.y);
+				}
 		}
 			
 		public void jump (int jumpF)
@@ -123,9 +124,46 @@ public class Mob1 : Entity
 				if (thisAttributes.jumped < thisAttributes.jumpLimit) {
 						rigidbody2D.AddForce (new Vector2 (0, jumpF));
 						thisAttributes.jumped++;
-				} else {
+				} 
 
+		}
 
+		void OnTriggerEnter2D (Collider2D other)
+		{
+
+				if (other.gameObject.tag == "teleport") {
+						Teleport teleSpot = (Teleport)other.GetComponent ("Teleport");
+						Vector3 teleTo = teleSpot.teleto.transform.position;
+						this.transform.position = new Vector3 (teleTo.x - teleSpot.xOff,
+			                                       teleTo.y - teleSpot.yOff, teleTo.z - teleSpot.zOff);
+						
+				}
+		
+				
+			
+				
+		
+		}
+
+		void OnCollisionEnter2D (Collision2D other)
+		{
+
+				
+				if (other.gameObject.tag == "Destroyable") {
+						Resource temp = other.gameObject.GetComponent<Resource> ();
+						temp.dropMadeOf (Random.Range (0, 5));
+				}
+
+				if (other.gameObject.tag == "Enemy") {
+						rigidbody2D.AddForce (new Vector2 (other.rigidbody.velocity.x + Random.Range (0, 300) * 100
+								, Random.Range (0, 90) * 100));
+				}
+
+				if (other.gameObject.tag == "boost") {
+						collisionBoost thisBoost = other.gameObject.GetComponent<collisionBoost> ();
+						Vector2 force = new Vector2 (rigidbody2D.velocity.x * (-1 * thisBoost.boostAmount)
+			                             , rigidbody2D.velocity.y * (-20 * thisBoost.boostAmount));
+						rigidbody2D.AddForce (force);
 				}
 
 

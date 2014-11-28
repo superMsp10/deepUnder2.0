@@ -56,7 +56,7 @@ public class Enemy : Mob1
 		public void moveAi ()
 		{
 
-				if (Mathf.Abs (target.transform.position.x - transform.position.x) > 1) {
+				if (Mathf.Abs (target.transform.position.x - transform.position.x) > 0) {
 						float move = 0;
 						if (target.transform.position.x < transform.position.x) {
 								move = (Vector2.right.x * -1);
@@ -74,7 +74,7 @@ public class Enemy : Mob1
 				}
 				if (target.transform.position.y > transform.position.y) {
 
-						jump (thisAttributes.jump);
+						jump (thisAttributes.jump + Random.Range (-30, 200));
 
 
 				}
