@@ -1,11 +1,25 @@
 fileFormatVersion: 2
 guid: a2be54a009af30a4cb3395d5b91d89b3
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Mob_0
+    21300002: Mob_1
+    21300004: Mob_2
+    21300006: Mob_3
+    21300008: Mob_4
+    21300010: Mob_5
+    21300012: Mob_6
+    21300014: Mob_7
+    21300016: Mob_8
+    21300018: Mob_9
+    21300020: Mob_10
+    21300022: Mob_11
+    21300024: Mob_12
+    21300026: Mob_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -25,23 +39,163 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Mob_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 535
+        width: 10
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mob_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 565
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mob_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 537
+        width: 96
+        height: 63
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mob_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 519
+        width: 40
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mob_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 540
+        width: 6
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mob_5
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 548
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mob_6
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 517
+        width: 32
+        height: 62
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mob_7
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 506
+        width: 46
+        height: 59
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mob_8
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 508
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mob_9
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 500
+        width: 82
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mob_10
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 566
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mob_11
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 400
+        width: 194
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mob_12
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 404
+        width: 183
+        height: 94
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mob_13
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 506
+        width: 40
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
