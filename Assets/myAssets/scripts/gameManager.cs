@@ -34,6 +34,7 @@ public class gameManager : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{		
+				
 				version = "NetTest 0.2.2";
 				PhotonNetwork.player.name = PlayerPrefs.GetString ("UserName", "EnterNameHere");
 				levels = FindObjectsOfType<level> ();
