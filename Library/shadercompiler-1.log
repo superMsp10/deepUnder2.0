@@ -1,6 +1,13 @@
 Base path: C:/Users/Mahan/Documents/MahanWorkspace/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-1-5660
+Pipe name: \\.\pipe\UnityShaderCompiler-1-3248
 Cmd: getPlatforms
-Cmd: compileSnippet
-  error: 2 plat 4 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)
-  api=4 type=0 insize=1623 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=1654 outsize=1035 ok=1
+Cmd: preprocess
+  insize=1101 outsize=904 ok=1
+Cmd: preprocess
+  insize=1725 outsize=1007 ok=1
+Cmd: preprocess
+  insize=464 outsize=464 ok=1
+Cmd: preprocess
+  insize=1574 outsize=702 ok=1

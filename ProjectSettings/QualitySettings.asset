@@ -24,7 +24,14 @@ QualitySettings:
     lodBias: .300000012
     maximumLODLevel: 0
     particleRaycastBudget: 4
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Web
+    - Standalone
+    - iPhone
+    - Android
+    - BlackBerry
+    - Windows Store Apps
+    - WP8
   - serializedVersion: 2
     name: Fast
     pixelLightCount: 0
@@ -120,4 +127,11 @@ QualitySettings:
     maximumLODLevel: 0
     particleRaycastBudget: 4096
     excludedTargetPlatforms: []
-  m_PerPlatformDefaultQuality: {}
+  m_PerPlatformDefaultQuality:
+    Android: 0
+    BlackBerry: 0
+    Standalone: 0
+    WP8: 0
+    Web: 0
+    Windows Store Apps: 0
+    iPhone: 0

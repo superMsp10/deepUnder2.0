@@ -15,6 +15,7 @@ public class gameManager : MonoBehaviour
 		public string currMenu = "null";
 		public Camera currCamera;
 		
+		
 		// bool voted = false;
 		// public
 	
@@ -185,10 +186,13 @@ public class gameManager : MonoBehaviour
 				//voted = false;
 				if (currentLevel != null) {
 						currentLevel.gameObject.SetActive (false);
+						currentLevel.endLevel ();
 				}
+				
 				currentLevel = lev;
 				currentLevel.gameObject.SetActive (true);
 				currentLevel.camera1.SetActive (true);
+				currentLevel.startLevel ();
 				currCamera = currentLevel.camera1.camera;
 				RenderSettings.skybox = currentLevel.skybox;
 
@@ -207,6 +211,12 @@ public class gameManager : MonoBehaviour
 				
 				}
 			
-		} 
+		}
 		
+		void OnDestroy ()
+		{
+				
+
+
+		}
 }

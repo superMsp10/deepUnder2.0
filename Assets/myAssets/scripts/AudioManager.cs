@@ -1,19 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
 		private float BMV;
 		public gameManager thisManage;
 		public float defaultVolume = 1;
+		public Slider[] sliderUI;
 		
 
 
 		// Use this for initialization
 		void Start ()
 		{
-				BMV = defaultVolume;
-				changeBMV (defaultVolume);
+				BMV = PlayerPrefs.GetFloat ("BMV", defaultVolume);
+				changeBMV (BMV);
 		}
 	
 		// Update is called once per frame
@@ -43,6 +45,11 @@ public class AudioManager : MonoBehaviour
 
 						l.audio.volume = BMV;
 				}
+				foreach (Slider s in sliderUI) {
+			
+						s.value = volume;
+				}
+			
 
 
 
@@ -52,5 +59,11 @@ public class AudioManager : MonoBehaviour
 		{
 
 				return BMV;
+		}
+			
+		void OnDestroy ()
+		{
+				PlayerPrefs.SetFloat ("BMV", BMV);
+
 		}
 }

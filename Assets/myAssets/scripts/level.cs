@@ -10,12 +10,13 @@ public class level : MonoBehaviour
 		public Material skybox;
 		public List<Entity> entities;
 		public AudioManager audioM;
+		private AudioSource thisSound;
 
 
 		// Use this for initialization
 		void Start ()
 		{
-			
+				thisSound = GetComponent<AudioSource> ();
 		}
 			
 		void OnEnable ()
@@ -26,6 +27,20 @@ public class level : MonoBehaviour
 				
 
 
+		}
+			
+		public void startLevel ()
+		{
+
+				thisSound.enabled = true;
+
+		}
+
+		public void endLevel ()
+		{
+		
+				thisSound.enabled = false;
+		
 		}
 
 
