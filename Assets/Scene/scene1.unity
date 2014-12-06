@@ -1414,6 +1414,7 @@ Transform:
   m_Children:
   - {fileID: 258948726}
   - {fileID: 1500331262}
+  - {fileID: 868234960}
   m_Father: {fileID: 863131150}
   m_RootOrder: 0
 --- !u!1 &293752004
@@ -4460,6 +4461,33 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!1 &868234959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 868234960}
+  m_Layer: 0
+  m_Name: OldMan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &868234960
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 868234959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 284264488}
+  m_RootOrder: 2
 --- !u!1001 &880213114
 Prefab:
   m_ObjectHideFlags: 0
@@ -9534,7 +9562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inGame: 0
   levels: []
-  loadTest: 0
+  loadTest: 1
   dead: 1
   currMenu: null
   currCamera: {fileID: 0}
