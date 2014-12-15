@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
 		private float BMV;
+		private float fxVolume;
 		public gameManager thisManage;
 		public float defaultVolume = 1;
-		public Slider[] sliderUI;
+		public List<Slider> bmvSliders;
+		public List<Slider> fxSliders;
+
 		
 
 
