@@ -138,6 +138,7 @@
      <Compile Include="Assets\myAssets\scripts\NetworkManeger.cs" />
      <Compile Include="Assets\myAssets\scripts\Resource.cs" />
      <Compile Include="Assets\myAssets\scripts\SpawnSpot.cs" />
+     <Compile Include="Assets\myAssets\scripts\button_sound.cs" />
      <Compile Include="Assets\myAssets\scripts\collisionBoost.cs" />
      <Compile Include="Assets\myAssets\scripts\effectsManager.cs" />
      <Compile Include="Assets\myAssets\scripts\gameManager.cs" />

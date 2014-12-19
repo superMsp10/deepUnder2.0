@@ -21,7 +21,7 @@ public class level : MonoBehaviour
 		void OnEnable ()
 		{
 
-				audio.volume = audioM.getBMV ();	
+				thisSound.volume = audioM.getBMV ();	
 				
 				
 

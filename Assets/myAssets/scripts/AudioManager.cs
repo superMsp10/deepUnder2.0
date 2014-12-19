@@ -18,6 +18,8 @@ public class AudioManager : MonoBehaviour
 		void Start ()
 		{
 				BMV = PlayerPrefs.GetFloat ("BMV", defaultVolume);
+				fxVolume = PlayerPrefs.GetFloat ("FXV", defaultVolume);
+
 				changeBMV (BMV);
 		}
 	
@@ -27,11 +29,13 @@ public class AudioManager : MonoBehaviour
 	
 		}
 	
-		public void playSound (Vector3 pos, string category, AudioClip clip)
+		public  void playSound (Vector3 pos, string category, AudioClip clip)
 		{
 				float v = 0;
 				if (category == "b")
 						v = BMV;
+				if (category == "fx")
+						v = fxVolume;
 				else
 						Debug.LogError ("No matching category for your audio");
 				//else if (category == "s")
@@ -48,7 +52,7 @@ public class AudioManager : MonoBehaviour
 
 						l.audio.volume = BMV;
 				}
-				foreach (Slider s in sliderUI) {
+				foreach (Slider s in bmvSliders) {
 			
 						s.value = volume;
 				}
@@ -64,9 +68,31 @@ public class AudioManager : MonoBehaviour
 				return BMV;
 		}
 			
+		public void changeFXV (float volume)
+		{
+		
+				fxVolume = volume;
+				
+				foreach (Slider s in fxSliders) {
+			
+						s.value = volume;
+				}
+		
+		
+		
+		
+		}
+	
+		public float getFXV ()
+		{
+		
+				return fxVolume;
+		}
+			
 		void OnDestroy ()
 		{
 				PlayerPrefs.SetFloat ("BMV", BMV);
+				PlayerPrefs.SetFloat ("FXV", fxVolume);
 
 		}
 }
