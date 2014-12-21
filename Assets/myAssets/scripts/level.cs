@@ -9,19 +9,22 @@ public class level : MonoBehaviour
 		public int votes;
 		public Material skybox;
 		public List<Entity> entities;
-		public AudioManager audioM;
+		private AudioManager audioM;
+		private gameManager thisManage;
 		public AudioSource thisSound;
 
 
 		// Use this for initialization
 		void Start ()
 		{
+				thisManage = gameManager.thisM;
+				audioM = AudioManager.thisAM;
 		}
 			
 		void OnEnable ()
 		{
-
-				thisSound.volume = audioM.getBMV ();	
+				//if (thisSound != null)
+				//		thisSound.volume = audioM.getBMV ();	
 				
 				
 
@@ -31,7 +34,7 @@ public class level : MonoBehaviour
 		public void startLevel ()
 		{
 
-				thisSound.enabled = true;
+				//thisSound.enabled = true;
 
 		}
 

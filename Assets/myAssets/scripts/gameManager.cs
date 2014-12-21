@@ -6,6 +6,7 @@ public class gameManager : MonoBehaviour
 {
 
 
+		public static gameManager thisM;
 		public bool inGame = false;
 		protected level currentLevel;
 		protected level start;
@@ -32,6 +33,14 @@ public class gameManager : MonoBehaviour
 		private string status = "[newbie]";
 		private health myHp;
 
+		void Awake ()
+		{
+
+
+				if (thisM == null) {
+						thisM = this;
+				}
+		}
 		// Use this for initialization
 		void Start ()
 		{		

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Resource : MonoBehaviour
 {
-		public string name = "Tes";
+		//public string name = "Tes";
 		public GameObject madeOf;
 		public bool destroyOnDrop = true;
 		Rigidbody2D thisRigid;

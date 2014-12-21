@@ -22,6 +22,7 @@ public class Entity : MonoBehaviour
 
 		void Start ()
 		{
+				thisManage = gameManager.thisM;
 				thisLevel.addEntity (this);
 
 		}

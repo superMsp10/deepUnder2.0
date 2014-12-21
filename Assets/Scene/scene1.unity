@@ -504,7 +504,6 @@ GameObject:
   - 114: {fileID: 206290017}
   - 95: {fileID: 206290016}
   - 82: {fileID: 206290015}
-  - 114: {fileID: 206290020}
   m_Layer: 5
   m_Name: opplay
   m_TagString: Untagged
@@ -526,9 +525,9 @@ RectTransform:
   - {fileID: 1313016851}
   m_Father: {fileID: 1772028226}
   m_RootOrder: 0
-  m_AnchorMin: {x: 1, y: .5}
-  m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -650.73999, y: 228.410004}
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -173, y: 228}
   m_SizeDelta: {x: 240, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!82 &206290015
@@ -702,21 +701,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1908301637}
   m_GameObject: {fileID: 206290013}
---- !u!114 &206290020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1908301637}
-  m_GameObject: {fileID: 206290013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1cfdde37303ae44bbb76dc7d2bfcb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisAM: {fileID: 1539869382}
-  thisClip: {fileID: 8300000, guid: e9e61438290dd0545bd192046f645ab4, type: 3}
-  played: 0
 --- !u!1 &207749157
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +714,6 @@ GameObject:
   - 114: {fileID: 207749161}
   - 95: {fileID: 207749160}
   - 82: {fileID: 207749159}
-  - 114: {fileID: 207749164}
   m_Layer: 5
   m_Name: Button 1
   m_TagString: Untagged
@@ -928,21 +911,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1951065070}
   m_GameObject: {fileID: 207749157}
---- !u!114 &207749164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1951065070}
-  m_GameObject: {fileID: 207749157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1cfdde37303ae44bbb76dc7d2bfcb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisAM: {fileID: 0}
-  thisClip: {fileID: 8300000, guid: e9e61438290dd0545bd192046f645ab4, type: 3}
-  played: 0
 --- !u!1 &258948725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,7 +1119,6 @@ GameObject:
   - 114: {fileID: 293752008}
   - 95: {fileID: 293752007}
   - 82: {fileID: 293752006}
-  - 114: {fileID: 293752011}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1173,9 +1140,9 @@ RectTransform:
   - {fileID: 1497610152}
   m_Father: {fileID: 1772028226}
   m_RootOrder: 3
-  m_AnchorMin: {x: 1, y: .5}
-  m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -680.049988, y: -206.589996}
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -202, y: -207}
   m_SizeDelta: {x: 230, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!82 &293752006
@@ -1349,21 +1316,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1988258098}
   m_GameObject: {fileID: 293752004}
---- !u!114 &293752011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1988258098}
-  m_GameObject: {fileID: 293752004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1cfdde37303ae44bbb76dc7d2bfcb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisAM: {fileID: 1539869382}
-  thisClip: {fileID: 8300000, guid: e9e61438290dd0545bd192046f645ab4, type: 3}
-  played: 0
 --- !u!1 &318396188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,7 +1570,6 @@ GameObject:
   - 114: {fileID: 408372161}
   - 95: {fileID: 408372160}
   - 82: {fileID: 408372159}
-  - 114: {fileID: 408372164}
   m_Layer: 5
   m_Name: Story
   m_TagString: Untagged
@@ -1816,21 +1767,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1777549658}
   m_GameObject: {fileID: 408372157}
---- !u!114 &408372164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1777549658}
-  m_GameObject: {fileID: 408372157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1cfdde37303ae44bbb76dc7d2bfcb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisAM: {fileID: 0}
-  thisClip: {fileID: 8300000, guid: e9e61438290dd0545bd192046f645ab4, type: 3}
-  played: 0
 --- !u!1 &437421579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,7 +2033,6 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -2438,7 +2373,6 @@ GameObject:
   - 114: {fileID: 696562975}
   - 95: {fileID: 696562974}
   - 82: {fileID: 696562973}
-  - 114: {fileID: 696562978}
   m_Layer: 5
   m_Name: Story
   m_TagString: Untagged
@@ -2624,21 +2558,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 812792148}
   m_GameObject: {fileID: 696562971}
---- !u!114 &696562978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d,
-    type: 2}
-  m_PrefabInternal: {fileID: 812792148}
-  m_GameObject: {fileID: 696562971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1cfdde37303ae44bbb76dc7d2bfcb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisAM: {fileID: 0}
-  thisClip: {fileID: 8300000, guid: e9e61438290dd0545bd192046f645ab4, type: 3}
-  played: 0
 --- !u!1 &723934385
 GameObject:
   m_ObjectHideFlags: 0
@@ -3127,8 +3046,7 @@ MonoBehaviour:
   votes: 0
   skybox: {fileID: 2100000, guid: 33c62717892294f56a9ebbf8df7c658c, type: 2}
   entities: []
-  audioM: {fileID: 1539869382}
-  thisSound: {fileID: 0}
+  thisSound: {fileID: 863131152}
 --- !u!82 &863131152
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3255,11 +3173,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -728.309326
+      value: -250
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 83.4120026
+      value: 83
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_SizeDelta.x
@@ -3271,7 +3189,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMin.y
@@ -3279,7 +3197,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMax.y
@@ -3317,7 +3235,7 @@ Prefab:
       propertyPath: m_Text
       value: Tutorial
       objectReference: {fileID: 0}
-    - target: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d, type: 2}
+    - target: {fileID: 0}
       propertyPath: thisAM
       value: 
       objectReference: {fileID: 1539869382}
@@ -3339,7 +3257,6 @@ GameObject:
   - 114: {fileID: 918905185}
   - 95: {fileID: 918905184}
   - 82: {fileID: 918905183}
-  - 114: {fileID: 918905188}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -3537,21 +3454,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 446232296}
   m_GameObject: {fileID: 918905181}
---- !u!114 &918905188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d,
-    type: 2}
-  m_PrefabInternal: {fileID: 446232296}
-  m_GameObject: {fileID: 918905181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1cfdde37303ae44bbb76dc7d2bfcb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisAM: {fileID: 0}
-  thisClip: {fileID: 8300000, guid: e9e61438290dd0545bd192046f645ab4, type: 3}
-  played: 0
 --- !u!1 &949017476
 GameObject:
   m_ObjectHideFlags: 0
@@ -3599,7 +3501,6 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -3776,8 +3677,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1539869382}
-        m_MethodName: changeBMV
-        m_Mode: 0
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
@@ -4010,7 +3911,6 @@ GameObject:
   - 114: {fileID: 994289486}
   - 95: {fileID: 994289485}
   - 82: {fileID: 994289484}
-  - 114: {fileID: 994289489}
   m_Layer: 5
   m_Name: tutr
   m_TagString: Untagged
@@ -4032,9 +3932,9 @@ RectTransform:
   - {fileID: 953485685}
   m_Father: {fileID: 1772028226}
   m_RootOrder: 1
-  m_AnchorMin: {x: 1, y: .5}
-  m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -728.309326, y: 83.4120026}
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -250, y: 83}
   m_SizeDelta: {x: 240, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!82 &994289484
@@ -4196,21 +4096,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 880213114}
   m_GameObject: {fileID: 994289482}
---- !u!114 &994289489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d,
-    type: 2}
-  m_PrefabInternal: {fileID: 880213114}
-  m_GameObject: {fileID: 994289482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1cfdde37303ae44bbb76dc7d2bfcb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisAM: {fileID: 1539869382}
-  thisClip: {fileID: 8300000, guid: e9e61438290dd0545bd192046f645ab4, type: 3}
-  played: 0
 --- !u!1 &1105135262
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,7 +4385,6 @@ GameObject:
   - 114: {fileID: 1198341774}
   - 95: {fileID: 1198341773}
   - 82: {fileID: 1198341772}
-  - 114: {fileID: 1198341777}
   m_Layer: 5
   m_Name: Story
   m_TagString: Untagged
@@ -4686,21 +4570,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 972356267}
   m_GameObject: {fileID: 1198341770}
---- !u!114 &1198341777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d,
-    type: 2}
-  m_PrefabInternal: {fileID: 972356267}
-  m_GameObject: {fileID: 1198341770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1cfdde37303ae44bbb76dc7d2bfcb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisAM: {fileID: 0}
-  thisClip: {fileID: 8300000, guid: e9e61438290dd0545bd192046f645ab4, type: 3}
-  played: 0
 --- !u!1 &1198462180
 GameObject:
   m_ObjectHideFlags: 0
@@ -4872,11 +4741,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -752.200012
+      value: -274
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -61.5880013
+      value: -62
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_SizeDelta.x
@@ -4888,7 +4757,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMin.y
@@ -4896,7 +4765,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMax.y
@@ -4958,7 +4827,7 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d, type: 2}
+    - target: {fileID: 0}
       propertyPath: thisAM
       value: 
       objectReference: {fileID: 1539869382}
@@ -5760,7 +5629,6 @@ MonoBehaviour:
   votes: 0
   skybox: {fileID: 0}
   entities: []
-  audioM: {fileID: 1539869382}
   thisSound: {fileID: 1459637420}
 --- !u!82 &1459637420
 AudioSource:
@@ -5883,7 +5751,6 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -6417,10 +6284,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9599faef172d5024ab69373747decffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisManage: {fileID: 1539869378}
   defaultVolume: 1
   bmvSliders: []
   fxSliders: []
+  maxPlay: 10
+  playing: []
 --- !u!1 &1546294436
 GameObject:
   m_ObjectHideFlags: 0
@@ -6952,8 +6820,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 600}
+  m_AnchoredPosition: {x: 4.74998665, y: 0}
+  m_SizeDelta: {x: -9.5, y: 600}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1772028227
 MonoBehaviour:
@@ -7301,7 +7169,6 @@ MonoBehaviour:
   votes: 0
   skybox: {fileID: 2100000, guid: 6663dd49fee03a743970c6a910557b45, type: 2}
   entities: []
-  audioM: {fileID: 1539869382}
   thisSound: {fileID: 1839506554}
 --- !u!82 &1839506554
 AudioSource:
@@ -7470,11 +7337,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -650.73999
+      value: -173
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 228.410004
+      value: 228
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_SizeDelta.x
@@ -7486,7 +7353,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMin.y
@@ -7494,7 +7361,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMax.y
@@ -7564,7 +7431,7 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d, type: 2}
+    - target: {fileID: 0}
       propertyPath: thisAM
       value: 
       objectReference: {fileID: 1539869382}
@@ -7586,7 +7453,6 @@ GameObject:
   - 114: {fileID: 1939039273}
   - 95: {fileID: 1939039272}
   - 82: {fileID: 1939039271}
-  - 114: {fileID: 1939039276}
   m_Layer: 5
   m_Name: Story
   m_TagString: Untagged
@@ -7772,21 +7638,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 2119668669}
   m_GameObject: {fileID: 1939039269}
---- !u!114 &1939039276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d,
-    type: 2}
-  m_PrefabInternal: {fileID: 2119668669}
-  m_GameObject: {fileID: 1939039269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1cfdde37303ae44bbb76dc7d2bfcb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisAM: {fileID: 0}
-  thisClip: {fileID: 8300000, guid: e9e61438290dd0545bd192046f645ab4, type: 3}
-  played: 0
 --- !u!1001 &1951065070
 Prefab:
   m_ObjectHideFlags: 0
@@ -8001,7 +7852,6 @@ GameObject:
   - 114: {fileID: 1956523169}
   - 95: {fileID: 1956523168}
   - 82: {fileID: 1956523167}
-  - 114: {fileID: 1956523172}
   m_Layer: 5
   m_Name: Story
   m_TagString: Untagged
@@ -8199,21 +8049,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 106304279}
   m_GameObject: {fileID: 1956523165}
---- !u!114 &1956523172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d,
-    type: 2}
-  m_PrefabInternal: {fileID: 106304279}
-  m_GameObject: {fileID: 1956523165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1cfdde37303ae44bbb76dc7d2bfcb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisAM: {fileID: 0}
-  thisClip: {fileID: 8300000, guid: e9e61438290dd0545bd192046f645ab4, type: 3}
-  played: 0
 --- !u!1 &1956787808
 GameObject:
   m_ObjectHideFlags: 0
@@ -8284,7 +8119,6 @@ GameObject:
   - 114: {fileID: 1977504054}
   - 95: {fileID: 1977504053}
   - 82: {fileID: 1977504052}
-  - 114: {fileID: 1977504057}
   m_Layer: 5
   m_Name: con
   m_TagString: Untagged
@@ -8306,9 +8140,9 @@ RectTransform:
   - {fileID: 1762355171}
   m_Father: {fileID: 1772028226}
   m_RootOrder: 2
-  m_AnchorMin: {x: 1, y: .5}
-  m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -752.200012, y: -61.5880013}
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -274, y: -62}
   m_SizeDelta: {x: 240, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!82 &1977504052
@@ -8482,21 +8316,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1235823773}
   m_GameObject: {fileID: 1977504050}
---- !u!114 &1977504057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1235823773}
-  m_GameObject: {fileID: 1977504050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1cfdde37303ae44bbb76dc7d2bfcb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisAM: {fileID: 1539869382}
-  thisClip: {fileID: 8300000, guid: e9e61438290dd0545bd192046f645ab4, type: 3}
-  played: 0
 --- !u!1 &1978510936
 GameObject:
   m_ObjectHideFlags: 0
@@ -8546,7 +8365,6 @@ MonoBehaviour:
   votes: 0
   skybox: {fileID: 2100000, guid: 16522f49031ff414abdf1f83f1b6a36c, type: 2}
   entities: []
-  audioM: {fileID: 1539869382}
   thisSound: {fileID: 1978510939}
 --- !u!82 &1978510939
 AudioSource:
@@ -8651,11 +8469,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -680.049988
+      value: -202
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -206.589996
+      value: -207
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_SizeDelta.x
@@ -8667,7 +8485,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMin.y
@@ -8675,7 +8493,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMax.y
@@ -8737,7 +8555,7 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11400006, guid: e5f145320dafb55428a51cf78713600d, type: 2}
+    - target: {fileID: 0}
       propertyPath: thisAM
       value: 
       objectReference: {fileID: 1539869382}
