@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class NetworkManeger : MonoBehaviour
 {
-
+		/*
 		public List<GameObject> players;
 		public int dethHeight;
 		public bool inGame;
@@ -29,7 +29,7 @@ public class NetworkManeger : MonoBehaviour
 		private string gameMode = "  ";
 		private bool spec = false;
 		GameObject specPlayer;
-		private PhotonView thisView;
+//		private PhotonView thisView;
 		int randomVote = 0;
 		private health myHp;
 
@@ -37,8 +37,8 @@ public class NetworkManeger : MonoBehaviour
 		void Start ()
 		{
 				version = "NetTest 0.2.2";
-				PhotonNetwork.player.name = PlayerPrefs.GetString ("UserName", "EnterNameHere");
-				thisView = this.GetComponent<PhotonView> ();
+				//PhotonNetwork.player.name = PlayerPrefs.GetString ("UserName", "EnterNameHere");
+				//thisView = this.GetComponent<PhotonView> ();
 				chatMessages = new List<string> ();
 				levels = FindObjectsOfType<level> ();
 				foreach (level l in levels) {
@@ -78,7 +78,7 @@ public class NetworkManeger : MonoBehaviour
 
 
 
-				}*/
+				}
 				
 				
 
@@ -408,7 +408,7 @@ public class NetworkManeger : MonoBehaviour
 				myPlayer = (GameObject)PhotonNetwork.Instantiate ("player", MySS.transform.position, MySS.transform.rotation, 0);
 				myHp = myPlayer.GetComponent <health> ();
 		myHp.enabled = true;
-		myPlayer.GetComponent<character> ().enabled = true;
+//		myPlayer.GetComponent<character> ().enabled = true;
 		myPlayer.transform.FindChild ("Camera").gameObject.SetActive(true);
 	
 				 
@@ -416,5 +416,5 @@ public class NetworkManeger : MonoBehaviour
 				players.Add (myPlayer);
 				currentLevel.camera1.SetActive (false);
 		}
-
+*/
 }

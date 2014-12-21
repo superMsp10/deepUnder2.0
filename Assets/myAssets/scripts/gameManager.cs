@@ -46,7 +46,7 @@ public class gameManager : MonoBehaviour
 		{		
 				
 				version = "NetTest 0.2.2";
-				PhotonNetwork.player.name = PlayerPrefs.GetString ("UserName", "EnterNameHere");
+//				PhotonNetwork.player.name = PlayerPrefs.GetString ("UserName", "EnterNameHere");
 				levels = FindObjectsOfType<level> ();
 				foreach (level l in levels) {
 						l.gameObject.SetActive (false);
@@ -211,15 +211,13 @@ public class gameManager : MonoBehaviour
 						SS = FindObjectsOfType<SpawnSpot> ();
 						
 						currMenu = "spawn";
-						if (PhotonNetwork.connected) {
+//						if (PhotonNetwork.connected) {
 
-						}
-						foreach (level l in levels) {
-								l.votes = 0;
-						}
-				
 				}
-			
+				foreach (level l in levels) {
+						l.votes = 0;
+				}
+				
 		}
 		
 		void OnDestroy ()

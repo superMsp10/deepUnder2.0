@@ -49,13 +49,9 @@
      <Compile Include="Assets\Pathfinding\Scenes\Scripts\JSGridPlayer.js" />
      <Compile Include="Assets\Pathfinding\Scenes\Scripts\JSGridPlayer2D.js" />
      <Compile Include="Assets\Pathfinding\Scripts\JSPath.js" />
-     <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
-     <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
-     <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Plugins\release_history.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />

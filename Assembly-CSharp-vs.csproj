@@ -46,84 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Assets_LD29\Scripts\Player.cs" />
-     <Compile Include="Assets\Assets_LD29\Scripts\Teleport.cs" />
-     <Compile Include="Assets\Assets_LD29\Scripts\character.cs" />
-     <Compile Include="Assets\Assets_LD29\Scripts\tilegen.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\Sample Supporting Emitters\DetonatorSprayHelper.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\Detonator.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorBurstEmitter.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorCloudRing.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorComponent.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorFireball.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorForce.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorGlow.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorHeatwave.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorLight.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorShockwave.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSmoke.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSound.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSparks.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSpray.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\TestScene\DetonatorTest.cs" />
-     <Compile Include="Assets\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
-     <Compile Include="Assets\Pathfinding\Scenes\Scripts\AI.cs" />
-     <Compile Include="Assets\Pathfinding\Scenes\Scripts\GridPlayer.cs" />
-     <Compile Include="Assets\Pathfinding\Scenes\Scripts\GridPlayer2D.cs" />
-     <Compile Include="Assets\Pathfinding\Scenes\Scripts\Lines.cs" />
-     <Compile Include="Assets\Pathfinding\Scenes\Scripts\SearchPlayerAI.cs" />
-     <Compile Include="Assets\Pathfinding\Scenes\Scripts\SetGrid.cs" />
-     <Compile Include="Assets\Pathfinding\Scenes\Scripts\SimpleAI.cs" />
-     <Compile Include="Assets\Pathfinding\Scenes\Scripts\SimpleAI2D.cs" />
-     <Compile Include="Assets\Pathfinding\Scenes\Scripts\TDEnemy.cs" />
-     <Compile Include="Assets\Pathfinding\Scenes\Scripts\TDManager.cs" />
-     <Compile Include="Assets\Pathfinding\Scenes\Scripts\WaypointPlayer.cs" />
-     <Compile Include="Assets\Pathfinding\Scripts\DynamicMapUpdate.cs" />
-     <Compile Include="Assets\Pathfinding\Scripts\DynamicTDGridObject.cs" />
-     <Compile Include="Assets\Pathfinding\Scripts\Node.cs" />
-     <Compile Include="Assets\Pathfinding\Scripts\NodeSearch.cs" />
-     <Compile Include="Assets\Pathfinding\Scripts\Pathfinder.cs" />
-     <Compile Include="Assets\Pathfinding\Scripts\Pathfinder2D.cs" />
-     <Compile Include="Assets\Pathfinding\Scripts\Pathfinding.cs" />
-     <Compile Include="Assets\Pathfinding\Scripts\Pathfinding2D.cs" />
-     <Compile Include="Assets\Pathfinding\Scripts\QueuePath.cs" />
-     <Compile Include="Assets\Pathfinding\Scripts\WaypointListNode.cs" />
-     <Compile Include="Assets\Pathfinding\Scripts\WaypointNode.cs" />
-     <Compile Include="Assets\Pathfinding\Scripts\WaypointPathfinder.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\CustomTypes.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Enums.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Extensions.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\FriendInfo.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\LoadbalancingPeer.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonClasses.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonLagSimulationGui.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonPlayer.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonStatsGui.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PingCloudRegions.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\RPC.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Room.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\RoomInfo.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\RpcIndexComponent.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\ServerSettings.cs" />
-     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\SocketUdp.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\ConnectAndJoinRandom.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\InRoomChat.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\InputToEvent.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\ManualPhotonViewAllocator.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\MoveByKeys.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\OnAwakeUsePhotonView.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\OnClickDestroy.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\OnClickInstantiate.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\OnClickLoadSomething.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\PointedAtGameObjectInfo.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\ServerTime.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SmoothSyncMovement.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TestDontDestroyOnLoad.cs" />
-     <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
      <Compile Include="Assets\myAssets\Mobs\Dummy\Dummy.cs" />
      <Compile Include="Assets\myAssets\scripts\AudioManager.cs" />
      <Compile Include="Assets\myAssets\scripts\BodyParts.cs" />
@@ -136,38 +58,26 @@
      <Compile Include="Assets\myAssets\scripts\Mob1.cs" />
      <Compile Include="Assets\myAssets\scripts\NPC.cs" />
      <Compile Include="Assets\myAssets\scripts\NetworkManeger.cs" />
+     <Compile Include="Assets\myAssets\scripts\Player.cs" />
      <Compile Include="Assets\myAssets\scripts\Resource.cs" />
      <Compile Include="Assets\myAssets\scripts\Sound.cs" />
      <Compile Include="Assets\myAssets\scripts\SpawnSpot.cs" />
+     <Compile Include="Assets\myAssets\scripts\Teleport.cs" />
+     <Compile Include="Assets\myAssets\scripts\character.cs" />
      <Compile Include="Assets\myAssets\scripts\collisionBoost.cs" />
      <Compile Include="Assets\myAssets\scripts\effectsManager.cs" />
      <Compile Include="Assets\myAssets\scripts\gameManager.cs" />
      <Compile Include="Assets\myAssets\scripts\health.cs" />
      <Compile Include="Assets\myAssets\scripts\level.cs" />
      <Compile Include="Assets\myAssets\scripts\tree.cs" />
-     <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
-     <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
-     <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
-     <None Include="Assets\Plugins\release_history.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\Assets_LD29\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
-     <None Include="Assets\Photon Unity Networking\readme.txt" />
-     <None Include="Assets\Plugins\Photon3Unity3D.xml" />
-     <None Include="Assets\Photon Unity Networking\changelog.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>M:/ProducedGames/deepUnder2.0/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="Photon3Unity3D">
- <HintPath>M:/ProducedGames/deepUnder2.0/Assets/Plugins/Photon3Unity3D.dll</HintPath>
- </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{49564D5C-9626-8F7F-5F4E-C2716F7900A1}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

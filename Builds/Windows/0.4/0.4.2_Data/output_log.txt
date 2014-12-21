@@ -21,28 +21,12 @@ Platform assembly: M:\ProducedGames\deepUnder2.0\Builds\Windows\0.4\0.4.2_Data\M
 Loading M:\ProducedGames\deepUnder2.0\Builds\Windows\0.4\0.4.2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: M:\ProducedGames\deepUnder2.0\Builds\Windows\0.4\0.4.2_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading M:\ProducedGames\deepUnder2.0\Builds\Windows\0.4\0.4.2_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.088 seconds
+- Completed reload, in  0.099 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: M:\ProducedGames\deepUnder2.0\Builds\Windows\0.4\0.4.2_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: M:\ProducedGames\deepUnder2.0\Builds\Windows\0.4\0.4.2_Data\Managed\System.dll (this message is harmless)
-hi
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-hi
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-hi
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-hi
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
 Can't execute Disconnect() while not connected. Nothing changed. State: PeerCreated
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
