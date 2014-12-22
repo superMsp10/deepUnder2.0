@@ -11,9 +11,8 @@ public class gameManager : MonoBehaviour
 		protected level currentLevel;
 		protected level start;
 		public level[] levels;
-		public bool loadTest = false;
 		public bool dead = false;
-		public string currMenu = "null";
+		//public string currMenu = "null";
 		public Camera currCamera;
 		
 		
@@ -51,8 +50,8 @@ public class gameManager : MonoBehaviour
 				foreach (level l in levels) {
 						l.gameObject.SetActive (false);
 				}
-				if (loadTest)
-						changeLvl ("testLevel");
+				if (currentLevel != null)
+						levelex (currentLevel);
 				else
 						changeLvl ("startMenu");
 
@@ -67,17 +66,16 @@ public class gameManager : MonoBehaviour
 				}
 		}
 
-		public void changeMenu (string menu)
-		{
-
-				currMenu = menu;
-		}
+		//public void changeMenu (string menu)
+		//{
+		//		currMenu = menu;
+		//	}
 
 		void OnGUI ()
 		{
 
-				if (!inGame) {
-						/*if (currMenu == "null") {
+				/*if (!inGame) {
+						if (currMenu == "null") {
 								GUILayout.BeginArea (new Rect (0, 0, Screen.width, Screen.height));
 								GUILayout.BeginHorizontal ();
 								GUILayout.FlexibleSpace ();
@@ -145,8 +143,8 @@ public class gameManager : MonoBehaviour
 						(new Vector2 (0, 500), ForceMode2D.Impulse);
 				}
 			}
-			 */
 				}
+		 */
 				
 			
 					
@@ -210,7 +208,7 @@ public class gameManager : MonoBehaviour
 						dead = true;
 						SS = FindObjectsOfType<SpawnSpot> ();
 						
-						currMenu = "spawn";
+//						currMenu = "spawn";
 //						if (PhotonNetwork.connected) {
 
 				}
