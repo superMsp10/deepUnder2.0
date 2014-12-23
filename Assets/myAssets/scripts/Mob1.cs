@@ -59,8 +59,7 @@ public class Mob1 : Entity
 		void FixedUpdate ()
 		{
 		
-				bool ground = Physics2D.OverlapCircle (groundCheck.position, groundRad, whatGround);
-
+				bool ground = Physics2D.Linecast (transform.position, groundCheck.position, whatGround); 
 				if (!grounded && ground) {
 						landed = true;
 						grounded = true;

@@ -63,6 +63,7 @@
      <Compile Include="Assets\myAssets\scripts\Sound.cs" />
      <Compile Include="Assets\myAssets\scripts\SpawnSpot.cs" />
      <Compile Include="Assets\myAssets\scripts\Teleport.cs" />
+     <Compile Include="Assets\myAssets\scripts\Tihs.cs" />
      <Compile Include="Assets\myAssets\scripts\character.cs" />
      <Compile Include="Assets\myAssets\scripts\collisionBoost.cs" />
      <Compile Include="Assets\myAssets\scripts\effectsManager.cs" />

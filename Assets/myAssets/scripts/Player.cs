@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
 		void FixedUpdate ()
 		{
 
-				bool ground = Physics2D.OverlapCircle (groundCheck.position, groundRad, whatGround);
+				bool ground = Physics2D.Linecast (transform.position, groundCheck.position, whatGround); 
 				if (!grounded && ground) {
 						landed = true;
 						grounded = true;
@@ -123,7 +123,7 @@ public class Player : MonoBehaviour
 				}
 				if (other.gameObject.tag == "Destroyable") {
 						Resource temp = other.GetComponent<Resource> ();
-						temp.dropMadeOf (Random.Range(0,5));
+						temp.dropMadeOf (Random.Range (0, 5));
 				}
 	
 		}

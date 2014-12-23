@@ -8,10 +8,12 @@ public class gameManager : MonoBehaviour
 
 		public static gameManager thisM;
 		public bool inGame = false;
-		protected level currentLevel;
+		public level currentLevel;
 		protected level start;
 		public level[] levels;
 		public bool dead = false;
+		public bool loadDefault = false;
+
 		//public string currMenu = "null";
 		public Camera currCamera;
 		
@@ -50,7 +52,7 @@ public class gameManager : MonoBehaviour
 				foreach (level l in levels) {
 						l.gameObject.SetActive (false);
 				}
-				if (currentLevel != null)
+				if (currentLevel != null && loadDefault)
 						levelex (currentLevel);
 				else
 						changeLvl ("startMenu");
@@ -184,6 +186,7 @@ public class gameManager : MonoBehaviour
 				foreach (level l in levels) {
 						if (l.name == i) {
 								levelex (l);
+								
 						}
 				}
 		}
@@ -199,19 +202,15 @@ public class gameManager : MonoBehaviour
 				currentLevel = lev;
 				currentLevel.gameObject.SetActive (true);
 				currentLevel.camera1.SetActive (true);
-				currentLevel.startLevel ();
 				currCamera = currentLevel.camera1.camera;
 				RenderSettings.skybox = currentLevel.skybox;
 
-		
 				if (currentLevel.spawnable) {
 						dead = true;
 						SS = FindObjectsOfType<SpawnSpot> ();
 						
-//						currMenu = "spawn";
-//						if (PhotonNetwork.connected) {
-
 				}
+				currentLevel.startLevel ();
 				foreach (level l in levels) {
 						l.votes = 0;
 				}

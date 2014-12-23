@@ -2,15 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class level : MonoBehaviour
+public  class level : MonoBehaviour
 {
 		public GameObject camera1;
 		public bool spawnable = true;
 		public int votes;
 		public Material skybox;
 		public List<Entity> entities;
-		private AudioManager audioM;
-		private gameManager thisManage;
+		protected AudioManager audioM;
+		protected gameManager thisManage;
 		public AudioSource thisSound;
 
 
@@ -31,14 +31,14 @@ public class level : MonoBehaviour
 
 		}
 			
-		public void startLevel ()
+		public virtual  void startLevel ()
 		{
-
+				Debug.Log ("HI, from Levl");
 				//thisSound.enabled = true;
 
 		}
 
-		public void endLevel ()
+		public  virtual void endLevel ()
 		{
 		
 				thisSound.enabled = false;
