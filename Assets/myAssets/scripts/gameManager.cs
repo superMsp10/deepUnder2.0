@@ -171,8 +171,7 @@ public class gameManager : MonoBehaviour
 				currCamera = myPlayer.GetComponentInChildren<Camera> ();
 				myHp = myPlayer.GetComponent<health> ();
 
-
-
+				myPlayer.GetComponent<Entity> ().thisLevel = currentLevel;
 		}
 
 		public void changeLvl (int i)

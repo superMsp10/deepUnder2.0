@@ -11,8 +11,6 @@ public class mobAtributes
 		public float moveForce = 5;
 		public int blunt, point, slash;
 		public int jump = 100;
-		public int jumpLimit = 1;
-		public int jumped = 0;
 		public int optTargetRange = 30;
 		public bool canFly = false;
 
@@ -39,8 +37,13 @@ public class Mob1 : Entity
 
 		void Start ()
 		{
+				thisManage = gameManager.thisM;
 				thisLevel.addEntity (this);
 				rigidbody2D.centerOfMass = centerOfMass;
+				
+
+
+	
 
 
 
@@ -51,8 +54,7 @@ public class Mob1 : Entity
 
 				if (thisAttributes.HP < 0)
 						DestroyEntity (0);
-				if (grounded)
-						thisAttributes.jumped = 0;
+						
 
 		}
 		
@@ -63,6 +65,7 @@ public class Mob1 : Entity
 				if (!grounded && ground) {
 						landed = true;
 						grounded = true;
+					
 			
 			
 				} else if (!ground) {
@@ -83,7 +86,7 @@ public class Mob1 : Entity
 				*/
 		}
 	
-		public void takeDmg (int damage, string type)
+		public virtual void takeDmg (int damage, string type)
 		{
 				if (type == "blunt") {
 						thisAttributes.HP -= (damage - thisAttributes.blunt);
@@ -101,7 +104,7 @@ public class Mob1 : Entity
 
 		}
 		
-		public void flip ()
+		public virtual void flip ()
 		{
 				turnR = !turnR;
 				Vector3 scale = transform.localScale;
@@ -109,7 +112,7 @@ public class Mob1 : Entity
 				transform.localScale = scale;
 		}
 		
-		public void moveX (float moveX)
+		public virtual void moveX (float moveX)
 		{
 				if (grounded) {
 						if (Mathf.Abs (rigidbody2D.velocity.x) < thisAttributes.maxSped)
@@ -118,11 +121,13 @@ public class Mob1 : Entity
 				}
 		}
 			
-		public void jump (int jumpF)
+		public virtual void jump (int jumpF)
 		{
-				if (thisAttributes.jumped < thisAttributes.jumpLimit) {
+
+				if (grounded) {
 						rigidbody2D.AddForce (new Vector2 (0, jumpF));
-						thisAttributes.jumped++;
+					
+
 				} 
 
 		}

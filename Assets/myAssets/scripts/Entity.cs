@@ -13,7 +13,7 @@ public class DestroyDetails
 
 }
 
-public class Entity : MonoBehaviour
+public  class Entity : MonoBehaviour
 {
 
 		public DestroyDetails desD;

@@ -17,7 +17,6 @@ public class Dummy : Enemy
 		
 				if (!grounded && ground) {
 						landed = true;
-						thisAttributes.jumped = 0;
 						grounded = true;
 			
 			

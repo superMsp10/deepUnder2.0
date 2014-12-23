@@ -858,6 +858,22 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -21.7000008
       objectReference: {fileID: 0}
+    - target: {fileID: 406688, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -60.4000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406688, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
+      propertyPath: gizmoSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406688, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
+      propertyPath: icon
+      value: Bed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806688, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 0ad2be2344560a44fa82fdd93d082482, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
   m_RootGameObject: {fileID: 824517288}
@@ -5757,7 +5773,7 @@ EdgeCollider2D:
   m_PrefabInternal: {fileID: 197545404}
   m_GameObject: {fileID: 1038067373}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0ad2be2344560a44fa82fdd93d082482, type: 2}
   m_IsTrigger: 0
   m_Points:
   - {x: -5.12000132, y: .700958252}
@@ -8879,7 +8895,7 @@ MonoBehaviour:
   dead: 1
   loadDefault: 1
   currCamera: {fileID: 0}
-  myPlayerIns: {fileID: 100004, guid: bc7911ac35129c047904b854ed18c411, type: 2}
+  myPlayerIns: {fileID: 100004, guid: c1ea0b1ed06925648a41f6f4e43f359a, type: 2}
   myPlayer: {fileID: 0}
 --- !u!224 &1539869381
 RectTransform:
@@ -9106,7 +9122,7 @@ Transform:
   m_PrefabInternal: {fileID: 197545404}
   m_GameObject: {fileID: 1559457818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -60.4000015, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1826948088}
@@ -9124,6 +9140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamId: 0
+  icon: Bed
 --- !u!23 &1559457821
 Renderer:
   m_ObjectHideFlags: 0
@@ -10603,6 +10620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamId: 0
+  icon: 
 --- !u!23 &1888292612
 Renderer:
   m_ObjectHideFlags: 0
@@ -11679,6 +11697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamId: 0
+  icon: 
 --- !u!23 &1959316738
 Renderer:
   m_ObjectHideFlags: 0

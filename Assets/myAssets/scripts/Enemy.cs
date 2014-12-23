@@ -27,7 +27,6 @@ public class Enemy : Mob1
 		
 				if (!grounded && ground) {
 						landed = true;
-						thisAttributes.jumped = 0;
 						grounded = true;
 			
 			
