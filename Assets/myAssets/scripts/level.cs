@@ -33,7 +33,6 @@ public  class level : MonoBehaviour
 			
 		public virtual  void startLevel ()
 		{
-				Debug.Log ("HI, from Levl");
 				//thisSound.enabled = true;
 
 		}

@@ -8,7 +8,6 @@ public class Tihs : level
 		{
 		
 				//thisSound.enabled = true;
-				Debug.Log ("Hi, from tihs");
 				thisManage.spawn ();
 
 		
