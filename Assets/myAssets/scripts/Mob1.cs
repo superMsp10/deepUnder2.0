@@ -106,7 +106,7 @@ public class Mob1 : Entity
 		public virtual void updateAnim ()
 		{
 				thisAnim.SetBool ("grounded", grounded);
-				thisAnim.SetFloat ("vSpeed", Mathf.Abs (rigidbody2D.velocity.y));
+				thisAnim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 				thisAnim.SetFloat ("hSpeed", Mathf.Abs (rigidbody2D.velocity.x));
 
 
