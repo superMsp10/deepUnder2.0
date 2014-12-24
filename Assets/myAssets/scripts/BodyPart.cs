@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BodyPart : Entity
 {
-		public Mob thisMob;
+		public Mob1 thisMob;
 		
 }
 

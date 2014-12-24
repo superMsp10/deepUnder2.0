@@ -35,6 +35,7 @@ public class Mob1 : Entity
 		public Vector2 centerOfMass;
 		public LayerMask whatGround;
 		public Animator thisAnim;
+		public BodyPart[] bodyParts;
 
 		void Start ()
 		{
@@ -50,6 +51,10 @@ public class Mob1 : Entity
 				}
 				if (groundCheck == null)
 						Debug.Log ("no feets included");
+				bodyParts = GetComponentsInChildren<BodyPart> ();
+				foreach (BodyPart b in bodyParts) {
+						b.thisLevel = thisLevel;
+				}
 		}
 		
 		void Update ()
@@ -141,10 +146,16 @@ public class Mob1 : Entity
 		
 		public virtual void moveX (float moveX)
 		{
-				if (grounded) {
+
+				if (thisAttributes.canFly) {
 						if (Mathf.Abs (rigidbody2D.velocity.x) < thisAttributes.maxSped)
 								rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x + 
 										(moveX * thisAttributes.moveForce), rigidbody2D.velocity.y);
+				} else if (grounded) {
+						if (Mathf.Abs (rigidbody2D.velocity.x) < thisAttributes.maxSped)
+								rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x + 
+										(moveX * thisAttributes.moveForce), rigidbody2D.velocity.y);
+
 				}
 		}
 			
@@ -169,13 +180,31 @@ public class Mob1 : Entity
 			                                       teleTo.y - teleSpot.yOff, teleTo.z - teleSpot.zOff);
 						
 				}
+				if (other.gameObject.tag == "boost") {
+						collisionBoost thisBoost = other.gameObject.GetComponent<collisionBoost> ();
+						if (thisBoost == null)
+								Debug.LogError ("no collision boost script attached");
+						Vector2 force = new Vector2 (rigidbody2D.velocity.x * thisBoost.boostAmount
+			                             , rigidbody2D.velocity.y * (-20 * thisBoost.boostAmount));
+						rigidbody2D.AddForce (force);
+					
+
+				}
 		
 				
+				if (other.gameObject.tag == "Cannon") {
+						cannon thisCannon = other.gameObject.GetComponent<cannon> ();
+						if (thisCannon == null)
+								Debug.LogError ("no cannon script attached");
+						Debug.LogError ("hi");
+						thisCannon.shoot ();
 			
-				
+			
+				}
+		
 		
 		}
-
+	
 		void OnCollisionEnter2D (Collision2D other)
 		{
 
@@ -190,12 +219,7 @@ public class Mob1 : Entity
 								, Random.Range (0, 90) * 100));
 				}
 
-				if (other.gameObject.tag == "boost") {
-						collisionBoost thisBoost = other.gameObject.GetComponent<collisionBoost> ();
-						Vector2 force = new Vector2 (rigidbody2D.velocity.x * (-1 * thisBoost.boostAmount)
-			                             , rigidbody2D.velocity.y * (-20 * thisBoost.boostAmount));
-						rigidbody2D.AddForce (force);
-				}
+				
 
 
 		}
