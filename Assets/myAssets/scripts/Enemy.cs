@@ -23,7 +23,20 @@ public class Enemy : Mob1
 
 		void FixedUpdate ()
 		{
-				bool ground = Physics2D.OverlapCircle (groundCheck.position, groundRad, whatGround);
+				int yGround = 0;
+				int nGround = 0;
+				foreach (Transform t in groundCheck) {
+						if (Physics2D.Linecast (transform.position, t.position, whatGround))
+								yGround++;
+						else
+								nGround ++;
+				}
+				bool ground;
+				if (yGround > nGround)
+						ground = true;
+				else
+						ground = false;
+
 		
 				if (!grounded && ground) {
 						landed = true;

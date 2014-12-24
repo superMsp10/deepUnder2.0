@@ -12,6 +12,7 @@ public  class level : MonoBehaviour
 		protected AudioManager audioM;
 		protected gameManager thisManage;
 		public AudioSource thisSound;
+		public int deathHeight = -200;
 
 
 		// Use this for initialization

@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\myAssets\Mobs\Dummy\Dummy.cs" />
      <Compile Include="Assets\myAssets\scripts\AudioManager.cs" />
+     <Compile Include="Assets\myAssets\scripts\BodyPart.cs" />
      <Compile Include="Assets\myAssets\scripts\BodyParts.cs" />
      <Compile Include="Assets\myAssets\scripts\Branch.cs" />
      <Compile Include="Assets\myAssets\scripts\Destroy.cs" />

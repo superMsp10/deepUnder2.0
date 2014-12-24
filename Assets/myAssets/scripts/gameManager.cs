@@ -171,7 +171,11 @@ public class gameManager : MonoBehaviour
 				currCamera = myPlayer.GetComponentInChildren<Camera> ();
 				myHp = myPlayer.GetComponent<health> ();
 
-				myPlayer.GetComponent<Entity> ().thisLevel = currentLevel;
+				Entity e = myPlayer.GetComponent<Entity> ();
+				if (e == null)
+						Debug.LogError ("cannot spawn not a entity");
+				else
+						e.thisLevel = currentLevel;
 		}
 
 		public void changeLvl (int i)

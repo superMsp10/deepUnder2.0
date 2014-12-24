@@ -31,22 +31,25 @@ public class Mob1 : Entity
 		protected bool turnR = false;
 		//---------------------------------------
 		public float groundRad = 0.16f;
-		public Transform groundCheck;
+		public Transform[] groundCheck;
 		public Vector2 centerOfMass;
 		public LayerMask whatGround;
+		public Animator thisAnim;
 
 		void Start ()
 		{
+				
 				thisManage = gameManager.thisM;
 				thisLevel.addEntity (this);
 				rigidbody2D.centerOfMass = centerOfMass;
-				
-
-
-	
-
-
-
+				if (thisAnim == null) {
+						thisAnim = GetComponent<Animator> ();
+				}
+				if (thisAnim == null) {
+						Debug.LogError ("no animator is provided");
+				}
+				if (groundCheck == null)
+						Debug.Log ("no feets included");
 		}
 		
 		void Update ()
@@ -54,14 +57,28 @@ public class Mob1 : Entity
 
 				if (thisAttributes.HP < 0)
 						DestroyEntity (0);
+				if (transform.position.y < thisLevel.deathHeight)
+						thisAttributes.HP = 0;
 						
 
 		}
 		
 		void FixedUpdate ()
 		{
-		
-				bool ground = Physics2D.Linecast (transform.position, groundCheck.position, whatGround); 
+				int yGround = 0;
+				int nGround = 0;
+				foreach (Transform t in groundCheck) {
+						if (Physics2D.Linecast (transform.position, t.position, whatGround))
+								yGround++;
+						else
+								nGround ++;
+				}
+				bool ground;
+				if (yGround > nGround)
+						ground = true;
+				else
+						ground = false;
+
 				if (!grounded && ground) {
 						landed = true;
 						grounded = true;
@@ -85,7 +102,17 @@ public class Mob1 : Entity
 						rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x + (move * moveForce), rigidbody2D.velocity.y);
 				*/
 		}
-	
+
+		public virtual void updateAnim ()
+		{
+				thisAnim.SetBool ("grounded", grounded);
+				thisAnim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
+				thisAnim.SetFloat ("hSpeed", rigidbody2D.velocity.x);
+
+
+
+		}
+
 		public virtual void takeDmg (int damage, string type)
 		{
 				if (type == "blunt") {
