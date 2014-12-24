@@ -59,7 +59,7 @@ public class Mob1 : Entity
 						DestroyEntity (0);
 				if (transform.position.y < thisLevel.deathHeight)
 						thisAttributes.HP = 0;
-						
+				updateAnim ();
 
 		}
 		
@@ -106,8 +106,8 @@ public class Mob1 : Entity
 		public virtual void updateAnim ()
 		{
 				thisAnim.SetBool ("grounded", grounded);
-				thisAnim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
-				thisAnim.SetFloat ("hSpeed", rigidbody2D.velocity.x);
+				thisAnim.SetFloat ("vSpeed", Mathf.Abs (rigidbody2D.velocity.y));
+				thisAnim.SetFloat ("hSpeed", Mathf.Abs (rigidbody2D.velocity.x));
 
 
 

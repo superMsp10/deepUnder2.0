@@ -78,6 +78,8 @@ public class Player : MonoBehaviour
 				anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 
 				float move = Input.GetAxis ("Horizontal");
+
+
 				if (move < 0 && turnR) {
 						flip ();
 				} else if (move > 0 && !turnR) {

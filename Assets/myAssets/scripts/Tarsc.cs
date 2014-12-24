@@ -17,7 +17,7 @@ public class Tarsc : Mob1
 			
 			
 				}
-				
+				updateAnim ();
 			
 		}
 
