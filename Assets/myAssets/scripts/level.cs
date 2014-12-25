@@ -49,8 +49,11 @@ public  class level : MonoBehaviour
 		// Update is called once per frame
 		public void addEntity (Entity e)
 		{
+				if (!e.customHierarchy) {
+		
+						e.gameObject.transform.parent = transform.FindChild ("Entities");
+				}
 
-				e.gameObject.transform.parent = transform.FindChild ("Entities");
 				entities.Add (e);
 
 

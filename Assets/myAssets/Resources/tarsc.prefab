@@ -78,7 +78,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 405220}
-  - 114: {fileID: 11464606}
   m_Layer: 9
   m_Name: BodyParts
   m_TagString: Untagged
@@ -185,7 +184,6 @@ GameObject:
   - 4: {fileID: 405232}
   - 58: {fileID: 5833376}
   - 114: {fileID: 11464620}
-  - 114: {fileID: 11464598}
   m_Layer: 9
   m_Name: FrontParts
   m_TagString: BodyPart
@@ -296,7 +294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &105246
 GameObject:
   m_ObjectHideFlags: 1
@@ -758,6 +756,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisAttributes:
     HP: 0
     Dmg: 0
@@ -767,6 +766,7 @@ MonoBehaviour:
     point: 0
     slash: 0
     jump: 5500
+    moving: 0
     optTargetRange: 30
     canFly: 1
   grounded: 0
@@ -779,6 +779,9 @@ MonoBehaviour:
     m_Bits: 4096
   thisAnim: {fileID: 0}
   bodyParts: []
+  frontBody: {fileID: 405232}
+  sideBody: {fileID: 405244}
+  detectedFacing: 1
 --- !u!114 &11464590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -795,6 +798,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
 --- !u!114 &11464592
 MonoBehaviour:
@@ -812,6 +816,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
 --- !u!114 &11464594
 MonoBehaviour:
@@ -829,6 +834,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
 --- !u!114 &11464596
 MonoBehaviour:
@@ -846,24 +852,8 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
---- !u!114 &11464598
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 105232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0704ac097e09374184929b5c78a6389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desD:
-    destroyOnAwake: 0
-    awakeDestroyDelay: 0
-  thisLevel: {fileID: 0}
-  thisManage: {fileID: 0}
-  thisMob: {fileID: 0}
 --- !u!114 &11464600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -880,6 +870,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
 --- !u!114 &11464602
 MonoBehaviour:
@@ -897,6 +888,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
 --- !u!114 &11464604
 MonoBehaviour:
@@ -914,23 +906,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
-  thisMob: {fileID: 11414438}
---- !u!114 &11464606
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 105220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0704ac097e09374184929b5c78a6389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desD:
-    destroyOnAwake: 0
-    awakeDestroyDelay: 0
-  thisLevel: {fileID: 0}
-  thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
 --- !u!114 &11464608
 MonoBehaviour:
@@ -948,6 +924,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
 --- !u!114 &11464610
 MonoBehaviour:
@@ -965,6 +942,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
 --- !u!114 &11464612
 MonoBehaviour:
@@ -982,6 +960,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
 --- !u!114 &11464614
 MonoBehaviour:
@@ -999,6 +978,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
 --- !u!114 &11464616
 MonoBehaviour:
@@ -1016,6 +996,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
 --- !u!114 &11464618
 MonoBehaviour:
@@ -1033,6 +1014,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
 --- !u!114 &11464620
 MonoBehaviour:
@@ -1050,6 +1032,7 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 1
   thisMob: {fileID: 11414438}
 --- !u!124 &12400000
 Behaviour:

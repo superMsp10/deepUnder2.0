@@ -15,8 +15,13 @@ public class cannon : Entity
 				transform.LookAt (target);
 				Collider2D[] col = Physics2D.OverlapCircleAll (target.position, power, shootWhat);
 				foreach (Collider2D c in col) {
-
-						c.rigidbody2D.AddForce (transform.forward * power);
+						if (c.gameObject.tag == "BodyPart") {
+								BodyPart b = c.gameObject.GetComponent<BodyPart> ();
+								if (b == null)
+										Debug.Log ("Tagged as bodypart but no bodyscript ");
+								b.thisMob.rigidbody2D
+					.AddForce (transform.forward * power);
+						}
 				}
 		}
 

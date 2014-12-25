@@ -14,11 +14,22 @@ public class Tarsc : Mob1
 						thisAttributes.HP = 0;
 				if (Input.GetKeyDown (KeyCode.Space)) {
 						jump (thisAttributes.jump);
-			
-			
 				}
+				if (Mathf.Abs (rigidbody2D.velocity.x) > 0.1)
+						thisAttributes.moving = true;
+				else
+						thisAttributes.moving = false;
 				updateAnim ();
-			
+
+				if (detectedFacing) {
+						if (thisAttributes.moving && rigidbody2D.velocity.y > -20) {
+								frontBody.gameObject.SetActive (false);
+								sideBody.gameObject.SetActive (true);
+						} else {
+								sideBody.gameObject.SetActive (false);
+								frontBody.gameObject.SetActive (true);
+						}
+				}			
 		}
 
 		void FixedUpdate ()

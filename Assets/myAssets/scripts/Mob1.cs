@@ -11,6 +11,7 @@ public class mobAtributes
 		public float moveForce = 5;
 		public int blunt, point, slash;
 		public int jump = 100;
+		public bool moving = false;
 		public int optTargetRange = 30;
 		public bool canFly = false;
 
@@ -36,6 +37,9 @@ public class Mob1 : Entity
 		public LayerMask whatGround;
 		public Animator thisAnim;
 		public BodyPart[] bodyParts;
+		public Transform frontBody;
+		public Transform sideBody;
+		public bool detectedFacing = false;
 
 		void Start ()
 		{
@@ -64,8 +68,20 @@ public class Mob1 : Entity
 						DestroyEntity (0);
 				if (transform.position.y < thisLevel.deathHeight)
 						thisAttributes.HP = 0;
+				if (grounded && Mathf.Abs (rigidbody2D.velocity.x) > 0.1)
+						thisAttributes.moving = true;
+				else
+						thisAttributes.moving = false;
 				updateAnim ();
-
+				if (detectedFacing) {
+						if (thisAttributes.moving) {
+								frontBody.gameObject.SetActive (false);
+								sideBody.gameObject.SetActive (true);
+						} else {
+								sideBody.gameObject.SetActive (false);
+								frontBody.gameObject.SetActive (true);
+						}
+				}
 		}
 		
 		void FixedUpdate ()
@@ -196,7 +212,6 @@ public class Mob1 : Entity
 						cannon thisCannon = other.gameObject.GetComponent<cannon> ();
 						if (thisCannon == null)
 								Debug.LogError ("no cannon script attached");
-						Debug.LogError ("hi");
 						thisCannon.shoot ();
 			
 			

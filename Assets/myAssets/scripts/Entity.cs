@@ -19,6 +19,7 @@ public  class Entity : MonoBehaviour
 		public DestroyDetails desD;
 		public level thisLevel;
 		public gameManager thisManage;
+		public bool customHierarchy = false;
 
 		void Start ()
 		{
