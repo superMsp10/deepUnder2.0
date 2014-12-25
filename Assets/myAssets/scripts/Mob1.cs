@@ -200,8 +200,8 @@ public class Mob1 : Entity
 						collisionBoost thisBoost = other.gameObject.GetComponent<collisionBoost> ();
 						if (thisBoost == null)
 								Debug.LogError ("no collision boost script attached");
-						Vector2 force = new Vector2 (rigidbody2D.velocity.x * thisBoost.boostAmount
-			                             , rigidbody2D.velocity.y * (-20 * thisBoost.boostAmount));
+						Vector2 force = new Vector2 (rigidbody2D.velocity.x * ((thisBoost.multiX) * thisBoost.boostAmount)
+			                             , rigidbody2D.velocity.y * ((-thisBoost.multiY) * thisBoost.boostAmount));
 						rigidbody2D.AddForce (force);
 					
 
