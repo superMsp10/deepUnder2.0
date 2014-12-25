@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &100000
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -314,6 +314,54 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &150098
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 450098}
+  - 114: {fileID: 11450098}
+  m_Layer: 9
+  m_Name: feets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &150100
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 450100}
+  - 114: {fileID: 11450100}
+  m_Layer: 9
+  m_Name: feets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &189410
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 489410}
+  - 114: {fileID: 11489410}
+  m_Layer: 9
+  m_Name: feets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -321,11 +369,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.3900001, z: 0}
+  m_LocalPosition: {x: -.810000002, y: -2.3900001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400004}
-  m_RootOrder: 1
+  m_Father: {fileID: 405232}
+  m_RootOrder: 6
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -349,7 +397,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
-  - {fileID: 400000}
   - {fileID: 405220}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -378,7 +425,7 @@ Transform:
   - {fileID: 405232}
   - {fileID: 405244}
   m_Father: {fileID: 400004}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &405222
 Transform:
   m_ObjectHideFlags: 1
@@ -455,6 +502,8 @@ Transform:
   - {fileID: 405224}
   - {fileID: 405226}
   - {fileID: 405242}
+  - {fileID: 400000}
+  - {fileID: 489410}
   m_Father: {fileID: 405220}
   m_RootOrder: 0
 --- !u!4 &405234
@@ -533,6 +582,8 @@ Transform:
   - {fileID: 405228}
   - {fileID: 405238}
   - {fileID: 405240}
+  - {fileID: 450100}
+  - {fileID: 450098}
   m_Father: {fileID: 405220}
   m_RootOrder: 1
 --- !u!4 &405246
@@ -547,6 +598,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 405232}
   m_RootOrder: 0
+--- !u!4 &450098
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.30400002, y: -2.3900001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 405244}
+  m_RootOrder: 7
+--- !u!4 &450100
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150100}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .349999994, y: -2.3900001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 405244}
+  m_RootOrder: 6
+--- !u!4 &489410
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .779999971, y: -2.3900001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 405232}
+  m_RootOrder: 7
 --- !u!20 &2000000
 Camera:
   m_ObjectHideFlags: 1
@@ -603,8 +690,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .551999092
-  m_Center: {x: 0, y: -1.72000003}
+  m_Radius: .639999986
+  m_Center: {x: 0, y: -1.57000005}
 --- !u!58 &5833378
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -761,7 +848,7 @@ MonoBehaviour:
   thisAttributes:
     HP: 0
     Dmg: 0
-    maxSped: 100
+    maxSped: 50
     moveForce: 1
     blunt: 0
     point: 0
@@ -774,6 +861,9 @@ MonoBehaviour:
   groundRad: .200000003
   groundCheck:
   - {fileID: 400000}
+  - {fileID: 489410}
+  - {fileID: 450100}
+  - {fileID: 450098}
   centerOfMass: {x: 0, y: 0}
   whatGround:
     serializedVersion: 2
@@ -783,6 +873,30 @@ MonoBehaviour:
   frontBody: {fileID: 405232}
   sideBody: {fileID: 405244}
   detectedFacing: 1
+--- !u!114 &11450098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8cd8911911edf42a6f8e4ea2003620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: feets
+--- !u!114 &11450100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8cd8911911edf42a6f8e4ea2003620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: feets
 --- !u!114 &11464590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1041,6 +1155,18 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8cd8911911edf42a6f8e4ea2003620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: feets
+--- !u!114 &11489410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189410}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e8cd8911911edf42a6f8e4ea2003620, type: 3}

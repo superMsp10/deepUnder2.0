@@ -33,6 +33,7 @@ public class gameManager : MonoBehaviour
 		private string code = "";
 		private string status = "[newbie]";
 		private health myHp;
+		private CameraManeger thisCam;
 
 		void Awake ()
 		{
@@ -45,7 +46,7 @@ public class gameManager : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{		
-				
+				thisCam = CameraManeger.thisCamera;
 				version = "NetTest 0.2.2";
 //				PhotonNetwork.player.name = PlayerPrefs.GetString ("UserName", "EnterNameHere");
 				levels = FindObjectsOfType<level> ();
@@ -170,6 +171,7 @@ public class gameManager : MonoBehaviour
 				myPlayer.SetActive (true);
 				currCamera = myPlayer.GetComponentInChildren<Camera> ();
 				myHp = myPlayer.GetComponent<health> ();
+				thisCam.addPlayer (currCamera);
 
 				Entity e = myPlayer.GetComponent<Entity> ();
 				if (e == null)

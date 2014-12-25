@@ -41,12 +41,19 @@ public class Tarsc : Mob1
 								yGround++;
 						else
 								nGround ++;
+
+
 				}
+			
+
 				bool ground;
-				if (yGround > nGround)
+				if (yGround - nGround >= 0) {
 						ground = true;
-				else
+						
+				} else {
 						ground = false;
+						
+				}
 				if (!grounded && ground) {
 						landed = true;
 						grounded = true;

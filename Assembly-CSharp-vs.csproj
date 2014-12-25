@@ -52,6 +52,9 @@
      <Compile Include="Assets\myAssets\scripts\BodyPart.cs" />
      <Compile Include="Assets\myAssets\scripts\BodyParts.cs" />
      <Compile Include="Assets\myAssets\scripts\Branch.cs" />
+     <Compile Include="Assets\myAssets\scripts\CameraConstraint.cs" />
+     <Compile Include="Assets\myAssets\scripts\CameraController.cs" />
+     <Compile Include="Assets\myAssets\scripts\CameraManeger.cs" />
      <Compile Include="Assets\myAssets\scripts\Destroy.cs" />
      <Compile Include="Assets\myAssets\scripts\DupliCator.cs" />
      <Compile Include="Assets\myAssets\scripts\Enemy.cs" />
