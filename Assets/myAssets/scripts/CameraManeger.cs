@@ -5,20 +5,22 @@ public class CameraManeger : MonoBehaviour
 {
 		public Camera player;
 		public followPlayer fp;
-		private gameManager thisManage;
-		public float maxSize;
 		public float minSize;
 		public float size;
+		public float xOff;
+		public float maxSize;
+		public float yOff;
 		public List<CameraController> visible;
 		public static CameraManeger thisCamera;
+		private GameObject target;
+		private gameManager thisManage;
 
 		// Use this for initialization
 		void Awake ()
 		{
-				maxSize = PlayerPrefs.GetFloat ("maxSize", maxSize);
-				minSize = PlayerPrefs.GetFloat ("minSize", minSize);
-				size = PlayerPrefs.GetFloat ("size", size);
-		
+			
+				//xOff = PlayerPrefs.GetFloat ("xOff", xOff);
+				//	yOff = PlayerPrefs.GetFloat ("yOff", yOff);
 				if (thisCamera == null) {
 						thisCamera = this;
 				}
@@ -27,7 +29,7 @@ public class CameraManeger : MonoBehaviour
 		void Start ()
 		{
 				thisManage = gameManager.thisM;
-				
+				changeSize (maxSize);				
 				
 				
 
@@ -38,6 +40,7 @@ public class CameraManeger : MonoBehaviour
 				player = cam;
 				fp = player.GetComponent<followPlayer> ();
 				changeSize (size);
+				target = fp.target;
 		}
 
 		public void addController (CameraController cam)
@@ -53,8 +56,20 @@ public class CameraManeger : MonoBehaviour
 		}
 
 		// Update is called once per frame
-		void Update ()
+		void LateUpdate ()
 		{
+				Vector2 raw = target.transform.position;
+				
+				if (visible.Count < 1) {
+						Vector2 offPos = new Vector2 (raw.x + xOff, raw.y + yOff);
+						fp.moveCamera (offPos);
+				} else if (visible.Count == 1) {
+						Vector2 p = visible [0].transform.position;
+						Vector2 offPos = new Vector2 (raw.x + xOff, raw.y + yOff);
+
+						xOff = Mathf.Abs (Mathf.Abs (raw.x) - Mathf.Abs (p.x));
+						fp.moveCamera (offPos);
+				}
 		}
 
 		public void changeSize (float change)
@@ -74,9 +89,9 @@ public class CameraManeger : MonoBehaviour
 
 		void OnDestroy ()
 		{
-				PlayerPrefs.SetFloat ("maxSize", maxSize);
-				PlayerPrefs.SetFloat ("minSize", minSize);
-				PlayerPrefs.SetFloat ("size", size);
+
+				//PlayerPrefs.SetFloat ("xOff", xOff);
+				//PlayerPrefs.SetFloat ("yOff", yOff);
 
 		}
 }

@@ -14,22 +14,29 @@ public class CameraController : Entity
 				thisLevel.addEntity (this);
 		}
 
-		void LateUpdate ()
+		void Update ()
 		{
 				if (!paused) {
+
 						if (renderer.isVisible) {
+								if (visible != true)
+										thisCam.addController (this);
 								visible = true;
-								thisCam.addController (this);
+				
 						} else {
+								if (visible = true)
+										thisCam.removeController (this);
+
 								visible = false;
-								thisCam.removeController (this);
+
 						}
 				}
 		}
 
 		void OnApplicationFocus (bool focusStatus)
 		{
-				paused = focusStatus;
+
+				paused = ! focusStatus;
 		}
 }
 

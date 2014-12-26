@@ -6,7 +6,7 @@ public class CameraConstraint : CameraController
 		public float amount;
 		public bool negative;
 
-		void Update ()
+		/*	void Update ()
 		{
 				float movePos = Mathf.Abs (thisManage.myPlayer.transform.position.x) - Mathf.Abs (transform.position.x);
 				if (negative)
@@ -19,7 +19,7 @@ public class CameraConstraint : CameraController
 
 				}
 		}
-
+*/
 		
 }
 
