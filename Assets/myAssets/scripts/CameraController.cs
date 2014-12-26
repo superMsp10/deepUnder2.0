@@ -5,6 +5,7 @@ public class CameraController : Entity
 {
 		protected CameraManeger thisCam ;
 		public bool visible;
+		public bool paused = false;
 
 		void Start ()
 		{
@@ -15,11 +16,20 @@ public class CameraController : Entity
 
 		void LateUpdate ()
 		{
-				if (renderer.isVisible) {
-						visible = true;
-				} else {
-						visible = false;
+				if (!paused) {
+						if (renderer.isVisible) {
+								visible = true;
+								thisCam.addController (this);
+						} else {
+								visible = false;
+								thisCam.removeController (this);
+						}
 				}
+		}
+
+		void OnApplicationFocus (bool focusStatus)
+		{
+				paused = focusStatus;
 		}
 }
 

@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class CameraManeger : MonoBehaviour
 {
@@ -9,6 +9,7 @@ public class CameraManeger : MonoBehaviour
 		public float maxSize;
 		public float minSize;
 		public float size;
+		public List<CameraController> visible;
 		public static CameraManeger thisCamera;
 
 		// Use this for initialization
@@ -38,7 +39,19 @@ public class CameraManeger : MonoBehaviour
 				fp = player.GetComponent<followPlayer> ();
 				changeSize (size);
 		}
+
+		public void addController (CameraController cam)
+		{
+				visible.Add (cam);
 	
+		}
+
+		public void removeController (CameraController cam)
+		{
+				visible.Remove (cam);
+		
+		}
+
 		// Update is called once per frame
 		void Update ()
 		{
@@ -46,7 +59,6 @@ public class CameraManeger : MonoBehaviour
 
 		public void changeSize (float change)
 		{
-				Debug.Log (size);
 
 				size = change;
 				player.orthographicSize = change;
