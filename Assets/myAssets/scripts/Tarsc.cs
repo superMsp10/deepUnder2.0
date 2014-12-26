@@ -3,7 +3,28 @@ using System.Collections;
 
 public class Tarsc : Mob1
 {
+		public followPlayer cameraF;
 
+		void Start ()
+		{
+		
+				thisManage = gameManager.thisM;
+				thisLevel.addEntity (this);
+				rigidbody2D.centerOfMass = centerOfMass;
+				if (thisAnim == null) {
+						thisAnim = GetComponent<Animator> ();
+				}
+				if (thisAnim == null) {
+						Debug.LogError ("no animator is provided");
+				}
+				if (groundCheck == null)
+						Debug.Log ("no feets included");
+				bodyParts = GetComponentsInChildren<BodyPart> ();
+				cameraF.thisLevel = thisLevel;
+				foreach (BodyPart b in bodyParts) {
+						b.thisLevel = thisLevel;
+				}
+		}
 
 		void Update ()
 		{

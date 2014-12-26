@@ -4,6 +4,7 @@ using System.Collections;
 public class CameraManeger : MonoBehaviour
 {
 		public Camera player;
+		public followPlayer fp;
 		private gameManager thisManage;
 		public float maxSize;
 		public float minSize;
@@ -13,7 +14,9 @@ public class CameraManeger : MonoBehaviour
 		// Use this for initialization
 		void Awake ()
 		{
-		
+				maxSize = PlayerPrefs.GetFloat ("maxSize", maxSize);
+				minSize = PlayerPrefs.GetFloat ("minSize", minSize);
+				size = PlayerPrefs.GetFloat ("size", size);
 		
 				if (thisCamera == null) {
 						thisCamera = this;
@@ -23,10 +26,8 @@ public class CameraManeger : MonoBehaviour
 		void Start ()
 		{
 				thisManage = gameManager.thisM;
-				maxSize = PlayerPrefs.GetFloat ("maxSize", maxSize);
-				minSize = PlayerPrefs.GetFloat ("minSize", minSize);
-				size = PlayerPrefs.GetFloat ("size", size);
-
+				
+				
 				
 
 		}
@@ -34,20 +35,21 @@ public class CameraManeger : MonoBehaviour
 		public void addPlayer (Camera cam)
 		{
 				player = cam;
+				fp = player.GetComponent<followPlayer> ();
 				changeSize (size);
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
-	
 		}
 
 		public void changeSize (float change)
 		{
+				Debug.Log (size);
+
 				size = change;
 				player.orthographicSize = change;
-				changeHeight (size / 2);
 
 
 		}
