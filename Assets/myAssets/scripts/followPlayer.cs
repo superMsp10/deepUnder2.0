@@ -14,8 +14,9 @@ public class followPlayer : Entity
 
 		public void moveCamera (Vector2 Pos)
 		{
-				
-				transform.position = new Vector3 (Pos.x, Pos.y, transform.position.z);
+				Vector3 p = new Vector3 (Pos.x, Pos.y, transform.position.z);
+				transform.position = p;
+				//Vector3.Lerp (transform.position, p, Time.deltaTime * 0.3f);
 		}
 }
 

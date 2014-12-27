@@ -14,6 +14,8 @@ public class CameraManeger : MonoBehaviour
 		public static CameraManeger thisCamera;
 		private GameObject target;
 		private gameManager thisManage;
+		Vector2 lastP ;
+		Vector2 rawT;
 
 		// Use this for initialization
 		void Awake ()
@@ -58,18 +60,25 @@ public class CameraManeger : MonoBehaviour
 		// Update is called once per frame
 		void LateUpdate ()
 		{
-				Vector2 raw = target.transform.position;
-				
+				lastP = rawT;
+				rawT = target.transform.position;
 				if (visible.Count < 1) {
-						Vector2 offPos = new Vector2 (raw.x + xOff, raw.y + yOff);
+						Vector2 offPos = new Vector2 (rawT.x + xOff, rawT.y + yOff);
 						fp.moveCamera (offPos);
 				} else if (visible.Count == 1) {
-						Vector2 p = visible [0].transform.position;
-						Vector2 offPos = new Vector2 (raw.x + xOff, raw.y + yOff);
+						CameraController c = visible [0];
+						Vector2 cPos = player.WorldToScreenPoint (c.transform.position);
+						Vector2 offPos = player.WorldToScreenPoint (new Vector2 (rawT.x + xOff, rawT.y + yOff));
+						/*	if (last.x - raw.x < c.xM) {
+								offPos = new Vector2 (last.x + xOff, raw.y + yOff);
 
-						xOff = Mathf.Abs (Mathf.Abs (raw.x) - Mathf.Abs (p.x));
-						fp.moveCamera (offPos);
+						}*/
+						//	fp.moveCamera (offPos);
+						//xOff = Mathf.Abs (Mathf.Abs (raw.x) - Mathf.Abs (p.x));
+						Debug.Log (Vector2.Distance (cPos, rawT));
+
 				}
+				
 		}
 
 		public void changeSize (float change)
