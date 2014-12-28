@@ -10,13 +10,16 @@ public class CameraManeger : MonoBehaviour
 		public float xOff;
 		public float maxSize;
 		public float yOff;
-		public	float fromBoundry;
+		public	float fromBoundryX;
 		public List<CameraController> visible;
 		public static CameraManeger thisCamera;
 		private GameObject target;
 		private gameManager thisManage;
 		Vector2 lastP ;
 		Vector2 rawT;
+		float lastXPos;
+		public bool paused = false;
+
 
 		// Use this for initialization
 		void Awake ()
@@ -46,53 +49,43 @@ public class CameraManeger : MonoBehaviour
 				target = fp.target;
 		}
 
-		public void addController (CameraController cam)
-		{
-				visible.Add (cam);
-	
-		}
 
-		public void removeController (CameraController cam)
-		{
-				visible.Remove (cam);
-		
-		}
 
 		// Update is called once per frame
 		void LateUpdate ()
 		{
 				lastP = rawT;
 				rawT = transform.TransformPoint (target.transform.position);
-				if (visible.Count < 1) {
+				/*if (visible.Count < 1) {
 						Vector2 offPos = new Vector2 (rawT.x + xOff, rawT.y + yOff);
 						fp.moveCamera (offPos);
 				} else if (visible.Count == 1) {
 						CameraController c = visible [0];
 						Vector2 cor = (new Vector3 (0, 0, 0));
-						if (c.dir.x == 0)
-								cor.x = 0;
-						else if (c.dir.x == 1)
-								cor.x = Screen.width;
-						if (c.dir.y == 0)
-								cor.y = 0;
-						else if (c.dir.y == 1)
-								cor.y = Screen.height;
+						cor.x = c.dir.x * Screen.width;
+						cor.y = c.dir.y * Screen.height;
+
 						Vector2 corner = player.ScreenToWorldPoint (cor);
 						Vector2 boundryPos = transform.TransformPoint (c.transform.position);
-						float fromCorner = Vector2.Distance (corner, rawT);
-						fromBoundry = Vector2.Distance (boundryPos, rawT);
-						if (fromBoundry >= fromCorner) {						
-								Vector2 offPos = new Vector2 (rawT.x + xOff, rawT.y + yOff);
-								Debug.Log ("move");
-								fp.moveCamera (offPos);
+
+						float fromCornerX = Mathf.Abs (corner.x - rawT.x);
+						fromBoundryX = Mathf.Abs (boundryPos.x - rawT.x);
+						Vector2 offPos;
+						
+						if (fromBoundryX < fromCornerX) {
+								//	offPos = new Vector2 (1000, rawT.y + yOff);
+								
+								float cornerToBoundryX = ((boundryPos.x - corner.x) + 10);
+								float screeenMiddle = player.ScreenToWorldPoint (new Vector3 (Screen.width / 2, 0, 0)).x;
+								offPos = new Vector2 (cornerToBoundryX + screeenMiddle, rawT.y + yOff);
+
 						} else {
-								Debug.Log ("not move");
+								Debug.Log ("hi");
+								offPos = new Vector2 (rawT.x + xOff, rawT.y + yOff);
 
-								Vector2 offPos = new Vector2 (lastP.x + xOff, lastP.y + yOff);
-								fp.moveCamera (offPos);
-
-						}
-				}
+						} 
+						
+				}*/
 				
 		}
 
@@ -105,9 +98,23 @@ public class CameraManeger : MonoBehaviour
 
 		}
 
-		public void changeHeight (float change)
+		void moveCamera (Vector2 offPos)
 		{
-				player.transform.position.Set (0, change, player.transform.position.z);		
+
+				fp.moveCamera (offPos);
+
+		}
+
+		public bool checkX (Vector2 pos)
+		{
+				Vector2 p = player.WorldToScreenPoint (pos);
+				return(p.x > 0 && p.x < Screen.width);
+
+		}
+
+		public bool checkX (float corX, float obPos, float amount)
+		{
+				return  (Mathf.Abs (corX - obPos) > amount);
 		
 		}
 
@@ -117,6 +124,11 @@ public class CameraManeger : MonoBehaviour
 				//PlayerPrefs.SetFloat ("xOff", xOff);
 				//PlayerPrefs.SetFloat ("yOff", yOff);
 
+		}
+		void OnApplicationFocus (bool focusStatus)
+		{
+		
+				paused = ! focusStatus;
 		}
 }
 

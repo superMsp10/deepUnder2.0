@@ -1,43 +1,38 @@
 using UnityEngine;
 using System.Collections;
 
-public class CameraController : Entity
+public class CameraController : MonoBehaviour
 {
-		protected CameraManeger thisCam ;
+		protected CameraManeger thisCam;
 		public bool visible;
-		public bool paused = false;
 		public Vector2 dir;
+		public float stage;
+		public  playLevel thisLevel;
+		public gameManager thisManage;
 
+
+	
 		void Start ()
 		{
 				thisCam = CameraManeger.thisCamera;
 				thisManage = gameManager.thisM;
-				thisLevel.addEntity (this);
+				thisLevel = (playLevel)thisLevel;
+
 		}
 
-		void Update ()
+		public void changeS (float  lev)
 		{
-				if (!paused) {
+				if (lev == stage) {
 
-						if (renderer.isVisible) {
-								if (visible != true)
-										thisCam.addController (this);
-								visible = true;
-				
-						} else {
-								if (visible = true)
-										thisCam.removeController (this);
+						thisLevel.addController (this);
 
-								visible = false;
+				} else
+						thisLevel.removeController (this);
 
-						}
-				}
+				Debug.Log ("hi");
 		}
 
-		void OnApplicationFocus (bool focusStatus)
-		{
+		
 
-				paused = ! focusStatus;
-		}
 }
 
