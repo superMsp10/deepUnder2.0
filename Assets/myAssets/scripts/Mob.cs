@@ -3,13 +3,11 @@ using System.Collections;
 
 public class Mob : MonoBehaviour
 {
-		public Rigidbody2D thisRigid;
 
 		void Start ()
 		{
 
-				thisRigid = GetComponent<Rigidbody2D> ();
-		
+
 		}
 
 		void OnTriggerEnter2D (Collider2D other)
@@ -28,7 +26,7 @@ public class Mob : MonoBehaviour
 		
 				if (other.gameObject.tag == "boost") {
 						collisionBoost thisBoost = other.GetComponent<collisionBoost> ();
-						thisRigid.AddForce (this.transform.position * (-1 * thisBoost.boostAmount));
+						thisBoost.boost (this.rigidbody2D);
 				}
 		
 				if (other.gameObject.tag == "Enemy") {

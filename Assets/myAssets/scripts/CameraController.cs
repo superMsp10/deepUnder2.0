@@ -6,8 +6,7 @@ public class CameraController : Entity
 		protected CameraManeger thisCam ;
 		public bool visible;
 		public bool paused = false;
-		public float xM;
-		public float yM;
+		public Vector2 dir;
 
 		void Start ()
 		{

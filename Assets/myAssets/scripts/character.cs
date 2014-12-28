@@ -42,32 +42,42 @@ public class character : MonoBehaviour
 
 		void OnTriggerEnter2D (Collider2D other)
 		{
-	
+		
 				if (other.gameObject.tag == "teleport") {
 						Teleport teleSpot = (Teleport)other.GetComponent ("Teleport");
 						Vector3 teleTo = teleSpot.teleto.transform.position;
 						this.transform.position = new Vector3 (teleTo.x - teleSpot.xOff,
-			                                      teleTo.y - teleSpot.yOff, teleTo.z - teleSpot.zOff);
-						if (teleSpot.nextLevel) {
-								level = teleSpot.level;
-						}
+			                                       teleTo.y - teleSpot.yOff, teleTo.z - teleSpot.zOff);
+			
 				}
-
 				if (other.gameObject.tag == "boost") {
-						collisionBoost thisBoost = other.GetComponent<collisionBoost> ();
-						thisRigid.AddForce (this.transform.position * (-1 * thisBoost.boostAmount));
-				}
+						collisionBoost thisBoost = other.gameObject.GetComponent<collisionBoost> ();
+						if (thisBoost == null)
+								Debug.LogError ("no collision boost script attached");
+						/*	float thisX = rigidbody2D.velocity.x / 2;
+			float thisY = rigidbody2D.velocity.y / 2;
+			
+			Vector2 force = new Vector2 (thisX +((thisBoost.multiX) * thisBoost.boostAmount)
+			                             , thisY + ((-thisBoost.multiY) * thisBoost.boostAmount));
+			rigidbody2D.AddForceAtPosition (force, transform.position);
 
-				if (other.gameObject.tag == "Enemy") {
-
+*/
+						thisBoost.boost (rigidbody2D);
 				}
-				if (other.gameObject.tag == "Destroyable") {
-						Resource temp = other.GetComponent<Resource> ();
-						temp.dropMadeOf (2);
+		
+		
+				if (other.gameObject.tag == "Cannon") {
+						cannon thisCannon = other.gameObject.GetComponent<cannon> ();
+						if (thisCannon == null)
+								Debug.LogError ("no cannon script attached");
+						thisCannon.shoot ();
+			
+			
 				}
-
+		
+		
 		}
-	
+
 		void FixedUpdate ()
 		{ 
 				// Cache the horizontal input.

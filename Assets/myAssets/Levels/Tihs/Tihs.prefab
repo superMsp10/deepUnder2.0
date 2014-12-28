@@ -571,7 +571,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.0999985, y: -1.29999995, z: 0}
+  m_LocalPosition: {x: 42.2400017, y: -1.47000003, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 420628}
@@ -749,9 +749,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156846}
-  m_LocalRotation: {x: 0, y: 0, z: .209657624, w: -.977774918}
-  m_LocalPosition: {x: -11.8400269, y: -20.8300171, z: 0}
-  m_LocalScale: {x: 5, y: 4, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .0167665426, w: .999859452}
+  m_LocalPosition: {x: -25.3000488, y: -19.7399902, z: 0}
+  m_LocalScale: {x: 7.65504932, y: 5.2159853, z: 1}
   m_Children: []
   m_Father: {fileID: 420606}
   m_RootOrder: 2
@@ -1045,7 +1045,7 @@ PolygonCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177984}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b362224e59b415044a8c746c585efb2c, type: 2}
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
@@ -1064,7 +1064,7 @@ PolygonCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177986}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b362224e59b415044a8c746c585efb2c, type: 2}
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
@@ -1287,8 +1287,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837dd47207d40cb4395d181c3b86fb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostAmount: 500
-  dir: {x: 5, y: 15}
+  MultiplierX: 0
+  MultiplierY: 20
+  boostAmount: 50
+  randomrange: 0
+  dir: {x: 5, y: 100}
   loc: {fileID: 456844}
 --- !u!114 &11456844
 MonoBehaviour:
@@ -1368,8 +1371,7 @@ MonoBehaviour:
   customHierarchy: 1
   visible: 0
   paused: 0
-  xM: 0
-  yM: 0
+  dir: {x: 0, y: 0}
 --- !u!114 &11484540
 MonoBehaviour:
   m_ObjectHideFlags: 1

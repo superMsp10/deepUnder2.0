@@ -3,7 +3,10 @@ using System.Collections;
 
 public class collisionBoost : MonoBehaviour
 {
-		public int boostAmount;
+		public int MultiplierX;
+		public int MultiplierY;
+		public float boostAmount;
+		public float randomrange = 0;
 		public Vector2 dir;
 		public Transform loc;
 
@@ -11,9 +14,10 @@ public class collisionBoost : MonoBehaviour
 		{
 
 				float thisX = target.velocity.x / 2;
-				float thisY = target.velocity.y / 2;
-		
-				Vector2 force = new Vector2 (dir.x * boostAmount, dir.y * boostAmount);
+				float thisY = (target.velocity.y / 2) * -1;
+				Vector2 tagetVeloMulti = new Vector2 (thisX * MultiplierX, thisY * MultiplierY);
+				Vector2 boost = new Vector2 (dir.x * (boostAmount + Random.Range (0, randomrange)), dir.y * (boostAmount + Random.Range (0, randomrange)));
+				Vector2 force = (tagetVeloMulti + boost);
 				target.AddForceAtPosition (force, transform.position);
 
 		}

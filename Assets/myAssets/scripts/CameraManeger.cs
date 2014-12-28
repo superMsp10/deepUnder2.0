@@ -10,6 +10,7 @@ public class CameraManeger : MonoBehaviour
 		public float xOff;
 		public float maxSize;
 		public float yOff;
+		public	float fromBoundry;
 		public List<CameraController> visible;
 		public static CameraManeger thisCamera;
 		private GameObject target;
@@ -61,22 +62,36 @@ public class CameraManeger : MonoBehaviour
 		void LateUpdate ()
 		{
 				lastP = rawT;
-				rawT = target.transform.position;
+				rawT = transform.TransformPoint (target.transform.position);
 				if (visible.Count < 1) {
 						Vector2 offPos = new Vector2 (rawT.x + xOff, rawT.y + yOff);
 						fp.moveCamera (offPos);
 				} else if (visible.Count == 1) {
 						CameraController c = visible [0];
-						Vector2 cPos = player.WorldToScreenPoint (c.transform.position);
-						Vector2 offPos = player.WorldToScreenPoint (new Vector2 (rawT.x + xOff, rawT.y + yOff));
-						/*	if (last.x - raw.x < c.xM) {
-								offPos = new Vector2 (last.x + xOff, raw.y + yOff);
+						Vector2 cor = (new Vector3 (0, 0, 0));
+						if (c.dir.x == 0)
+								cor.x = 0;
+						else if (c.dir.x == 1)
+								cor.x = Screen.width;
+						if (c.dir.y == 0)
+								cor.y = 0;
+						else if (c.dir.y == 1)
+								cor.y = Screen.height;
+						Vector2 corner = player.ScreenToWorldPoint (cor);
+						Vector2 boundryPos = transform.TransformPoint (c.transform.position);
+						float fromCorner = Vector2.Distance (corner, rawT);
+						fromBoundry = Vector2.Distance (boundryPos, rawT);
+						if (fromBoundry >= fromCorner) {						
+								Vector2 offPos = new Vector2 (rawT.x + xOff, rawT.y + yOff);
+								Debug.Log ("move");
+								fp.moveCamera (offPos);
+						} else {
+								Debug.Log ("not move");
 
-						}*/
-						//	fp.moveCamera (offPos);
-						//xOff = Mathf.Abs (Mathf.Abs (raw.x) - Mathf.Abs (p.x));
-						Debug.Log (Vector2.Distance (cPos, rawT));
+								Vector2 offPos = new Vector2 (lastP.x + xOff, lastP.y + yOff);
+								fp.moveCamera (offPos);
 
+						}
 				}
 				
 		}
