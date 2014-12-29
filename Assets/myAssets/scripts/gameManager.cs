@@ -33,7 +33,7 @@ public class gameManager : MonoBehaviour
 		private string code = "";
 		private string status = "[newbie]";
 		private health myHp;
-		private CameraManeger thisCam;
+		public CameraManeger thisCam;
 
 		void Awake ()
 		{
@@ -46,7 +46,6 @@ public class gameManager : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{		
-				thisCam = CameraManeger.thisCamera;
 				version = "NetTest 0.2.2";
 //				PhotonNetwork.player.name = PlayerPrefs.GetString ("UserName", "EnterNameHere");
 				levels = FindObjectsOfType<level> ();
@@ -171,13 +170,14 @@ public class gameManager : MonoBehaviour
 				myPlayer.SetActive (true);
 				currCamera = myPlayer.GetComponentInChildren<Camera> ();
 				myHp = myPlayer.GetComponent<health> ();
-				thisCam.addPlayer (currCamera);
-
+				thisCam = myPlayer.GetComponent<CameraManeger> (); 
 				Entity e = myPlayer.GetComponent<Entity> ();
 				if (e == null)
-						Debug.LogError ("cannot spawn not a entity");
+						Debug.LogError ("cannot spawn, non entities");
 				else
 						e.thisLevel = currentLevel;
+
+
 		}
 
 		public void changeLvl (int i)

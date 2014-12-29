@@ -18,7 +18,7 @@ public class CameraManeger : MonoBehaviour
 		public float maxSize;
 		public float yOff;
 		public	float fromBoundryX;
-		public static CameraManeger thisCamera;
+		public  CameraManeger thisCamera;
 		private gameManager thisManage;
 		float lastXPos;
 		public bool paused = false;
@@ -27,15 +27,14 @@ public class CameraManeger : MonoBehaviour
 		// Use this for initialization
 		void Awake ()
 		{
-				if (thisCamera == null) {
-						thisCamera = this;
-				}
+			
 		}
 
 		void Start ()
 		{
 				thisManage = gameManager.thisM;
 				thisLevl = (playLevel)thisManage.currentLevel;
+			
 
 		}
 
@@ -43,8 +42,14 @@ public class CameraManeger : MonoBehaviour
 		{
 				playerCamera = cam;
 				fp = playerCamera.GetComponent<followPlayer> ();
-				changeSize (size);
+				if (fp == null) {
+						Debug.Log ("no follow player attached");
+				}
+				if (fp.target == null) {
+						Debug.Log (transform.TransformPoint (playerGameObject.transform.position));
+				}
 				playerGameObject = fp.target;
+				changeSize (size);
 		}
 
 

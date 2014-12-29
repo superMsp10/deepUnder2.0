@@ -47,6 +47,7 @@ GameObject:
   - 50: {fileID: 5000000}
   - 95: {fileID: 9500000}
   - 114: {fileID: 11414438}
+  - 114: {fileID: 11452934}
   m_Layer: 9
   m_Name: Tarsc
   m_TagString: Player
@@ -899,6 +900,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: feets
+--- !u!114 &11452934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7432839f5ff092844a006004771a6122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visibleBoundries: 0
+  thisLevl: {fileID: 0}
+  playerCamera: {fileID: 0}
+  fp: {fileID: 0}
+  minSize: 0
+  size: 0
+  xOff: 0
+  maxSize: 0
+  yOff: 0
+  fromBoundryX: 0
+  thisCamera: {fileID: 0}
+  paused: 0
 --- !u!114 &11453212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -917,9 +941,6 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   target: {fileID: 100004}
-  xOff: 0
-  yOff: 10
-  move: 1
 --- !u!114 &11464590
 MonoBehaviour:
   m_ObjectHideFlags: 1

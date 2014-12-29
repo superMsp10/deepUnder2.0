@@ -4693,6 +4693,7 @@ MonoBehaviour:
   stage: 1
   stageBoundires: []
   allBoundries: []
+  thisCam: {fileID: 0}
 --- !u!1 &863131149
 GameObject:
   m_ObjectHideFlags: 0
@@ -6022,7 +6023,7 @@ Transform:
   m_PrefabInternal: {fileID: 1110989836}
   m_GameObject: {fileID: 1006466308}
   m_LocalRotation: {x: 0, y: 0, z: .0615421012, w: -.998104513}
-  m_LocalPosition: {x: 55.7000122, y: 34.6999512, z: 0}
+  m_LocalPosition: {x: 54.2200012, y: 34.8800011, z: 0}
   m_LocalScale: {x: -4.22108364, y: 2.69255996, z: 1}
   m_Children: []
   m_Father: {fileID: 396159982}
@@ -6510,6 +6511,14 @@ Prefab:
     - target: {fileID: 11474012, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
       propertyPath: stage
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477986, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 54.2200012
+      objectReference: {fileID: 0}
+    - target: {fileID: 477986, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 34.8800011
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
@@ -9565,10 +9574,9 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 224: {fileID: 1539869381}
-  - 114: {fileID: 1539869378}
+  - 4: {fileID: 1539869379}
   - 114: {fileID: 1539869382}
-  - 114: {fileID: 1539869379}
+  - 114: {fileID: 1539869378}
   m_Layer: 0
   m_Name: scripts
   m_TagString: Untagged
@@ -9595,30 +9603,9 @@ MonoBehaviour:
   currCamera: {fileID: 0}
   myPlayerIns: {fileID: 100004, guid: c1ea0b1ed06925648a41f6f4e43f359a, type: 2}
   myPlayer: {fileID: 0}
---- !u!114 &1539869379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1539869377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7432839f5ff092844a006004771a6122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visibleBoundries: 0
-  thisLevl: {fileID: 0}
-  playerCamera: {fileID: 0}
-  fp: {fileID: 0}
-  minSize: 5
-  size: 50
-  xOff: 0
-  maxSize: 50
-  yOff: 10
-  fromBoundryX: 0
-  paused: 0
---- !u!224 &1539869381
-RectTransform:
+  thisCam: {fileID: 0}
+--- !u!4 &1539869379
+Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -9629,11 +9616,6 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: .5, y: .5}
 --- !u!114 &1539869382
 MonoBehaviour:
   m_ObjectHideFlags: 0
