@@ -4,7 +4,6 @@ using System.Collections.Generic;
 public class CameraManeger : MonoBehaviour
 {
 
-		public int visibleBoundries;
 		public playLevel thisLevl;
 		public Camera playerCamera;
 		public followPlayer fp;
@@ -51,9 +50,11 @@ public class CameraManeger : MonoBehaviour
 
 		void Update ()
 		{
+
 				playertPos = transform.TransformPoint (playerGameObject.transform.position);
 				Vector2 boundryPos = transform.TransformPoint (thisLevl.stageBoundires [0].transform.position);
-				//	Debug.Log (amountDifference (playertPos.x, boundryPos.x, Screen.width / 2));
+				Debug.Log (xWillBeOnScreen (playertPos, boundryPos));
+				
 				/*if (visible.Count < 1) {
 						Vector2 offPos = new Vector2 (rawT.x + xOff, rawT.y + yOff);
 						fp.moveCamera (offPos);
@@ -105,10 +106,16 @@ public class CameraManeger : MonoBehaviour
 
 		}
 
-		public bool amountDifference (float corX, float obPos, float amount)
+		public bool xWillBeOnScreen (Vector2 thisPos, Vector2 objectPos)
 		{
-				return  (Mathf.Abs (corX - obPos) > amount);
-		
+				float thisX = playerCamera.WorldToScreenPoint (thisPos).x;
+				float objectX = playerCamera.WorldToScreenPoint (objectPos).x;
+
+				float rightFromScreen = thisX + (Screen.width / 2);
+				float leftFromScreen = thisX - (Screen.width / 2);
+			
+				return (objectX > leftFromScreen && objectX < rightFromScreen);
+
 		}
 
 		void OnDestroy ()

@@ -48,7 +48,7 @@ GameObject:
   - 95: {fileID: 9500000}
   - 114: {fileID: 11414438}
   m_Layer: 9
-  m_Name: Tarsc
+  m_Name: tarsc
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -917,9 +917,6 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   target: {fileID: 100004}
-  xOff: 0
-  yOff: 10
-  move: 1
 --- !u!114 &11464590
 MonoBehaviour:
   m_ObjectHideFlags: 1

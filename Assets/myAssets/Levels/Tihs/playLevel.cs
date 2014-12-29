@@ -5,6 +5,7 @@ public class playLevel : level
 {
 		public float stage = 0;
 		public List<CameraController> stageBoundires;
+		public List<CameraController> visibleBoundries;
 		public List<CameraController> allBoundries;
 		protected CameraManeger thisCam;
 
@@ -13,6 +14,19 @@ public class playLevel : level
 				thisManage = gameManager.thisM;
 				audioM = AudioManager.thisAM;
 				thisCam = CameraManeger.thisCamera;
+		}
+
+		void Update ()
+		{
+				foreach (CameraController c in stageBoundires) {
+						if (thisCam.onScreenX (c.gameObject.transform.position)) {
+								c.visible = true;
+								visibleBoundries.Add (c); 
+
+						}
+
+				}
+
 		}
 		
 		public override  void startLevel ()
