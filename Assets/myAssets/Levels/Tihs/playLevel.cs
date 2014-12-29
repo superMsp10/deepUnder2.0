@@ -6,13 +6,13 @@ public class playLevel : level
 		public float stage = 0;
 		public List<CameraController> stageBoundires;
 		public List<CameraController> allBoundries;
-		public  CameraManeger thisCam;
+		protected CameraManeger thisCam;
 
 		void Start ()
 		{
 				thisManage = gameManager.thisM;
 				audioM = AudioManager.thisAM;
-				thisCam = thisManage.thisCam;
+				thisCam = CameraManeger.thisCamera;
 		}
 		
 		public override  void startLevel ()
