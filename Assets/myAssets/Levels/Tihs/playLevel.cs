@@ -4,32 +4,59 @@ using System.Collections.Generic;
 public class playLevel : level
 {
 		public float stage = 0;
-		public List<CameraController> visible;
-		public List<CameraController> cC;
+		public List<CameraController> stageBoundires;
+		public List<CameraController> allBoundries;
+		protected CameraManeger thisCam;
 
 		void Start ()
 		{
 				thisManage = gameManager.thisM;
 				audioM = AudioManager.thisAM;
-				changeStage (1.0f);
+				thisCam = CameraManeger.thisCamera;
+		}
+		
+		public override  void startLevel ()
+		{
+				thisCam.addPlayer (thisManage.currCamera);
+				changeStage (1);
+		}
+	
+		public  override void endLevel ()
+		{
+		
+				thisSound.enabled = false;
+		
 		}
 
 		public void changeStage (float l)
 		{
-				foreach (CameraController c in visible) {
-
+				stage = l;
+				foreach (CameraController c in allBoundries) {
+						c.changeS (l);
 				}
 		}
 	
 		public void addController (CameraController cam)
 		{
-				cC.Add (cam);
+				allBoundries.Add (cam);
 		
 		}
 	
 		public void removeController (CameraController cam)
 		{
-				cC.Remove (cam);
+				allBoundries.Remove (cam);
+		
+		}
+
+		public void addToStage (CameraController cam)
+		{
+				stageBoundires.Add (cam);
+		
+		}
+	
+		public void removeFromStage (CameraController cam)
+		{
+				stageBoundires.Remove (cam);
 		
 		}
 }

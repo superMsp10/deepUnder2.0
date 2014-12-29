@@ -3,20 +3,23 @@ using System.Collections.Generic;
 
 public class CameraManeger : MonoBehaviour
 {
-		public Camera player;
+
+		public int visibleBoundries;
+		public playLevel thisLevl;
+		public Camera playerCamera;
 		public followPlayer fp;
+		private GameObject playerGameObject;
+		private Vector2 playertPos;
+		/// <summary>
+		/// 	/// </summary>
 		public float minSize;
 		public float size;
 		public float xOff;
 		public float maxSize;
 		public float yOff;
 		public	float fromBoundryX;
-		public List<CameraController> visible;
 		public static CameraManeger thisCamera;
-		private GameObject target;
 		private gameManager thisManage;
-		Vector2 lastP ;
-		Vector2 rawT;
 		float lastXPos;
 		public bool paused = false;
 
@@ -24,9 +27,6 @@ public class CameraManeger : MonoBehaviour
 		// Use this for initialization
 		void Awake ()
 		{
-			
-				//xOff = PlayerPrefs.GetFloat ("xOff", xOff);
-				//	yOff = PlayerPrefs.GetFloat ("yOff", yOff);
 				if (thisCamera == null) {
 						thisCamera = this;
 				}
@@ -35,27 +35,25 @@ public class CameraManeger : MonoBehaviour
 		void Start ()
 		{
 				thisManage = gameManager.thisM;
-				changeSize (maxSize);				
-				
-				
+				thisLevl = (playLevel)thisManage.currentLevel;
 
 		}
 
 		public void addPlayer (Camera cam)
 		{
-				player = cam;
-				fp = player.GetComponent<followPlayer> ();
+				playerCamera = cam;
+				fp = playerCamera.GetComponent<followPlayer> ();
 				changeSize (size);
-				target = fp.target;
+				playerGameObject = fp.target;
 		}
 
 
 
-		// Update is called once per frame
-		void LateUpdate ()
+		void Update ()
 		{
-				lastP = rawT;
-				rawT = transform.TransformPoint (target.transform.position);
+				playertPos = transform.TransformPoint (playerGameObject.transform.position);
+				Vector2 boundryPos = transform.TransformPoint (thisLevl.stageBoundires [0].transform.position);
+				//	Debug.Log (amountDifference (playertPos.x, boundryPos.x, Screen.width / 2));
 				/*if (visible.Count < 1) {
 						Vector2 offPos = new Vector2 (rawT.x + xOff, rawT.y + yOff);
 						fp.moveCamera (offPos);
@@ -93,26 +91,21 @@ public class CameraManeger : MonoBehaviour
 		{
 
 				size = change;
-				player.orthographicSize = change;
+				playerCamera.orthographicSize = change;
 
 
 		}
 
-		void moveCamera (Vector2 offPos)
+
+
+		public bool onScreenX (Vector2 pos)
 		{
-
-				fp.moveCamera (offPos);
-
-		}
-
-		public bool checkX (Vector2 pos)
-		{
-				Vector2 p = player.WorldToScreenPoint (pos);
+				Vector2 p = playerCamera.WorldToScreenPoint (pos);
 				return(p.x > 0 && p.x < Screen.width);
 
 		}
 
-		public bool checkX (float corX, float obPos, float amount)
+		public bool amountDifference (float corX, float obPos, float amount)
 		{
 				return  (Mathf.Abs (corX - obPos) > amount);
 		
@@ -121,8 +114,6 @@ public class CameraManeger : MonoBehaviour
 		void OnDestroy ()
 		{
 
-				//PlayerPrefs.SetFloat ("xOff", xOff);
-				//PlayerPrefs.SetFloat ("yOff", yOff);
 
 		}
 		void OnApplicationFocus (bool focusStatus)

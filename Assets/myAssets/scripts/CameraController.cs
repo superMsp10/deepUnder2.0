@@ -11,6 +11,11 @@ public class CameraController : MonoBehaviour
 		public gameManager thisManage;
 
 
+		void Awake ()
+		{
+				thisLevel.addController (this);
+
+		}
 	
 		void Start ()
 		{
@@ -24,12 +29,13 @@ public class CameraController : MonoBehaviour
 		{
 				if (lev == stage) {
 
-						thisLevel.addController (this);
+						gameObject.SetActive (true);
+						thisLevel.addToStage (this);
+				} else {
+						gameObject.SetActive (false);
+						thisLevel.removeFromStage (this);
+				}
 
-				} else
-						thisLevel.removeController (this);
-
-				Debug.Log ("hi");
 		}
 
 		

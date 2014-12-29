@@ -213,6 +213,7 @@ public class gameManager : MonoBehaviour
 				if (currentLevel.spawnable) {
 						dead = true;
 						SS = FindObjectsOfType<SpawnSpot> ();
+						spawn ();
 						
 				}
 				currentLevel.startLevel ();
