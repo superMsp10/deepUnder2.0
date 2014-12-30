@@ -4692,6 +4692,7 @@ MonoBehaviour:
   deathHeight: -200
   stage: 1
   stageBoundires: []
+  visibleBoundries: []
   allBoundries: []
 --- !u!1 &863131149
 GameObject:
@@ -6022,8 +6023,8 @@ Transform:
   m_PrefabInternal: {fileID: 1110989836}
   m_GameObject: {fileID: 1006466308}
   m_LocalRotation: {x: 0, y: 0, z: .0615421012, w: -.998104513}
-  m_LocalPosition: {x: 55.7000122, y: 34.6999512, z: 0}
-  m_LocalScale: {x: -4.22108364, y: 2.69255996, z: 1}
+  m_LocalPosition: {x: 43.4000015, y: 39.4000015, z: 0}
+  m_LocalScale: {x: 4.53898525, y: 2.84512711, z: 1}
   m_Children: []
   m_Father: {fileID: 396159982}
   m_RootOrder: 8
@@ -6510,6 +6511,22 @@ Prefab:
     - target: {fileID: 11474012, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
       propertyPath: stage
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477986, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 43.4000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 477986, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 39.4000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 477986, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 4.53898525
+      objectReference: {fileID: 0}
+    - target: {fileID: 477986, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2.84512711
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
@@ -9606,7 +9623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7432839f5ff092844a006004771a6122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visibleBoundries: 0
   thisLevl: {fileID: 0}
   playerCamera: {fileID: 0}
   fp: {fileID: 0}
@@ -10514,6 +10530,7 @@ MonoBehaviour:
   stage: 1
   thisLevel: {fileID: 824517291}
   thisManage: {fileID: 0}
+  paused: 0
 --- !u!212 &1686946300
 SpriteRenderer:
   m_ObjectHideFlags: 0

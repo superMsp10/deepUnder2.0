@@ -20,7 +20,6 @@ public class CameraManeger : MonoBehaviour
 		public static CameraManeger thisCamera;
 		private gameManager thisManage;
 		float lastXPos;
-		public bool paused = false;
 
 
 		// Use this for initialization
@@ -50,10 +49,15 @@ public class CameraManeger : MonoBehaviour
 
 		void Update ()
 		{
-
+				if (thisLevl.visibleBoundries.Count == 1) {
+						CameraController visible = thisLevl.visibleBoundries [0];
+				}
 				playertPos = transform.TransformPoint (playerGameObject.transform.position);
 				Vector2 boundryPos = transform.TransformPoint (thisLevl.stageBoundires [0].transform.position);
-				Debug.Log (xWillBeOnScreen (playertPos, boundryPos));
+				if (!xWillBeOnScreen (playertPos, boundryPos)) {
+						fp.moveCamera (playertPos);
+
+				}
 				
 				/*if (visible.Count < 1) {
 						Vector2 offPos = new Vector2 (rawT.x + xOff, rawT.y + yOff);
@@ -123,10 +127,6 @@ public class CameraManeger : MonoBehaviour
 
 
 		}
-		void OnApplicationFocus (bool focusStatus)
-		{
-		
-				paused = ! focusStatus;
-		}
+
 }
 

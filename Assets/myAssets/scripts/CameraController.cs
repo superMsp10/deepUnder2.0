@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
 		public float stage;
 		public  playLevel thisLevel;
 		public gameManager thisManage;
+		public bool paused = false;
 
 
 		void Awake ()
@@ -24,6 +25,18 @@ public class CameraController : MonoBehaviour
 				thisLevel = (playLevel)thisLevel;
 
 		}
+			
+		void Update ()
+		{
+				if (renderer.isVisible && !visible) {
+						visible = true;
+						thisLevel.visibleBoundries.Add (this);
+				} else if (visible && !renderer.isVisible) {
+						visible = false;
+						thisLevel.visibleBoundries.Remove (this);
+
+				}
+		}
 
 		public void changeS (float  lev)
 		{
@@ -37,7 +50,11 @@ public class CameraController : MonoBehaviour
 				}
 
 		}
-
+		void OnApplicationFocus (bool focusStatus)
+		{
+		
+				paused = ! focusStatus;
+		}
 		
 
 }

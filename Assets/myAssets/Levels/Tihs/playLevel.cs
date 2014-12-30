@@ -18,14 +18,6 @@ public class playLevel : level
 
 		void Update ()
 		{
-				foreach (CameraController c in stageBoundires) {
-						if (thisCam.onScreenX (c.gameObject.transform.position)) {
-								c.visible = true;
-								visibleBoundries.Add (c); 
-
-						}
-
-				}
 
 		}
 		
