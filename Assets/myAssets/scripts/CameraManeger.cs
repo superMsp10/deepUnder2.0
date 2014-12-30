@@ -49,16 +49,24 @@ public class CameraManeger : MonoBehaviour
 
 		void Update ()
 		{
+				playertPos = transform.TransformPoint (playerGameObject.transform.position);
+				Vector2 boundryPos;
+				boundryPos = transform.TransformPoint (thisLevl.stageBoundires [0].transform.position);
+
+				Vector2 cameraPos = playerCamera.transform.position;
 				if (thisLevl.visibleBoundries.Count == 1) {
 						CameraController visible = thisLevl.visibleBoundries [0];
-				}
-				playertPos = transform.TransformPoint (playerGameObject.transform.position);
-				Vector2 boundryPos = transform.TransformPoint (thisLevl.stageBoundires [0].transform.position);
+						boundryPos = transform.TransformPoint (visible.transform.position);
+				} else if (thisLevl.visibleBoundries.Count > 1) {
+						changeSize (size--);
+				} 
 				if (!xWillBeOnScreen (playertPos, boundryPos)) {
-						fp.moveCamera (playertPos);
-
+						cameraPos = new Vector2 (playertPos.x + xOff, playertPos.y + yOff);
+				} else {
+						cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, playertPos.y + yOff);
 				}
-				
+				fp.moveCamera (cameraPos);
+		
 				/*if (visible.Count < 1) {
 						Vector2 offPos = new Vector2 (rawT.x + xOff, rawT.y + yOff);
 						fp.moveCamera (offPos);
@@ -94,10 +102,10 @@ public class CameraManeger : MonoBehaviour
 
 		public void changeSize (float change)
 		{
-
-				size = change;
-				playerCamera.orthographicSize = change;
-
+				if (change > minSize) {
+						size = change;
+						playerCamera.orthographicSize = change;
+				}
 
 		}
 
