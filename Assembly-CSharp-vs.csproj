@@ -46,7 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\myAssets\Entities\Door.cs" />
      <Compile Include="Assets\myAssets\Entities\cannon.cs" />
+     <Compile Include="Assets\myAssets\Entities\nextLevelDoor.cs" />
+     <Compile Include="Assets\myAssets\Entities\stageDoor.cs" />
      <Compile Include="Assets\myAssets\Levels\Tihs\playLevel.cs" />
      <Compile Include="Assets\myAssets\Mobs\Dummy\Dummy.cs" />
      <Compile Include="Assets\myAssets\scripts\AudioManager.cs" />
@@ -60,18 +63,15 @@
      <Compile Include="Assets\myAssets\scripts\Enemy.cs" />
      <Compile Include="Assets\myAssets\scripts\Entity.cs" />
      <Compile Include="Assets\myAssets\scripts\GizmoIcon.cs" />
-     <Compile Include="Assets\myAssets\scripts\Mob.cs" />
      <Compile Include="Assets\myAssets\scripts\Mob1.cs" />
      <Compile Include="Assets\myAssets\scripts\NPC.cs" />
      <Compile Include="Assets\myAssets\scripts\NetworkManeger.cs" />
-     <Compile Include="Assets\myAssets\scripts\Player.cs" />
      <Compile Include="Assets\myAssets\scripts\Resource.cs" />
      <Compile Include="Assets\myAssets\scripts\Sound.cs" />
      <Compile Include="Assets\myAssets\scripts\SpawnSpot.cs" />
      <Compile Include="Assets\myAssets\scripts\Tarsc.cs" />
      <Compile Include="Assets\myAssets\scripts\Teleport.cs" />
      <Compile Include="Assets\myAssets\scripts\Tihs.cs" />
-     <Compile Include="Assets\myAssets\scripts\character.cs" />
      <Compile Include="Assets\myAssets\scripts\collisionBoost.cs" />
      <Compile Include="Assets\myAssets\scripts\effectsManager.cs" />
      <Compile Include="Assets\myAssets\scripts\followPlayer.cs" />

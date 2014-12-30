@@ -196,7 +196,7 @@ public class gameManager : MonoBehaviour
 				}
 		}
 
-		private void levelex (level lev)
+		public void levelex (level lev)
 		{
 				//voted = false;
 				if (currentLevel != null) {

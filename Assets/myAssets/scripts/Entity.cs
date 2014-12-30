@@ -23,6 +23,8 @@ public  class Entity : MonoBehaviour
 
 		void Start ()
 		{
+				if (thisLevel == null)
+						Debug.LogError ("no Level referenced for this entity: " + gameObject.name);
 				thisManage = gameManager.thisM;
 				thisLevel.addEntity (this);
 
@@ -53,7 +55,6 @@ public  class Entity : MonoBehaviour
 
 		void OnDestroy ()
 		{
-
 				thisLevel.removeEntity (this);
 
 		}

@@ -190,10 +190,8 @@ public class Mob1 : Entity
 		{
 
 				if (other.gameObject.tag == "teleport") {
-						Teleport teleSpot = (Teleport)other.GetComponent ("Teleport");
-						Vector3 teleTo = teleSpot.teleto.transform.position;
-						this.transform.position = new Vector3 (teleTo.x - teleSpot.xOff,
-			                                       teleTo.y - teleSpot.yOff, teleTo.z - teleSpot.zOff);
+						Teleport teleSpot = other.GetComponent<Teleport> ();
+						teleSpot.teleport (transform);
 						
 				}
 				if (other.gameObject.tag == "boost") {

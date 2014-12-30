@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NPC : Mob
+public class NPC : Mob1
 {
 		public bool blab;
 		public string greeting1 = "Hello";
@@ -20,7 +20,8 @@ public class NPC : Mob
 
 		public void OnTriggerEnter2D (Collider2D other)
 		{
-				if(other.name=="player")Debug.Log ("hi");
+				if (other.name == "player")
+						Debug.Log ("hi");
 			
 		}
 

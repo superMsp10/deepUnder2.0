@@ -34,6 +34,8 @@ public class CameraManeger : MonoBehaviour
 		{
 				thisManage = gameManager.thisM;
 				thisLevl = (playLevel)thisManage.currentLevel;
+				xOff = Screen.width * xOff;
+				yOff = Screen.height * yOff;
 
 		}
 
