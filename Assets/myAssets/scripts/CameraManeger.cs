@@ -52,52 +52,27 @@ public class CameraManeger : MonoBehaviour
 				playertPos = transform.TransformPoint (playerGameObject.transform.position);
 				Vector2 boundryPos;
 				boundryPos = transform.TransformPoint (thisLevl.stageBoundires [0].transform.position);
-
-				Vector2 cameraPos = playerCamera.transform.position;
+				CameraController visible;
+				bool neg = true;
+				Vector2 cameraPos = new Vector2 (playertPos.x + xOff, playertPos.y + yOff);
 				if (thisLevl.visibleBoundries.Count == 1) {
-						CameraController visible = thisLevl.visibleBoundries [0];
+						visible = thisLevl.visibleBoundries [0];
 						boundryPos = transform.TransformPoint (visible.transform.position);
+						if (visible.dir.x != 0) {
+								if (visible.dir.x < 0)
+										neg = true;
+								else
+										neg = false;
+								if (xWillBeOnScreen (playertPos, boundryPos, neg)) {
+										cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, playertPos.y + yOff);
+								} 
+						} 
+						
 				} else if (thisLevl.visibleBoundries.Count > 1) {
 						changeSize (size--);
 				} 
-				if (!xWillBeOnScreen (playertPos, boundryPos)) {
-						cameraPos = new Vector2 (playertPos.x + xOff, playertPos.y + yOff);
-				} else {
-						cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, playertPos.y + yOff);
-				}
 				fp.moveCamera (cameraPos);
-		
-				/*if (visible.Count < 1) {
-						Vector2 offPos = new Vector2 (rawT.x + xOff, rawT.y + yOff);
-						fp.moveCamera (offPos);
-				} else if (visible.Count == 1) {
-						CameraController c = visible [0];
-						Vector2 cor = (new Vector3 (0, 0, 0));
-						cor.x = c.dir.x * Screen.width;
-						cor.y = c.dir.y * Screen.height;
 
-						Vector2 corner = player.ScreenToWorldPoint (cor);
-						Vector2 boundryPos = transform.TransformPoint (c.transform.position);
-
-						float fromCornerX = Mathf.Abs (corner.x - rawT.x);
-						fromBoundryX = Mathf.Abs (boundryPos.x - rawT.x);
-						Vector2 offPos;
-						
-						if (fromBoundryX < fromCornerX) {
-								//	offPos = new Vector2 (1000, rawT.y + yOff);
-								
-								float cornerToBoundryX = ((boundryPos.x - corner.x) + 10);
-								float screeenMiddle = player.ScreenToWorldPoint (new Vector3 (Screen.width / 2, 0, 0)).x;
-								offPos = new Vector2 (cornerToBoundryX + screeenMiddle, rawT.y + yOff);
-
-						} else {
-								Debug.Log ("hi");
-								offPos = new Vector2 (rawT.x + xOff, rawT.y + yOff);
-
-						} 
-						
-				}*/
-				
 		}
 
 		public void changeSize (float change)
@@ -118,15 +93,17 @@ public class CameraManeger : MonoBehaviour
 
 		}
 
-		public bool xWillBeOnScreen (Vector2 thisPos, Vector2 objectPos)
+		public bool xWillBeOnScreen (Vector2 thisPos, Vector2 objectPos, bool left)
 		{
 				float thisX = playerCamera.WorldToScreenPoint (thisPos).x;
 				float objectX = playerCamera.WorldToScreenPoint (objectPos).x;
 
 				float rightFromScreen = thisX + (Screen.width / 2);
 				float leftFromScreen = thisX - (Screen.width / 2);
-			
-				return (objectX > leftFromScreen && objectX < rightFromScreen);
+				if (left)
+						return (objectX > leftFromScreen);
+				else
+						return (objectX < rightFromScreen);
 
 		}
 
