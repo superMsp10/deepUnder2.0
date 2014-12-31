@@ -7,8 +7,9 @@ public class Tarsc : Mob1
 
 		void Start ()
 		{
-		
 				thisManage = gameManager.thisM;
+				if (thisLevel == null)
+						Debug.LogError ("no Level referenced for this entity: " + gameObject.name);
 				thisLevel.addEntity (this);
 				rigidbody2D.centerOfMass = centerOfMass;
 				if (thisAnim == null) {

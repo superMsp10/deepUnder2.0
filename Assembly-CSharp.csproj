@@ -50,7 +50,7 @@
      <Compile Include="Assets\myAssets\Entities\cannon.cs" />
      <Compile Include="Assets\myAssets\Entities\nextLevelDoor.cs" />
      <Compile Include="Assets\myAssets\Entities\stageDoor.cs" />
-     <Compile Include="Assets\myAssets\Levels\Tihs\playLevel.cs" />
+     <Compile Include="Assets\myAssets\Levels\playLevel.cs" />
      <Compile Include="Assets\myAssets\Mobs\Dummy\Dummy.cs" />
      <Compile Include="Assets\myAssets\scripts\AudioManager.cs" />
      <Compile Include="Assets\myAssets\scripts\BodyPart.cs" />

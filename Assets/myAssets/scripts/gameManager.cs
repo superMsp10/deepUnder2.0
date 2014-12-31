@@ -37,8 +37,6 @@ public class gameManager : MonoBehaviour
 
 		void Awake ()
 		{
-
-
 				if (thisM == null) {
 						thisM = this;
 				}
@@ -165,6 +163,9 @@ public class gameManager : MonoBehaviour
 		{
 				currentLevel.camera1.SetActive (false);
 				inGame = true;
+				if (SS == null || SS.Length == 0)
+						Debug.LogError ("no spawn spots included for this level");
+						
 				MySS = SS [Random.Range (0, SS.Length)];
 				myPlayer = (GameObject)Instantiate
 			(myPlayerIns, MySS.transform.position, MySS.transform.rotation);
@@ -199,10 +200,12 @@ public class gameManager : MonoBehaviour
 		public void levelex (level lev)
 		{
 				//voted = false;
+				if (lev == null)
+						Debug.Log ("level is null cannot change");
 				if (currentLevel != null) {
 						currentLevel.gameObject.SetActive (false);
 						currentLevel.endLevel ();
-				}
+				} 
 				
 				currentLevel = lev;
 				currentLevel.gameObject.SetActive (true);
