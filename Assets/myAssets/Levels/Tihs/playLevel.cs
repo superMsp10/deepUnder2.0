@@ -13,7 +13,7 @@ public class playLevel : level
 		{
 				thisManage = gameManager.thisM;
 				audioM = AudioManager.thisAM;
-				thisCam = CameraManeger.thisCamera;
+				thisCam = thisManage.thisCamManange;
 		}
 
 		void Update ()
@@ -23,7 +23,7 @@ public class playLevel : level
 		
 		public override  void startLevel ()
 		{
-				thisCam.addPlayer (thisManage.currCamera);
+				thisCam = thisManage.thisCamManange;
 				changeStage (1);
 		}
 	

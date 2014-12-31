@@ -74,7 +74,6 @@
      <Compile Include="Assets\myAssets\scripts\Tihs.cs" />
      <Compile Include="Assets\myAssets\scripts\collisionBoost.cs" />
      <Compile Include="Assets\myAssets\scripts\effectsManager.cs" />
-     <Compile Include="Assets\myAssets\scripts\followPlayer.cs" />
      <Compile Include="Assets\myAssets\scripts\gameManager.cs" />
      <Compile Include="Assets\myAssets\scripts\health.cs" />
      <Compile Include="Assets\myAssets\scripts\level.cs" />

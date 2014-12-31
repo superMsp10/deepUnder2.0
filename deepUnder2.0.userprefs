@@ -1,8 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\Levels\Tihs\playLevel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\CameraManeger.cs">
     <Files>
-      <File FileName="Assets\myAssets\Levels\Tihs\playLevel.cs" Line="24" Column="38" />
+      <File FileName="Assets\myAssets\scripts\CameraManeger.cs" Line="62" Column="5" />
+      <File FileName="Assets\myAssets\scripts\Tarsc.cs" Line="1" Column="1" />
+      <File FileName="Assets\myAssets\Levels\Tihs\playLevel.cs" Line="27" Column="1" />
+      <File FileName="Assets\myAssets\scripts\gameManager.cs" Line="72" Column="62" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

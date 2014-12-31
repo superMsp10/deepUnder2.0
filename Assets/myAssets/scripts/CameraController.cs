@@ -20,8 +20,8 @@ public class CameraController : MonoBehaviour
 	
 		void Start ()
 		{
-				thisCam = CameraManeger.thisCamera;
 				thisManage = gameManager.thisM;
+				thisCam = thisManage.thisCamManange;
 				thisLevel = (playLevel)thisLevel;
 
 		}

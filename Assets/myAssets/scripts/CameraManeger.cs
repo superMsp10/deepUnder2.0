@@ -5,77 +5,63 @@ public class CameraManeger : MonoBehaviour
 {
 
 		public playLevel thisLevl;
+		public GameObject target;
 		public Camera playerCamera;
-		public followPlayer fp;
-		private GameObject playerGameObject;
-		private Vector2 playertPos;
-		/// <summary>
-		/// 	/// </summary>
 		public float minSize;
 		public float size;
 		public float xOff;
 		public float maxSize;
 		public float yOff;
 		public	float fromBoundryX;
-		public static CameraManeger thisCamera;
 		private gameManager thisManage;
+		Transform refPoint;
 		float lastXPos;
 
 
-		// Use this for initialization
-		void Awake ()
-		{
-				if (thisCamera == null) {
-						thisCamera = this;
-				}
-		}
+
 
 		void Start ()
 		{
+				transform.parent = null;
 				thisManage = gameManager.thisM;
 				thisLevl = (playLevel)thisManage.currentLevel;
+				playerCamera = GetComponent<Camera> ();
 				xOff = Screen.width * xOff;
 				yOff = Screen.height * yOff;
-
+				refPoint = thisManage.transform;
 		}
-
-		public void addPlayer (Camera cam)
-		{
-				playerCamera = cam;
-				fp = playerCamera.GetComponent<followPlayer> ();
-				changeSize (size);
-				playerGameObject = fp.target;
-		}
-
-
+	
 
 		void Update ()
 		{
-				playertPos = transform.TransformPoint (playerGameObject.transform.position);
+
+
 				Vector2 boundryPos;
-				boundryPos = transform.TransformPoint (thisLevl.stageBoundires [0].transform.position);
+				Vector2 playerPos = refPoint.TransformPoint (target.transform.position);
 				CameraController visible;
 				bool neg = true;
-				Vector2 cameraPos = new Vector2 (playertPos.x + xOff, playertPos.y + yOff);
+				Vector2 cameraPos = new Vector2 (playerPos.x + xOff, playerPos.y + yOff);
+				
 				if (thisLevl.visibleBoundries.Count == 1) {
+						boundryPos = refPoint.TransformPoint (thisLevl.stageBoundires [0].transform.position);
 						visible = thisLevl.visibleBoundries [0];
-						boundryPos = transform.TransformPoint (visible.transform.position);
+						boundryPos = refPoint.TransformPoint (visible.transform.position);
 						if (visible.dir.x != 0) {
 								if (visible.dir.x < 0)
 										neg = true;
 								else
 										neg = false;
-								if (xWillBeOnScreen (playertPos, boundryPos, neg)) {
-										cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, playertPos.y + yOff);
+								if (xWillBeOnScreen (playerPos, boundryPos, neg)) {
+										cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, playerPos.y + yOff);
 								} 
 						} 
 						
 				} else if (thisLevl.visibleBoundries.Count > 1) {
 						changeSize (size--);
 				} 
-				fp.moveCamera (cameraPos);
-
+				moveCamera (cameraPos);
 		}
+		
 
 		public void changeSize (float change)
 		{
@@ -107,6 +93,12 @@ public class CameraManeger : MonoBehaviour
 				else
 						return (objectX < rightFromScreen);
 
+		}
+
+		public void moveCamera (Vector2 Pos)
+		{
+				Vector3 p = new Vector3 (Pos.x, Pos.y, transform.position.z);
+				transform.position = p;
 		}
 
 		void OnDestroy ()

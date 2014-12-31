@@ -47,9 +47,8 @@ public class Mob1 : Entity
 				thisManage = gameManager.thisM;
 				thisLevel.addEntity (this);
 				rigidbody2D.centerOfMass = centerOfMass;
-				if (thisAnim == null) {
-						thisAnim = GetComponent<Animator> ();
-				}
+				thisAnim = GetComponent<Animator> ();
+				
 				if (thisAnim == null) {
 						Debug.LogError ("no animator is provided");
 				}
