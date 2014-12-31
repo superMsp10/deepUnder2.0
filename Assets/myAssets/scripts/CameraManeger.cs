@@ -19,7 +19,6 @@ public class CameraManeger : MonoBehaviour
 		public	float fromBoundryX;
 		public static CameraManeger thisCamera;
 		private gameManager thisManage;
-		public bool playableLevel;
 		float lastXPos;
 
 
@@ -34,14 +33,7 @@ public class CameraManeger : MonoBehaviour
 		void Start ()
 		{
 				thisManage = gameManager.thisM;
-				if (thisManage == null)
-						Debug.LogError ("thismanage is null");
-				if (thisManage.currentLevel as playLevel != null) {
-						thisLevl = (thisManage.currentLevel)as playLevel;
-						playableLevel = true;
-				} else {
-						playableLevel = false;
-				}
+				thisLevl = (playLevel)thisManage.currentLevel;
 				xOff = Screen.width * xOff;
 				yOff = Screen.height * yOff;
 
@@ -51,60 +43,40 @@ public class CameraManeger : MonoBehaviour
 		{
 				playerCamera = cam;
 				fp = playerCamera.GetComponent<followPlayer> ();
-				fp.thisLevel = thisLevl;
 				changeSize (size);
 				playerGameObject = fp.target;
-				playableLevel = true;
-				if (thisManage.currentLevel == null)
-						Debug.Log ("current Level is null cannot add camera of the player");
-				thisLevl = (thisManage.currentLevel)as playLevel;
-				if (thisLevl == null)
-						Debug.Log ("this level cannot be usedf as playable Level : " + thisLevl.gameObject.name);
-
 		}
 
 
 
 		void Update ()
 		{
-				if (playableLevel) {
-						playertPos = transform.TransformPoint (playerGameObject.transform.position);
-						Vector2 boundryPos;
-						boundryPos = transform.TransformPoint (thisLevl.stageBoundires [0].transform.position);
-						CameraController visible;
-				
-						Vector2 cameraPos = new Vector2 (playertPos.x + xOff, playertPos.y + yOff);
-						if (thisLevl.visibleBoundries.Count == 1) {
-								visible = thisLevl.visibleBoundries [0];
-								boundryPos = transform.TransformPoint (visible.transform.position);
-								if (visible.dir.x != 0) {
-										bool neg = true;
-										if (visible.dir.x < 0)
-												neg = true;
-										else
-												neg = false;
-										if (xWillBeOnScreen (playertPos, boundryPos, neg)) {
-												cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, playertPos.y + yOff);
-										} 
-								}
-								if (visible.dir.y != 0) {
-										bool neg = true;
-										if (visible.dir.y < 0)
-												neg = true;
-										else
-												neg = false;
-										if (yWillBeOnScreen (playertPos, boundryPos, neg)) {
-												cameraPos = new Vector2 (playertPos.x + xOff, playerCamera.transform.position.y + yOff);
-										}  
-								}
-						} else if (thisLevl.visibleBoundries.Count > 1) {
-								changeSize (size--);
+				playertPos = transform.TransformPoint (playerGameObject.transform.position);
+				Vector2 boundryPos;
+				boundryPos = transform.TransformPoint (thisLevl.stageBoundires [0].transform.position);
+				CameraController visible;
+				bool neg = true;
+				Vector2 cameraPos = new Vector2 (playertPos.x + xOff, playertPos.y + yOff);
+				if (thisLevl.visibleBoundries.Count == 1) {
+						visible = thisLevl.visibleBoundries [0];
+						boundryPos = transform.TransformPoint (visible.transform.position);
+						if (visible.dir.x != 0) {
+								if (visible.dir.x < 0)
+										neg = true;
+								else
+										neg = false;
+								if (xWillBeOnScreen (playertPos, boundryPos, neg)) {
+										cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, playertPos.y + yOff);
+								} 
 						} 
-						fp.moveCamera (cameraPos);
-
 						
-				}
+				} else if (thisLevl.visibleBoundries.Count > 1) {
+						changeSize (size--);
+				} 
+				fp.moveCamera (cameraPos);
+
 		}
+
 		public void changeSize (float change)
 		{
 				if (change > minSize) {
@@ -135,20 +107,6 @@ public class CameraManeger : MonoBehaviour
 				else
 						return (objectX < rightFromScreen);
 
-		}
-
-		public bool yWillBeOnScreen (Vector2 thisPos, Vector2 objectPos, bool up)
-		{
-				float thisY = playerCamera.WorldToScreenPoint (thisPos).y;
-				float objectY = playerCamera.WorldToScreenPoint (objectPos).y;
-			
-				float upFromScreen = thisY + (Screen.height / 2);
-				float downFromScreen = thisY - (Screen.height / 2);
-				if (up)
-						return (objectY > upFromScreen);
-				else
-						return (objectY < downFromScreen);
-			
 		}
 
 		void OnDestroy ()

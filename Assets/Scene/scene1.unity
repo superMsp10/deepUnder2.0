@@ -121,8 +121,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 9737162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.8000002, y: -5.34000015, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: -12.8300171, y: .440002441, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1691400608}
   m_RootOrder: 6
@@ -1509,15 +1509,27 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1539869378}
-        m_MethodName: levelex
-        m_Mode: 2
+        m_MethodName: changeLvl
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 824517291}
-          m_ObjectArgumentAssemblyTypeName: level, Assembly-CSharp, Version=0.0.0.0,
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: This
+          m_StringArgument: 1
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 1539869378}
+        m_MethodName: spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -9854,7 +9866,6 @@ MonoBehaviour:
   maxSize: 50
   yOff: .0320000015
   fromBoundryX: 0
-  playableLevel: 0
 --- !u!224 &1539869381
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12438,7 +12449,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_LocalPosition.x
@@ -12559,11 +12570,11 @@ Prefab:
       objectReference: {fileID: 1539869378}
     - target: {fileID: 11400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: levelex
+      value: changeLvl
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -12579,7 +12590,7 @@ Prefab:
       objectReference: {fileID: 1539869378}
     - target: {fileID: 11400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
+      value: spawn
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -12615,7 +12626,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: This
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
@@ -12623,12 +12634,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: level, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      value: UnityEngine.Object, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 824517291}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5f145320dafb55428a51cf78713600d, type: 2}
   m_RootGameObject: {fileID: 207749157}
@@ -13327,7 +13334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera1: {fileID: 2069550815}
-  spawnable: 0
+  spawnable: 1
   votes: 0
   skybox: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   entities: []
