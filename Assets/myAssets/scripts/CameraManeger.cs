@@ -8,7 +8,6 @@ public class CameraManeger : MonoBehaviour
 		public GameObject target;
 		public Camera playerCamera;
 		public float minSize;
-		public float size;
 		public float xOff;
 		public float maxSize;
 		public float yOff;
@@ -16,6 +15,7 @@ public class CameraManeger : MonoBehaviour
 		private gameManager thisManage;
 		Transform refPoint;
 		float lastXPos;
+		public Vector2 cameraPos;
 
 
 
@@ -40,11 +40,25 @@ public class CameraManeger : MonoBehaviour
 				Vector2 offSet = new Vector2 (xOff + target.transform.position.x, yOff + target.transform.position.y);
 				Vector2 playerPos = refPoint.TransformPoint (offSet);
 				CameraController visible;
-				Vector2 cameraPos = new Vector2 (playerPos.x, playerPos.y);
+				cameraPos = new Vector2 (playerPos.x, playerPos.y);
 				
-				if (thisLevl.visibleBoundries.Count == 1) {
-						visible = thisLevl.visibleBoundries [0];
+				if (thisLevl.withinDistance.Count > 0) {
+						visible = thisLevl.withinDistance [0];
 						boundryPos = refPoint.TransformPoint (visible.transform.position);
+
+						if (visible.dir.y != 0) {
+								bool neg = true;
+				
+								if (visible.dir.y > 0) {
+										neg = true;
+								} else {
+										neg = false;
+								}
+								if (!yWillBeOnScreen (playerPos, boundryPos, neg)) {
+										cameraPos = new Vector2 (playerPos.x, playerCamera.transform.position.y);
+								} 
+						} 
+						/*
 						if (visible.dir.y != 0) {
 								bool neg = true;
 				
@@ -53,12 +67,11 @@ public class CameraManeger : MonoBehaviour
 								} else {
 										neg = false;
 								}
-								Debug.Log (neg);
 								if (yWillBeOnScreen (playerPos, boundryPos, neg)) {
 										cameraPos = new Vector2 (playerPos.x, playerCamera.transform.position.y);
 								} 
 						} 
-						/*if (visible.dir.x != 0) {
+						if (visible.dir.x != 0) {
 								bool neg = true;
 
 								if (visible.dir.x < 0)
@@ -75,14 +88,6 @@ public class CameraManeger : MonoBehaviour
 		}
 		
 
-		public void changeSize (float change)
-		{
-				if (change > minSize) {
-						size = change;
-						playerCamera.orthographicSize = change;
-				}
-
-		}
 
 
 
@@ -95,7 +100,7 @@ public class CameraManeger : MonoBehaviour
 
 		public bool xWillBeOnScreen (Vector2 thisPos, Vector2 objectPos, bool left)
 		{
-				float thisX = playerCamera.WorldToScreenPoint (thisPos).x;
+				float thisX = playerCamera.WorldToScreenPoint (thisPos).x; 
 				float objectX = playerCamera.WorldToScreenPoint (objectPos).x;
 
 				float rightFromScreen = thisX + (Screen.width / 2);
@@ -108,18 +113,18 @@ public class CameraManeger : MonoBehaviour
 
 		}
 
-		public bool yWillBeOnScreen (Vector2 thisPos, Vector2 objectPos, bool up)
+
+		public bool yWillBeOnScreen (Vector2 thisPos, Vector2 objectPos, bool higherThanTop)
 		{
 				float thisY = playerCamera.WorldToScreenPoint (thisPos).y;
 				float objectY = playerCamera.WorldToScreenPoint (objectPos).y;
 		
-				float upFromScreen = thisY + (Screen.height / 2);
-				float downFromScreen = thisY - (Screen.height / 2);
-				if (up) {
-						return (objectY > upFromScreen);
-						Debug.Log ("hi");
+				float topOfScreen = thisY + (Screen.height / 2);
+				float bottomOfScreen = thisY - (Screen.height / 2);
+				if (higherThanTop) {
+						return (objectY > topOfScreen);
 				} else {
-						return (objectY < downFromScreen);
+						return (objectY < bottomOfScreen);
 				}
 		
 		}

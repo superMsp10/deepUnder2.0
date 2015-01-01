@@ -69,7 +69,7 @@ public class gameManager : MonoBehaviour
 				myPlayer.SetActive (true);
 				currCamera = myPlayer.GetComponentInChildren<Camera> ();
 				myHp = myPlayer.GetComponent<health> ();
-				thisCamManange = myPlayer.GetComponent<CameraManeger> ();
+				thisCamManange = myPlayer.GetComponentInChildren<CameraManeger> ();
 				Entity e = myPlayer.GetComponent<Entity> ();
 				if (e == null)
 						Debug.LogError ("cannot spawn not a entity");

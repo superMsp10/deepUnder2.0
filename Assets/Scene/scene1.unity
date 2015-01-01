@@ -5077,7 +5077,7 @@ MonoBehaviour:
   deathHeight: -200
   stage: 1
   stageBoundires: []
-  visibleBoundries: []
+  withinDistance: []
   allBoundries: []
 --- !u!1 &834642107
 GameObject:
@@ -11551,8 +11551,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1821306404}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: -61.7999992, y: 63.2999992, z: 0}
-  m_LocalScale: {x: 1, y: 1000, z: 1}
+  m_LocalPosition: {x: .600000024, y: 119.199997, z: 0}
+  m_LocalScale: {x: -3.92516518, y: 1779.95349, z: 1}
   m_Children: []
   m_Father: {fileID: 655692571}
   m_RootOrder: 7
@@ -11605,7 +11605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visible: 0
-  dir: {x: 0, y: -1}
+  dir: {x: 0, y: 1}
   stage: 1
   thisLevel: {fileID: 824517291}
   thisManage: {fileID: 0}
@@ -11635,7 +11635,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1823173091}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: .5, y: -39.9000015, z: 0}
+  m_LocalPosition: {x: 1, y: -38.7999992, z: 0}
   m_LocalScale: {x: 5, y: 1705.3894, z: 1}
   m_Children: []
   m_Father: {fileID: 655692571}
@@ -11689,7 +11689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visible: 0
-  dir: {x: 0, y: -1}
+  dir: {x: 0, y: 1}
   stage: 1
   thisLevel: {fileID: 824517291}
   thisManage: {fileID: 0}

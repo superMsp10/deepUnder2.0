@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
 		public  playLevel thisLevel;
 		public gameManager thisManage;
 		public bool paused = false;
+		private Vector2 camPos;
 
 
 		void Awake ()
@@ -28,18 +29,17 @@ public class CameraController : MonoBehaviour
 			
 		void Update ()
 		{
-				if (renderer.isVisible && !visible) {
-						visible = true;
-						thisLevel.visibleBoundries.Add (this);
-				} else if (visible && !renderer.isVisible) {
-						visible = false;
-						thisLevel.visibleBoundries.Remove (this);
+				camPos = thisCam.cameraPos;
+				if (Vector2.Distance (transform.position, camPos))
+						Debug.Log ("hi");
 
-				}
 		}
+
 
 		public void changeS (float  lev)
 		{
+				thisLevel = (playLevel)thisLevel;
+				thisCam = thisManage.thisCamManange;
 				if (lev == stage) {
 
 						gameObject.SetActive (true);
