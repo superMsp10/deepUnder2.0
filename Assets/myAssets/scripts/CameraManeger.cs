@@ -15,10 +15,6 @@ public class CameraManeger : MonoBehaviour
 		private gameManager thisManage;
 		Transform refPoint;
 		float lastXPos;
-		public Vector2 cameraPos;
-
-
-
 
 		void Start ()
 		{
@@ -30,7 +26,6 @@ public class CameraManeger : MonoBehaviour
 				yOff = Screen.height * yOff;
 				refPoint = thisManage.transform;
 		}
-	
 
 		void Update ()
 		{
@@ -40,56 +35,49 @@ public class CameraManeger : MonoBehaviour
 				Vector2 offSet = new Vector2 (xOff + target.transform.position.x, yOff + target.transform.position.y);
 				Vector2 playerPos = refPoint.TransformPoint (offSet);
 				CameraController visible;
-				cameraPos = new Vector2 (playerPos.x, playerPos.y);
+				Vector2 cameraPos = new Vector2 (playerPos.x, playerPos.y);
 				
-				if (thisLevl.withinDistance.Count > 0) {
-						visible = thisLevl.withinDistance [0];
+			
+
+				if (thisLevl.yVisible.Count > 0) {
+						cameraPos = new Vector2 (playerPos.x, playerPos.y);
+						visible = thisLevl.yVisible [0]; 
 						boundryPos = refPoint.TransformPoint (visible.transform.position);
-
-						if (visible.dir.y != 0) {
-								bool neg = true;
+						bool neg = true;
 				
-								if (visible.dir.y > 0) {
-										neg = true;
-								} else {
-										neg = false;
-								}
-								if (!yWillBeOnScreen (playerPos, boundryPos, neg)) {
-										cameraPos = new Vector2 (playerPos.x, playerCamera.transform.position.y);
-								} 
+						if (visible.dir.y > 0) {
+								neg = true;
+						} else {
+								neg = false;
+						}
+						if (!yWillBeOnScreen (playerPos, boundryPos, neg)) {
+								cameraPos = new Vector2 (playerPos.x, playerCamera.transform.position.y);
 						} 
-						/*
-						if (visible.dir.y != 0) {
-								bool neg = true;
-				
-								if (visible.dir.y < 0) {
-										neg = true;
-								} else {
-										neg = false;
-								}
-								if (yWillBeOnScreen (playerPos, boundryPos, neg)) {
-										cameraPos = new Vector2 (playerPos.x, playerCamera.transform.position.y);
-								} 
-						} 
-						if (visible.dir.x != 0) {
-								bool neg = true;
+						moveCamera (cameraPos);
 
-								if (visible.dir.x < 0)
-										neg = true;
-								else
-										neg = false;
-								if (xWillBeOnScreen (playerPos, boundryPos, neg)) {
-										cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, playerPos.y + yOff);
-								} 
-						} */
-						
+				} 
+
+				
+
+				if (thisLevl.xVisible.Count > 0) {
+						visible = thisLevl.yVisible [0]; 
+						boundryPos = refPoint.TransformPoint (visible.transform.position);
+						bool neg = true;
+
+						if (visible.dir.x < 0)
+								neg = true;
+						else
+								neg = false;
+						if (xWillBeOnScreen (playerPos, boundryPos, neg)) {
+								cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, playerPos.y + yOff);
+						} 
+						moveCamera (cameraPos);
+
 				}
-				moveCamera (cameraPos);
+				if (thisLevl.xVisible.Count == 0 && thisLevl.yVisible.Count == 0)
+						moveCamera (cameraPos);
+
 		}
-		
-
-
-
 
 		public bool onScreenX (Vector2 pos)
 		{
@@ -112,7 +100,6 @@ public class CameraManeger : MonoBehaviour
 				}
 
 		}
-
 
 		public bool yWillBeOnScreen (Vector2 thisPos, Vector2 objectPos, bool higherThanTop)
 		{

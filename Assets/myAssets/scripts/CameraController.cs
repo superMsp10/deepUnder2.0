@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
 		public gameManager thisManage;
 		public bool paused = false;
 		private Vector2 camPos;
-
+		public bool yAxis = false;
 
 		void Awake ()
 		{
@@ -24,22 +24,39 @@ public class CameraController : MonoBehaviour
 				thisManage = gameManager.thisM;
 				thisCam = thisManage.thisCamManange;
 				thisLevel = (playLevel)thisLevel;
+				if (dir.y != 0) {
+						yAxis = true;
+				} else {
 
+						yAxis = false;
+				}
 		}
 			
 		void Update ()
 		{
-				camPos = thisCam.cameraPos;
-				if (Vector2.Distance (transform.position, camPos))
-						Debug.Log ("hi");
-
+				if (yAxis) {
+						if (renderer.isVisible && !visible) {
+								visible = true;
+								thisLevel.yVisible.Add (this);
+						} else if (!renderer.isVisible) {
+								visible = false;
+								thisLevel.yVisible.Remove (this);
+						}
+				}
+				if (!yAxis) { 
+						if (renderer.isVisible && !visible) {
+								visible = true;
+								thisLevel.xVisible.Add (this);
+						} else if (!renderer.isVisible) {
+								visible = false;
+								thisLevel.xVisible.Remove (this);
+						}
+				}
+				
 		}
-
 
 		public void changeS (float  lev)
 		{
-				thisLevel = (playLevel)thisLevel;
-				thisCam = thisManage.thisCamManange;
 				if (lev == stage) {
 
 						gameObject.SetActive (true);
@@ -50,6 +67,7 @@ public class CameraController : MonoBehaviour
 				}
 
 		}
+
 		void OnApplicationFocus (bool focusStatus)
 		{
 		

@@ -3033,6 +3033,7 @@ MonoBehaviour:
   thisLevel: {fileID: 824517291}
   thisManage: {fileID: 0}
   paused: 0
+  yAxis: 0
 --- !u!1001 &453946174
 Prefab:
   m_ObjectHideFlags: 0
@@ -5077,7 +5078,8 @@ MonoBehaviour:
   deathHeight: -200
   stage: 1
   stageBoundires: []
-  withinDistance: []
+  xVisible: []
+  yVisible: []
   allBoundries: []
 --- !u!1 &834642107
 GameObject:
@@ -8705,6 +8707,7 @@ MonoBehaviour:
   thisLevel: {fileID: 824517291}
   thisManage: {fileID: 0}
   paused: 0
+  yAxis: 0
 --- !u!1 &1376722274
 GameObject:
   m_ObjectHideFlags: 0
@@ -11610,6 +11613,7 @@ MonoBehaviour:
   thisLevel: {fileID: 824517291}
   thisManage: {fileID: 0}
   paused: 0
+  yAxis: 0
 --- !u!1 &1823173091
 GameObject:
   m_ObjectHideFlags: 0
@@ -11689,11 +11693,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visible: 0
-  dir: {x: 0, y: 1}
+  dir: {x: 0, y: -1}
   stage: 1
   thisLevel: {fileID: 824517291}
   thisManage: {fileID: 0}
   paused: 0
+  yAxis: 0
 --- !u!1 &1837462054
 GameObject:
   m_ObjectHideFlags: 0
@@ -13475,7 +13480,7 @@ MonoBehaviour:
   camera1: {fileID: 2069550815}
   spawnable: 0
   votes: 0
-  skybox: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  skybox: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 3}
   entities: []
   thisSound: {fileID: 1978510939}
   deathHeight: -200

@@ -5,7 +5,9 @@ public class playLevel : level
 {
 		public float stage = 0;
 		public List<CameraController> stageBoundires;
-		public List<CameraController> withinDistance;
+		public List<CameraController> xVisible;
+		public List<CameraController> yVisible;
+
 		public List<CameraController> allBoundries;
 		protected CameraManeger thisCam;
 
