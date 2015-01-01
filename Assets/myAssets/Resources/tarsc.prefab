@@ -857,7 +857,7 @@ MonoBehaviour:
     jump: 5500
     moving: 0
     optTargetRange: 30
-    canFly: 1
+    flyAmount: 2
   grounded: 0
   groundRad: .200000003
   groundCheck:
@@ -1177,7 +1177,6 @@ MonoBehaviour:
   target: {fileID: 100004}
   playerCamera: {fileID: 0}
   minSize: 0
-  size: 0
   xOff: 0
   maxSize: 0
   yOff: .0250000004

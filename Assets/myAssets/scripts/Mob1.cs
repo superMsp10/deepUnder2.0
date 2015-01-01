@@ -13,7 +13,7 @@ public class mobAtributes
 		public int jump = 100;
 		public bool moving = false;
 		public int optTargetRange = 30;
-		public bool canFly = false;
+		public float  flyAmount = 0.5f;
 
 	
 	
@@ -161,17 +161,16 @@ public class Mob1 : Entity
 		
 		public virtual void moveX (float moveX)
 		{
+				float xMove = (moveX * thisAttributes.moveForce);
 
-				if (thisAttributes.canFly) {
-						if (Mathf.Abs (rigidbody2D.velocity.x) < thisAttributes.maxSped)
-								rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x + 
-										(moveX * thisAttributes.moveForce), rigidbody2D.velocity.y);
-				} else if (grounded) {
-						if (Mathf.Abs (rigidbody2D.velocity.x) < thisAttributes.maxSped)
-								rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x + 
-										(moveX * thisAttributes.moveForce), rigidbody2D.velocity.y);
-
+	
+				if (!grounded) {
+						xMove /= thisAttributes.flyAmount;
 				}
+
+				if (Mathf.Abs (rigidbody2D.velocity.x) < thisAttributes.maxSped)
+						rigidbody2D.velocity = new Vector2 (xMove + rigidbody2D.velocity.x, rigidbody2D.velocity.y);
+		
 		}
 			
 		public virtual void jump (int jumpF)
