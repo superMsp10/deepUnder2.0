@@ -39,14 +39,27 @@ public class CameraManeger : MonoBehaviour
 				Vector2 boundryPos;
 				Vector2 playerPos = refPoint.TransformPoint (target.transform.position);
 				CameraController visible;
-				bool neg = true;
 				Vector2 cameraPos = new Vector2 (playerPos.x + xOff, playerPos.y + yOff);
 				
 				if (thisLevl.visibleBoundries.Count == 1) {
 						boundryPos = refPoint.TransformPoint (thisLevl.stageBoundires [0].transform.position);
 						visible = thisLevl.visibleBoundries [0];
 						boundryPos = refPoint.TransformPoint (visible.transform.position);
+						if (visible.dir.y != 0) {
+								bool neg = true;
+				
+								if (visible.dir.y < 0) {
+										neg = true;
+								} else {
+										neg = false;
+								}
+								if (yWillBeOnScreen (playerPos, boundryPos, neg)) {
+										cameraPos = new Vector2 (playerPos.x + xOff, playerCamera.transform.position.y);
+								} 
+						} 
 						if (visible.dir.x != 0) {
+								bool neg = true;
+
 								if (visible.dir.x < 0)
 										neg = true;
 								else
@@ -93,6 +106,20 @@ public class CameraManeger : MonoBehaviour
 				else
 						return (objectX < rightFromScreen);
 
+		}
+
+		public bool yWillBeOnScreen (Vector2 thisPos, Vector2 objectPos, bool up)
+		{
+				float thisY = playerCamera.WorldToScreenPoint (thisPos).y;
+				float objectY = playerCamera.WorldToScreenPoint (objectPos).y;
+		
+				float upFromScreen = thisY + (Screen.height / 2);
+				float downFromScreen = thisY - (Screen.height / 2);
+				if (up)
+						return (objectY > upFromScreen);
+				else
+						return (objectY < downFromScreen);
+		
 		}
 
 		public void moveCamera (Vector2 Pos)
