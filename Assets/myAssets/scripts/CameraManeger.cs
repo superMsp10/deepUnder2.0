@@ -51,16 +51,14 @@ public class CameraManeger : MonoBehaviour
 								neg = false;
 						}
 						if (!yWillBeOnScreen (playerPos, boundryPos, neg)) {
-								cameraPos = new Vector2 (playerPos.x, playerCamera.transform.position.y);
+								cameraPos = new Vector2 (cameraPos.x, playerCamera.transform.position.y);
 						} 
-						moveCamera (cameraPos);
-
 				} 
 
 				
 
 				if (thisLevl.xVisible.Count > 0) {
-						visible = thisLevl.yVisible [0]; 
+						visible = thisLevl.xVisible [0]; 
 						boundryPos = refPoint.TransformPoint (visible.transform.position);
 						bool neg = true;
 
@@ -69,13 +67,12 @@ public class CameraManeger : MonoBehaviour
 						else
 								neg = false;
 						if (xWillBeOnScreen (playerPos, boundryPos, neg)) {
-								cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, playerPos.y + yOff);
+								cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, cameraPos.y);
 						} 
-						moveCamera (cameraPos);
 
 				}
-				if (thisLevl.xVisible.Count == 0 && thisLevl.yVisible.Count == 0)
-						moveCamera (cameraPos);
+			
+				moveCamera (cameraPos);
 
 		}
 
