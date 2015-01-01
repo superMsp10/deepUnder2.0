@@ -37,12 +37,12 @@ public class CameraManeger : MonoBehaviour
 
 
 				Vector2 boundryPos;
-				Vector2 playerPos = refPoint.TransformPoint (target.transform.position);
+				Vector2 offSet = new Vector2 (xOff + target.transform.position.x, yOff + target.transform.position.y);
+				Vector2 playerPos = refPoint.TransformPoint (offSet);
 				CameraController visible;
-				Vector2 cameraPos = new Vector2 (playerPos.x + xOff, playerPos.y + yOff);
+				Vector2 cameraPos = new Vector2 (playerPos.x, playerPos.y);
 				
 				if (thisLevl.visibleBoundries.Count == 1) {
-						boundryPos = refPoint.TransformPoint (thisLevl.stageBoundires [0].transform.position);
 						visible = thisLevl.visibleBoundries [0];
 						boundryPos = refPoint.TransformPoint (visible.transform.position);
 						if (visible.dir.y != 0) {
@@ -53,11 +53,12 @@ public class CameraManeger : MonoBehaviour
 								} else {
 										neg = false;
 								}
+								Debug.Log (neg);
 								if (yWillBeOnScreen (playerPos, boundryPos, neg)) {
-										cameraPos = new Vector2 (playerPos.x + xOff, playerCamera.transform.position.y);
+										cameraPos = new Vector2 (playerPos.x, playerCamera.transform.position.y);
 								} 
 						} 
-						if (visible.dir.x != 0) {
+						/*if (visible.dir.x != 0) {
 								bool neg = true;
 
 								if (visible.dir.x < 0)
@@ -67,11 +68,9 @@ public class CameraManeger : MonoBehaviour
 								if (xWillBeOnScreen (playerPos, boundryPos, neg)) {
 										cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, playerPos.y + yOff);
 								} 
-						} 
+						} */
 						
-				} else if (thisLevl.visibleBoundries.Count > 1) {
-						changeSize (size--);
-				} 
+				}
 				moveCamera (cameraPos);
 		}
 		
@@ -101,10 +100,11 @@ public class CameraManeger : MonoBehaviour
 
 				float rightFromScreen = thisX + (Screen.width / 2);
 				float leftFromScreen = thisX - (Screen.width / 2);
-				if (left)
+				if (left) {
 						return (objectX > leftFromScreen);
-				else
+				} else {
 						return (objectX < rightFromScreen);
+				}
 
 		}
 
@@ -115,10 +115,12 @@ public class CameraManeger : MonoBehaviour
 		
 				float upFromScreen = thisY + (Screen.height / 2);
 				float downFromScreen = thisY - (Screen.height / 2);
-				if (up)
+				if (up) {
 						return (objectY > upFromScreen);
-				else
+						Debug.Log ("hi");
+				} else {
 						return (objectY < downFromScreen);
+				}
 		
 		}
 
