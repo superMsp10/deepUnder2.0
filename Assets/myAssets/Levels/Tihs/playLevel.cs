@@ -26,7 +26,7 @@ public class playLevel : level
 		public override  void startLevel ()
 		{
 				thisCam = thisManage.thisCamManange;
-				changeStage (1);
+				changeStage (stage);
 		}
 	
 		public  override void endLevel ()

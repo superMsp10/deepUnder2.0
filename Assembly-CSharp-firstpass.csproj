@@ -46,38 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\API\Core\GJAPI.cs" />
-     <Compile Include="Assets\Plugins\API\Helper\Core\GJAPIHelper.cs" />
-     <Compile Include="Assets\Plugins\API\Helper\Core\GJHNotificationsManager.cs" />
-     <Compile Include="Assets\Plugins\API\Helper\Core\GJHWindowsManager.cs" />
-     <Compile Include="Assets\Plugins\API\Helper\Methods Groups\GJHScoresMethods.cs" />
-     <Compile Include="Assets\Plugins\API\Helper\Methods Groups\GJHTrophiesMethods.cs" />
-     <Compile Include="Assets\Plugins\API\Helper\Methods Groups\GJHUsersMethods.cs" />
-     <Compile Include="Assets\Plugins\API\Helper\Objects\GJHNotification.cs" />
-     <Compile Include="Assets\Plugins\API\Helper\Objects\GJHWindow.cs" />
-     <Compile Include="Assets\Plugins\API\Helper\Windows\GJHLoginWindow.cs" />
-     <Compile Include="Assets\Plugins\API\Helper\Windows\GJHScoresWindow.cs" />
-     <Compile Include="Assets\Plugins\API\Helper\Windows\GJHTrophiesWindow.cs" />
-     <Compile Include="Assets\Plugins\API\Methods Groups\GJDataMehods.cs" />
-     <Compile Include="Assets\Plugins\API\Methods Groups\GJScoresMethods.cs" />
-     <Compile Include="Assets\Plugins\API\Methods Groups\GJSessionsMethods.cs" />
-     <Compile Include="Assets\Plugins\API\Methods Groups\GJTrophiesMethods.cs" />
-     <Compile Include="Assets\Plugins\API\Methods Groups\GJUsersMethods.cs" />
-     <Compile Include="Assets\Plugins\API\Objects\GJObject.cs" />
-     <Compile Include="Assets\Plugins\API\Objects\GJScore.cs" />
-     <Compile Include="Assets\Plugins\API\Objects\GJTable.cs" />
-     <Compile Include="Assets\Plugins\API\Objects\GJTrophy.cs" />
-     <Compile Include="Assets\Plugins\API\Objects\GJUser.cs" />
-     <Compile Include="Assets\Plugins\Libraries\MD5.cs" />
+     <Compile Include="Assets\Standard Assets\Water (Basic)\Sources\Scripts\WaterSimple.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
-     <None Include="Assets\Plugins\release_history.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\Plugins\Photon3Unity3D.xml" />
+     <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Photon3Unity3D">
- <HintPath>M:/ProducedGames/deepUnder2.0/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

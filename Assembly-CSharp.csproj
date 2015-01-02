@@ -50,6 +50,7 @@
      <Compile Include="Assets\myAssets\Entities\cannon.cs" />
      <Compile Include="Assets\myAssets\Entities\nextLevelDoor.cs" />
      <Compile Include="Assets\myAssets\Entities\stageDoor.cs" />
+     <Compile Include="Assets\myAssets\Levels\Tihs\Tihs.cs" />
      <Compile Include="Assets\myAssets\Levels\Tihs\playLevel.cs" />
      <Compile Include="Assets\myAssets\Mobs\Dummy\Dummy.cs" />
      <Compile Include="Assets\myAssets\scripts\AudioManager.cs" />
@@ -71,7 +72,6 @@
      <Compile Include="Assets\myAssets\scripts\SpawnSpot.cs" />
      <Compile Include="Assets\myAssets\scripts\Tarsc.cs" />
      <Compile Include="Assets\myAssets\scripts\Teleport.cs" />
-     <Compile Include="Assets\myAssets\scripts\Tihs.cs" />
      <Compile Include="Assets\myAssets\scripts\collisionBoost.cs" />
      <Compile Include="Assets\myAssets\scripts\effectsManager.cs" />
      <Compile Include="Assets\myAssets\scripts\gameManager.cs" />
@@ -80,11 +80,14 @@
      <Compile Include="Assets\myAssets\scripts\tree.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{49564D5C-9626-8F7F-5F4E-C2716F7900A1}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
       <Project>{55D6D4D0-FEF5-1F1B-D29F-C6B6EEB218C7}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
