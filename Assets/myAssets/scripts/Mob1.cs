@@ -39,6 +39,7 @@ public class Mob1 : Entity
 		public BodyPart[] bodyParts;
 		public Transform frontBody;
 		public Transform sideBody;
+		public bool animated = false;
 		public bool detectedFacing = false;
 
 		void Start ()
@@ -71,7 +72,8 @@ public class Mob1 : Entity
 						thisAttributes.moving = true;
 				else
 						thisAttributes.moving = false;
-				updateAnim ();
+				if (animated)
+						updateAnim ();
 				if (detectedFacing) {
 						if (thisAttributes.moving) {
 								frontBody.gameObject.SetActive (false);
@@ -230,8 +232,8 @@ public class Mob1 : Entity
 				}
 
 				if (other.gameObject.tag == "Enemy") {
-						rigidbody2D.AddForce (new Vector2 (other.rigidbody.velocity.x + Random.Range (0, 300) * 100
-								, Random.Range (0, 90) * 100));
+						rigidbody2D.AddForce (new Vector2 (other.rigidbody.velocity.x + Random.Range (0, 300)
+								, Random.Range (0, 90)));
 				}
 
 				

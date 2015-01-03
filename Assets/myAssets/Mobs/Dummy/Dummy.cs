@@ -71,7 +71,7 @@ public class Dummy : Enemy
 						} else if (move > 0 && !turnR) {
 								flip ();
 						}
-						moveX (move);
+						moveX (move * Random.Range (0, 10));
 			
 				}
 				if (target.transform.position.y > transform.position.y) {

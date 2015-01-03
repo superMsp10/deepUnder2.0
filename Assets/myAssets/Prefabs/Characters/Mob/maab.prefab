@@ -43,6 +43,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
+  - 114: {fileID: 11472232}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Enemy
@@ -75,6 +76,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400006}
+  - 114: {fileID: 11472230}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Enemy
@@ -114,36 +116,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &100014
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400014}
-  m_Layer: 0
-  m_Name: COM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &100016
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400016}
-  m_Layer: 0
-  m_Name: COM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -156,8 +128,6 @@ Transform:
   m_Children:
   - {fileID: 400010}
   - {fileID: 400012}
-  - {fileID: 400016}
-  - {fileID: 400014}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400002
@@ -236,30 +206,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 1
---- !u!4 &400014
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100014}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400000}
-  m_RootOrder: 3
---- !u!4 &400016
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100016}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400000}
-  m_RootOrder: 2
 --- !u!50 &5000000
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -335,31 +281,80 @@ MonoBehaviour:
     awakeDestroyDelay: 0
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
+  customHierarchy: 0
+  stage: 0
+  despawnOnChange: 0
   thisAttributes:
     HP: 0
     Dmg: 0
-    maxSped: 10
+    maxSped: 100
     moveForce: 5
     blunt: 0
     point: 0
     slash: 0
     jump: 300
-    jumpLimit: 10
-    jumped: 0
-    optTargetRange: 30
-    canFly: 0
+    moving: 0
+    optTargetRange: 15
+    flyAmount: 1
   grounded: 0
   groundRad: .159999996
-  groundCheck: {fileID: 400012}
+  groundCheck:
+  - {fileID: 400012}
   centerOfMass: {x: 0, y: 0}
   whatGround:
     serializedVersion: 2
     m_Bits: 4096
+  thisAnim: {fileID: 0}
+  bodyParts: []
+  frontBody: {fileID: 0}
+  sideBody: {fileID: 0}
+  animated: 0
+  detectedFacing: 0
   whatEnemy:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 512
   target: {fileID: 0}
-  sight: 108
+  sight: 150
+--- !u!114 &11472230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0704ac097e09374184929b5c78a6389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desD:
+    destroyOnAwake: 0
+    awakeDestroyDelay: 0
+  thisLevel: {fileID: 0}
+  thisManage: {fileID: 0}
+  customHierarchy: 1
+  stage: 0
+  despawnOnChange: 0
+  thisMob: {fileID: 11400000}
+--- !u!114 &11472232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0704ac097e09374184929b5c78a6389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desD:
+    destroyOnAwake: 0
+    awakeDestroyDelay: 0
+  thisLevel: {fileID: 0}
+  thisManage: {fileID: 0}
+  customHierarchy: 1
+  stage: 0
+  despawnOnChange: 0
+  thisMob: {fileID: 11400000}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

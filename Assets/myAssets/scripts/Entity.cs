@@ -20,6 +20,8 @@ public  class Entity : MonoBehaviour
 		public  level thisLevel;
 		public gameManager thisManage;
 		public bool customHierarchy = false;
+		public int stage;
+		public bool despawnOnChange;
 
 		void Start ()
 		{
@@ -27,6 +29,7 @@ public  class Entity : MonoBehaviour
 						Debug.LogError ("no Level referenced for this entity: " + gameObject.name);
 				thisManage = gameManager.thisM;
 				thisLevel.addEntity (this);
+
 
 		}
 
@@ -37,6 +40,18 @@ public  class Entity : MonoBehaviour
 						DestroyEntity (desD.awakeDestroyDelay);
 				}
 		
+		}
+
+		public void changeS (float  lev)
+		{
+				if (despawnOnChange) {
+						if (lev == stage) {
+			
+								gameObject.SetActive (true);
+						} else {
+								gameObject.SetActive (false);
+						}
+				}
 		}
 	
 		void DisableChildGameObject (string name)

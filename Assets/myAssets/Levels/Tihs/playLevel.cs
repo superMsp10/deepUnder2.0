@@ -42,6 +42,10 @@ public class playLevel : level
 				foreach (CameraController c in allBoundries) {
 						c.changeS (l);
 				}
+				foreach (Entity e in entities) {
+
+						e.changeS (l);
+				}
 		}
 	
 		public void addController (CameraController cam)
