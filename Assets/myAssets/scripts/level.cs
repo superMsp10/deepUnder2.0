@@ -20,6 +20,7 @@ public  class level : MonoBehaviour
 		{
 				thisManage = gameManager.thisM;
 				audioM = AudioManager.thisAM;
+				audioM.playSound (transform.position, "background", thisSound.clip);
 		}
 			
 		void OnEnable ()

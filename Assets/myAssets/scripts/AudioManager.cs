@@ -44,7 +44,7 @@ public class AudioManager : MonoBehaviour
 		public  void playSound (Vector3 pos, string category, AudioClip clip)
 		{
 				float v = 0;
-				if (category == "b")
+				if (category == "background")
 						v = BMV;
 				if (category == "fx")
 						v = fxVolume;
