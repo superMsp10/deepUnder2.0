@@ -6,24 +6,26 @@ public class Sound : MonoBehaviour
 
 		// Use this for initialization
 		private AudioManager thisAM;
-		public AudioSource thisS;
+		public AudioSource channel;
 		public AudioClip thisClip;
+
 
 		void Start ()
 		{
 				thisAM = AudioManager.thisAM;
+				channel = thisAM.buttonFX;
 		}
-	
-		// Update is called once per frame
-		void Update ()
+			
+		void OnEnable ()
 		{
-	
+				
+				channel.PlayOneShot (thisClip);
 		}
 
-		public void playSound ()
+		void OnDisable ()
 		{
-				thisS.volume = thisAM.getFXV ();
-
+		
+				//channel.enabled = false;
 		}
 
 

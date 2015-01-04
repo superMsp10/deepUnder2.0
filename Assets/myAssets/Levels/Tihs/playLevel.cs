@@ -14,8 +14,9 @@ public class playLevel : level
 		void Start ()
 		{
 				thisManage = gameManager.thisM;
-				audioM = AudioManager.thisAM;
 				thisCam = thisManage.thisCamManange;
+				audioM = AudioManager.thisAM;
+				thisChannel = audioM.bMusic;
 		}
 
 		void Update ()
@@ -27,13 +28,15 @@ public class playLevel : level
 		{
 				thisCam = thisManage.thisCamManange;
 				changeStage (stage);
+				thisChannel.clip = startMusic;
+				thisChannel.Play ();
+
 		}
 	
 		public  override void endLevel ()
 		{
 		
-				thisSound.enabled = false;
-		
+
 		}
 
 		public void changeStage (float l)

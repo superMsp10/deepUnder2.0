@@ -11,7 +11,8 @@ public  class level : MonoBehaviour
 		public List<Entity> entities;
 		protected AudioManager audioM;
 		protected gameManager thisManage;
-		public AudioSource thisSound;
+		public AudioClip startMusic;
+		public AudioSource thisChannel;
 		public int deathHeight = -200;
 
 
@@ -20,30 +21,26 @@ public  class level : MonoBehaviour
 		{
 				thisManage = gameManager.thisM;
 				audioM = AudioManager.thisAM;
-				//audioM.playSound (transform.position, "background", thisSound.clip);
+				thisChannel = audioM.bMusic;
 		}
 			
 		void OnEnable ()
 		{
 				//if (thisSound != null)
 				//		thisSound.volume = audioM.getBMV ();	
-				
-				
-
-
 		}
 			
 		public virtual  void startLevel ()
 		{
-				//thisSound.enabled = true;
+				thisChannel.clip = startMusic;
+				thisChannel.Play ();
 
 		}
 
 		public  virtual void endLevel ()
 		{
 		
-				thisSound.enabled = false;
-		
+
 		}
 
 

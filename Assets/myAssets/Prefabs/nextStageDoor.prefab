@@ -56,7 +56,13 @@ MonoBehaviour:
   xOff: 0
   yOff: 0
   thisLev: {fileID: 0}
+  wahtTele:
+    serializedVersion: 2
+    m_Bits: 4294967295
   stage: 1
+  whatPlayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

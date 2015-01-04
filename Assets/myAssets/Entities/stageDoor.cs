@@ -5,14 +5,14 @@ public class stageDoor : Door
 {
 
 		public int stage = 0;
-	
-		public virtual void teleport (Transform player)
+		public LayerMask whatPlayer;
+
+		protected override void extra (GameObject player)
 		{
+				if (player.layer == LayerMask.NameToLayer ("Player")) {
+						thisLev.changeStage (stage);
+				}
 		
-				Vector3 telepos = new Vector2 (teleTo.position.x - xOff,
-		                               teleTo.position.y - yOff);
-				player.position = telepos;
-				thisLev.changeStage (stage);
 		}
 }
 

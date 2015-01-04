@@ -52,12 +52,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202083523bbec3f4ab5924f0b3b97bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 0
-  level: 0
-  teleto: {fileID: 0}
+  teleTo: {fileID: 0}
   xOff: 0
   yOff: 0
-  zOff: 0
+  thisLev: {fileID: 0}
+  wahtTele:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

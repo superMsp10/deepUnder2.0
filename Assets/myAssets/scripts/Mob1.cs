@@ -191,7 +191,7 @@ public class Mob1 : Entity
 
 				if (other.gameObject.tag == "teleport") {
 						Teleport teleSpot = other.GetComponent<Teleport> ();
-						teleSpot.teleport (transform);
+						teleSpot.teleport (gameObject);
 						
 				}
 				if (other.gameObject.tag == "boost") {
@@ -232,8 +232,8 @@ public class Mob1 : Entity
 				}
 
 				if (other.gameObject.tag == "Enemy") {
-						rigidbody2D.AddForce (new Vector2 (other.rigidbody.velocity.x + Random.Range (0, 300)
-								, Random.Range (0, 90)));
+						rigidbody2D.AddForce (new Vector2 (other.rigidbody.velocity.x + Random.Range (-300, 300) * -10 
+								, Random.Range (-90, 90) * -10));
 				}
 
 				

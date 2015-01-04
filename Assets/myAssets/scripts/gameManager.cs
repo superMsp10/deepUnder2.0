@@ -30,8 +30,6 @@ public class gameManager : MonoBehaviour
 		private health myHp;
 		void Awake ()
 		{
-
-
 				if (thisM == null) {
 						thisM = this;
 				}

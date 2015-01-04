@@ -10,12 +10,11 @@ public class Teleport : MonoBehaviour
 		public float yOff = 0;
 		public playLevel thisLev;
 
-		public virtual void teleport (Transform player)
+		public virtual void teleport (GameObject player)
 		{
-
 				Vector3 telepos = new Vector2 (teleTo.position.x - xOff,
 		                                       teleTo.position.y - yOff);
-				player.position = telepos;
+				player.transform.position = telepos;
+				
 		}
-	                   
 }
