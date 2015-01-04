@@ -46,15 +46,18 @@ public class Mob1 : Entity
 		{
 				
 				thisManage = gameManager.thisM;
+				checkNecesseries ();
 				thisLevel.addEntity (this);
 				rigidbody2D.centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
-				checkNecesseries ();
 			
 		}
 
 		protected virtual void checkNecesseries ()
 		{
+
+				if (thisLevel == null)
+						Debug.LogError ("no Level referenced for this entity: " + gameObject.name);
 				if (thisAnim == null && animated) {
 						Debug.LogError ("no animator is provided");
 				}
@@ -238,8 +241,8 @@ public class Mob1 : Entity
 				}
 
 				if (other.gameObject.tag == "Enemy") {
-						rigidbody2D.AddForce (new Vector2 (other.rigidbody.velocity.x + Random.Range (-300, 300) * -10 
-								, Random.Range (-90, 90) * -10));
+						rigidbody2D.AddForce (new Vector2 (other.rigidbody.velocity.x + Random.Range (-300, 300) * 50 
+								, Random.Range (-90, 90) * 50));
 				}
 
 				

@@ -859,7 +859,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisAttributes:
     HP: 0
     Dmg: 0
@@ -882,7 +882,7 @@ MonoBehaviour:
   centerOfMass: {x: 0, y: 0}
   whatGround:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 5120
   thisAnim: {fileID: 0}
   bodyParts: []
   frontBody: {fileID: 405232}
@@ -931,7 +931,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11464592
 MonoBehaviour:
@@ -951,7 +951,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11464594
 MonoBehaviour:
@@ -971,7 +971,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11464596
 MonoBehaviour:
@@ -991,7 +991,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11464600
 MonoBehaviour:
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11464602
 MonoBehaviour:
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11464604
 MonoBehaviour:
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11464608
 MonoBehaviour:
@@ -1071,7 +1071,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11464610
 MonoBehaviour:
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11464612
 MonoBehaviour:
@@ -1111,7 +1111,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11464614
 MonoBehaviour:
@@ -1131,7 +1131,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11464616
 MonoBehaviour:
@@ -1151,7 +1151,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11464618
 MonoBehaviour:
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11464620
 MonoBehaviour:
@@ -1191,7 +1191,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11414438}
 --- !u!114 &11468926
 MonoBehaviour:

@@ -53,6 +53,8 @@
      <Compile Include="Assets\myAssets\Levels\Tihs\Tihs.cs" />
      <Compile Include="Assets\myAssets\Levels\Tihs\playLevel.cs" />
      <Compile Include="Assets\myAssets\Mobs\Dummy\Dummy.cs" />
+     <Compile Include="Assets\myAssets\Mobs\Oldman\NPC.cs" />
+     <Compile Include="Assets\myAssets\Mobs\Oldman\OldMan.cs" />
      <Compile Include="Assets\myAssets\scripts\AudioManager.cs" />
      <Compile Include="Assets\myAssets\scripts\BodyPart.cs" />
      <Compile Include="Assets\myAssets\scripts\BodyParts.cs" />
@@ -65,8 +67,8 @@
      <Compile Include="Assets\myAssets\scripts\Entity.cs" />
      <Compile Include="Assets\myAssets\scripts\GizmoIcon.cs" />
      <Compile Include="Assets\myAssets\scripts\Mob1.cs" />
-     <Compile Include="Assets\myAssets\scripts\NPC.cs" />
      <Compile Include="Assets\myAssets\scripts\NetworkManeger.cs" />
+     <Compile Include="Assets\myAssets\scripts\Quest.cs" />
      <Compile Include="Assets\myAssets\scripts\Resource.cs" />
      <Compile Include="Assets\myAssets\scripts\Sound.cs" />
      <Compile Include="Assets\myAssets\scripts\SpawnSpot.cs" />
