@@ -85,11 +85,15 @@ public class Enemy : Mob1
 		public void moveAi ()
 		{
 
-				if (Mathf.Abs (target.transform.position.x - transform.position.x) > 0) {
+				Vector2 targetPos = thisManage.transform.TransformPoint (target.transform.position);
+				Vector2 thisPos = thisManage.transform.TransformPoint (transform.position);
+
+				if (Mathf.Abs (targetPos.x - thisPos.x) > 0) {
 						float move = 0;
-						if (target.transform.position.x < transform.position.x) {
+						
+						if (targetPos.x < thisPos.x) {
 								move = (Vector2.right.x * -1);
-						} else if (target.transform.position.x > transform.position.x) {
+						} else if (targetPos.x > thisPos.x) {
 								move = (Vector2.right.x);
 						}
 			
@@ -101,9 +105,8 @@ public class Enemy : Mob1
 						moveX (move);
 				
 				}
-				if (target.transform.position.y > transform.position.y) {
-
-						jump (thisAttributes.jump + Random.Range (-30, 200));
+				if (targetPos.y > thisPos.y) {
+						jump (thisAttributes.jump * Random.Range (0, 30));
 
 
 				}

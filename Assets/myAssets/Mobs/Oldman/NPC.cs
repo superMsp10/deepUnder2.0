@@ -7,7 +7,7 @@ public class NPC : Mob1
 		public GameObject Target;
 		public List<Quest> quests;
 		public Quest currQuest;
-
+		
 		
 
 }

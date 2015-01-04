@@ -249,9 +249,9 @@ public class Mob1 : Entity
 						temp.dropMadeOf (Random.Range (0, 5));
 				}
 
-				if (other.gameObject.tag == "Enemy") {
-						rigidbody2D.AddForce (new Vector2 (other.rigidbody.velocity.x + Random.Range (-300, 300) * 50 
-								, Random.Range (-90, 90) * 50));
+				if (other.gameObject.tag == "Player") {
+						Vector2 force = new Vector2 (Random.Range (-100, 100), Random.Range (-100, 0));
+						rigidbody2D.AddForce (force * Random.Range (-2, 2), ForceMode2D.Impulse);
 				}
 
 				
