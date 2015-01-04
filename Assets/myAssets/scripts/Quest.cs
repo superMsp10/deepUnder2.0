@@ -4,16 +4,28 @@ using System.Collections;
 public class Quest : MonoBehaviour
 {
 
-		// Use this for initialization
-		void Start ()
+		public bool started;
+		public bool finished;
+		public void startQuest ()
 		{
-	
+				started = true;
+				Debug.Log ("started");
+
 		}
-	
-		// Update is called once per frame
-		void Update ()
+
+		public void updateQuest ()
 		{
-	
+				if (started)
+						Debug.Log ("hi");
+				if (finished)
+						Debug.Log ("ended");
 		}
+
+		public void endQuest ()
+		{
+				finished = true;
+				Debug.Log ("finished");
+		}
+		
 }
 

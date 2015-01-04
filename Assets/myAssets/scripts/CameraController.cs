@@ -34,6 +34,13 @@ public class CameraController : MonoBehaviour
 			
 		void Update ()
 		{
+				checkVisible ();
+				
+		}
+
+		public void checkVisible ()
+		{
+
 				if (yAxis) {
 						if (renderer.isVisible && !visible) {
 								visible = true;
@@ -52,11 +59,11 @@ public class CameraController : MonoBehaviour
 								thisLevel.xVisible.Remove (this);
 						}
 				}
-				
 		}
 
 		public void changeS (float  lev)
 		{
+
 				if (lev == stage) {
 
 						gameObject.SetActive (true);
@@ -65,6 +72,7 @@ public class CameraController : MonoBehaviour
 						gameObject.SetActive (false);
 						thisLevel.removeFromStage (this);
 				}
+				checkVisible ();
 
 		}
 

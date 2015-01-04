@@ -5685,7 +5685,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410017908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -250.800003, y: 130.100006, z: 0}
+  m_LocalPosition: {x: -245.899994, y: 130.100006, z: 0}
   m_LocalScale: {x: 4.86754084, y: 2.69255996, z: 1}
   m_Children: []
   m_Father: {fileID: 809779737}
@@ -8263,6 +8263,8 @@ MonoBehaviour:
   detectedFacing: 0
   talkDistance: 0
   Target: {fileID: 0}
+  quests: []
+  currQuest: {fileID: 0}
 --- !u!50 &609771423
 Rigidbody2D:
   m_ObjectHideFlags: 0

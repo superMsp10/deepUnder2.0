@@ -72,17 +72,22 @@ public class Mob1 : Entity
 		
 		void Update ()
 		{
+				if (animated)
+						updateAnim ();
+				checkDead ();
+				checkFacing ();
+		}
 
+		protected void checkDead ()
+		{
 				if (thisAttributes.HP < 0)
 						DestroyEntity (0);
 				if (transform.position.y < thisLevel.deathHeight)
 						thisAttributes.HP = 0;
-				if (grounded && Mathf.Abs (rigidbody2D.velocity.x) > 0.1)
-						thisAttributes.moving = true;
-				else
-						thisAttributes.moving = false;
-				if (animated)
-						updateAnim ();
+		}
+
+		protected void checkFacing ()
+		{
 				if (detectedFacing) {
 						if (thisAttributes.moving) {
 								frontBody.gameObject.SetActive (false);
@@ -91,6 +96,7 @@ public class Mob1 : Entity
 								sideBody.gameObject.SetActive (false);
 								frontBody.gameObject.SetActive (true);
 						}
+
 				}
 		}
 		
@@ -139,7 +145,10 @@ public class Mob1 : Entity
 				thisAnim.SetBool ("grounded", grounded);
 				thisAnim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 				thisAnim.SetFloat ("hSpeed", Mathf.Abs (rigidbody2D.velocity.x));
-
+				if (grounded && Mathf.Abs (rigidbody2D.velocity.x) > 0.1)
+						thisAttributes.moving = true;
+				else
+						thisAttributes.moving = false;
 
 
 		}
