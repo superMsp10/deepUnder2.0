@@ -15,8 +15,9 @@ public class gameManager : MonoBehaviour
 		public bool dead = false;
 		public bool loadDefault = false;
 		public Camera currCamera;
-		
-		
+		public GameObject ins1;
+		public GameObject ins2;
+
 		private string version;
 		public GameObject myPlayerIns;
 		public GameObject myPlayer;
@@ -54,6 +55,20 @@ public class gameManager : MonoBehaviour
 		{
 				if (Input.GetKeyDown (KeyCode.Escape)) {
 						inGame = !inGame;
+				}
+				if (Input.GetKeyDown (KeyCode.Mouse0)) {
+						GameObject g = (GameObject)Instantiate (ins1, myPlayer.transform.position * 2, Quaternion.identity);
+						g.transform.parent = null;
+						Debug.Log ("hi");
+						Entity e = g.GetComponent<Entity> ();
+						e.thisLevel = currentLevel;
+				}
+				if (Input.GetKeyDown (KeyCode.Mouse1)) {
+						GameObject g = (GameObject)Instantiate (ins2, myPlayer.transform.position * 2, Quaternion.identity);
+						g.transform.parent = null;
+
+						Entity e = g.GetComponent<Entity> ();
+						e.thisLevel = currentLevel;
 				}
 		}
 

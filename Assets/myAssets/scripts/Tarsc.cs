@@ -13,15 +13,7 @@ public class Tarsc : Mob1
 				rigidbody2D.centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
 
-				if (thisAnim == null) {
-						Debug.LogError ("no animator is provided");
-				}
-				if (groundCheck == null)
-						Debug.Log ("no feets included");
-				bodyParts = GetComponentsInChildren<BodyPart> ();
-				foreach (BodyPart b in bodyParts) {
-						b.thisLevel = thisLevel;
-				}
+				checkNecesseries ();
 
 
 				cameraM = GetComponentInChildren<CameraManeger> ();

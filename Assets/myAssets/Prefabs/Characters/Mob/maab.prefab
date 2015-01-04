@@ -212,9 +212,9 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 1.28999996
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -283,12 +283,12 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 0
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisAttributes:
     HP: 0
     Dmg: 0
     maxSped: 10
-    moveForce: 1
+    moveForce: 5
     blunt: 0
     point: 0
     slash: 0
@@ -315,6 +315,7 @@ MonoBehaviour:
     m_Bits: 1536
   target: {fileID: 0}
   sight: 150
+  despawnWithDistance: 1
 --- !u!114 &11472230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -333,7 +334,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11400000}
 --- !u!114 &11472232
 MonoBehaviour:
@@ -353,7 +354,7 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   customHierarchy: 1
   stage: 0
-  despawnOnChange: 0
+  despawnWithStage: 0
   thisMob: {fileID: 11400000}
 --- !u!212 &21200000
 SpriteRenderer:

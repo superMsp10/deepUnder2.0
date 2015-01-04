@@ -49,8 +49,13 @@ public class Mob1 : Entity
 				thisLevel.addEntity (this);
 				rigidbody2D.centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
-				
-				if (thisAnim == null) {
+				checkNecesseries ();
+			
+		}
+
+		protected virtual void checkNecesseries ()
+		{
+				if (thisAnim == null && animated) {
 						Debug.LogError ("no animator is provided");
 				}
 				if (groundCheck == null)
@@ -59,6 +64,7 @@ public class Mob1 : Entity
 				foreach (BodyPart b in bodyParts) {
 						b.thisLevel = thisLevel;
 				}
+
 		}
 		
 		void Update ()

@@ -6,6 +6,8 @@ public class Enemy : Mob1
 		public LayerMask whatEnemy;
 		public GameObject target;
 		public float sight;
+		public bool despawnWithDistance;
+
 
 		public void selectTarget ()
 		{
@@ -23,6 +25,14 @@ public class Enemy : Mob1
 
 		void FixedUpdate ()
 		{
+				checkGround ();
+				TargetSight ();
+
+		}
+
+
+		protected	void checkGround ()
+		{
 				int yGround = 0;
 				int nGround = 0;
 				foreach (Transform t in groundCheck) {
@@ -36,7 +46,7 @@ public class Enemy : Mob1
 						ground = true;
 				else
 						ground = false;
-
+		
 		
 				if (!grounded && ground) {
 						landed = true;
@@ -51,18 +61,27 @@ public class Enemy : Mob1
 				} else {
 						landed = false;
 				}
-				
+
+		}
+		protected	void TargetSight ()
+		{
 				if (target != null) {
 						if (Vector2.Distance (target.transform.position, transform.position)
 								> thisAttributes.optTargetRange) {
 								moveAi ();
 						}
-								
+			
+						if (Vector2.Distance (target.transform.position, transform.position) > sight) {
+								target = null;
+								if (despawnWithDistance) {
+										gameObject.SetActive (false);
+								}
+				
+				
+						}
 				} else
 						selectTarget ();
 
-
-			
 		}
 		
 		public void moveAi ()

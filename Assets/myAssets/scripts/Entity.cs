@@ -21,7 +21,7 @@ public  class Entity : MonoBehaviour
 		public gameManager thisManage;
 		public bool customHierarchy = false;
 		public int stage;
-		public bool despawnOnChange;
+		public bool despawnWithStage;
 
 		void Start ()
 		{
@@ -44,7 +44,7 @@ public  class Entity : MonoBehaviour
 
 		public void changeS (float  lev)
 		{
-				if (despawnOnChange) {
+				if (despawnWithStage) {
 						if (lev == stage) {
 			
 								gameObject.SetActive (true);
