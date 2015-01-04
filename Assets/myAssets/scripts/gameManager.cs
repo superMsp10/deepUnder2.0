@@ -53,23 +53,24 @@ public class gameManager : MonoBehaviour
 	
 		void Update ()
 		{
+				if (myPlayer != null) {
+						Vector2 spawnPoint = new Vector2 (myPlayer.transform.position.x + 10, myPlayer.transform.position.y + 10);
+						if (Input.GetKeyDown (KeyCode.Escape)) {
+								inGame = !inGame;
+						}
+						if (Input.GetKeyDown (KeyCode.Mouse0)) {
+								GameObject g = (GameObject)Instantiate (ins1, spawnPoint, Quaternion.identity);
+								g.transform.parent = null;
+								Entity e = g.GetComponent<Entity> ();
+								e.thisLevel = currentLevel;
+						}
+						if (Input.GetKeyDown (KeyCode.Mouse1)) {
+								GameObject g = (GameObject)Instantiate (ins2, spawnPoint, Quaternion.identity);
+								g.transform.parent = null;
 
-				Vector2 spawnPoint = new Vector2 (myPlayer.transform.position.x + 10, myPlayer.transform.position.y + 10);
-				if (Input.GetKeyDown (KeyCode.Escape)) {
-						inGame = !inGame;
-				}
-				if (Input.GetKeyDown (KeyCode.Mouse0)) {
-						GameObject g = (GameObject)Instantiate (ins1, spawnPoint, Quaternion.identity);
-						g.transform.parent = null;
-						Entity e = g.GetComponent<Entity> ();
-						e.thisLevel = currentLevel;
-				}
-				if (Input.GetKeyDown (KeyCode.Mouse1)) {
-						GameObject g = (GameObject)Instantiate (ins2, spawnPoint, Quaternion.identity);
-						g.transform.parent = null;
-
-						Entity e = g.GetComponent<Entity> ();
-						e.thisLevel = currentLevel;
+								Entity e = g.GetComponent<Entity> ();
+								e.thisLevel = currentLevel;
+						}
 				}
 		}
 

@@ -1,10 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\Levels\Tihs\playLevel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\Tarsc.cs">
     <Files>
-      <File FileName="Assets\myAssets\Mobs\Oldman\OldMan.cs" Line="6" Column="2" />
-      <File FileName="Assets\myAssets\Mobs\Oldman\NPC.cs" Line="11" Column="3" />
+      <File FileName="Assets\myAssets\scripts\Tarsc.cs" Line="28" Column="9" />
+      <File FileName="Assets\myAssets\scripts\gameManager.cs" Line="74" Column="6" />
+      <File FileName="Assets\myAssets\Mobs\Oldman\OldMan.cs" Line="1" Column="1" />
+      <File FileName="Assets\myAssets\Mobs\Oldman\NPC.cs" Line="1" Column="1" />
       <File FileName="Assets\myAssets\Levels\Tihs\playLevel.cs" Line="46" Column="21" />
+      <File FileName="Assets\myAssets\scripts\Mob1.cs" Line="151" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

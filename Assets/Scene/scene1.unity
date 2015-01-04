@@ -1749,7 +1749,7 @@ GameObject:
   - 4: {fileID: 171488418}
   - 212: {fileID: 171488420}
   - 58: {fileID: 171488419}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2445,7 +2445,7 @@ GameObject:
   - 4: {fileID: 227622573}
   - 212: {fileID: 227622575}
   - 61: {fileID: 227622574}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2807,7 +2807,7 @@ GameObject:
   - 4: {fileID: 249077525}
   - 212: {fileID: 249077527}
   - 61: {fileID: 249077526}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4310,7 +4310,7 @@ GameObject:
   - 4: {fileID: 324620819}
   - 212: {fileID: 324620821}
   - 61: {fileID: 324620820}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8194,7 +8194,7 @@ GameObject:
   - 4: {fileID: 609771421}
   - 114: {fileID: 609771422}
   - 50: {fileID: 609771423}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: OldMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11923,7 +11923,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 836645667}
   - 212: {fileID: 836645668}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12080,7 +12080,7 @@ GameObject:
   - 4: {fileID: 852015597}
   - 212: {fileID: 852015596}
   - 61: {fileID: 852015595}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19553,7 +19553,7 @@ GameObject:
   - 4: {fileID: 1395176725}
   - 212: {fileID: 1395176727}
   - 61: {fileID: 1395176726}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21807,10 +21807,10 @@ MonoBehaviour:
   currentLevel: {fileID: 824517291}
   levels: []
   dead: 1
-  loadDefault: 1
+  loadDefault: 0
   currCamera: {fileID: 0}
   ins1: {fileID: 100000, guid: 08f594c7c40395d4593e569526ea6708, type: 2}
-  ins2: {fileID: 100000, guid: 08f594c7c40395d4593e569526ea6708, type: 2}
+  ins2: {fileID: 609771420}
   myPlayerIns: {fileID: 100004, guid: c1ea0b1ed06925648a41f6f4e43f359a, type: 2}
   myPlayer: {fileID: 0}
 --- !u!4 &1539869379
@@ -24232,7 +24232,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1754957293}
   - 58: {fileID: 1754957294}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Feets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27331,6 +27331,46 @@ Prefab:
       propertyPath: m_Mass
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 149058, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149050, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149056, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149054, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149062, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149048, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149060, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149052, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149064, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149066, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
   m_RootGameObject: {fileID: 609771420}
@@ -29884,7 +29924,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2114719231}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

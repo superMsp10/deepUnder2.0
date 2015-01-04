@@ -20,6 +20,18 @@ public class Tarsc : Mob1
 				cameraM.thisLevl = (playLevel)thisLevel;
 		}
 
+		public override void updateAnim ()
+		{
+				thisAnim.SetBool ("grounded", grounded);
+				thisAnim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
+				thisAnim.SetFloat ("hSpeed", Mathf.Abs (rigidbody2D.velocity.x));
+				if (Mathf.Abs (rigidbody2D.velocity.x) > 0.1)
+						thisAttributes.moving = true;
+				else
+						thisAttributes.moving = false;
+		
+		
+		}
 		void Update ()
 		{
 				if (Input.GetKeyDown (KeyCode.Space)) {
