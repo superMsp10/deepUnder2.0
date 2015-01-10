@@ -79,6 +79,7 @@
      <Compile Include="Assets\myAssets\scripts\gameManager.cs" />
      <Compile Include="Assets\myAssets\scripts\health.cs" />
      <Compile Include="Assets\myAssets\scripts\level.cs" />
+     <Compile Include="Assets\myAssets\scripts\questManager.cs" />
      <Compile Include="Assets\myAssets\scripts\tree.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />

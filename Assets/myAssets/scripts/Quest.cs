@@ -6,10 +6,12 @@ public class Quest : MonoBehaviour
 
 		public bool started;
 		public bool finished;
+		public questManager thisQuest;
 		public void startQuest ()
 		{
 				started = true;
 				Debug.Log ("started");
+				thisQuest = questManager.thisQuest;
 
 		}
 

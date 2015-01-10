@@ -17,7 +17,7 @@ Platform assembly: M:\ProducedGames\deepUnder2.0\Builds\Windows\0.6\0.65_Data\Ma
 Loading M:\ProducedGames\deepUnder2.0\Builds\Windows\0.6\0.65_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: M:\ProducedGames\deepUnder2.0\Builds\Windows\0.6\0.65_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading M:\ProducedGames\deepUnder2.0\Builds\Windows\0.6\0.65_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.093 seconds
+- Completed reload, in  0.056 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.

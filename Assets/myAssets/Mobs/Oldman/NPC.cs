@@ -8,7 +8,10 @@ public class NPC : Mob1
 		public List<Quest> quests;
 		public Quest currQuest;
 		
-		
+		public virtual void PlayerInteract ()
+		{
+				Debug.Log ("hi");
+		}
 
 }
 

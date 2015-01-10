@@ -128,7 +128,8 @@ GameObject:
   - 4: {fileID: 449062}
   - 114: {fileID: 11449066}
   - 50: {fileID: 5040192}
-  m_Layer: 10
+  - 58: {fileID: 5826374}
+  m_Layer: 13
   m_Name: OldMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +258,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -965, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 449064}
@@ -310,6 +311,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!58 &5826374
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149062}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Radius: 8.68999958
+  m_Center: {x: 0, y: 2.9000001}
 --- !u!58 &5849064
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -407,7 +419,7 @@ MonoBehaviour:
   stage: 0
   despawnWithStage: 0
   thisAttributes:
-    HP: 0
+    HP: 30.0200005
     Dmg: 0
     maxSped: 10
     moveForce: 5
@@ -434,6 +446,8 @@ MonoBehaviour:
   detectedFacing: 0
   talkDistance: 0
   Target: {fileID: 0}
+  quests: []
+  currQuest: {fileID: 0}
 --- !u!212 &21249054
 SpriteRenderer:
   m_ObjectHideFlags: 1

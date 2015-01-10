@@ -674,8 +674,8 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_Mass: 4
-  m_LinearDrag: .200000003
+  m_Mass: 5
+  m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 2
   m_FixedAngle: 1
@@ -789,7 +789,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Size: {x: 1, y: 1}
-  m_Center: {x: 0, y: 0}
+  m_Center: {x: 0, y: 2.26999998}
 --- !u!61 &6183262
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -861,13 +861,13 @@ MonoBehaviour:
   stage: 0
   despawnWithStage: 0
   thisAttributes:
-    HP: 0
+    HP: 20
     Dmg: 0
-    maxSped: 50
+    maxSped: 60
     moveForce: 1
-    blunt: 0
-    point: 0
-    slash: 0
+    blunt: 283
+    point: 43
+    slash: 176
     jump: 5500
     moving: 0
     optTargetRange: 30

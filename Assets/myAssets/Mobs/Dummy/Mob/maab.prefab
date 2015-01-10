@@ -285,7 +285,7 @@ MonoBehaviour:
   stage: 0
   despawnWithStage: 0
   thisAttributes:
-    HP: 0
+    HP: 64.0500031
     Dmg: 0
     maxSped: 10
     moveForce: 5

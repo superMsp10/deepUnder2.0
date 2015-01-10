@@ -80,7 +80,7 @@ public class Mob1 : Entity
 
 		protected void checkDead ()
 		{
-				if (thisAttributes.HP < 0)
+				if (thisAttributes.HP <= 0)
 						DestroyEntity (0);
 				if (transform.position.y < thisLevel.deathHeight)
 						thisAttributes.HP = 0;
@@ -236,6 +236,14 @@ public class Mob1 : Entity
 			
 			
 				}
+
+				if (other.gameObject.tag == "NPC") {
+						NPC thisCannon = other.gameObject.GetComponent<NPC> ();
+						if (thisCannon == null)
+								Debug.LogError ("no NPC script attached but tag is NPC");
+						thisCannon.PlayerInteract ();
+			
+				}
 		
 		
 		}
@@ -249,9 +257,18 @@ public class Mob1 : Entity
 						temp.dropMadeOf (Random.Range (0, 5));
 				}
 
+				if (other.gameObject.tag == "Enemy") {
+						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, (transform.position.y - other.transform.position.y) * Random.Range (0, 5));
+						rigidbody2D.AddForce (force * Random.Range (0, 50));
+						takeDmg (1, "point");
+		
+				}
+
 				if (other.gameObject.tag == "Player") {
-						Vector2 force = new Vector2 (Random.Range (-100, 100), Random.Range (-100, 0));
-						rigidbody2D.AddForce (force * Random.Range (-2, 2), ForceMode2D.Impulse);
+						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, Random.Range (0, 5));
+						rigidbody2D.AddForce (force * Random.Range (0, 50));
+						takeDmg (1, "slash");
+
 				}
 
 				

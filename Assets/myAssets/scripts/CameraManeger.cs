@@ -29,51 +29,52 @@ public class CameraManeger : MonoBehaviour
 
 		void Update ()
 		{
+				if (target != null) {
 
-
-				Vector2 boundryPos;
-				Vector2 offSet = new Vector2 (xOff + target.transform.position.x, yOff + target.transform.position.y);
-				Vector2 playerPos = refPoint.TransformPoint (offSet);
-				CameraController visible;
-				Vector2 cameraPos = new Vector2 (playerPos.x, playerPos.y);
+						Vector2 boundryPos;
+						Vector2 offSet = new Vector2 (xOff + target.transform.position.x, yOff + target.transform.position.y);
+						Vector2 playerPos = refPoint.TransformPoint (offSet);
+						CameraController visible;
+						Vector2 cameraPos = new Vector2 (playerPos.x, playerPos.y);
 				
 			
 
-				if (thisLevl.yVisible.Count > 0) {
-						cameraPos = new Vector2 (playerPos.x, playerPos.y);
-						visible = thisLevl.yVisible [0]; 
-						boundryPos = refPoint.TransformPoint (visible.transform.position);
-						bool neg = true;
+						if (thisLevl.yVisible.Count > 0) {
+								cameraPos = new Vector2 (playerPos.x, playerPos.y);
+								visible = thisLevl.yVisible [0]; 
+								boundryPos = refPoint.TransformPoint (visible.transform.position);
+								bool neg = true;
 				
-						if (visible.dir.y > 0) {
-								neg = true;
-						} else {
-								neg = false;
+								if (visible.dir.y > 0) {
+										neg = true;
+								} else {
+										neg = false;
+								}
+								if (!yWillBeOnScreen (playerPos, boundryPos, neg)) {
+										cameraPos = new Vector2 (cameraPos.x, playerCamera.transform.position.y);
+								} 
+						} 
+
+				
+
+						if (thisLevl.xVisible.Count > 0) {
+								visible = thisLevl.xVisible [0]; 
+								boundryPos = refPoint.TransformPoint (visible.transform.position);
+								bool neg = true;
+
+								if (visible.dir.x < 0)
+										neg = true;
+								else
+										neg = false;
+								if (xWillBeOnScreen (playerPos, boundryPos, neg)) {
+										cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, cameraPos.y);
+								} 
+
 						}
-						if (!yWillBeOnScreen (playerPos, boundryPos, neg)) {
-								cameraPos = new Vector2 (cameraPos.x, playerCamera.transform.position.y);
-						} 
-				} 
-
-				
-
-				if (thisLevl.xVisible.Count > 0) {
-						visible = thisLevl.xVisible [0]; 
-						boundryPos = refPoint.TransformPoint (visible.transform.position);
-						bool neg = true;
-
-						if (visible.dir.x < 0)
-								neg = true;
-						else
-								neg = false;
-						if (xWillBeOnScreen (playerPos, boundryPos, neg)) {
-								cameraPos = new Vector2 (playerCamera.transform.position.x + xOff, cameraPos.y);
-						} 
-
-				}
 			
-				moveCamera (cameraPos);
-
+						moveCamera (cameraPos);
+				} else
+						Destroy (gameObject);
 		}
 
 		public bool onScreenX (Vector2 pos)
