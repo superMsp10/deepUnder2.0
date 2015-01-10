@@ -53,7 +53,7 @@ public class gameManager : MonoBehaviour
 	
 		void Update ()
 		{
-				if (myPlayer != null) {
+				/*if (myPlayer != null) {
 						Vector2 spawnPoint = new Vector2 (myPlayer.transform.position.x + 10, myPlayer.transform.position.y + 10);
 						if (Input.GetKeyDown (KeyCode.Escape)) {
 								inGame = !inGame;
@@ -71,7 +71,7 @@ public class gameManager : MonoBehaviour
 								Entity e = g.GetComponent<Entity> ();
 								e.thisLevel = currentLevel;
 						}
-				}
+				}*/
 		}
 
 		public void spawn ()

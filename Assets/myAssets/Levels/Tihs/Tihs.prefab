@@ -11389,7 +11389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837dd47207d40cb4395d181c3b86fb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MultiplierX: 1
+  MultiplierX: 5
   MultiplierY: 20
   boostAmount: 50
   randomrange: 5

@@ -153,22 +153,9 @@ public class Mob1 : Entity
 
 		}
 
-		public virtual void takeDmg (int damage, string type)
+		public virtual void takeDmg (int damage)
 		{
-				if (type == "blunt") {
-						thisAttributes.HP -= (damage - thisAttributes.blunt);
-
-				} else if (type == "point") {
-						thisAttributes.HP -= (damage - thisAttributes.point) / 2;
-			
-				} else if (type == "slash") {
-						int preDmg = 0;
-						preDmg = (Random.Range (0, damage) / (thisAttributes.slash * Random.Range (-2, thisAttributes.slash)));
-						thisAttributes.HP -= (preDmg + Random.Range (-thisAttributes.slash, thisAttributes.slash));
-			
-				}
-
-
+				thisAttributes.HP -= damage;
 		}
 		
 		public virtual void flip ()
@@ -260,14 +247,14 @@ public class Mob1 : Entity
 				if (other.gameObject.tag == "Enemy") {
 						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, (transform.position.y - other.transform.position.y) * Random.Range (0, 5));
 						rigidbody2D.AddForce (force * Random.Range (0, 50));
-						takeDmg (1, "point");
+						takeDmg (1);
 		
 				}
 
 				if (other.gameObject.tag == "Player") {
 						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, Random.Range (0, 5));
 						rigidbody2D.AddForce (force * Random.Range (0, 50));
-						takeDmg (1, "slash");
+						takeDmg (1);
 
 				}
 

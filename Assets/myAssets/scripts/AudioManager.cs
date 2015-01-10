@@ -8,9 +8,12 @@ public class AudioManager : MonoBehaviour
 		private gameManager thisManage;
 		public  AudioSource bMusic;
 		public  AudioSource buttonFX;
+		public  AudioSource playerFX;
+
 
 		public Slider[] backgroundMusicSliders;
 		public Slider[] buttonFXSliders;
+		public Slider[] playerFXSliders;
 
 		void Awake ()
 		{
@@ -24,12 +27,16 @@ public class AudioManager : MonoBehaviour
 		{
 				bMusic.volume = PlayerPrefs.GetFloat ("BackgroundMusic");
 				buttonFX.volume = PlayerPrefs.GetFloat ("buttonFX");
-
+				playerFX.volume = PlayerPrefs.GetFloat ("playerFX");
 				foreach (Slider s in backgroundMusicSliders) {
 						s.value = bMusic.volume;
 				}
 				foreach (Slider s in buttonFXSliders) {
 						s.value = buttonFX.volume;
+				}
+
+				foreach (Slider s in playerFXSliders) {
+						s.value = playerFX.volume;
 				}
 				buttonFX.enabled = true;
 		}
@@ -43,13 +50,9 @@ public class AudioManager : MonoBehaviour
 		{
 				PlayerPrefs.SetFloat ("BackgroundMusic", bMusic.volume);
 				PlayerPrefs.SetFloat ("buttonFX", buttonFX.volume);
-
+				PlayerPrefs.SetFloat ("playerFX", playerFX.volume);
 		}
 
-		public static void AAA ()
-		{
-
-		}
-	
+		
 
 }
