@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Run
+  m_Name: Run 1
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -56617,36 +56617,4 @@ AnimationClip:
     path: BodyParts/SideParts/SideBody
     classID: 4
     script: {fileID: 0}
-  m_Events:
-  - time: 1.60000002
-    functionName: playSound
-    data: 
-    objectReferenceParameter: {fileID: 8300000, guid: bc3c59548c3aa8949a1906d519357093,
-      type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 2.8499999
-    functionName: playSound
-    data: 
-    objectReferenceParameter: {fileID: 8300000, guid: bc3c59548c3aa8949a1906d519357093,
-      type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 6.63333321
-    functionName: playSound
-    data: 
-    objectReferenceParameter: {fileID: 8300000, guid: bc3c59548c3aa8949a1906d519357093,
-      type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 7.41666651
-    functionName: playSound
-    data: 
-    objectReferenceParameter: {fileID: 8300000, guid: bc3c59548c3aa8949a1906d519357093,
-      type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

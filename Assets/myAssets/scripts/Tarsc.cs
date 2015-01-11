@@ -4,6 +4,7 @@ using System.Collections;
 public class Tarsc : Mob1
 {
 		CameraManeger cameraM;
+		AudioSource thisAudio;
 
 		void Start ()
 		{
@@ -12,7 +13,7 @@ public class Tarsc : Mob1
 				thisLevel.addEntity (this);
 				rigidbody2D.centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
-
+				thisAudio = AudioManager.thisAM.playerFX;
 				checkNecesseries ();
 
 
@@ -25,12 +26,20 @@ public class Tarsc : Mob1
 				thisAnim.SetBool ("grounded", grounded);
 				thisAnim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 				thisAnim.SetFloat ("hSpeed", Mathf.Abs (rigidbody2D.velocity.x));
-				if (Mathf.Abs (rigidbody2D.velocity.x) > 0.1)
+
+				if (Mathf.Abs (rigidbody2D.velocity.x) > 1)
 						thisAttributes.moving = true;
 				else
 						thisAttributes.moving = false;
+				thisAnim.SetBool ("moving", thisAttributes.moving);
 		
 		
+		}
+
+		public void playSound (AudioClip clip)
+		{
+
+				thisAudio.PlayOneShot (clip);
 		}
 		void Update ()
 		{
@@ -39,8 +48,8 @@ public class Tarsc : Mob1
 				}
 				if (animated)
 						updateAnim ();
-				checkDead ();
 				checkFacing ();
+				checkDead ();
 							
 		}
 
