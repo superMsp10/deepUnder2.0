@@ -4,7 +4,7 @@ using System.Collections;
 public class Tarsc : Mob1
 {
 		CameraManeger cameraM;
-		AudioSource thisAudio;
+
 
 		void Start ()
 		{
@@ -36,11 +36,7 @@ public class Tarsc : Mob1
 		
 		}
 
-		public void playSound (AudioClip clip)
-		{
 
-				thisAudio.PlayOneShot (clip);
-		}
 		void Update ()
 		{
 				if (Input.GetKeyDown (KeyCode.Space)) {
@@ -55,40 +51,7 @@ public class Tarsc : Mob1
 
 		void FixedUpdate ()
 		{
-				int yGround = 0;
-				int nGround = 0;
-				foreach (Transform t in groundCheck) {
-						if (Physics2D.Linecast (transform.position, t.position, whatGround))
-								yGround++;
-						else
-								nGround ++;
-
-
-				}
-			
-
-				bool ground;
-				if (yGround - nGround >= 0) {
-						ground = true;
-						
-				} else {
-						ground = false;
-						
-				}
-				if (!grounded && ground) {
-						landed = true;
-						grounded = true;
-
-			
-				} else if (!ground) {
-						grounded = false;
-						landed = false;
-			
-			
-				} else {
-						landed = false;
-				}
-
+				checkground ();
 				float move = Input.GetAxis ("Horizontal");
 				if (move < 0 && turnR) {
 						flip ();

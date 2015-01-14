@@ -56619,7 +56619,7 @@ AnimationClip:
     script: {fileID: 0}
   m_Events:
   - time: 1.60000002
-    functionName: playSound
+    functionName: stepSound
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: bc3c59548c3aa8949a1906d519357093,
       type: 3}
@@ -56627,7 +56627,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 2.8499999
-    functionName: playSound
+    functionName: stepSound
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: bc3c59548c3aa8949a1906d519357093,
       type: 3}
@@ -56635,7 +56635,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 6.63333321
-    functionName: playSound
+    functionName: stepSound
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: bc3c59548c3aa8949a1906d519357093,
       type: 3}
@@ -56643,7 +56643,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 7.41666651
-    functionName: playSound
+    functionName: stepSound
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: bc3c59548c3aa8949a1906d519357093,
       type: 3}

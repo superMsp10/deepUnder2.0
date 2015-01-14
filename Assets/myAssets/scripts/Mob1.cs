@@ -41,6 +41,13 @@ public class Mob1 : Entity
 		public Transform sideBody;
 		public bool animated = false;
 		public bool detectedFacing = false;
+		public AudioSource thisAudio;
+		public AudioClip  jumpClip;
+		public AudioClip  stepClip;
+		public AudioClip  landClip;
+
+
+
 
 		void Start ()
 		{
@@ -100,7 +107,27 @@ public class Mob1 : Entity
 				}
 		}
 		
-		void FixedUpdate ()
+		public virtual void stepSound ()
+		{
+		
+				thisAudio.PlayOneShot (stepClip);
+
+		}
+
+		public virtual void playJumpSound ()
+		{
+		
+				thisAudio.PlayOneShot (jumpClip);
+		
+		}
+		public virtual void playLandSound ()
+		{
+		
+				thisAudio.PlayOneShot (landClip);
+		
+		}
+
+		protected void checkground ()
 		{
 				int yGround = 0;
 				int nGround = 0;
@@ -115,12 +142,12 @@ public class Mob1 : Entity
 						ground = true;
 				else
 						ground = false;
-
+		
 				if (!grounded && ground) {
 						landed = true;
 						grounded = true;
-					
 			
+						playLandSound ();
 			
 				} else if (!ground) {
 						grounded = false;
@@ -130,6 +157,10 @@ public class Mob1 : Entity
 				} else {
 						landed = false;
 				}
+		}
+		void FixedUpdate ()
+		{
+				checkground ();
 				/*if (move < 0 && turnR) {
 			flip ();
 		} else if (move > 0 && !turnR) {
@@ -185,7 +216,7 @@ public class Mob1 : Entity
 
 				if (grounded) {
 						rigidbody2D.AddForce (new Vector2 (0, jumpF));
-					
+						playJumpSound ();
 
 				} 
 
