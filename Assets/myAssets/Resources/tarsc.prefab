@@ -703,7 +703,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .471784472
+  m_Radius: .670000017
   m_Center: {x: -.400000006, y: -1.58000004}
 --- !u!58 &5883262
 CircleCollider2D:
@@ -890,9 +890,9 @@ MonoBehaviour:
   animated: 1
   detectedFacing: 1
   thisAudio: {fileID: 0}
-  jumpClip: {fileID: 8300000, guid: 206d6a9439900af4cae1c86ae94e19b9, type: 3}
+  jumpClip: {fileID: 8300000, guid: 9e145e5e857f4aa47b140257255bc9b0, type: 3}
   stepClip: {fileID: 8300000, guid: bc3c59548c3aa8949a1906d519357093, type: 3}
-  landClip: {fileID: 8300000, guid: 9e145e5e857f4aa47b140257255bc9b0, type: 3}
+  landClip: {fileID: 8300000, guid: 206d6a9439900af4cae1c86ae94e19b9, type: 3}
 --- !u!114 &11450098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1226,7 +1226,7 @@ MonoBehaviour:
   minSize: 0
   xOff: 0
   maxSize: 0
-  yOff: .0250000004
+  yOff: .0299999993
   fromBoundryX: 0
 --- !u!114 &11489410
 MonoBehaviour:

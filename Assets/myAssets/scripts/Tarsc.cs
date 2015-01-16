@@ -5,7 +5,6 @@ public class Tarsc : Mob1
 {
 		CameraManeger cameraM;
 
-
 		void Start ()
 		{
 		
@@ -27,12 +26,13 @@ public class Tarsc : Mob1
 				thisAnim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 				thisAnim.SetFloat ("hSpeed", Mathf.Abs (rigidbody2D.velocity.x));
 
-				if (Mathf.Abs (rigidbody2D.velocity.x) > 1)
+				if (Mathf.Abs (rigidbody2D.velocity.x) > 1) {
 						thisAttributes.moving = true;
-				else
+						
+				} else {
 						thisAttributes.moving = false;
+				}
 				thisAnim.SetBool ("moving", thisAttributes.moving);
-		
 		
 		}
 

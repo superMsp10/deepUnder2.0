@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\Tarsc.cs">
     <Files>
-      <File FileName="Assets\myAssets\scripts\Tarsc.cs" Line="54" Column="20" />
+      <File FileName="Assets\myAssets\scripts\Tarsc.cs" Line="7" Column="1" />
       <File FileName="Assets\myAssets\scripts\Mob1.cs" Line="163" Column="20" />
+      <File FileName="Assets\myAssets\scripts\CameraManeger.cs" Line="30" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

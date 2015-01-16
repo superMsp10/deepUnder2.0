@@ -27,7 +27,7 @@ public class CameraManeger : MonoBehaviour
 				refPoint = thisManage.transform;
 		}
 
-		void Update ()
+		public void Update ()
 		{
 				if (target != null) {
 
