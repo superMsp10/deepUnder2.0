@@ -893,7 +893,7 @@ MonoBehaviour:
   jumpClip: {fileID: 8300000, guid: 9e145e5e857f4aa47b140257255bc9b0, type: 3}
   stepClip: {fileID: 8300000, guid: bc3c59548c3aa8949a1906d519357093, type: 3}
   landClip: {fileID: 8300000, guid: 206d6a9439900af4cae1c86ae94e19b9, type: 3}
-  movingClip: {fileID: 0}
+  movingClip: {fileID: 8300000, guid: 96bfec0684f02e444b7de028dc377a9e, type: 3}
 --- !u!114 &11450098
 MonoBehaviour:
   m_ObjectHideFlags: 1
