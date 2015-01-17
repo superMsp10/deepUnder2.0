@@ -10642,7 +10642,7 @@ MonoBehaviour:
   votes: 0
   skybox: {fileID: 2100000, guid: 6663dd49fee03a743970c6a910557b45, type: 2}
   entities: []
-  startMusic: {fileID: 8300000, guid: 7df35072307b0254389e924692484962, type: 3}
+  startMusic: {fileID: 8300000, guid: fdac7a29c628b694a817d32eaa30f217, type: 3}
   thisChannel: {fileID: 1153522529}
   deathHeight: -200
   stage: 1
@@ -19672,7 +19672,7 @@ MonoBehaviour:
   currentLevel: {fileID: 824517291}
   levels: []
   dead: 1
-  loadDefault: 1
+  loadDefault: 0
   currCamera: {fileID: 0}
   ins1: {fileID: 100000, guid: 08f594c7c40395d4593e569526ea6708, type: 2}
   ins2: {fileID: 149062, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}

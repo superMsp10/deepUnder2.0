@@ -45,7 +45,7 @@ public class Mob1 : Entity
 		public AudioClip  jumpClip;
 		public AudioClip  stepClip;
 		public AudioClip  landClip;
-
+		public AudioClip  movingClip;
 
 
 
@@ -126,6 +126,13 @@ public class Mob1 : Entity
 				thisAudio.PlayOneShot (landClip);
 		
 		}
+		public virtual void playMoveSound ()
+		{
+		
+				thisAudio.PlayOneShot (movingClip, 0.5f);
+		
+		}
+
 
 		protected void checkground ()
 		{
