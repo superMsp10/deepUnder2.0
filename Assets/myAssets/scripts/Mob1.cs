@@ -30,8 +30,9 @@ public class Mob1 : Entity
 		protected bool landed = false;
 		public bool grounded = false;
 		protected bool turnR = false;
+		protected bool front = true;
+
 		//---------------------------------------
-		public float groundRad = 0.16f;
 		public Transform[] groundCheck;
 		public Vector2 centerOfMass;
 		public LayerMask whatGround;
@@ -97,9 +98,12 @@ public class Mob1 : Entity
 		{
 				if (detectedFacing) {
 						if (thisAttributes.moving) {
+								front = false;
 								frontBody.gameObject.SetActive (false);
 								sideBody.gameObject.SetActive (true);
 						} else {
+								front = true;
+
 								sideBody.gameObject.SetActive (false);
 								frontBody.gameObject.SetActive (true);
 						}
@@ -134,7 +138,7 @@ public class Mob1 : Entity
 		}
 
 
-		protected void checkground ()
+		protected virtual void checkground ()
 		{
 				int yGround = 0;
 				int nGround = 0;
@@ -145,6 +149,7 @@ public class Mob1 : Entity
 								nGround ++;
 				}
 				bool ground;
+				Debug.Log (nGround + " " + yGround);
 				if (yGround > nGround)
 						ground = true;
 				else

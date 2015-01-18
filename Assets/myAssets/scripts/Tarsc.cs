@@ -4,6 +4,8 @@ using System.Collections;
 public class Tarsc : Mob1
 {
 		CameraManeger cameraM;
+		public Transform[] fGroundCheck;
+		public Transform[] lGroundCheck;
 
 		void Start ()
 		{
@@ -60,6 +62,50 @@ public class Tarsc : Mob1
 				}
 				moveX (move);
 
+		}
+
+		protected override void checkground ()
+		{
+				int yGround = 0;
+				int nGround = 0;
+
+				if (front) {
+						foreach (Transform t in fGroundCheck) {
+								if (Physics2D.Linecast (transform.position, t.position, whatGround))
+										yGround++;
+								else
+										nGround ++;
+						}
+				} else {
+						foreach (Transform t in lGroundCheck) {
+								if (Physics2D.Linecast (transform.position, t.position, whatGround))
+										yGround++;
+								else
+										nGround ++;
+						}
+
+				}
+				
+				bool ground;
+				if (yGround > nGround)
+						ground = true;
+				else
+						ground = false;
+		
+				if (!grounded && ground) {
+						landed = true;
+						grounded = true;
+			
+						playLandSound ();
+			
+				} else if (!ground) {
+						grounded = false;
+						landed = false;
+			
+			
+				} else {
+						landed = false;
+				}
 		}
 
 }

@@ -17,7 +17,6 @@ public class gameManager : MonoBehaviour
 		public Camera currCamera;
 		public GameObject ins1;
 		public GameObject ins2;
-
 		private string version;
 		public GameObject myPlayerIns;
 		public GameObject myPlayer;
@@ -29,6 +28,9 @@ public class gameManager : MonoBehaviour
 		private string code = "";
 		private string status = "[newbie]";
 		private health myHp;
+		public GameObject gameUI;
+		public GameObject pausedUi;
+
 		void Awake ()
 		{
 				if (thisM == null) {
@@ -48,7 +50,19 @@ public class gameManager : MonoBehaviour
 				else
 						changeLvl ("startMenu");
 
-				inGame = false;
+		}
+
+		public void Update ()
+		{
+				if (currentLevel.spawnable) {
+						if (inGame) {
+								pausedUi.SetActive (false);
+								gameUI.SetActive (true);
+						} else {
+								gameUI.SetActive (false);
+								pausedUi.SetActive (true);
+						}
+				}
 		}
 
 		public void spawn ()

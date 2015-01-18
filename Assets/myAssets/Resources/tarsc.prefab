@@ -371,7 +371,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.810000002, y: -2.3900001, z: 0}
+  m_LocalPosition: {x: -.810000002, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405232}
@@ -607,7 +607,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.30400002, y: -2.50300002, z: 0}
+  m_LocalPosition: {x: -1.30400002, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405244}
@@ -619,7 +619,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .349999994, y: -2.50300002, z: 0}
+  m_LocalPosition: {x: .349999994, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405244}
@@ -631,7 +631,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .779999971, y: -2.3900001, z: 0}
+  m_LocalPosition: {x: .779999971, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405232}
@@ -692,8 +692,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .639999986
-  m_Center: {x: 0, y: -1.57000005}
+  m_Radius: .699999988
+  m_Center: {x: 0, y: -1.5}
 --- !u!58 &5833378
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -703,8 +703,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .670000017
-  m_Center: {x: -.400000006, y: -1.58000004}
+  m_Radius: .649999976
+  m_Center: {x: -.319999993, y: -1.5}
 --- !u!58 &5883262
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -766,8 +766,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .793502808, y: 2.16666675}
-  m_Center: {x: -.103248596, y: -1.08333337}
+  m_Size: {x: .793502808, y: 1.75271976}
+  m_Center: {x: -.103248596, y: -.87635988}
 --- !u!61 &6115272
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -777,8 +777,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .748208404, y: 2.16666675}
-  m_Center: {x: .0842291117, y: -1.08333337}
+  m_Size: {x: .748208404, y: 1.75271976}
+  m_Center: {x: .0842291117, y: -.87635988}
 --- !u!61 &6150092
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -873,7 +873,6 @@ MonoBehaviour:
     optTargetRange: 30
     flyAmount: 2
   grounded: 0
-  groundRad: .200000003
   groundCheck:
   - {fileID: 400000}
   - {fileID: 489410}
@@ -894,6 +893,12 @@ MonoBehaviour:
   stepClip: {fileID: 8300000, guid: bc3c59548c3aa8949a1906d519357093, type: 3}
   landClip: {fileID: 8300000, guid: 206d6a9439900af4cae1c86ae94e19b9, type: 3}
   movingClip: {fileID: 8300000, guid: 96bfec0684f02e444b7de028dc377a9e, type: 3}
+  fGroundCheck:
+  - {fileID: 400000}
+  - {fileID: 489410}
+  lGroundCheck:
+  - {fileID: 450100}
+  - {fileID: 450098}
 --- !u!114 &11450098
 MonoBehaviour:
   m_ObjectHideFlags: 1
