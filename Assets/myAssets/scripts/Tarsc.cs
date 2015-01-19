@@ -108,5 +108,10 @@ public class Tarsc : Mob1
 				}
 		}
 
+		void OnDestroy ()
+		{
+				Destroy (cameraM.gameObject);
+		}
+
 }
 

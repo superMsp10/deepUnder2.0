@@ -41,7 +41,19 @@ public class AudioManager : MonoBehaviour
 				buttonFX.enabled = true;
 		}
 	
+		public void updateSliders ()
+		{
+				foreach (Slider s in backgroundMusicSliders) {
+						s.value = bMusic.volume;
+				}
+				foreach (Slider s in buttonFXSliders) {
+						s.value = buttonFX.volume;
+				}
 		
+				foreach (Slider s in playerFXSliders) {
+						s.value = playerFX.volume;
+				}
+		}
 		void Update ()
 		{
 		}

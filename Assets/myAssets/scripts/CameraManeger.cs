@@ -73,8 +73,7 @@ public class CameraManeger : MonoBehaviour
 						}
 			
 						moveCamera (cameraPos);
-				} else
-						Destroy (gameObject);
+				}
 		}
 
 		public bool onScreenX (Vector2 pos)
@@ -120,11 +119,7 @@ public class CameraManeger : MonoBehaviour
 				transform.position = p;
 		}
 
-		void OnDestroy ()
-		{
-
-
-		}
+		
 
 }
 

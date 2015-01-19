@@ -14,6 +14,7 @@ public class gameManager : MonoBehaviour
 		public level[] levels;
 		public bool dead = false;
 		public bool loadDefault = false;
+		public level defaultLev;
 		public Camera currCamera;
 		public GameObject ins1;
 		public GameObject ins2;
@@ -45,8 +46,8 @@ public class gameManager : MonoBehaviour
 				foreach (level l in levels) {
 						l.gameObject.SetActive (false);
 				}
-				if (currentLevel != null && loadDefault)
-						levelex (currentLevel);
+				if (defaultLev != null && loadDefault)
+						levelex (defaultLev);
 				else
 						changeLvl ("startMenu");
 
@@ -54,6 +55,8 @@ public class gameManager : MonoBehaviour
 
 		public void Update ()
 		{
+				if (Input.GetKeyDown (KeyCode.Escape))
+						inGame = ! inGame;
 				if (currentLevel.spawnable) {
 						if (inGame) {
 								pausedUi.SetActive (false);
@@ -62,6 +65,11 @@ public class gameManager : MonoBehaviour
 								gameUI.SetActive (false);
 								pausedUi.SetActive (true);
 						}
+				} else {
+						gameUI.SetActive (false);
+
+						pausedUi.SetActive (false);
+
 				}
 		}
 
@@ -102,12 +110,17 @@ public class gameManager : MonoBehaviour
 		public void levelex (level lev)
 		{
 				//voted = false;
+
 				if (currentLevel != null) {
 						currentLevel.gameObject.SetActive (false);
+						if (currentLevel.spawnable) {
+								dead = true;
+								Destroy (myPlayer);
+						}
 						currentLevel.endLevel ();
 				}
-				
 				currentLevel = lev;
+				AudioManager.thisAM.updateSliders ();
 				currentLevel.gameObject.SetActive (true);
 				currentLevel.camera1.SetActive (true);
 				currCamera = currentLevel.camera1.camera;
