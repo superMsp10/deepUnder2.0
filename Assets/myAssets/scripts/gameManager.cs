@@ -53,6 +53,11 @@ public class gameManager : MonoBehaviour
 
 		}
 
+		public void restartLevel ()
+		{
+				Application.LoadLevel (Application.loadedLevel);
+		}
+
 		public void Update ()
 		{
 				if (Input.GetKeyDown (KeyCode.Escape))
