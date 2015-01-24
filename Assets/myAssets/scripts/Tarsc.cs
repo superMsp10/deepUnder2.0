@@ -87,7 +87,7 @@ public class Tarsc : Mob1
 				}
 				
 				bool ground;
-				if (yGround > nGround)
+				if (yGround > 0)
 						ground = true;
 				else
 						ground = false;
@@ -110,7 +110,8 @@ public class Tarsc : Mob1
 
 		void OnDestroy ()
 		{
-				Destroy (cameraM.gameObject);
+				if (cameraM != null)
+						Destroy (cameraM.gameObject);
 		}
 
 }

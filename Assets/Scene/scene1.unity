@@ -2737,19 +2737,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -1072
+      value: -1037
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -371
+      value: -356
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 240
+      value: 369
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_AnchorMin.x
@@ -2797,7 +2797,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_Text
-      value: Quit
+      value: Main Menu
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_Name
@@ -2855,6 +2855,18 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1459637419}
+    - target: {fileID: 11400004, guid: e5f145320dafb55428a51cf78713600d, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: e5f145320dafb55428a51cf78713600d, type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: e5f145320dafb55428a51cf78713600d, type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5f145320dafb55428a51cf78713600d, type: 2}
   m_RootGameObject: {fileID: 1898875159}
@@ -11478,7 +11490,7 @@ MonoBehaviour:
   votes: 0
   skybox: {fileID: 2100000, guid: 6663dd49fee03a743970c6a910557b45, type: 2}
   entities: []
-  startMusic: {fileID: 8300000, guid: fdac7a29c628b694a817d32eaa30f217, type: 3}
+  startMusic: {fileID: 8300000, guid: d14fbc0d2708bcc4fbc1033472bca264, type: 3}
   thisChannel: {fileID: 1153522529}
   deathHeight: -200
   stage: 1
@@ -12550,7 +12562,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit
+  m_Text: Main Menu
 --- !u!222 &916954037
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23494,6 +23506,10 @@ Prefab:
       propertyPath: thisChannel
       value: 
       objectReference: {fileID: 1153522529}
+    - target: {fileID: 11474012, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
+      propertyPath: startMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: d14fbc0d2708bcc4fbc1033472bca264, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2baf6824293a20e45b1f49f775037e27, type: 2}
   m_RootGameObject: {fileID: 824517288}
@@ -25807,8 +25823,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -1072, y: -371}
-  m_SizeDelta: {x: 240, y: 50}
+  m_AnchoredPosition: {x: -1037, y: -356}
+  m_SizeDelta: {x: 369, y: 80}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1898875161
 MonoBehaviour:
@@ -25908,7 +25924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Sprite: {fileID: 21300000, guid: a432e29ebf93ec04fa18d0baecd3c20a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
