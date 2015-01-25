@@ -10,9 +10,9 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
-  - 58: {fileID: 5800000}
   - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
+  - 61: {fileID: 6132684}
   m_Layer: 8
   m_Name: bomb
   m_TagString: Untagged
@@ -30,7 +30,6 @@ GameObject:
   - 4: {fileID: 400002}
   - 198: {fileID: 19800000}
   - 199: {fileID: 19900000}
-  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: sparks
   m_TagString: Untagged
@@ -45,8 +44,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6154.33203, z: -28.3439941}
-  m_LocalScale: {x: .351805806, y: .351805747, z: 1}
+  m_LocalPosition: {x: -1150.18201, y: 963.011902, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 400002}
   m_Father: {fileID: 0}
@@ -58,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: -.622460783, y: .335473746, z: -.335473686, w: .622460783}
-  m_LocalPosition: {x: .953821242, y: .888697207, z: 0}
+  m_LocalPosition: {x: -.00700000022, y: .101999998, z: 0}
   m_LocalScale: {x: 2.84247732, y: 1, z: 2.84247732}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -69,26 +68,15 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDrag: 0
-  m_AngularDrag: 10
-  m_GravityScale: 1
+  m_AngularDrag: 2
+  m_GravityScale: 2
   m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!58 &5800000
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Radius: 1.25999999
-  m_Center: {x: 0, y: .0199999996}
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -100,6 +88,17 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .839999974, y: .579999983}
   m_Center: {x: -.100000001, y: .219999999}
+--- !u!61 &6132684
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .200000003, y: .200000003}
+  m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,22 +112,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombRadius: 7
   bombForce: 100
-  boom: {fileID: 8300000, guid: 9e145e5e857f4aa47b140257255bc9b0, type: 3}
-  fuse: {fileID: 8300000, guid: 238da4efc08184aee919af254edb2ef1, type: 3}
-  fuseTime: 1.5
+  boom: {fileID: 8300000, guid: f49ac45b37662be4884f00361aebb99d, type: 3}
+  fuse: {fileID: 8300000, guid: 9fe427c4d2a645847afd5bd3373ae308, type: 3}
+  fuseTime: 3
   explosion: {fileID: 100000, guid: 9c8b546f746e74328ab6b8bba733af67, type: 2}
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c8afc2d208205641bd1aa5e27769e11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingLayerName: Character
+  explosionFX: {fileID: 19800000, guid: 5b8d8461f4d094ae1911a6d9df6d9f68, type: 2}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -303,7 +291,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4281414143
       minMaxState: 0
     startSize:
       scalar: 1
@@ -473,18 +461,18 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 3
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4278222322
         key1:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4278253823
         key2:
           serializedVersion: 2
-          rgba: 0
+          rgba: 16777215
         key3:
           serializedVersion: 2
           rgba: 0
@@ -501,8 +489,8 @@ ParticleSystem:
           serializedVersion: 2
           rgba: 0
         ctime0: 0
-        ctime1: 65535
-        ctime2: 0
+        ctime1: 21588
+        ctime2: 65535
         ctime3: 0
         ctime4: 0
         ctime5: 0
@@ -511,13 +499,13 @@ ParticleSystem:
         atime0: 0
         atime1: 59174
         atime2: 65535
-        atime3: 0
+        atime3: 65535
         atime4: 0
         atime5: 0
         atime6: 0
         atime7: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 3
+        m_NumAlphaKeys: 2
       minGradient:
         key0:
           serializedVersion: 2
@@ -1201,9 +1189,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 2511236001
+  m_SortingLayerID: 1024582385
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: c2fc7b356ebe242deaefac9ceb95a7e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 83b2d65e8ac1cf74ab08406f5fc0d072, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

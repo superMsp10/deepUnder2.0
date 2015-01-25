@@ -11,8 +11,7 @@ public class Bomb : MonoBehaviour
 		public GameObject explosion;			// Prefab of explosion effect.
 
 
-		private LayBombs layBombs;				// Reference to the player's LayBombs script.
-		private ParticleSystem explosionFX;		// Reference to the particle system of the explosion effect.
+		public ParticleSystem explosionFX;		// Reference to the particle system of the explosion effect.
 
 
 
@@ -43,10 +42,7 @@ public class Bomb : MonoBehaviour
 		public void Explode ()
 		{
 		
-				// The player is now free to lay bombs when he has them.
-				layBombs.bombLaid = false;
-
-				// Make the pickup spawner start to deliver a new pickup.
+			
 
 				// Find all the colliders on the Enemies layer within the bombRadius.
 				Collider2D[] enemies = Physics2D.OverlapCircleAll (transform.position, bombRadius, 1 << LayerMask.NameToLayer ("Enemies"));
@@ -73,7 +69,7 @@ public class Bomb : MonoBehaviour
 				explosionFX.Play ();
 
 				// Instantiate the explosion prefab.
-				Instantiate (explosion, transform.position, Quaternion.identity);
+				Destroy (Instantiate (explosion, transform.position, Quaternion.identity), 0.1fs);
 
 				// Play the explosion sound effect.
 				AudioSource.PlayClipAtPoint (boom, transform.position);
