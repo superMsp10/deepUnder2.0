@@ -21144,7 +21144,7 @@ MonoBehaviour:
   currentLevel: {fileID: 0}
   levels: []
   dead: 1
-  loadDefault: 0
+  loadDefault: 1
   defaultLev: {fileID: 824517291}
   currCamera: {fileID: 0}
   ins1: {fileID: 100000, guid: 08f594c7c40395d4593e569526ea6708, type: 2}
@@ -21176,16 +21176,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1539869377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea1696b327e2da47b760062c1e398fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 44efd103bf5b13e4ba02dd1f7d12cc27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slots:
-  - {fileID: 1642773427}
-  - {fileID: 1223225165}
-  - {fileID: 1191748103}
-  - {fileID: 1091281402}
-  - {fileID: 1425051726}
+  slots: []
   empty: {fileID: 21300000, guid: f5eec6744b58a87499d63365888e2ea4, type: 3}
+  inv: []
 --- !u!114 &1539869382
 MonoBehaviour:
   m_ObjectHideFlags: 0
