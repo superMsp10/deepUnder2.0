@@ -824,8 +824,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .793502808, y: 1.75271976}
-  m_Center: {x: -.103248596, y: -.87635988}
+  m_Size: {x: .465652287, y: 1.75271976}
+  m_Center: {x: .0606766641, y: -.87635988}
 --- !u!61 &6115272
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -835,8 +835,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .748208404, y: 1.75271976}
-  m_Center: {x: .0842291117, y: -.87635988}
+  m_Size: {x: .469290793, y: 1.75271976}
+  m_Center: {x: -.0111901164, y: -.87635988}
 --- !u!61 &6150092
 BoxCollider2D:
   m_ObjectHideFlags: 1

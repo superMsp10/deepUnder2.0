@@ -78,6 +78,7 @@
      <Compile Include="Assets\myAssets\scripts\SpawnSpot.cs" />
      <Compile Include="Assets\myAssets\scripts\Tarsc.cs" />
      <Compile Include="Assets\myAssets\scripts\Teleport.cs" />
+     <Compile Include="Assets\myAssets\scripts\UIslot.cs" />
      <Compile Include="Assets\myAssets\scripts\collisionBoost.cs" />
      <Compile Include="Assets\myAssets\scripts\effectsManager.cs" />
      <Compile Include="Assets\myAssets\scripts\gameManager.cs" />
@@ -85,6 +86,7 @@
      <Compile Include="Assets\myAssets\scripts\invManager.cs" />
      <Compile Include="Assets\myAssets\scripts\level.cs" />
      <Compile Include="Assets\myAssets\scripts\questManager.cs" />
+     <Compile Include="Assets\myAssets\scripts\slotCollection.cs" />
      <Compile Include="Assets\myAssets\scripts\tree.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />

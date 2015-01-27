@@ -69,7 +69,7 @@ public class Bomb : MonoBehaviour
 				explosionFX.Play ();
 
 				// Instantiate the explosion prefab.
-				Destroy (Instantiate (explosion, transform.position, Quaternion.identity), 0.1fs);
+				Destroy (Instantiate (explosion, transform.position, Quaternion.identity), 0.05f);
 
 				// Play the explosion sound effect.
 				AudioSource.PlayClipAtPoint (boom, transform.position);

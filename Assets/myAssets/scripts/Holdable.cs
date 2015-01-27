@@ -5,7 +5,6 @@ public class Holdable : MonoBehaviour
 {
 
 		public Sprite holdUI;
-
 		public void  onUse ()
 		{
 
