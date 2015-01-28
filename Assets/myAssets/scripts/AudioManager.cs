@@ -9,11 +9,14 @@ public class AudioManager : MonoBehaviour
 		public  AudioSource bMusic;
 		public  AudioSource buttonFX;
 		public  AudioSource playerFX;
+		public  AudioSource weapons;
 
 
 		public Slider[] backgroundMusicSliders;
 		public Slider[] buttonFXSliders;
 		public Slider[] playerFXSliders;
+		public Slider[] weaponSliders;
+
 
 		void Awake ()
 		{
@@ -28,6 +31,8 @@ public class AudioManager : MonoBehaviour
 				bMusic.volume = PlayerPrefs.GetFloat ("BackgroundMusic");
 				buttonFX.volume = PlayerPrefs.GetFloat ("buttonFX");
 				playerFX.volume = PlayerPrefs.GetFloat ("playerFX");
+				weapons.volume = PlayerPrefs.GetFloat ("weaponFX");
+
 				foreach (Slider s in backgroundMusicSliders) {
 						s.value = bMusic.volume;
 				}
@@ -37,6 +42,9 @@ public class AudioManager : MonoBehaviour
 
 				foreach (Slider s in playerFXSliders) {
 						s.value = playerFX.volume;
+				}
+				foreach (Slider s in weaponSliders) {
+						s.value = weapons.volume;
 				}
 				buttonFX.enabled = true;
 		}
@@ -53,16 +61,19 @@ public class AudioManager : MonoBehaviour
 				foreach (Slider s in playerFXSliders) {
 						s.value = playerFX.volume;
 				}
+				foreach (Slider s in weaponSliders) {
+						s.value = weapons.volume;
+				}
 		}
-		void Update ()
-		{
-		}
+		
 
 		void OnDestroy ()
 		{
 				PlayerPrefs.SetFloat ("BackgroundMusic", bMusic.volume);
 				PlayerPrefs.SetFloat ("buttonFX", buttonFX.volume);
 				PlayerPrefs.SetFloat ("playerFX", playerFX.volume);
+				PlayerPrefs.SetFloat ("weaponFX", weapons.volume);
+
 		}
 
 		

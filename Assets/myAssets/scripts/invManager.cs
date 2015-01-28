@@ -18,10 +18,11 @@ public class invManager : slotCollection
 	
 		void Update ()
 		{
-				if (Input.GetButtonDown ("InvSelected")) {
-						selected.Use ();
+				if (thismanage.inGame) {
+						if (Input.GetButtonDown ("InvSelected") && selected.holding != null) {
+								selected.Use ();
+						}
 				}
 		}
-
 
 }

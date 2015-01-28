@@ -19,6 +19,7 @@ public class Bomb : Holdable
 		public override void  onUse ()
 		{
 				Instantiate (gameObject, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
+				
 		}
 
 		void Start ()
@@ -34,7 +35,7 @@ public class Bomb : Holdable
 		IEnumerator BombDetonation ()
 		{
 				// Play the fuse audioclip.
-				AudioSource.PlayClipAtPoint (fuse, transform.position);
+				AudioSource.PlayClipAtPoint (fuse, transform.position, AudioManager.thisAM.weapons.volume);
 
 				// Wait for 2 seconds.
 				yield return new WaitForSeconds (fuseTime);
@@ -74,10 +75,10 @@ public class Bomb : Holdable
 				explosionFX.Play ();
 
 				// Instantiate the explosion prefab.
-				Destroy (Instantiate (explosion, transform.position, Quaternion.identity), 0.05f);
+				Destroy (Instantiate (explosion, transform.position, Quaternion.identity), 0.01f);
 
 				// Play the explosion sound effect.
-				AudioSource.PlayClipAtPoint (boom, transform.position);
+				AudioSource.PlayClipAtPoint (boom, transform.position, AudioManager.thisAM.weapons.volume);
 
 				// Destroy the bomb.
 				Destroy (gameObject);
