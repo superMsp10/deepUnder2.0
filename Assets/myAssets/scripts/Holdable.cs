@@ -5,9 +5,12 @@ public class Holdable : MonoBehaviour
 {
 
 		public Sprite holdUI;
-		public void  onUse ()
-		{
 
-				Debug.Log ("hi");
+		
+
+		public virtual void  onUse ()
+		{
+				Debug.Log ("hifrom holdable");
+
 		}
 }

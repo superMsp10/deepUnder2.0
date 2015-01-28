@@ -12,5 +12,11 @@ public class UIslot : MonoBehaviour
 				holding = h;
 				slot.sprite = h.holdUI;
 		}
+
+		public void Use ()
+		{
+				holding.onUse ();
+
+		}
 }
 

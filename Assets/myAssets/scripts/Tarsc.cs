@@ -41,7 +41,7 @@ public class Tarsc : Mob1
 
 		void Update ()
 		{
-				if (Input.GetKeyDown (KeyCode.Space)) {
+				if (Input.GetButtonDown ("Jump")) {
 						jump (thisAttributes.jump);
 				}
 				if (animated)

@@ -21,7 +21,7 @@ Platform assembly: M:\ProducedGames\deepUnder2.0\Builds\Windows\0.4\0.4.2_Data\M
 Loading M:\ProducedGames\deepUnder2.0\Builds\Windows\0.4\0.4.2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: M:\ProducedGames\deepUnder2.0\Builds\Windows\0.4\0.4.2_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading M:\ProducedGames\deepUnder2.0\Builds\Windows\0.4\0.4.2_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.099 seconds
+- Completed reload, in  0.059 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.

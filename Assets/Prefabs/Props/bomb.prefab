@@ -13,7 +13,6 @@ GameObject:
   - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
   - 58: {fileID: 5845202}
-  - 114: {fileID: 11480366}
   m_Layer: 11
   m_Name: bomb
   m_TagString: Untagged
@@ -62,7 +61,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1147.8313, y: 960.976807, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 447954}
@@ -141,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d060b6f2711747368c4bc5aae24049b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holdUI: {fileID: 21300000, guid: 3f52bc4ea7c37b44a9548a549527831d, type: 3}
   bombRadius: 7
   bombForce: 100
   boom: {fileID: 8300000, guid: f49ac45b37662be4884f00361aebb99d, type: 3}
@@ -148,18 +148,6 @@ MonoBehaviour:
   fuseTime: 3
   explosion: {fileID: 100000, guid: 9c8b546f746e74328ab6b8bba733af67, type: 2}
   explosionFX: {fileID: 19800000, guid: 5b8d8461f4d094ae1911a6d9df6d9f68, type: 2}
---- !u!114 &11480366
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06d8865d31ed9db4aa0804ddd7914674, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  holdUI: {fileID: 21300000, guid: 3f52bc4ea7c37b44a9548a549527831d, type: 3}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

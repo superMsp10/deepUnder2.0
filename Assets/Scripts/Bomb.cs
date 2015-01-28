@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bomb : MonoBehaviour
+
+public class Bomb : Holdable
 {
 		public float bombRadius = 10f;			// Radius within which enemies are killed.
 		public float bombForce = 100f;			// Force that enemies are thrown from the blast.
@@ -14,8 +15,11 @@ public class Bomb : MonoBehaviour
 		public ParticleSystem explosionFX;		// Reference to the particle system of the explosion effect.
 
 
-
-
+		
+		public override void  onUse ()
+		{
+				Instantiate (gameObject, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
+		}
 
 		void Start ()
 		{
@@ -23,6 +27,7 @@ public class Bomb : MonoBehaviour
 				// If the bomb has no parent, it has been laid by the player and should detonate.
 				if (transform.root == transform)
 						StartCoroutine (BombDetonation ());
+				
 		}
 
 
