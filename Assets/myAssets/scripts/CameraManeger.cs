@@ -30,7 +30,6 @@ public class CameraManeger : MonoBehaviour
 		public void Update ()
 		{
 				if (target != null) {
-
 						Vector2 boundryPos;
 						Vector2 offSet = new Vector2 (xOff + target.transform.position.x, yOff + target.transform.position.y);
 						Vector2 playerPos = refPoint.TransformPoint (offSet);

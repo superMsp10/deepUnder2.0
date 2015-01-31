@@ -16,7 +16,7 @@ public class playLevel : level
 				thisManage = gameManager.thisM;
 				thisCam = thisManage.thisCamManange;
 				audioM = AudioManager.thisAM;
-				thisChannel = audioM.bMusic;
+
 		}
 
 		void Update ()

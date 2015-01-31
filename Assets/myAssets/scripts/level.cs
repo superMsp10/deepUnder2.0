@@ -21,7 +21,6 @@ public  class level : MonoBehaviour
 		{
 				thisManage = gameManager.thisM;
 				audioM = AudioManager.thisAM;
-				thisChannel = audioM.bMusic;
 		}
 			
 		void OnEnable ()
