@@ -1316,7 +1316,7 @@ MonoBehaviour:
   minSize: 0
   xOff: 0
   maxSize: 0
-  yOff: .0299999993
+  yOff: .0399999991
   fromBoundryX: 0
 --- !u!114 &11489410
 MonoBehaviour:
