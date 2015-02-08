@@ -11,8 +11,8 @@ public class Bomb : Holdable
 		public float fuseTime = 1.5f;
 		public GameObject explosion;			// Prefab of explosion effect.
 
-
-		public ParticleSystem explosionFX;		// Reference to the particle system of the explosion effect.
+		public ParticleSystem particleIns;
+		public static ParticleSystem explosionFX;		// Reference to the particle system of the explosion effect.
 
 
 		
@@ -28,7 +28,12 @@ public class Bomb : Holdable
 				// If the bomb has no parent, it has been laid by the player and should detonate.
 				if (transform.root == transform)
 						StartCoroutine (BombDetonation ());
-				
+				if (explosionFX == null) {
+						 
+						GameObject g = (GameObject)Instantiate (particleIns.gameObject);
+						explosionFX = g.particleSystem;
+
+				}
 		}
 
 
