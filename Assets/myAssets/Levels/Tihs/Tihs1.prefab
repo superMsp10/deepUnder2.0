@@ -1518,7 +1518,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131834}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9762e198e2e07dc46aab7cdf60b115f1, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 2.83433247, y: 2.70686579}
   m_Center: {x: .0317382812, y: -.93951416}
