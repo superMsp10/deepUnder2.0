@@ -118,10 +118,7 @@ public class gameManager : MonoBehaviour
 
 				if (currentLevel != null) {
 						currentLevel.gameObject.SetActive (false);
-						if (currentLevel.spawnable) {
-								dead = true;
-								Destroy (myPlayer);
-						}
+						
 						currentLevel.endLevel ();
 				}
 				currentLevel = lev;
@@ -132,7 +129,6 @@ public class gameManager : MonoBehaviour
 				RenderSettings.skybox = currentLevel.skybox;
 
 				if (currentLevel.spawnable) {
-						dead = true;
 						SS = FindObjectsOfType<SpawnSpot> ();
 						spawn ();
 						

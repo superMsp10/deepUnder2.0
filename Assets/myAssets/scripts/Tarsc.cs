@@ -11,7 +11,7 @@ public class Tarsc : Mob1
 		{
 		
 				thisManage = gameManager.thisM;
-				thisLevel.addEntity (this);
+				changeLevel (thisLevel);
 				rigidbody2D.centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
 				thisAudio = AudioManager.thisAM.playerFX;
@@ -20,6 +20,13 @@ public class Tarsc : Mob1
 
 				cameraM = GetComponentInChildren<CameraManeger> ();
 				cameraM.thisLevl = (playLevel)thisLevel;
+		}
+
+		public override void changeLevel (level level)
+		{
+				thisLevel = level;
+				thisLevel.addEntity (this);
+		
 		}
 
 		public override void updateAnim ()
