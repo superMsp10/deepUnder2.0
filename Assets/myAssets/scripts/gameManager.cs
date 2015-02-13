@@ -26,9 +26,7 @@ public class gameManager : MonoBehaviour
 		private bool connecting = false;
 		List <string> chatMessages;
 		int MaxChatMess = 5;
-		private string code = "";
 		private string status = "[newbie]";
-		private health myHp;
 		public GameObject gameUI;
 		public GameObject pausedUi;
 
@@ -87,7 +85,6 @@ public class gameManager : MonoBehaviour
 			(myPlayerIns, MySS.transform.position, MySS.transform.rotation);
 				myPlayer.SetActive (true);
 				currCamera = myPlayer.GetComponentInChildren<Camera> ();
-				myHp = myPlayer.GetComponent<health> ();
 				thisCamManange = myPlayer.GetComponentInChildren<CameraManeger> ();
 				Entity e = myPlayer.GetComponent<Entity> ();
 				if (e == null)

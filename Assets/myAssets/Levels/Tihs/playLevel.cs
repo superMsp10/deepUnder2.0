@@ -11,21 +11,13 @@ public class playLevel : level
 		public List<CameraController> allBoundries;
 		protected CameraManeger thisCam;
 
-		void Start ()
+		
+
+		public override  void startLevel ()
 		{
 				thisManage = gameManager.thisM;
 				thisCam = thisManage.thisCamManange;
 				audioM = AudioManager.thisAM;
-
-		}
-
-		void Update ()
-		{
-
-		}
-		
-		public override  void startLevel ()
-		{
 				thisCam = thisManage.thisCamManange;
 				changeStage (stage);
 				thisChannel.clip = startMusic;

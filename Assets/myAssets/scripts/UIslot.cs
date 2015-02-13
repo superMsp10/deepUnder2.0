@@ -24,7 +24,7 @@ public class UIslot : MonoBehaviour
 		public void Use ()
 		{
 				holding.onUse ();
-				changeHolding (null);
+				//changeHolding (null);
 		}
 }
 

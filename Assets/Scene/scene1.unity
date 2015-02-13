@@ -7308,7 +7308,7 @@ EdgeCollider2D:
   m_PrefabInternal: {fileID: 2119210899}
   m_GameObject: {fileID: 433595914}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7745c162aea28e342995ba71835de3e7, type: 2}
   m_IsTrigger: 0
   m_Points:
   - {x: -101.118118, y: -14.2427368}
@@ -26253,7 +26253,7 @@ MonoBehaviour:
   currentLevel: {fileID: 0}
   levels: []
   dead: 1
-  loadDefault: 0
+  loadDefault: 1
   defaultLev: {fileID: 824517291}
   currCamera: {fileID: 0}
   ins1: {fileID: 100000, guid: 08f594c7c40395d4593e569526ea6708, type: 2}
@@ -36861,6 +36861,10 @@ Prefab:
       propertyPath: m_Name
       value: market
       objectReference: {fileID: 0}
+    - target: {fileID: 6870908, guid: ddc5b27861549724cbf30f3e5f9f384d, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 7745c162aea28e342995ba71835de3e7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddc5b27861549724cbf30f3e5f9f384d, type: 2}
   m_RootGameObject: {fileID: 1909678052}
