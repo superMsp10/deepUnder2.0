@@ -28,14 +28,8 @@ public  class Entity : MonoBehaviour
 				if (thisLevel == null)
 						Debug.LogError ("no Level referenced for this entity: " + gameObject.name);
 				thisManage = gameManager.thisM;
-				changeLevel (thisLevel);
-
-		}
-
-		public virtual void changeLevel (level level)
-		{
-				thisLevel = level;
 				thisLevel.addEntity (this);
+
 
 		}
 

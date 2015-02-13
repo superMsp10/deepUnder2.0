@@ -9,7 +9,6 @@ public class Teleport : MonoBehaviour
 		public float xOff = 0;
 		public float yOff = 0;
 		public playLevel thisLev;
-		public gameManager thisM;
 
 		public virtual void teleport (GameObject player)
 		{
