@@ -61,6 +61,19 @@ public class Mob1 : Entity
 			
 		}
 
+		public override void changeLevel (level lev)
+		{
+				if (lev == null)
+						Debug.LogError ("transfering level is null: " + gameObject.name);
+				thisLevel.removeEntity (this);
+				thisLevel = lev;
+				thisLevel.addEntity (this);
+				checkNecesseries ();
+
+
+
+		}
+
 		protected virtual void checkNecesseries ()
 		{
 

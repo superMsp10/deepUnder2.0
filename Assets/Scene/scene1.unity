@@ -7308,7 +7308,7 @@ EdgeCollider2D:
   m_PrefabInternal: {fileID: 2119210899}
   m_GameObject: {fileID: 433595914}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 7745c162aea28e342995ba71835de3e7, type: 2}
+  m_Material: {fileID: 6200000, guid: 0ad2be2344560a44fa82fdd93d082482, type: 2}
   m_IsTrigger: 0
   m_Points:
   - {x: -101.118118, y: -14.2427368}
@@ -15813,7 +15813,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 885478094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 69, z: 0}
+  m_LocalPosition: {x: 1099.19995, y: 69, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1211786693}
@@ -30598,7 +30598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera1: {fileID: 1114050589}
-  spawnable: 1
+  spawnable: 0
   votes: 0
   skybox: {fileID: 2100000, guid: 52b7d70b1de7c4ce09662b77c14d9fda, type: 2}
   entities: []
@@ -36864,7 +36864,7 @@ Prefab:
     - target: {fileID: 6870908, guid: ddc5b27861549724cbf30f3e5f9f384d, type: 2}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: 7745c162aea28e342995ba71835de3e7, type: 2}
+      objectReference: {fileID: 6200000, guid: 0ad2be2344560a44fa82fdd93d082482, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddc5b27861549724cbf30f3e5f9f384d, type: 2}
   m_RootGameObject: {fileID: 1909678052}

@@ -78,6 +78,8 @@ public class gameManager : MonoBehaviour
 
 		public void spawn ()
 		{
+				SS = FindObjectsOfType<SpawnSpot> ();
+
 				currentLevel.camera1.SetActive (false);
 				inGame = true;
 				MySS = SS [Random.Range (0, SS.Length)];
@@ -92,7 +94,17 @@ public class gameManager : MonoBehaviour
 				else
 						e.thisLevel = currentLevel;
 		}
+		public void transferLevelPlayer ()
+		{
+				currentLevel.camera1.SetActive (false);
+				inGame = true;
+				myPlayer.GetComponent<Mob1> ().changeLevel (currentLevel);
+				SS = FindObjectsOfType<SpawnSpot> ();
 
+				MySS = SS [Random.Range (0, SS.Length)];
+				myPlayer.transform.position = MySS.transform.position;
+
+		}
 		public void changeLvl (int i)
 		{
 				levelex (levels [i]);
@@ -115,10 +127,7 @@ public class gameManager : MonoBehaviour
 
 				if (currentLevel != null) {
 						currentLevel.gameObject.SetActive (false);
-						if (currentLevel.spawnable) {
-								dead = true;
-								Destroy (myPlayer);
-						}
+						
 						currentLevel.endLevel ();
 				}
 				currentLevel = lev;
@@ -129,8 +138,6 @@ public class gameManager : MonoBehaviour
 				RenderSettings.skybox = currentLevel.skybox;
 
 				if (currentLevel.spawnable) {
-						dead = true;
-						SS = FindObjectsOfType<SpawnSpot> ();
 						spawn ();
 						
 				}

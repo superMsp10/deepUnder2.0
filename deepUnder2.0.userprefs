@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\Levels\Tihs\playLevel.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\gameManager.cs">
     <Files>
-      <File FileName="Assets\myAssets\Levels\Tihs\playLevel.cs" Line="16" Column="38" />
-      <File FileName="Assets\myAssets\scripts\gameManager.cs" Line="88" Column="1" />
+      <File FileName="Assets\myAssets\Entities\nextLevelDoor.cs" Line="19" Column="2" />
+      <File FileName="Assets\myAssets\scripts\gameManager.cs" Line="82" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

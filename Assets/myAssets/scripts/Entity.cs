@@ -53,6 +53,15 @@ public  class Entity : MonoBehaviour
 						}
 				}
 		}
+		public virtual void changeLevel (level lev)
+		{
+				if (lev == null)
+						Debug.LogError ("transfering level is null: " + gameObject.name);
+				thisLevel.removeEntity (this);
+				thisLevel = lev;
+				thisLevel.addEntity (this);
+
+		}
 	
 		void DisableChildGameObject (string name)
 		{
