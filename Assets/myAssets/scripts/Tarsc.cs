@@ -15,13 +15,30 @@ public class Tarsc : Mob1
 				rigidbody2D.centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
 				thisAudio = AudioManager.thisAM.playerFX;
+				cameraM = GetComponentInChildren<CameraManeger> ();
 				checkNecesseries ();
 
-
-				cameraM = GetComponentInChildren<CameraManeger> ();
-				cameraM.thisLevl = (playLevel)thisLevel;
 		}
 
+		protected override void checkNecesseries ()
+		{
+		
+				if (thisLevel == null)
+						Debug.LogError ("no Level referenced for this entity: " + gameObject.name);
+
+				if (thisAnim == null && animated) {
+						Debug.LogError ("no animator is provided");
+				}
+				if (groundCheck == null)
+						Debug.Log ("no feets included");
+				bodyParts = GetComponentsInChildren<BodyPart> ();
+				foreach (BodyPart b in bodyParts) {
+						b.thisLevel = thisLevel;
+				}
+				cameraM.thisLevl = (playLevel)thisLevel;
+
+		
+		}
 		public override void updateAnim ()
 		{
 				thisAnim.SetBool ("grounded", grounded);
