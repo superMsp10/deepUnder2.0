@@ -74,12 +74,17 @@ public class Bomb : Holdable
 								if (rb != null) {
 										// Find the Enemy script and set the enemy's health to zero.
 								
-
+										float distanceForce;
 										// Find a vector from the bomb to the enemy.
 										Vector3 deltaPos = rb.transform.position - transform.position;
-										float distanceForce = bombForce - Vector2.Distance (rb.transform.position, transform.position);
+										if (Vector2.Distance (rb.transform.position, transform.position) < bombRadius) {
+												distanceForce = bombRadius - Vector2.Distance (rb.transform.position, transform.position);
+										} else {
+												distanceForce = 0f;
+
+										}
 										// Apply a force in this direction with a magnitude of bombForce.
-										Vector3 force = deltaPos.normalized * bombForce;
+										Vector3 force = deltaPos.normalized * bombForce * distanceForce;
 										Debug.Log (distanceForce);
 										rb.AddForce (force, ForceMode2D.Impulse);
 								}
