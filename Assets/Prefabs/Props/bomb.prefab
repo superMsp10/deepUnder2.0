@@ -171,12 +171,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdUI: {fileID: 21300000, guid: 3f52bc4ea7c37b44a9548a549527831d, type: 3}
-  bombRadius: 7
-  bombForce: 100
+  bombRadius: 30
+  bombForce: 1000
   boom: {fileID: 8300000, guid: f49ac45b37662be4884f00361aebb99d, type: 3}
   fuse: {fileID: 8300000, guid: 9fe427c4d2a645847afd5bd3373ae308, type: 3}
   fuseTime: 3
   explosion: {fileID: 100000, guid: 9c8b546f746e74328ab6b8bba733af67, type: 2}
+  whatExplode:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  dmg: 1
   particleIns: {fileID: 19802054, guid: 5b8d8461f4d094ae1911a6d9df6d9f68, type: 2}
 --- !u!198 &19800000
 ParticleSystem:

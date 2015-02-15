@@ -10,6 +10,8 @@ public class Bomb : Holdable
 		public AudioClip fuse;					// Audioclip of fuse.
 		public float fuseTime = 1.5f;
 		public GameObject explosion;			// Prefab of explosion effect.
+		public LayerMask whatExplode;
+		public float dmg;
 
 		public ParticleSystem particleIns;
 		public static ParticleSystem explosionFX;		// Reference to the particle system of the explosion effect.
@@ -56,25 +58,29 @@ public class Bomb : Holdable
 			
 
 				// Find all the colliders on the Enemies layer within the bombRadius.
-				Collider2D[] enemies = Physics2D.OverlapCircleAll (transform.position, bombRadius, 1 << LayerMask.NameToLayer ("Enemies"));
+				Collider2D[] enemies = Physics2D.OverlapCircleAll (transform.position, bombRadius, whatExplode);
 
 				// For each collider...
 				foreach (Collider2D en in enemies) {
 						// Check if it has a rigidbody (since there is only one per enemy, on the parent).
 						Rigidbody2D rb = en.rigidbody2D;
-						if (rb != null && rb.tag == "Enemy") {
+						Mob1 mab = en.GetComponent<Mob1> ();
+						if (rb != null) {
 								// Find the Enemy script and set the enemy's health to zero.
-								rb.gameObject.GetComponent<Enemy> ().thisAttributes.HP = 0;
+								
 
 								// Find a vector from the bomb to the enemy.
 								Vector3 deltaPos = rb.transform.position - transform.position;
 
 								// Apply a force in this direction with a magnitude of bombForce.
-								Vector3 force = deltaPos.normalized * bombForce;
+								Vector3 force = deltaPos.normalized * bombForce * 100;
 								rb.AddForce (force);
 						}
-				}
+						if (mab != null) {
+								mab.thisAttributes.HP -= dmg;
+						}
 
+				}
 				// Set the explosion effect's position to the bomb's position and play the particle system.
 				explosionFX.transform.position = transform.position;
 				explosionFX.Play ();
