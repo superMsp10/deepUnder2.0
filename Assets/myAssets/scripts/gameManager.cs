@@ -60,7 +60,7 @@ public class gameManager : MonoBehaviour
 		{
 				if (Input.GetKeyDown (KeyCode.Escape))
 						inGame = ! inGame;
-				if (currentLevel.spawnable) {
+				if (!dead) {
 						if (inGame) {
 								pausedUi.SetActive (false);
 								gameUI.SetActive (true);
@@ -93,6 +93,7 @@ public class gameManager : MonoBehaviour
 						Debug.LogError ("cannot spawn not a entity");
 				else
 						e.thisLevel = currentLevel;
+				dead = false;
 		}
 		public void transferLevelPlayer ()
 		{
