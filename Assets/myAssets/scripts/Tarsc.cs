@@ -129,6 +129,7 @@ public class Tarsc : Mob1
 		{
 				if (cameraM != null)
 						Destroy (cameraM.gameObject);
+				thisManage.dead = true;
 		}
 
 }

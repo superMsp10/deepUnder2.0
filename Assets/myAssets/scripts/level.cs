@@ -14,6 +14,7 @@ public  class level : MonoBehaviour
 		public AudioClip startMusic;
 		public AudioSource thisChannel;
 		public int deathHeight = -200;
+		public bool killPlayerOnEnter = false;
 
 
 		// Use this for initialization

@@ -5,6 +5,11 @@ public class Holdable : MonoBehaviour
 {
 
 		public Sprite holdUI;
+		public gameManager thisManage;
+		public void Start ()
+		{
+				thisManage = gameManager.thisM;
+		}
 
 		
 

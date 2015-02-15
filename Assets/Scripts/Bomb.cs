@@ -20,13 +20,16 @@ public class Bomb : Holdable
 		
 		public override void  onUse ()
 		{
-				Instantiate (gameObject, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
+				thisManage = gameManager.thisM;
+
+				if (thisManage.myPlayer != null)
+						Instantiate (gameObject, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
 				
 		}
 
 		void Start ()
 		{
-		
+				thisManage = gameManager.thisM;
 				// If the bomb has no parent, it has been laid by the player and should detonate.
 				if (transform.root == transform)
 						StartCoroutine (BombDetonation ());
@@ -63,23 +66,27 @@ public class Bomb : Holdable
 				// For each collider...
 				foreach (Collider2D en in enemies) {
 						// Check if it has a rigidbody (since there is only one per enemy, on the parent).
-						Rigidbody2D rb = en.rigidbody2D;
-						Mob1 mab = en.GetComponent<Mob1> ();
-						if (rb != null) {
-								// Find the Enemy script and set the enemy's health to zero.
+						if (en.gameObject.GetInstanceID () != gameObject.GetInstanceID ()) {
+								
+					
+								Rigidbody2D rb = en.rigidbody2D;
+								Mob1 mab = en.GetComponent<Mob1> ();
+								if (rb != null) {
+										// Find the Enemy script and set the enemy's health to zero.
 								
 
-								// Find a vector from the bomb to the enemy.
-								Vector3 deltaPos = rb.transform.position - transform.position;
-
-								// Apply a force in this direction with a magnitude of bombForce.
-								Vector3 force = deltaPos.normalized * bombForce * 100;
-								rb.AddForce (force);
-						}
-						if (mab != null) {
-								mab.thisAttributes.HP -= dmg;
-						}
-
+										// Find a vector from the bomb to the enemy.
+										Vector3 deltaPos = rb.transform.position - transform.position;
+										float distanceForce = bombForce - Vector2.Distance (rb.transform.position, transform.position);
+										// Apply a force in this direction with a magnitude of bombForce.
+										Vector3 force = deltaPos.normalized * bombForce;
+										Debug.Log (distanceForce);
+										rb.AddForce (force, ForceMode2D.Impulse);
+								}
+								if (mab != null) {
+										mab.thisAttributes.HP -= dmg;
+								}
+						}	
 				}
 				// Set the explosion effect's position to the bomb's position and play the particle system.
 				explosionFX.transform.position = transform.position;

@@ -17019,6 +17019,7 @@ MonoBehaviour:
   startMusic: {fileID: 8300000, guid: d14fbc0d2708bcc4fbc1033472bca264, type: 3}
   thisChannel: {fileID: 1153522529}
   deathHeight: -200
+  killPlayerOnEnter: 0
   stage: 3
   stageBoundires: []
   xVisible: []
@@ -17379,6 +17380,7 @@ MonoBehaviour:
   startMusic: {fileID: 0}
   thisChannel: {fileID: 1153522529}
   deathHeight: -200
+  killPlayerOnEnter: 0
 --- !u!1 &869276216
 GameObject:
   m_ObjectHideFlags: 0
@@ -26275,6 +26277,7 @@ MonoBehaviour:
   startMusic: {fileID: 8300000, guid: acd99d397756e254e85415c13412b8e5, type: 3}
   thisChannel: {fileID: 1153522529}
   deathHeight: -200
+  killPlayerOnEnter: 0
   stage: 1
   stageBoundires: []
   xVisible: []
@@ -28346,6 +28349,7 @@ MonoBehaviour:
   startMusic: {fileID: 8300000, guid: fdac7a29c628b694a817d32eaa30f217, type: 3}
   thisChannel: {fileID: 1153522529}
   deathHeight: -200
+  killPlayerOnEnter: 1
 --- !u!95 &1459637421
 Animator:
   serializedVersion: 3
@@ -34155,6 +34159,7 @@ MonoBehaviour:
   startMusic: {fileID: 8300000, guid: 9fe427c4d2a645847afd5bd3373ae308, type: 3}
   thisChannel: {fileID: 1153522529}
   deathHeight: -200
+  killPlayerOnEnter: 0
   stage: 1
   stageBoundires: []
   xVisible: []
@@ -37424,6 +37429,7 @@ MonoBehaviour:
   startMusic: {fileID: 8300000, guid: 97af0f60c4ea1f34fbb579dfd05c2b9b, type: 3}
   thisChannel: {fileID: 1153522529}
   deathHeight: -200
+  killPlayerOnEnter: 0
 --- !u!1 &1988403248
 GameObject:
   m_ObjectHideFlags: 0

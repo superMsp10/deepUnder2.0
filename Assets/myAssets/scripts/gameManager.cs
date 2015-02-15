@@ -130,6 +130,7 @@ public class gameManager : MonoBehaviour
 						currentLevel.gameObject.SetActive (false);
 						
 						currentLevel.endLevel ();
+					
 				}
 				currentLevel = lev;
 				AudioManager.thisAM.updateSliders ();
@@ -137,7 +138,8 @@ public class gameManager : MonoBehaviour
 				currentLevel.camera1.SetActive (true);
 				currCamera = currentLevel.camera1.camera;
 				RenderSettings.skybox = currentLevel.skybox;
-
+				if (currentLevel.killPlayerOnEnter && myPlayer != null)
+						Destroy (myPlayer);
 				if (currentLevel.spawnable) {
 						spawn ();
 						

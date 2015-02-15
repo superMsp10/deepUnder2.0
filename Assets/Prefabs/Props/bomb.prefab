@@ -128,7 +128,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mass: 3
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 2
   m_GravityScale: 2
@@ -171,8 +171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdUI: {fileID: 21300000, guid: 3f52bc4ea7c37b44a9548a549527831d, type: 3}
-  bombRadius: 30
-  bombForce: 1000
+  thisManage: {fileID: 0}
+  bombRadius: 100
+  bombForce: 500
   boom: {fileID: 8300000, guid: f49ac45b37662be4884f00361aebb99d, type: 3}
   fuse: {fileID: 8300000, guid: 9fe427c4d2a645847afd5bd3373ae308, type: 3}
   fuseTime: 3
