@@ -173,7 +173,7 @@ MonoBehaviour:
   holdUI: {fileID: 21300000, guid: 3f52bc4ea7c37b44a9548a549527831d, type: 3}
   thisManage: {fileID: 0}
   bombRadius: 50
-  bombForce: 10
+  bombForce: 20
   boom: {fileID: 8300000, guid: f49ac45b37662be4884f00361aebb99d, type: 3}
   fuse: {fileID: 8300000, guid: 9fe427c4d2a645847afd5bd3373ae308, type: 3}
   fuseTime: 3
