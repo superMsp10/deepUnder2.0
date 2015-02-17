@@ -29,6 +29,7 @@ public class gameManager : MonoBehaviour
 		private string status = "[newbie]";
 		public GameObject gameUI;
 		public GameObject pausedUi;
+		public GameObject deathScreen;
 
 		void Awake ()
 		{
@@ -60,19 +61,27 @@ public class gameManager : MonoBehaviour
 		{
 				if (Input.GetKeyDown (KeyCode.Escape))
 						inGame = ! inGame;
-				if (!dead) {
-						if (inGame) {
-								pausedUi.SetActive (false);
-								gameUI.SetActive (true);
+				if (!currentLevel.menuLevel) {
+						deathScreen.SetActive (false);
+
+						if (!dead) {
+								deathScreen.SetActive (false);
+								if (inGame) {
+										pausedUi.SetActive (false);
+										gameUI.SetActive (true);
+								} else {
+										gameUI.SetActive (false);
+										pausedUi.SetActive (true);
+								}
+						
 						} else {
+								deathScreen.SetActive (true);
+
 								gameUI.SetActive (false);
-								pausedUi.SetActive (true);
+
+								pausedUi.SetActive (false);
+
 						}
-				} else {
-						gameUI.SetActive (false);
-
-						pausedUi.SetActive (false);
-
 				}
 		}
 

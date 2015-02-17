@@ -15,6 +15,7 @@ public  class level : MonoBehaviour
 		public AudioSource thisChannel;
 		public int deathHeight = -200;
 		public bool killPlayerOnEnter = false;
+		public bool menuLevel = false;
 
 
 		// Use this for initialization
