@@ -76,6 +76,19 @@ public class gameManager : MonoBehaviour
 				}
 		}
 
+		public void die ()
+		{
+
+				if (myPlayer != null) {
+						Destroy (myPlayer);
+				}
+				dead = true;
+				currentLevel.camera1.SetActive (true);
+				inGame = false;
+
+
+		}
+
 		public void spawn ()
 		{
 				SS = FindObjectsOfType<SpawnSpot> ();
