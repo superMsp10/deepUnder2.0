@@ -37,6 +37,7 @@ public class gameManager : MonoBehaviour
 						thisM = this;
 				}
 		}
+
 		void Start ()
 		{		
 				version = "NetTest 0.2.2";
@@ -59,30 +60,39 @@ public class gameManager : MonoBehaviour
 
 		public void Update ()
 		{
-				if (Input.GetKeyDown (KeyCode.Escape))
-						inGame = ! inGame;
 				if (!currentLevel.menuLevel) {
-						deathScreen.SetActive (false);
-
-						if (!dead) {
-								deathScreen.SetActive (false);
-								if (inGame) {
-										pausedUi.SetActive (false);
-										gameUI.SetActive (true);
-								} else {
-										gameUI.SetActive (false);
-										pausedUi.SetActive (true);
-								}
-						
-						} else {
-								deathScreen.SetActive (true);
-
-								gameUI.SetActive (false);
-
-								pausedUi.SetActive (false);
-
-						}
+						if (Input.GetKeyDown (KeyCode.Escape))
+								inGame = ! inGame;
+						changeMenu ();
 				}
+		}
+
+		public void changeMenu ()
+		{
+				if (inGame && gameUI.activeSelf == false) {
+						pausedUi.SetActive (false);
+						deathScreen.SetActive (false);
+						gameUI.SetActive (true);
+				}
+				if (!inGame && pausedUi.activeSelf == false) {
+						gameUI.SetActive (false);
+						pausedUi.SetActive (true);
+						deathScreen.SetActive (false);
+				}
+				if (dead && deathScreen.activeSelf == false) {
+						gameUI.SetActive (false);
+						pausedUi.SetActive (false);
+						deathScreen.SetActive (true);
+
+				}
+		}
+
+		public void menuReset ()
+		{
+				gameUI.SetActive (false);
+				pausedUi.SetActive (false);
+				deathScreen.SetActive (false);
+
 		}
 
 		public void die ()
@@ -117,6 +127,7 @@ public class gameManager : MonoBehaviour
 						e.thisLevel = currentLevel;
 				dead = false;
 		}
+
 		public void transferLevelPlayer ()
 		{
 				currentLevel.camera1.SetActive (false);
@@ -128,6 +139,7 @@ public class gameManager : MonoBehaviour
 				myPlayer.transform.position = MySS.transform.position;
 
 		}
+
 		public void changeLvl (int i)
 		{
 				levelex (levels [i]);
@@ -147,7 +159,7 @@ public class gameManager : MonoBehaviour
 		public void levelex (level lev)
 		{
 				//voted = false;
-
+				menuReset ();
 				if (currentLevel != null) {
 						currentLevel.gameObject.SetActive (false);
 						
