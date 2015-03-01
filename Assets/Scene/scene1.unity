@@ -443,6 +443,14 @@ Prefab:
       propertyPath: killPlayerOnEnter
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2096356, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
+      propertyPath: orthographic size
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 496376, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -22
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
   m_RootGameObject: {fileID: 1802177988}
@@ -3658,7 +3666,7 @@ SpriteRenderer:
   m_SortingLayerID: 1535931219
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 4fd9bdfaf52bea7409e6e0eb8319fa8e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .720588207, g: .715289772, b: .715289772, a: 1}
 --- !u!68 &156924572
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -21474,7 +21482,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reset
+  m_Text: Respawn
 --- !u!222 &919559070
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21529,7 +21537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera1: {fileID: 722384431}
-  spawnable: 0
+  spawnable: 1
   votes: 0
   skybox: {fileID: 2100000, guid: 83c318792ac2c874390dca10c59c0e25, type: 2}
   entities: []
@@ -26523,7 +26531,7 @@ Transform:
   m_PrefabInternal: {fileID: 10607925}
   m_GameObject: {fileID: 1114050589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -22, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1802177989}
@@ -26573,7 +26581,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 50
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -35354,12 +35362,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisCamManange: {fileID: 0}
-  inGame: 0
+  paused: 1
   currentLevel: {fileID: 0}
   levels: []
   dead: 1
   loadDefault: 1
-  defaultLev: {fileID: 824517291}
+  defaultLev: {fileID: 928617123}
   currCamera: {fileID: 0}
   ins1: {fileID: 100000, guid: 08f594c7c40395d4593e569526ea6708, type: 2}
   ins2: {fileID: 149062, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
@@ -37169,7 +37177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1641257294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44924,7 +44932,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_Text
-      value: Reset
+      value: Respawn
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_Name
@@ -49830,7 +49838,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2131264316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -275.599976, y: -60, z: -10}
+  m_LocalPosition: {x: 705, y: 57, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 824517289}
@@ -49880,7 +49888,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 40
+  orthographic size: 154.001129
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2

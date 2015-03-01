@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
@@ -18,7 +18,7 @@ public class invManager : slotCollection
 	
 		void Update ()
 		{
-				if (thismanage.inGame) {
+				if (thismanage.paused) {
 						if (Input.GetButtonDown ("InvSelected") && selected.holding != null) {
 								selected.Use ();
 						}

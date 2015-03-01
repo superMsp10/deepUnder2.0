@@ -8,7 +8,7 @@ public class gameManager : MonoBehaviour
 
 		public static gameManager thisM;
 		public CameraManeger thisCamManange;
-		public bool inGame = false;
+		public bool paused = true;
 		public level currentLevel;
 		protected level start;
 		public level[] levels;
@@ -60,31 +60,35 @@ public class gameManager : MonoBehaviour
 
 		public void Update ()
 		{
+
 				if (!currentLevel.menuLevel) {
-						if (Input.GetKeyDown (KeyCode.Escape))
-								inGame = ! inGame;
-						//	changeMenu ();
+						
+						if (dead && deathScreen.activeSelf == false) {
+
+								menuReset ();
+								deathScreen.SetActive (true);
+			
+						} else if (Input.GetKeyDown (KeyCode.Escape)) {
+								paused = ! paused;
+								changeMenu ();
+						}
+								
 				}
 		}
 
 		public void changeMenu ()
 		{
-				if (inGame && gameUI.activeSelf == false) {
+				if (paused && gameUI.activeSelf == false) {
 						pausedUi.SetActive (false);
 						deathScreen.SetActive (false);
 						gameUI.SetActive (true);
 				}
-				if (!inGame && pausedUi.activeSelf == false) {
+				if (!paused && pausedUi.activeSelf == false) {
 						gameUI.SetActive (false);
 						pausedUi.SetActive (true);
 						deathScreen.SetActive (false);
 				}
-				if (dead && deathScreen.activeSelf == false) {
-						gameUI.SetActive (false);
-						pausedUi.SetActive (false);
-						deathScreen.SetActive (true);
-
-				}
+				
 		}
 
 		public void menuReset ()
@@ -105,7 +109,7 @@ public class gameManager : MonoBehaviour
 				if (currentLevel != null) {
 						currentLevel.camera1.SetActive (true);
 				}
-				inGame = false;
+				paused = false;
 
 
 		}
@@ -115,7 +119,7 @@ public class gameManager : MonoBehaviour
 				SS = FindObjectsOfType<SpawnSpot> ();
 
 				currentLevel.camera1.SetActive (false);
-				inGame = true;
+				paused = true;
 				MySS = SS [Random.Range (0, SS.Length)];
 				myPlayer = (GameObject)Instantiate
 			(myPlayerIns, MySS.transform.position, MySS.transform.rotation);
@@ -128,12 +132,15 @@ public class gameManager : MonoBehaviour
 				else
 						e.thisLevel = currentLevel;
 				dead = false;
+				paused = false;
+				changeMenu ();
+
 		}
 
 		public void transferLevelPlayer ()
 		{
 				currentLevel.camera1.SetActive (false);
-				inGame = true;
+				paused = true;
 
 				myPlayer.GetComponent<Mob1> ().changeLevel (currentLevel);
 				SS = FindObjectsOfType<SpawnSpot> ();
@@ -163,6 +170,7 @@ public class gameManager : MonoBehaviour
 		{
 				//voted = false;
 				//	menuReset ();
+				menuReset ();
 				if (currentLevel != null) {
 						currentLevel.gameObject.SetActive (false);
 						
