@@ -63,7 +63,7 @@ public class gameManager : MonoBehaviour
 				if (!currentLevel.menuLevel) {
 						if (Input.GetKeyDown (KeyCode.Escape))
 								inGame = ! inGame;
-						changeMenu ();
+						//	changeMenu ();
 				}
 		}
 
@@ -102,7 +102,9 @@ public class gameManager : MonoBehaviour
 						Destroy (myPlayer);
 				}
 				dead = true;
-				currentLevel.camera1.SetActive (true);
+				if (currentLevel != null) {
+						currentLevel.camera1.SetActive (true);
+				}
 				inGame = false;
 
 
@@ -132,6 +134,7 @@ public class gameManager : MonoBehaviour
 		{
 				currentLevel.camera1.SetActive (false);
 				inGame = true;
+
 				myPlayer.GetComponent<Mob1> ().changeLevel (currentLevel);
 				SS = FindObjectsOfType<SpawnSpot> ();
 
@@ -159,7 +162,7 @@ public class gameManager : MonoBehaviour
 		public void levelex (level lev)
 		{
 				//voted = false;
-				menuReset ();
+				//	menuReset ();
 				if (currentLevel != null) {
 						currentLevel.gameObject.SetActive (false);
 						
