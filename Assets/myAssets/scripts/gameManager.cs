@@ -132,7 +132,7 @@ public class gameManager : MonoBehaviour
 				else
 						e.thisLevel = currentLevel;
 				dead = false;
-				paused = false;
+				paused = true;
 				changeMenu ();
 
 		}
