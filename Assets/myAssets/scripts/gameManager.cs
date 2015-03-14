@@ -76,6 +76,13 @@ public class gameManager : MonoBehaviour
 				}
 		}
 
+		public void setPaused ()
+		{
+				paused = !paused;
+				changeMenu ();
+
+		}
+
 		public void changeMenu ()
 		{
 				if (paused && gameUI.activeSelf == false) {
