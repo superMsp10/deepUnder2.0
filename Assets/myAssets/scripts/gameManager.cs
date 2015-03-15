@@ -68,7 +68,7 @@ public class gameManager : MonoBehaviour
 								menuReset ();
 								deathScreen.SetActive (true);
 			
-						} else if (Input.GetKeyDown (KeyCode.Escape)) {
+						} else if (Input.GetKeyDown (KeyCode.Escape) && !dead) {
 								paused = ! paused;
 								changeMenu ();
 						}
