@@ -46,6 +46,7 @@ public class Mob1 : Entity
 		public AudioClip  jumpClip;
 		public AudioClip  stepClip;
 		public AudioClip  landClip;
+		public AudioClip  dmgClip;
 		public AudioClip  movingClip;
 
 
@@ -162,7 +163,6 @@ public class Mob1 : Entity
 								nGround ++;
 				}
 				bool ground;
-				Debug.Log (nGround + " " + yGround);
 				if (yGround > nGround)
 						ground = true;
 				else
@@ -212,6 +212,7 @@ public class Mob1 : Entity
 		public virtual void takeDmg (int damage)
 		{
 				thisAttributes.HP -= damage;
+				thisAudio.PlayOneShot (dmgClip);
 		}
 		
 		public virtual void flip ()

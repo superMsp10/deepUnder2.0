@@ -29,6 +29,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -48,15 +49,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb907531728fafe4abfc0f8cf9c53cb8, type: 3}
+  m_Script: {fileID: 11500000, guid: b6e906cf8dbfae643a3ca3e3f26ab3a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 1
-  level: 2
-  teleto: {fileID: 0}
-  xOff: -2
+  teleTo: {fileID: 0}
+  xOff: 0
   yOff: 0
-  zOff: 0
+  thisLev: {fileID: 0}
+  levelChange: {fileID: 0}
+  whatPlayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -75,9 +78,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 4
-  m_SortingOrder: 4
   m_SortingLayerID: 1024582385
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 472f2e4aaeafc874091ab1806687e8d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000

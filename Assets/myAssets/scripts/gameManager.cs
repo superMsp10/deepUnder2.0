@@ -117,6 +117,7 @@ public class gameManager : MonoBehaviour
 						currentLevel.camera1.SetActive (true);
 				}
 				paused = false;
+				
 
 
 		}
@@ -141,6 +142,8 @@ public class gameManager : MonoBehaviour
 				dead = false;
 				paused = true;
 				changeMenu ();
+				(currentLevel as playLevel).changeStage (1);
+
 
 		}
 
