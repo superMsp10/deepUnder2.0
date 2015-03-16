@@ -12,11 +12,28 @@ public class NPC : Mob1
 		public Text talk;
 		public GameObject responses;
 		public Button  answer1;
+		public Text  answer1Text;
 		public Button  answer2;
+		public Text  answer2Text;
 		
-		public virtual void PlayerInteract ()
+		void Start ()
 		{
-				Debug.Log ("hi");
+				thisManage = gameManager.thisM;
+				checkNecesseries ();
+				thisLevel.addEntity (this);
+				rigidbody2D.centerOfMass = centerOfMass;
+				thisAnim = GetComponent<Animator> ();
+				answer1Text = answer1.GetComponentInChildren<Text> ();
+				answer2Text = answer2.GetComponentInChildren<Text> ();
+				speechStart ();
+		
+		}
+
+		protected virtual void speechStart ()
+		{
+
+
+
 		}
 		void Update ()
 		{
@@ -47,7 +64,7 @@ public class NPC : Mob1
 						NPC thisCannon = other.gameObject.GetComponent<NPC> ();
 						if (thisCannon == null)
 								Debug.LogError ("no NPC script attached but tag is NPC");
-						thisCannon.PlayerInteract ();
+					
 			
 				}
 

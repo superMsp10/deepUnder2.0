@@ -139,13 +139,7 @@ public class Bomb : Holdable
 			
 				}
 		
-				if (other.gameObject.tag == "NPC") {
-						NPC thisCannon = other.gameObject.GetComponent<NPC> ();
-						if (thisCannon == null)
-								Debug.LogError ("no NPC script attached but tag is NPC");
-						thisCannon.PlayerInteract ();
 			
-				}
 
 		}
 }
