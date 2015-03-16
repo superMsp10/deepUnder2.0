@@ -30,6 +30,27 @@ public class NPC : Mob1
 			
 				if (other.gameObject.tag == "Player")
 						responses.SetActive (true);
+
+				if (other.gameObject.tag == "teleport") {
+						Teleport teleSpot = other.GetComponent<Teleport> ();
+						teleSpot.teleport (gameObject);
+			
+				}
+				if (other.gameObject.tag == "boost") {
+						collisionBoost thisBoost = other.gameObject.GetComponent<collisionBoost> ();
+						if (thisBoost == null)
+								Debug.LogError ("no collision boost script attached");
+						thisBoost.boost (rigidbody2D);
+				}
+
+				if (other.gameObject.tag == "NPC") {
+						NPC thisCannon = other.gameObject.GetComponent<NPC> ();
+						if (thisCannon == null)
+								Debug.LogError ("no NPC script attached but tag is NPC");
+						thisCannon.PlayerInteract ();
+			
+				}
+
 		}
 		
 		void OnTriggerExit2D (Collider2D other)
@@ -39,5 +60,19 @@ public class NPC : Mob1
 						responses.SetActive (false);
 		}
 
+		public void button1Click ()
+		{
+				Debug.Log ("hi");
+
+
+		}
+
+		public void button2Click ()
+		{
+
+				Debug.Log ("hi");
+
+
+		}
 }
 
