@@ -9,6 +9,9 @@ public class invManager : slotCollection
 		private gameManager thismanage;
 		public UIslot selected;
 		public Holdable empty;
+		public Color highlighted;
+		public Color normal;
+		public int selectedId;
 		void Start ()
 		{
 				thismanage = gameManager.thisM;
@@ -19,6 +22,11 @@ public class invManager : slotCollection
 		void Update ()
 		{
 				if (thismanage.paused) {
+						if (Input.GetAxisRaw ("slotChange") > 0) {
+								selectSlot (selectedId + 1);
+						} else if (Input.GetAxisRaw ("slotChange") < 0) {
+								selectSlot (selectedId - 1);
+						}
 						if (Input.GetButtonDown ("InvSelected") && selected.holding != null) {
 								selected.Use ();
 						}
@@ -27,9 +35,12 @@ public class invManager : slotCollection
 		}
 		public void selectSlot (int i)
 		{
-		
-				selected = slots [i];
-
+				if (i >= 0 && i < slots.Capacity) {
+						selectedId = i;
+						if (selected != null)
+								selected.outline.color = normal;
+						selected = slots [i];
+						selected.outline.color = highlighted;
+				}
 		}
-
 }

@@ -151,12 +151,13 @@ public class gameManager : MonoBehaviour
 		{
 				currentLevel.camera1.SetActive (false);
 				paused = true;
-
+				changeMenu ();
 				myPlayer.GetComponent<Mob1> ().changeLevel (currentLevel);
 				SS = FindObjectsOfType<SpawnSpot> ();
 
 				MySS = SS [Random.Range (0, SS.Length)];
 				myPlayer.transform.position = MySS.transform.position;
+
 
 		}
 

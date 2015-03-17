@@ -7,6 +7,8 @@ public class UIslot : MonoBehaviour
 		public Holdable holding;
 		public Image slot;
 		public Sprite empty;
+		public Image outline;
+
 
 		
 
