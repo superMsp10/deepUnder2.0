@@ -517,7 +517,7 @@ Prefab:
     - target: {fileID: 11496374, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
       propertyPath: startMusic
       value: 
-      objectReference: {fileID: 8300000, guid: 7df35072307b0254389e924692484962, type: 3}
+      objectReference: {fileID: 8300000, guid: 2d7582531ca8a104fa00d24529a81c4e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
   m_RootGameObject: {fileID: 1802177988}
@@ -56988,13 +56988,13 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    gravityModifier: 0
+    gravityModifier: -10
     inheritVelocity: 0
     maxNumParticles: 1000
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 4
+    type: 2
     radius: 1
     angle: 61.26408
     length: 5
@@ -67367,7 +67367,7 @@ MonoBehaviour:
   votes: 0
   skybox: {fileID: 2100000, guid: 1cc11dd39a962b0418d40553aac3aee9, type: 2}
   entities: []
-  startMusic: {fileID: 8300000, guid: 7df35072307b0254389e924692484962, type: 3}
+  startMusic: {fileID: 8300000, guid: 2d7582531ca8a104fa00d24529a81c4e, type: 3}
   thisChannel: {fileID: 1153522529}
   deathHeight: -200
   killPlayerOnEnter: 0
