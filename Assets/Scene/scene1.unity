@@ -1813,6 +1813,18 @@ Prefab:
       propertyPath: particle
       value: 
       objectReference: {fileID: 1797468876}
+    - target: {fileID: 11449066, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: thisAttributes.HP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449066, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: thisAttributes.Dmg
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449066, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: grounded
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5826374, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
@@ -41997,8 +42009,8 @@ MonoBehaviour:
   stage: 1
   despawnWithStage: 0
   thisAttributes:
-    HP: 30.0200005
-    Dmg: 0
+    HP: 100
+    Dmg: 1
     maxSped: 10
     moveForce: 5
     blunt: 0
@@ -65898,7 +65910,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 1.5
+      scalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
