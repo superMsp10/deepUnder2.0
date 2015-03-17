@@ -19409,9 +19409,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
-    m_PressedColor: {r: 0, g: .0482759476, b: 1, a: 1}
+    m_NormalColor: {r: .808823526, g: .808823526, b: .808823526, a: .568627477}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
     m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
     m_ColorMultiplier: 1
     m_FadeDuration: .100000001
@@ -41801,6 +41801,8 @@ MonoBehaviour:
   answer1Text: {fileID: 0}
   answer2: {fileID: 1388591354}
   answer2Text: {fileID: 0}
+  talking: 1
+  follow: 0
 --- !u!1001 &1128179655
 Prefab:
   m_ObjectHideFlags: 0
@@ -50317,9 +50319,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
-    m_PressedColor: {r: .117241859, g: 0, b: 1, a: 1}
+    m_NormalColor: {r: .808823526, g: .808823526, b: .808823526, a: .568627477}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
     m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
     m_ColorMultiplier: 1
     m_FadeDuration: .100000001

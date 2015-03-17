@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+
 public class NPC : Mob1
 {
 		public float talkDistance;
@@ -15,6 +16,8 @@ public class NPC : Mob1
 		public Text  answer1Text;
 		public Button  answer2;
 		public Text  answer2Text;
+		public bool talking = true;
+		public string speakStage = "start";
 		
 		void Start ()
 		{
@@ -31,8 +34,13 @@ public class NPC : Mob1
 
 		protected virtual void speechStart ()
 		{
+				speakStage = "started";
 
 
+		}
+
+		protected virtual  void updateSpeech (bool answer)
+		{
 
 		}
 		void Update ()
@@ -42,12 +50,23 @@ public class NPC : Mob1
 				checkDead ();
 				checkFacing ();
 		}
+
+		public void changeTalkBoxState (bool response)
+		{
+
+				if (talking) {
+
+						responses.SetActive (response);
+
+				} else
+						responses.SetActive (false);
+
+		}
 		void OnTriggerEnter2D (Collider2D other)
 		{
 			
 				if (other.gameObject.tag == "Player")
-						responses.SetActive (true);
-
+						changeTalkBoxState (true);
 				if (other.gameObject.tag == "teleport") {
 						Teleport teleSpot = other.GetComponent<Teleport> ();
 						teleSpot.teleport (gameObject);
@@ -74,20 +93,23 @@ public class NPC : Mob1
 		{
 		
 				if (other.gameObject.tag == "Player")
-						responses.SetActive (false);
+						changeTalkBoxState (false);
 		}
 
 		public void button1Click ()
 		{
-				Debug.Log ("hi");
 
-
+				talking = false;
+				changeTalkBoxState (false);
+				updateSpeech (true);
 		}
 
 		public void button2Click ()
 		{
 
-				Debug.Log ("hi");
+				talking = false;
+				changeTalkBoxState (false);
+				updateSpeech (false);
 
 
 		}
