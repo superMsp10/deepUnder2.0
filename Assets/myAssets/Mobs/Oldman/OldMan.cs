@@ -5,7 +5,8 @@ public class OldMan : NPC
 {
 		public bool follow;
 		public GameObject arrow;
-		
+		public GameObject particle;
+
 		protected override void speechStart ()
 		{
 				talk.text = "I have been waiting for you" + "\n" + "Follow Me";
@@ -19,14 +20,32 @@ public class OldMan : NPC
 						if (answer) {
 								talk.text = "Good choice, follow these arrows I have put down";
 								speakStage = "follow";
+								talking = true;
+								changeTalkBoxState (true);
+								goto end;
 						}
 
 				}
 				if (speakStage == "follow") {
+						if (answer) {
+								rigidbody2D.gravityScale = -0.05f;
+								Invoke ("teleport", 5);
+								arrow.SetActive (true);
+								transform.FindChild ("particles").gameObject.SetActive (true);
 
+						}
 				}
-		
+				end:
+				Debug.Log ("hi");
 		}
+
+		void teleport ()
+		{
+
+				Destroy (this.gameObject, 2);
+				particle.SetActive (true);
+		}
+
 
 }
 
