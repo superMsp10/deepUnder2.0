@@ -13,7 +13,7 @@ public class invManager : slotCollection
 		{
 				thismanage = gameManager.thisM;
 				changeNextSlot (empty);
-				selected = slots [0];
+				selectSlot (0);
 		}
 	
 		void Update ()
@@ -23,6 +23,13 @@ public class invManager : slotCollection
 								selected.Use ();
 						}
 				}
+				
+		}
+		public void selectSlot (int i)
+		{
+		
+				selected = slots [i];
+
 		}
 
 }

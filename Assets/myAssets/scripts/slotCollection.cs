@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class slotCollection : MonoBehaviour
 {
 		public List<UIslot> slots;
+
 		public void changeNextSlot (Holdable h)
 		{
 
@@ -26,6 +27,6 @@ public class slotCollection : MonoBehaviour
 			
 
 		}
-		
+
 }
 
