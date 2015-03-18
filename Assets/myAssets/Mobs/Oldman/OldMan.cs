@@ -28,8 +28,8 @@ public class OldMan : NPC
 				}
 				if (speakStage == "follow") {
 						if (answer) {
-								rigidbody2D.gravityScale = -0.5f;
-								Invoke ("teleport", 2);
+								rigidbody2D.gravityScale = -0.2f;
+								Invoke ("teleport", 5);
 								arrow.SetActive (true);
 								transform.FindChild ("particles").gameObject.SetActive (true);
 
@@ -42,7 +42,7 @@ public class OldMan : NPC
 		void teleport ()
 		{
 
-				Destroy (this.gameObject, 3);
+				Destroy (this.gameObject, 5);
 				particle.SetActive (true);
 		}
 
