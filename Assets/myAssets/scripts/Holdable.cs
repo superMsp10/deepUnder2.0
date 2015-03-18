@@ -6,6 +6,7 @@ public class Holdable : MonoBehaviour
 
 		public Sprite holdUI;
 		public gameManager thisManage;
+		public pickups phisical;
 		public void Start ()
 		{
 				thisManage = gameManager.thisM;
