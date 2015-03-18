@@ -8,6 +8,15 @@ public class UIslot : MonoBehaviour
 		public Image slot;
 		public Sprite empty;
 		public Image outline;
+		gameManager thisM;
+		Vector2 playerPos;
+		pickups tmp;
+
+		void Start ()
+		{
+
+				thisM = gameManager.thisM;
+		}
 
 
 		
@@ -19,9 +28,9 @@ public class UIslot : MonoBehaviour
 						holding = null;
 				} else {
 						holding = h;
-						holding.phisical.thisLevel = gameManager.thisM.currentLevel;
+						holding.phisical.thisLevel = thisM.currentLevel;
 						slot.sprite = h.holdUI;
-						Debug.Log ("hi");
+						
 				}
 		}
 
@@ -33,11 +42,24 @@ public class UIslot : MonoBehaviour
 
 		public void onClick ()
 		{
+				Debug.Log ("hi");
 				if (holding != null) {
-						if (gameManager.thisM.myPlayer != null)
-								Instantiate (holding.phisical, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
-						holding = null;
+						if (thisM.myPlayer != null) {
+								playerPos = thisM.myPlayer.transform.position;
+								
+								GameObject p = (GameObject)Instantiate (holding.phisical.gameObject, playerPos, Quaternion.identity);
+								tmp = p.GetComponent<pickups> ();
+								tmp.pickable = false;
+								Invoke ("resetPickable", 5);
+								changeHolding (null);
+						}
 				}
+		}
+
+		void resetPickable ()
+		{
+				tmp.pickable = true;
+		
 		}
 }
 

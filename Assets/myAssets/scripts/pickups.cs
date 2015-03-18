@@ -6,6 +6,8 @@ public class pickups : Entity
 
 		invManager thisInv;
 		public Holdable thisHolding;
+		public bool pickable = true;
+
 		void Start ()
 		{
 				thisInv = invManager.thisInv;
@@ -35,7 +37,7 @@ public class pickups : Entity
 			
 			
 				}
-				if (other.gameObject.tag == "Player") {
+				if (other.gameObject.tag == "Player" && pickable) {
 						thisInv.changeNextSlot (thisHolding);
 						Destroy (gameObject);
 			
@@ -44,4 +46,6 @@ public class pickups : Entity
 
 
 		}
+
+		
 }
