@@ -12,8 +12,7 @@ public class slotCollection : MonoBehaviour
 				for (int i = 0; i <  slots.Count; i ++) {
 
 						if (slots [i].holding == null) {
-								slots [i].holding = h;
-								slots [i].slot.sprite = h.holdUI;
+								slots [i].changeHolding (h);
 								return;
 						}
 				}
@@ -22,8 +21,7 @@ public class slotCollection : MonoBehaviour
 		public void changeSlot (Holdable h, int i)
 		{
 
-				slots [i].holding = h;
-				slots [i].slot.sprite = h.holdUI;
+				slots [i].changeHolding (h);
 			
 
 		}

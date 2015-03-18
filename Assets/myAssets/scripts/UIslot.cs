@@ -19,14 +19,25 @@ public class UIslot : MonoBehaviour
 						holding = null;
 				} else {
 						holding = h;
+						holding.phisical.thisLevel = gameManager.thisM.currentLevel;
 						slot.sprite = h.holdUI;
+						Debug.Log ("hi");
 				}
 		}
 
 		public void Use ()
 		{
 				holding.onUse ();
-				//changeHolding (null);
+				changeHolding (null);
+		}
+
+		public void onClick ()
+		{
+				if (holding != null) {
+						if (gameManager.thisM.myPlayer != null)
+								Instantiate (holding.phisical, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
+						holding = null;
+				}
 		}
 }
 
