@@ -7,14 +7,24 @@ public class invManager : slotCollection
 {
 		
 		private gameManager thismanage;
+		public static invManager thisInv;
 		public UIslot selected;
 		public Holdable empty;
 		public Color highlighted;
 		public Color normal;
 		public int selectedId;
+
+		void Awake ()
+		{
+
+				if (thisInv == null)
+						thisInv = this;
+
+		}
 		void Start ()
 		{
 				thismanage = gameManager.thisM;
+
 				changeNextSlot (empty);
 				selectSlot (0);
 		}

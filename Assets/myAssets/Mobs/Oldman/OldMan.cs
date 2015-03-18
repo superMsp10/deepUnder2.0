@@ -36,7 +36,7 @@ public class OldMan : NPC
 						}
 				}
 				end:
-				Debug.Log ("hi");
+				;
 		}
 
 		void teleport ()

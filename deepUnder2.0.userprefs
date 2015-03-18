@@ -1,12 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\Mobs\Oldman\OldMan.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\pickups.cs">
     <Files>
-      <File FileName="Assets\myAssets\scripts\gameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\myAssets\scripts\invManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\myAssets\scripts\UIslot.cs" Line="1" Column="1" />
-      <File FileName="Assets\myAssets\scripts\slotCollection.cs" Line="1" Column="1" />
-      <File FileName="Assets\myAssets\Mobs\Oldman\OldMan.cs" Line="45" Column="32" />
+      <File FileName="Assets\myAssets\scripts\invManager.cs" Line="21" Column="14" />
+      <File FileName="Assets\myAssets\scripts\slotCollection.cs" Line="14" Column="39" />
+      <File FileName="Assets\myAssets\scripts\pickups.cs" Line="39" Column="7" />
+      <File FileName="Assets\myAssets\scripts\Mob1.cs" Line="282" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
