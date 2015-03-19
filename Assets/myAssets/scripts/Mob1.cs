@@ -53,6 +53,7 @@ public class Mob1 : Entity
 		public AudioClip  dmgClip;
 		public AudioClip  movingClip;
 		public Slider healthbar;
+		public GameObject weaponHand;
 
 
 

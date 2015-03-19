@@ -78,6 +78,21 @@ public class UIslot : MonoBehaviour
 				}
 		}
 
+		public void onSelect ()
+		{
+				if (holding != null)
+						holding.onSelect ();
+
+
+
+		}
+
+		public void onDeselect ()
+		{
+				if (holding != null)
+						holding.onDeselect ();
+
+		}
 		void resetPickable ()
 		{
 				tmp.pickable = true;

@@ -20,4 +20,16 @@ public class Holdable : MonoBehaviour
 				Debug.Log ("hifrom holdable");
 
 		}
+		public virtual void  onSelect ()
+		{
+				Debug.Log ("hifrom select");
+		
+		}
+		public virtual void  onDeselect ()
+		{
+				Debug.Log ("hifrom de select");
+		
+		}
+
+
 }

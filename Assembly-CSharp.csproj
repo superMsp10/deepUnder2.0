@@ -61,6 +61,7 @@
      <Compile Include="Assets\myAssets\scripts\AudioManager.cs" />
      <Compile Include="Assets\myAssets\scripts\BodyPart.cs" />
      <Compile Include="Assets\myAssets\scripts\BodyParts.cs" />
+     <Compile Include="Assets\myAssets\scripts\Bow.cs" />
      <Compile Include="Assets\myAssets\scripts\Branch.cs" />
      <Compile Include="Assets\myAssets\scripts\CameraController.cs" />
      <Compile Include="Assets\myAssets\scripts\CameraManeger.cs" />

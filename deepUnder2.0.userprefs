@@ -1,11 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\Mob1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\Bow.cs">
     <Files>
-      <File FileName="Assets\myAssets\scripts\Mob1.cs" Line="224" Column="1" />
+      <File FileName="Assets\myAssets\scripts\Bow.cs" Line="33" Column="28" />
+      <File FileName="Assets\myAssets\scripts\Holdable.cs" Line="29" Column="4" />
       <File FileName="Assets\Scripts\Bomb.cs" Line="1" Column="1" />
-      <File FileName="Assets\myAssets\scripts\Tarsc.cs" Line="1" Column="1" />
-      <File FileName="Assets\myAssets\scripts\invManager.cs" Line="29" Column="36" />
+      <File FileName="Assets\myAssets\scripts\Mob1.cs" Line="1" Column="1" />
+      <File FileName="Assets\myAssets\scripts\invManager.cs" Line="57" Column="1" />
+      <File FileName="Assets\myAssets\scripts\UIslot.cs" Line="85" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -47,10 +47,14 @@ public class invManager : slotCollection
 		{
 				if (i >= 0 && i < slots.Capacity) {
 						selectedId = i;
-						if (selected != null)
+						if (selected != null) {
 								selected.outline.color = normal;
+								selected.onDeselect ();
+						}
 						selected = slots [i];
 						selected.outline.color = highlighted;
+						selected.onSelect ();
+						
 				}
 		}
 }
