@@ -38,8 +38,8 @@ public class pickups : Entity
 			
 				}
 				if (other.gameObject.tag == "Player" && pickable) {
-						thisInv.changeNextSlot (thisHolding);
-						Destroy (gameObject);
+						if (thisInv.changeNextSlot (thisHolding))
+								Destroy (gameObject);
 			
 			
 				}

@@ -28,7 +28,7 @@ public class UIslot : MonoBehaviour
 						holding = null;
 				} else {
 						holding = h;
-						holding.phisical.thisLevel = thisM.currentLevel;
+						
 						slot.sprite = h.holdUI;
 						
 				}
@@ -42,13 +42,13 @@ public class UIslot : MonoBehaviour
 
 		public void onClick ()
 		{
-				Debug.Log ("hi");
 				if (holding != null) {
 						if (thisM.myPlayer != null) {
 								playerPos = thisM.myPlayer.transform.position;
 								
 								GameObject p = (GameObject)Instantiate (holding.phisical.gameObject, playerPos, Quaternion.identity);
 								tmp = p.GetComponent<pickups> ();
+								tmp.thisLevel = thisM.currentLevel;
 								tmp.pickable = false;
 								Invoke ("resetPickable", 5);
 								changeHolding (null);

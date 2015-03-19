@@ -6,16 +6,17 @@ public class slotCollection : MonoBehaviour
 {
 		public List<UIslot> slots;
 
-		public void changeNextSlot (Holdable h)
+		public bool changeNextSlot (Holdable h)
 		{
 
 				for (int i = 0; i <  slots.Count; i ++) {
 
 						if (slots [i].holding == null) {
 								slots [i].changeHolding (h);
-								return;
+								return true;
 						}
 				}
+				return false;
 		}
 
 		public void changeSlot (Holdable h, int i)
