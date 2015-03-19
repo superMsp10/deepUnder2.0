@@ -221,7 +221,6 @@ public class Mob1 : Entity
 				thisAttributes.HP -= damage;
 				thisAudio.PlayOneShot (dmgClip);
 				healthbar.value = thisAttributes.HP;
-				Debug.Log ("hi");
 		}
 		
 		public virtual void flip ()

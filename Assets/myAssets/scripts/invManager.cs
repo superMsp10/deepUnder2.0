@@ -12,6 +12,7 @@ public class invManager : slotCollection
 		public Color highlighted;
 		public Color normal;
 		public int selectedId;
+		public Holdable give;
 
 		void Awake ()
 		{
@@ -25,6 +26,7 @@ public class invManager : slotCollection
 				thismanage = gameManager.thisM;
 
 				selectSlot (0);
+				slots [0].changeHolding (give);
 		}
 	
 		void Update ()

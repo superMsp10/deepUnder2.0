@@ -8030,11 +8030,11 @@ Prefab:
       objectReference: {fileID: 51931797}
     - target: {fileID: 22491518, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22491518, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
@@ -60005,6 +60005,7 @@ MonoBehaviour:
   highlighted: {r: 1, g: 1, b: 1, a: 1}
   normal: {r: 1, g: 1, b: 1, a: .196078435}
   selectedId: 0
+  give: {fileID: 11400000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
 --- !u!114 &1539869382
 MonoBehaviour:
   m_ObjectHideFlags: 0
