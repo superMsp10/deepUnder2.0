@@ -36,7 +36,8 @@ public class Tarsc : Mob1
 						b.thisLevel = thisLevel;
 				}
 				cameraM.thisLevl = (playLevel)thisLevel;
-
+				healthbar.maxValue = thisAttributes.maxHP;
+				healthbar.value = thisAttributes.HP;
 		
 		}
 		public override void updateAnim ()

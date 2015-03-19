@@ -86,10 +86,11 @@ public class Bomb : Holdable
 										// Apply a force in this direction with a magnitude of bombForce.
 										Vector3 force = deltaPos.normalized * bombForce * distanceForce;
 										rb.AddForce (force, ForceMode2D.Impulse);
+										if (mab != null) {
+												mab.takeDmg (dmg * distanceForce);
+										}
 								}
-								if (mab != null) {
-										mab.thisAttributes.HP -= dmg;
-								}
+								
 						}	
 				}
 				// Set the explosion effect's position to the bomb's position and play the particle system.

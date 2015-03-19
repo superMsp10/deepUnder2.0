@@ -5,6 +5,8 @@ public class OldMan : NPC
 {
 		public bool follow;
 		public GameObject arrow;
+		public GameObject bombPick;
+
 		public GameObject particle;
 
 		protected override void speechStart ()
@@ -32,6 +34,7 @@ public class OldMan : NPC
 								Invoke ("teleport", 5);
 								arrow.SetActive (true);
 								transform.FindChild ("particles").gameObject.SetActive (true);
+								bombPick.SetActive (true);
 
 						}
 				}

@@ -1,4 +1,6 @@
 using  UnityEngine;
+using UnityEngine.UI;
+
 using System.Collections.Generic;
 using UnityEngine.Serialization;
 
@@ -6,6 +8,8 @@ using UnityEngine.Serialization;
 public class mobAtributes
 {
 		public float HP;
+		public float maxHP;
+
 		public int Dmg;
 		public float maxSped = 10f;
 		public float moveForce = 5;
@@ -48,6 +52,8 @@ public class Mob1 : Entity
 		public AudioClip  landClip;
 		public AudioClip  dmgClip;
 		public AudioClip  movingClip;
+		public Slider healthbar;
+
 
 
 
@@ -59,7 +65,7 @@ public class Mob1 : Entity
 				thisLevel.addEntity (this);
 				rigidbody2D.centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
-			
+
 		}
 
 		public override void changeLevel (level lev)
@@ -89,7 +95,8 @@ public class Mob1 : Entity
 				foreach (BodyPart b in bodyParts) {
 						b.thisLevel = thisLevel;
 				}
-
+				healthbar.maxValue = thisAttributes.maxHP;
+				healthbar.value = thisAttributes.HP;
 		}
 		
 		void Update ()
@@ -209,10 +216,12 @@ public class Mob1 : Entity
 
 		}
 
-		public virtual void takeDmg (int damage)
+		public virtual void takeDmg (float damage)
 		{
 				thisAttributes.HP -= damage;
 				thisAudio.PlayOneShot (dmgClip);
+				healthbar.value = thisAttributes.HP;
+				Debug.Log ("hi");
 		}
 		
 		public virtual void flip ()
