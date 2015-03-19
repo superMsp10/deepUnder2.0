@@ -8,6 +8,8 @@ public class UIslot : MonoBehaviour
 		public Image slot;
 		public Sprite empty;
 		public Image outline;
+		public int amount;
+		public Text amountText;
 		gameManager thisM;
 		Vector2 playerPos;
 		pickups tmp;
@@ -26,18 +28,37 @@ public class UIslot : MonoBehaviour
 				if (h == null) {
 						slot.sprite = empty;
 						holding = null;
+						amount = 0;
+						amountText.text = "";
 				} else {
 						holding = h;
 						
 						slot.sprite = h.holdUI;
-						
+						amount = 1;
+						amountText.text = "1";
 				}
+		}
+
+		public void changeHolding (Holdable h, int amounts)
+		{
+
+				holding = h;
+				amount = amounts;
+				slot.sprite = h.holdUI;
+				amountText.text = amount.ToString ();
+				
 		}
 
 		public void Use ()
 		{
 				holding.onUse ();
-				changeHolding (null);
+				amount -= 1;
+				amountText.text = amount.ToString ();
+
+				if (amount <= 0) {
+						changeHolding (null);
+						amountText.text = "";
+				}
 		}
 
 		public void onClick ()
@@ -50,6 +71,7 @@ public class UIslot : MonoBehaviour
 								tmp = p.GetComponent<pickups> ();
 								tmp.thisLevel = thisM.currentLevel;
 								tmp.pickable = false;
+								tmp.amount = amount;
 								Invoke ("resetPickable", 5);
 								changeHolding (null);
 						}
