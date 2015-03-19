@@ -54,6 +54,7 @@ public class Mob1 : Entity
 		public AudioClip  movingClip;
 		public Slider healthbar;
 		public GameObject weaponHand;
+		public bool attacking;
 
 
 
@@ -209,10 +210,13 @@ public class Mob1 : Entity
 				thisAnim.SetBool ("grounded", grounded);
 				thisAnim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 				thisAnim.SetFloat ("hSpeed", Mathf.Abs (rigidbody2D.velocity.x));
-				if (grounded && Mathf.Abs (rigidbody2D.velocity.x) > 0.1)
+				if (grounded && Mathf.Abs (rigidbody2D.velocity.x) > 0.1) {
 						thisAttributes.moving = true;
-				else
+				} else if (attacking) {
+						thisAttributes.moving = true;
+				} else {
 						thisAttributes.moving = false;
+				}
 
 
 		}

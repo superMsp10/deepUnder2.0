@@ -8,9 +8,11 @@ public class Holdable : MonoBehaviour
 		public gameManager thisManage;
 		public pickups phisical;
 		public int stackSize;
+		public bool weapon = false;
 		public void Start ()
 		{
 				thisManage = gameManager.thisM;
+
 		}
 
 		
@@ -28,6 +30,17 @@ public class Holdable : MonoBehaviour
 		public virtual void  onDeselect ()
 		{
 				Debug.Log ("hifrom de select");
+		
+		}
+		public virtual void  onPickup ()
+		{
+				Debug.Log ("hifrom on pickup");
+		
+		}
+
+		public virtual void  onDrop ()
+		{
+				Debug.Log ("hifrom on drop");
 		
 		}
 

@@ -44,9 +44,9 @@ MonoBehaviour:
   thisManage: {fileID: 0}
   phisical: {fileID: 11402394, guid: fb9268c6619cdec459e9ac8c2c7ed7ad, type: 2}
   stackSize: 100
+  weapon: 1
   controller: {fileID: 0}
   anim: {fileID: 0}
-  dummy: {fileID: 0}
 --- !u!212 &21205212
 SpriteRenderer:
   m_ObjectHideFlags: 1

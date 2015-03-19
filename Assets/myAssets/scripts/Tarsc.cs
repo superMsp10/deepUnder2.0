@@ -49,8 +49,11 @@ public class Tarsc : Mob1
 				if (Mathf.Abs (rigidbody2D.velocity.x) > 1) {
 						thisAttributes.moving = true;
 						
+				} else if (attacking) {
+						thisAttributes.moving = true;
 				} else {
 						thisAttributes.moving = false;
+
 				}
 				thisAnim.SetBool ("moving", thisAttributes.moving);
 		

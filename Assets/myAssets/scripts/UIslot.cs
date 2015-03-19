@@ -31,8 +31,9 @@ public class UIslot : MonoBehaviour
 						amount = 0;
 						amountText.text = "";
 				} else {
-						holding = h;
 						
+						holding = h;
+						holding.onPickup ();
 						slot.sprite = h.holdUI;
 						amount = 1;
 						amountText.text = "1";
@@ -41,8 +42,9 @@ public class UIslot : MonoBehaviour
 
 		public void changeHolding (Holdable h, int amounts)
 		{
-
 				holding = h;
+				holding.onPickup ();
+
 				amount = amounts;
 				slot.sprite = h.holdUI;
 				amountText.text = amount.ToString ();
@@ -64,6 +66,7 @@ public class UIslot : MonoBehaviour
 		public void onClick ()
 		{
 				if (holding != null) {
+						holding.onDrop ();
 						if (thisM.myPlayer != null) {
 								playerPos = thisM.myPlayer.transform.position;
 								
@@ -72,7 +75,7 @@ public class UIslot : MonoBehaviour
 								tmp.thisLevel = thisM.currentLevel;
 								tmp.pickable = false;
 								tmp.amount = amount;
-								Invoke ("resetPickable", 5);
+								Invoke ("resetPickable", tmp.resetPickup);
 								changeHolding (null);
 						}
 				}

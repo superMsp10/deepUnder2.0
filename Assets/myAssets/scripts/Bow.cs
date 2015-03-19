@@ -5,13 +5,10 @@ public class Bow : Holdable
 {
 		public Mob1 controller;
 		public Animator anim;
-		public GameObject dummy;
-
 		public void Start ()
 		{
 				thisManage = gameManager.thisM;
 				anim = GetComponent<Animator > ();
-				dummy.SetActive (false);
 		}
 
 
@@ -31,6 +28,23 @@ public class Bow : Holdable
 		public override void  onDeselect ()
 		{
 				Debug.Log ("hifrom bow de select");
+		
+		}
+		public override void  onPickup ()
+		{
+				thisManage = gameManager.thisM;
+				Debug.Log ("hifrom on pickup");
+				if (thisManage.myPlayer != null) {
+						GameObject g = (GameObject)Instantiate (gameObject, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
+
+						g.transform.SetParent (controller.weaponHand.transform);
+				}
+		
+		}
+	
+		public override void  onDrop ()
+		{
+				Debug.Log ("hifrom on drop");
 		
 		}
 
