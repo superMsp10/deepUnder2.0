@@ -53,6 +53,7 @@ public class Mob1 : Entity
 		public AudioClip  dmgClip;
 		public AudioClip  movingClip;
 		public Slider healthbar;
+		public bool falling;
 		public GameObject weaponHand;
 		public bool attacking;
 
@@ -131,6 +132,14 @@ public class Mob1 : Entity
 								frontBody.gameObject.SetActive (true);
 						}
 
+				}
+				if (rigidbody2D.velocity.y < -20) {
+
+						falling = true;
+						front = true;
+			
+						sideBody.gameObject.SetActive (false);
+						frontBody.gameObject.SetActive (true);
 				}
 		}
 		

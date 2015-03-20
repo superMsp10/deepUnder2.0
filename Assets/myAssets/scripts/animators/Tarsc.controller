@@ -226,7 +226,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: vSpeed
-    m_EventTreshold: -20
+    m_EventTreshold: -30
     m_ExitTime: .899999976
   m_Atomic: 1
   m_Solo: 0
@@ -386,7 +386,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: vSpeed
-    m_EventTreshold: -20
+    m_EventTreshold: -30
     m_ExitTime: .75
   m_Atomic: 1
   m_Solo: 0
@@ -617,5 +617,5 @@ StateMachine:
       - {fileID: 110196262}
       - {fileID: 110129394}
   m_MotionSetCount: 1
-  m_AnyStatePosition: {x: 24, y: 168, z: 0}
+  m_AnyStatePosition: {x: -156, y: 132, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
