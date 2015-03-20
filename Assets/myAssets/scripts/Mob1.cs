@@ -133,8 +133,8 @@ public class Mob1 : Entity
 						}
 
 				}
-				if (rigidbody2D.velocity.y < -20) {
-
+				if (rigidbody2D.velocity.y < -20 && !attacking) {
+			
 						falling = true;
 						front = true;
 			
@@ -219,10 +219,12 @@ public class Mob1 : Entity
 				thisAnim.SetBool ("grounded", grounded);
 				thisAnim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 				thisAnim.SetFloat ("hSpeed", Mathf.Abs (rigidbody2D.velocity.x));
+				thisAnim.SetBool ("Attack", attacking);
 				if (grounded && Mathf.Abs (rigidbody2D.velocity.x) > 0.1) {
 						thisAttributes.moving = true;
 				} else if (attacking) {
 						thisAttributes.moving = true;
+
 				} else {
 						thisAttributes.moving = false;
 				}

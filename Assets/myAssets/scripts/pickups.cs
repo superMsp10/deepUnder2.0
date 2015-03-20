@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class pickups : Entity
@@ -48,7 +48,7 @@ public class pickups : Entity
 				if (other.gameObject.tag == "Player" && pickable) {
 						if (thisHolding.weapon) {
 
-								thisHolding.gameObject.GetComponent<Bow> ().controller = thisManage.myPlayer.GetComponent<Mob1> ();
+								thisHolding.gameObject.GetComponent<Weapon> ().controller = thisManage.myPlayer.GetComponent<Mob1> ();
 						}
 						int returnA = thisInv.addHoldable (thisHolding, amount);
 						if (returnA == 0) {

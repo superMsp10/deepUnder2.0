@@ -61,7 +61,6 @@
      <Compile Include="Assets\myAssets\scripts\AudioManager.cs" />
      <Compile Include="Assets\myAssets\scripts\BodyPart.cs" />
      <Compile Include="Assets\myAssets\scripts\BodyParts.cs" />
-     <Compile Include="Assets\myAssets\scripts\Bow.cs" />
      <Compile Include="Assets\myAssets\scripts\Branch.cs" />
      <Compile Include="Assets\myAssets\scripts\CameraController.cs" />
      <Compile Include="Assets\myAssets\scripts\CameraManeger.cs" />
@@ -80,6 +79,7 @@
      <Compile Include="Assets\myAssets\scripts\Tarsc.cs" />
      <Compile Include="Assets\myAssets\scripts\Teleport.cs" />
      <Compile Include="Assets\myAssets\scripts\UIslot.cs" />
+     <Compile Include="Assets\myAssets\scripts\Weapon.cs" />
      <Compile Include="Assets\myAssets\scripts\collisionBoost.cs" />
      <Compile Include="Assets\myAssets\scripts\effectsManager.cs" />
      <Compile Include="Assets\myAssets\scripts\gameManager.cs" />

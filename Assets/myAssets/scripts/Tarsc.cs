@@ -45,6 +45,7 @@ public class Tarsc : Mob1
 				thisAnim.SetBool ("grounded", grounded);
 				thisAnim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 				thisAnim.SetFloat ("hSpeed", Mathf.Abs (rigidbody2D.velocity.x));
+				thisAnim.SetBool ("Attack", attacking);
 
 				if (Mathf.Abs (rigidbody2D.velocity.x) > 1) {
 						thisAttributes.moving = true;

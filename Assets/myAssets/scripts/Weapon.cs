@@ -1,10 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class Bow : Holdable
+public class Weapon : Holdable
 {
 		public Mob1 controller;
 		public Animator anim;
+		GameObject weaponIns ;
 		public void Start ()
 		{
 				thisManage = gameManager.thisM;
@@ -23,21 +24,27 @@ public class Bow : Holdable
 		public override void  onSelect ()
 		{
 				Debug.Log ("hifrom bow select");
+				thisManage.myPlayer.GetComponent<Mob1> ().attacking = true;
+				weaponIns.SetActive (true);
 		
 		}
 		public override void  onDeselect ()
 		{
 				Debug.Log ("hifrom bow de select");
-		
+				thisManage.myPlayer.GetComponent<Mob1> ().attacking = false;
+				weaponIns.SetActive (false);
+
+
 		}
 		public override void  onPickup ()
 		{
 				thisManage = gameManager.thisM;
 				Debug.Log ("hifrom on pickup");
 				if (thisManage.myPlayer != null) {
-						GameObject g = (GameObject)Instantiate (gameObject, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
+						weaponIns = (GameObject)Instantiate (gameObject, Vector2.zero, Quaternion.identity);
 
-						g.transform.SetParent (controller.weaponHand.transform);
+						weaponIns.transform.SetParent (controller.weaponHand.transform);
+						Debug.Log (weaponIns.transform.position);
 				}
 		
 		}

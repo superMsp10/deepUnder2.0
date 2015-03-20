@@ -803,7 +803,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176484}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
   m_LocalPosition: {x: 0, y: -3.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1208,6 +1208,7 @@ MonoBehaviour:
   dmgClip: {fileID: 8300000, guid: 4faa8d7582c39644f9b78c6736b1e36a, type: 3}
   movingClip: {fileID: 8300000, guid: 96bfec0684f02e444b7de028dc377a9e, type: 3}
   healthbar: {fileID: 11410412}
+  falling: 0
   weaponHand: {fileID: 176484}
   attacking: 0
   fGroundCheck:
