@@ -113,7 +113,7 @@ public class Mob1 : Entity
 		protected void checkDead ()
 		{
 				if (thisAttributes.HP <= 0)
-						DestroyEntity (0);
+						thisManage.die ();
 				if (transform.position.y < thisLevel.deathHeight)
 						thisAttributes.HP = 0;
 		}

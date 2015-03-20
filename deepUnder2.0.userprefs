@@ -1,14 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\Tarsc.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\Bow.cs">
     <Files>
-      <File FileName="Assets\myAssets\scripts\Bow.cs" Line="68" Column="1" />
-      <File FileName="Assets\myAssets\scripts\Weapon.cs" Line="45" Column="71" />
-      <File FileName="Assets\myAssets\scripts\pickups.cs" Line="49" Column="32" />
-      <File FileName="Assets\myAssets\scripts\gameManager.cs" Line="123" Column="25" />
-      <File FileName="Assets\myAssets\scripts\invManager.cs" Line="64" Column="18" />
-      <File FileName="Assets\myAssets\scripts\UIslot.cs" Line="107" Column="4" />
-      <File FileName="Assets\myAssets\scripts\Tarsc.cs" Line="137" Column="4" />
+      <File FileName="Assets\myAssets\scripts\Weapon.cs" Line="30" Column="38" />
+      <File FileName="Assets\myAssets\scripts\Bow.cs" Line="29" Column="76" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

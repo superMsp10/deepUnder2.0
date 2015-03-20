@@ -23,14 +23,12 @@ public class Weapon : Holdable
 		}
 		public override void  onSelect ()
 		{
-				Debug.Log ("hifrom wea select");
 				thisManage.myPlayer.GetComponent<Mob1> ().attacking = true;
 				weaponIns.SetActive (true);
 		
 		}
 		public override void  onDeselect ()
 		{
-				Debug.Log ("hifrom wea de select");
 				thisManage.myPlayer.GetComponent<Mob1> ().attacking = false;
 				weaponIns.SetActive (false);
 
@@ -49,8 +47,7 @@ public class Weapon : Holdable
 	
 		public override void  onDrop ()
 		{
-				Debug.Log ("hifrom on wea drop");
-		
+
 		}
 
 

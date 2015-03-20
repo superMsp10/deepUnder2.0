@@ -26,7 +26,7 @@ public class Bow : Weapon
 						// Get Angle in Degrees
 						float AngleDeg = (180 / Mathf.PI) * AngleRad;
 						// Rotate Object
-						transform.rotation = Quaternion.Euler (0, 0, Mathf.Clamp (AngleDeg, min, max));
+						transform.rotation = Quaternion.Euler (0, 0, Mathf.Clamp (AngleDeg * 5, min, max));
 				}
 		}
 
