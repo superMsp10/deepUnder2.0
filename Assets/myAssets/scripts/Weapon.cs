@@ -47,7 +47,7 @@ public class Weapon : Holdable
 	
 		public override void  onDrop ()
 		{
-
+				Destroy (weaponIns);
 		}
 
 

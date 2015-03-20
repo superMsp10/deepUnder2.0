@@ -21,21 +21,28 @@ public class Bow : Weapon
 		{
 				if (rotate) {
 						Vector3 mousePos = thisManage.currCamera.ScreenToWorldPoint (Input.mousePosition);
+						Vector3 thisPos = transform.position;
 						// Get Angle in Radians
-						float AngleRad = Mathf.Atan2 (mousePos.y - transform.position.y, mousePos.x - transform.position.x);
+						float AngleRad = Mathf.Atan2 (mousePos.y - thisPos.y, mousePos.x - thisPos.x);
 						// Get Angle in Degrees
 						float AngleDeg = (180 / Mathf.PI) * AngleRad;
 						// Rotate Object
-						transform.rotation = Quaternion.Euler (0, 0, Mathf.Clamp (AngleDeg * 5, min, max));
+						controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0, 0, AngleDeg);
 				}
 		}
 
 		public override void  onUse ()
 		{
 				thisManage = gameManager.thisM;
-				if (thisManage.myPlayer != null)
-						Instantiate (arrow, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
-		
+				if (thisManage.myPlayer != null) {
+				
+						GameObject g = (GameObject)Instantiate (arrow, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
+						
+
+						g.rigidbody2D.velocity.Set (10000, 1000);
+						Debug.Log (g.rigidbody2D.velocity);
+				}
+	
 		}
 
 

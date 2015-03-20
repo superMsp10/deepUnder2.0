@@ -158,7 +158,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mass: 5
+  m_Mass: 1
   m_LinearDrag: .5
   m_AngularDrag: 0
   m_GravityScale: -.00999999978
@@ -226,6 +226,7 @@ MonoBehaviour:
   thisHolding: {fileID: 11400000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
   pickable: 1
   amount: 1
+  resetPickup: 5
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
