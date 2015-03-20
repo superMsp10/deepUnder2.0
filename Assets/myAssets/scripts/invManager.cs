@@ -57,4 +57,13 @@ public class invManager : slotCollection
 						
 				}
 		}
+
+		public void clearInv ()
+		{
+				foreach (UIslot s in slots) {
+						s.onClick ();
+
+				}
+
+		}
 }

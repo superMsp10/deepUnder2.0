@@ -5,7 +5,7 @@ public class Weapon : Holdable
 {
 		public Mob1 controller;
 		public Animator anim;
-		GameObject weaponIns ;
+		protected	GameObject weaponIns ;
 		public void Start ()
 		{
 				thisManage = gameManager.thisM;
@@ -23,14 +23,14 @@ public class Weapon : Holdable
 		}
 		public override void  onSelect ()
 		{
-				Debug.Log ("hifrom bow select");
+				Debug.Log ("hifrom wea select");
 				thisManage.myPlayer.GetComponent<Mob1> ().attacking = true;
 				weaponIns.SetActive (true);
 		
 		}
 		public override void  onDeselect ()
 		{
-				Debug.Log ("hifrom bow de select");
+				Debug.Log ("hifrom wea de select");
 				thisManage.myPlayer.GetComponent<Mob1> ().attacking = false;
 				weaponIns.SetActive (false);
 
@@ -39,19 +39,17 @@ public class Weapon : Holdable
 		public override void  onPickup ()
 		{
 				thisManage = gameManager.thisM;
-				Debug.Log ("hifrom on pickup");
 				if (thisManage.myPlayer != null) {
-						weaponIns = (GameObject)Instantiate (gameObject, Vector2.zero, Quaternion.identity);
+						weaponIns = (GameObject)Instantiate (gameObject, controller.weaponHand.transform.position, controller.weaponHand.transform.rotation);
 
 						weaponIns.transform.SetParent (controller.weaponHand.transform);
-						Debug.Log (weaponIns.transform.position);
 				}
 		
 		}
 	
 		public override void  onDrop ()
 		{
-				Debug.Log ("hifrom on drop");
+				Debug.Log ("hifrom on wea drop");
 		
 		}
 

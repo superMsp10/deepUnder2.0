@@ -8,6 +8,7 @@ public class gameManager : MonoBehaviour
 
 		public static gameManager thisM;
 		public CameraManeger thisCamManange;
+		public invManager thisInv;
 		public bool paused = true;
 		public level currentLevel;
 		protected level start;
@@ -50,6 +51,7 @@ public class gameManager : MonoBehaviour
 						levelex (defaultLev);
 				else
 						changeLvl ("startMenu");
+				thisInv = invManager.thisInv;
 
 		}
 
@@ -116,7 +118,9 @@ public class gameManager : MonoBehaviour
 				if (currentLevel != null) {
 						currentLevel.camera1.SetActive (true);
 				}
+
 				paused = false;
+				thisInv.clearInv ();
 				
 
 
