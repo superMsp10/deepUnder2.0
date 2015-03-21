@@ -25,10 +25,10 @@ InputManager:
     m_Name: slotChange
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: w
-    positiveButton: s
-    altNegativeButton: 
-    altPositiveButton: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: w
+    altPositiveButton: s
     gravity: 3
     dead: .00100000005
     sensitivity: 3

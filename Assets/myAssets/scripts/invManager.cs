@@ -32,9 +32,9 @@ public class invManager : slotCollection
 		void Update ()
 		{
 				if (thismanage.paused) {
-						if (Input.GetAxisRaw ("slotChange") > 0) {
+						if (Input.GetAxisRaw ("slotChange") > 0 || Input.GetKeyDown (KeyCode.W)) {
 								selectSlot (selectedId + 1);
-						} else if (Input.GetAxisRaw ("slotChange") < 0) {
+						} else if (Input.GetAxisRaw ("slotChange") < 0 || Input.GetKeyDown (KeyCode.S)) {
 								selectSlot (selectedId - 1);
 						}
 						if (Input.GetButtonDown ("InvSelected") && selected.holding != null) {

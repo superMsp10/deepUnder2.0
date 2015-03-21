@@ -38,9 +38,7 @@ public class Weapon : Holdable
 		{
 				thisManage = gameManager.thisM;
 				if (thisManage.myPlayer != null) {
-						weaponIns = (GameObject)Instantiate (gameObject, controller.weaponHand.transform.position, controller.weaponHand.transform.rotation);
-
-						weaponIns.transform.SetParent (controller.weaponHand.transform);
+						insModel ();
 				}
 		
 		}
@@ -50,6 +48,14 @@ public class Weapon : Holdable
 				Destroy (weaponIns);
 		}
 
+		public void insModel ()
+		{
+
+				weaponIns = (GameObject)Instantiate (gameObject, controller.weaponHand.transform.position, Quaternion.identity);
+		
+				weaponIns.transform.SetParent (controller.weaponHand.transform);
+				weaponIns.transform.rotation = new Quaternion (0, 0, 0, 0);
+		}
 
 }
 

@@ -19,6 +19,7 @@ public class Bow : Weapon
 
 		void Update ()
 		{
+
 				if (rotate) {
 						Vector3 mousePos = Input.mousePosition * -1;
 						controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0, 0, mousePos.y / Mathf.PI);
@@ -51,8 +52,10 @@ public class Bow : Weapon
 		{
 				thisManage.myPlayer.GetComponent<Mob1> ().attacking = true;
 				if (weaponIns == null) {
-						insWeapon ();
+						insModel ();
 				} 
+			
+
 				weaponIns.SetActive (true);
 				rotate = true;
 				
@@ -62,7 +65,7 @@ public class Bow : Weapon
 		{
 				thisManage.myPlayer.GetComponent<Mob1> ().attacking = false;
 				if (weaponIns == null) {
-						insWeapon ();
+						insModel ();
 				} 
 				weaponIns.SetActive (false);
 				rotate = false;
@@ -70,13 +73,5 @@ public class Bow : Weapon
 		
 		}
 
-		void insWeapon ()
-		{
-				if (thisManage.myPlayer != null) {
-						weaponIns = (GameObject)Instantiate (gameObject, controller.weaponHand.transform.position, controller.weaponHand.transform.rotation);
-			
-						weaponIns.transform.SetParent (controller.weaponHand.transform);
-
-				}
-		}
+		
 }

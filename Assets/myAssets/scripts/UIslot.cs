@@ -45,8 +45,10 @@ public class UIslot : MonoBehaviour
 
 		public void changeHolding (Holdable h, int amounts)
 		{
-				holding = h;
-				holding.onPickup ();
+				if (holding != h) {
+						holding = h;
+						holding.onPickup ();
+				}
 
 				amount = amounts;
 				slot.sprite = h.holdUI;
