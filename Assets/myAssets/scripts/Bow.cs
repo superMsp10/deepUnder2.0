@@ -5,9 +5,9 @@ public class Bow : Weapon
 {
 		public GameObject arrow;
 		public bool rotate;
-		public float min;
-		public float max;
+		
 		public float force;
+		public Vector2 dir;
 		
 		public void Start ()
 		{
@@ -32,16 +32,17 @@ public class Bow : Weapon
 		{
 				Vector2 mousePos = Input.mousePosition * -1;
 				controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0, 0, mousePos.y / Mathf.PI);
+				dir = controller.attackArea.transform.position;
 				Vector2 pos = new Vector2 (controller.weaponHand.transform.position.x, controller.weaponHand.transform.position.y);
 						
 				GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
-				Vector2 dir = new Vector2 (pos.x - g.transform.position.x, pos.y - g.transform.position.y);
-				if (controller.turnR) {
-						g.rigidbody2D.AddForce (dir * force * 100);
+				Vector2 dir2 = dir - pos;
+				float distance = dir2.magnitude;
+				Vector2 direction = dir2 / distance;
+			
+				g.rigidbody2D.AddForce (dir2 * force);
 
-				} else {
-						g.rigidbody2D.AddForce (dir * -force * 100);
-				}
+			
 	
 		}
 

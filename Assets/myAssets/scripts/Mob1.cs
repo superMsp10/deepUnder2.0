@@ -56,6 +56,8 @@ public class Mob1 : Entity
 		public bool falling;
 		public GameObject weaponHand;
 		public bool attacking;
+		public GameObject attackArea;
+
 
 
 
