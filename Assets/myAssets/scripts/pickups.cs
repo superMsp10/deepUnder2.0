@@ -9,6 +9,7 @@ public class pickups : Entity
 		public bool pickable = true;
 		public int amount = 1;
 		public float resetPickup = 5;
+		public AudioClip pickup;
 
 
 		void Start ()
@@ -52,6 +53,7 @@ public class pickups : Entity
 						}
 						int returnA = thisInv.addHoldable (thisHolding, amount);
 						if (returnA == 0) {
+								AudioManager.thisAM.playerFX.PlayOneShot (pickup);
 								Destroy (gameObject);
 						} else {
 

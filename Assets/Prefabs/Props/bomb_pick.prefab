@@ -227,6 +227,7 @@ MonoBehaviour:
   pickable: 1
   amount: 1
   resetPickup: 5
+  pickup: {fileID: 8300000, guid: 23e6fa6537b7b4d4caaced58ebf13699, type: 3}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

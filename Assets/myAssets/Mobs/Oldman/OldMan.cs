@@ -35,6 +35,8 @@ public class OldMan : NPC
 								arrow.SetActive (true);
 								transform.FindChild ("particles").gameObject.SetActive (true);
 								bombPick.SetActive (true);
+								AudioSource.PlayClipAtPoint (jumpClip, transform.position, 1);
+
 
 						}
 				}
@@ -45,6 +47,7 @@ public class OldMan : NPC
 		void teleport ()
 		{
 
+				AudioSource.PlayClipAtPoint (movingClip, transform.position, 1);
 				Destroy (this.gameObject, 5);
 				particle.SetActive (true);
 		}
