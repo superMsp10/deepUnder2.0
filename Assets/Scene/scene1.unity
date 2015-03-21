@@ -45914,6 +45914,7 @@ MonoBehaviour:
     optTargetRange: 30
     flyAmount: .5
   grounded: 0
+  turnR: 0
   groundCheck:
   - {fileID: 1818869196}
   centerOfMass: {x: 0, y: 0}

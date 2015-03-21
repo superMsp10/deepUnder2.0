@@ -4,6 +4,7 @@ using System.Collections;
 public class Bow : Weapon
 {
 		public GameObject arrow;
+		public Mob1 player;
 		public bool rotate;
 		public float min;
 		public float max;
@@ -12,7 +13,7 @@ public class Bow : Weapon
 		{
 				thisManage = gameManager.thisM;
 				anim = GetComponent<Animator > ();
-	
+				player = thisManage.myPlayer.GetComponent<Mob1> ();
 
 		}
 	
@@ -20,23 +21,22 @@ public class Bow : Weapon
 		void Update ()
 		{
 				if (rotate) {
-						Vector3 mousePos = thisManage.currCamera.ScreenToWorldPoint (Input.mousePosition);
-						Vector3 thisPos = transform.position;
-						// Get Angle in Radians
-						float AngleRad = Mathf.Atan2 (mousePos.y - thisPos.y, mousePos.x - thisPos.x);
-						// Get Angle in Degrees
-						float AngleDeg = (180 / Mathf.PI) * AngleRad;
-						// Rotate Object
-						controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0, 0, AngleDeg);
+						Vector3 mousePos = Input.mousePosition * -1;
+						controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0, 0, mousePos.y / Mathf.PI);
+
+
 				}
+
 		}
 
 		public override void  onUse ()
 		{
 				thisManage = gameManager.thisM;
+				player = thisManage.myPlayer.GetComponent<Mob1> ();
+
 				if (thisManage.myPlayer != null) {
 				
-						GameObject g = (GameObject)Instantiate (arrow, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
+						GameObject g = (GameObject)Instantiate (arrow, player.transform.position, Quaternion.identity);
 						
 
 						g.rigidbody2D.velocity.Set (10000, 1000);

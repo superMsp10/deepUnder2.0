@@ -33,7 +33,7 @@ public class Mob1 : Entity
 		//---------------------------------------
 		protected bool landed = false;
 		public bool grounded = false;
-		protected bool turnR = false;
+		public bool turnR = false;
 		protected bool front = true;
 
 		//---------------------------------------
