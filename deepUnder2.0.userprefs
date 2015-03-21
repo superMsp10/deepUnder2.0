@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\Bow.cs">
     <Files>
       <File FileName="Assets\myAssets\scripts\Weapon.cs" Line="1" Column="1" />
-      <File FileName="Assets\myAssets\scripts\Bow.cs" Line="24" Column="50" />
+      <File FileName="Assets\myAssets\scripts\Bow.cs" Line="38" Column="94" />
       <File FileName="Assets\myAssets\scripts\Tarsc.cs" Line="1" Column="1" />
-      <File FileName="Assets\myAssets\scripts\Mob1.cs" Line="36" Column="9" />
+      <File FileName="Assets\myAssets\scripts\Mob1.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

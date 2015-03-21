@@ -51,6 +51,7 @@ MonoBehaviour:
   rotate: 1
   min: 0
   max: 100
+  force: 1e+07
 --- !u!212 &21205212
 SpriteRenderer:
   m_ObjectHideFlags: 1

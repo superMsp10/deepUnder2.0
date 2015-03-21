@@ -4,16 +4,15 @@ using System.Collections;
 public class Bow : Weapon
 {
 		public GameObject arrow;
-		public Mob1 player;
 		public bool rotate;
 		public float min;
 		public float max;
+		public float force;
 		
 		public void Start ()
 		{
 				thisManage = gameManager.thisM;
 				anim = GetComponent<Animator > ();
-				player = thisManage.myPlayer.GetComponent<Mob1> ();
 
 		}
 	
@@ -31,16 +30,17 @@ public class Bow : Weapon
 
 		public override void  onUse ()
 		{
-				thisManage = gameManager.thisM;
-				player = thisManage.myPlayer.GetComponent<Mob1> ();
-
-				if (thisManage.myPlayer != null) {
-				
-						GameObject g = (GameObject)Instantiate (arrow, player.transform.position, Quaternion.identity);
+				Vector2 mousePos = Input.mousePosition * -1;
+				controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0, 0, mousePos.y / Mathf.PI);
+				Vector2 pos = new Vector2 (controller.weaponHand.transform.position.x, controller.weaponHand.transform.position.y);
 						
+				GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
+				Vector2 dir = new Vector2 (pos.x - g.transform.position.x, pos.y - g.transform.position.y);
+				if (controller.turnR) {
+						g.rigidbody2D.AddForce (dir * force * 100);
 
-						g.rigidbody2D.velocity.Set (10000, 1000);
-						Debug.Log (g.rigidbody2D.velocity);
+				} else {
+						g.rigidbody2D.AddForce (dir * -force * 100);
 				}
 	
 		}
