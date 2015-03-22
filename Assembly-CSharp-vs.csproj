@@ -55,6 +55,7 @@
      <Compile Include="Assets\myAssets\Entities\stageDoor.cs" />
      <Compile Include="Assets\myAssets\Levels\Tihs\Tihs.cs" />
      <Compile Include="Assets\myAssets\Levels\Tihs\playLevel.cs" />
+     <Compile Include="Assets\myAssets\Mobs\Archer\Archer.cs" />
      <Compile Include="Assets\myAssets\Mobs\Dummy\Dummy.cs" />
      <Compile Include="Assets\myAssets\Mobs\Oldman\NPC.cs" />
      <Compile Include="Assets\myAssets\Mobs\Oldman\OldMan.cs" />

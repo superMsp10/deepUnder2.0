@@ -112,10 +112,10 @@ public class Mob1 : Entity
 				checkFacing ();
 		}
 
-		protected void checkDead ()
+		protected virtual void checkDead ()
 		{
 				if (thisAttributes.HP <= 0)
-						thisManage.die ();
+						die ();
 				if (transform.position.y < thisLevel.deathHeight)
 						thisAttributes.HP = 0;
 		}
@@ -133,16 +133,16 @@ public class Mob1 : Entity
 								sideBody.gameObject.SetActive (false);
 								frontBody.gameObject.SetActive (true);
 						}
-
+						if (rigidbody2D.velocity.y < -20 && !attacking) {
+				
+								falling = true;
+								front = true;
+				
+								sideBody.gameObject.SetActive (false);
+								frontBody.gameObject.SetActive (true);
+						}
 				}
-				if (rigidbody2D.velocity.y < -20 && !attacking) {
-			
-						falling = true;
-						front = true;
-			
-						sideBody.gameObject.SetActive (false);
-						frontBody.gameObject.SetActive (true);
-				}
+				
 		}
 		
 		public virtual void stepSound ()
@@ -169,6 +169,12 @@ public class Mob1 : Entity
 		
 				thisAudio.PlayOneShot (movingClip, 0.5f);
 		
+		}
+
+		public void die ()
+		{
+				Destroy (gameObject);
+
 		}
 
 

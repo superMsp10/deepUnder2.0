@@ -8,6 +8,8 @@ public class OldMan : NPC
 		public GameObject bombPick;
 		public GameObject particle;
 		public GameObject bomb;
+		public GameObject henchMan;
+
 
 		protected override void speechStart ()
 		{
@@ -100,9 +102,9 @@ public class OldMan : NPC
 				answer1Text.text = "Good";
 				answer2Text.text = "I dont care";
 				flyAway ();
-				for (int i = 0; i < 10; i++) {
-						Vector2 pos = new Vector2 (transform.position.x + Random.Range (-10, 10) * i, transform.position.y + Random.Range (0, 10) * i);
-						Instantiate (bomb, pos, Quaternion.identity);
+				for (int i = 0; i < 20; i++) {
+						Invoke ("insBomb", Random.Range (0, 2f));
+						
 
 				}
 		}
@@ -112,6 +114,18 @@ public class OldMan : NPC
 				AudioSource.PlayClipAtPoint (movingClip, transform.position, 1);
 				Destroy (this.gameObject, 5);
 				particle.SetActive (true);
+		}
+
+		void insBomb ()
+		{
+				Vector2 pos = new Vector2 (transform.position.x + Random.Range (-50, 50), transform.position.y + Random.Range (0, 10));
+				Instantiate (bomb, pos, Quaternion.identity);
+		}
+
+		void insHenchMan ()
+		{
+				GameObject g = (GameObject)Instantiate (henchMan, transform.position, Quaternion.identity);
+				Mob1 hench = g.GetComponent<Mob1> ();
 		}
 
 

@@ -26,7 +26,7 @@ public  class Entity : MonoBehaviour
 		void Start ()
 		{
 				if (thisLevel == null)
-						Debug.LogError ("no Level referenced for this entity: " + gameObject.name);
+						Debug.LogError ("no Level referenced for this entity: " + gameObject.name + " Parent =  " + gameObject.transform.parent);
 				thisManage = gameManager.thisM;
 				thisLevel.addEntity (this);
 

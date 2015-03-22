@@ -753,6 +753,7 @@ MonoBehaviour:
     optTargetRange: 30
     flyAmount: .5
   grounded: 0
+  turnR: 0
   groundCheck:
   - {fileID: 449064}
   centerOfMass: {x: 0, y: 0}
@@ -766,12 +767,16 @@ MonoBehaviour:
   animated: 0
   detectedFacing: 0
   thisAudio: {fileID: 0}
-  jumpClip: {fileID: 0}
+  jumpClip: {fileID: 8300000, guid: 4ec8626c55b592047a70bf24f49dbf63, type: 3}
   stepClip: {fileID: 0}
   landClip: {fileID: 0}
   dmgClip: {fileID: 0}
-  movingClip: {fileID: 0}
+  movingClip: {fileID: 8300000, guid: f49ac45b37662be4884f00361aebb99d, type: 3}
   healthbar: {fileID: 11491520}
+  falling: 0
+  weaponHand: {fileID: 0}
+  attacking: 0
+  attackArea: {fileID: 0}
   talkDistance: 0
   Target: {fileID: 0}
   quests: []
@@ -791,6 +796,8 @@ MonoBehaviour:
   arrow: {fileID: 0}
   bombPick: {fileID: 0}
   particle: {fileID: 191492}
+  bomb: {fileID: 100000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
+  henchMan: {fileID: 0}
 --- !u!114 &11491496
 MonoBehaviour:
   m_ObjectHideFlags: 1

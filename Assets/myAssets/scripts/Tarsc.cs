@@ -86,6 +86,15 @@ public class Tarsc : Mob1
 
 		}
 
+		protected override void checkDead ()
+		{
+				if (thisAttributes.HP <= 0)
+						thisManage.die ();
+				if (transform.position.y < thisLevel.deathHeight)
+						thisAttributes.HP = 0;
+		}
+
+
 		protected override void checkground ()
 		{
 				int yGround = 0;

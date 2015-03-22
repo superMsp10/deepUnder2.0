@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 67eb9e9cf7dec074ca019cd3a7eaa09a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sideBody_Archer_1
+    21300002: frontBody_Archer_2
+    21300004: quiver_Archer_3
+    21300006: arrow_Archer_4
+    21300008: Bow_Archer_5
+    21300010: sideleg_Archer_7
+    21300012: frontLeg
+    21300014: frontHead_Archer_11
+    21300016: SideHead_Archer_12
+    21300018: frontArm_Archer_13
+    21300020: sideArm_Archer_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 10
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: sideBody_Archer_1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 349
+        width: 40
+        height: 47
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: frontBody_Archer_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 349
+        width: 39
+        height: 48
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: quiver_Archer_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 337
+        width: 15
+        height: 49
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arrow_Archer_4
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 353
+        width: 7
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bow_Archer_5
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 352
+        width: 11
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sideleg_Archer_7
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 316
+        width: 12
+        height: 32
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: frontLeg
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 317
+        width: 11
+        height: 32
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: frontHead_Archer_11
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 272
+        width: 30
+        height: 23
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SideHead_Archer_12
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 272
+        width: 21
+        height: 23
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: frontArm_Archer_13
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 221
+        width: 10
+        height: 46
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sideArm_Archer_15
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 225
+        width: 11
+        height: 41
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
