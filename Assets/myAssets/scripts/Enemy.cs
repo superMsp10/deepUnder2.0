@@ -46,8 +46,11 @@ public class Enemy : Mob1
 				
 				
 						}
-				} else
+				} else {
 						selectTarget ();
+						attacking = false;
+						thisAttributes.moving = false;
+				}
 
 		}
 		

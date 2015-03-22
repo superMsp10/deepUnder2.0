@@ -40,26 +40,7 @@ public class Tarsc : Mob1
 				healthbar.value = thisAttributes.HP;
 		
 		}
-		public override void updateAnim ()
-		{
-				thisAnim.SetBool ("grounded", grounded);
-				thisAnim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
-				thisAnim.SetFloat ("hSpeed", Mathf.Abs (rigidbody2D.velocity.x));
-				thisAnim.SetBool ("Attack", attacking);
-
-				if (Mathf.Abs (rigidbody2D.velocity.x) > 1) {
-						thisAttributes.moving = true;
-						
-				} else if (attacking) {
-						thisAttributes.moving = true;
-				} else {
-						thisAttributes.moving = false;
-
-				}
-				thisAnim.SetBool ("moving", thisAttributes.moving);
 		
-		}
-
 
 		void Update ()
 		{

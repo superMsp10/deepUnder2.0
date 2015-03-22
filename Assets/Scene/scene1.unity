@@ -41125,9 +41125,9 @@ MonoBehaviour:
     blunt: 283
     point: 43
     slash: 176
-    jump: 10
+    jump: 100
     moving: 0
-    optTargetRange: 80
+    optTargetRange: 20
     flyAmount: .600000024
   grounded: 0
   turnR: 0
@@ -41137,7 +41137,7 @@ MonoBehaviour:
   centerOfMass: {x: 0, y: 0}
   whatGround:
     serializedVersion: 2
-    m_Bits: 5120
+    m_Bits: 4608
   thisAnim: {fileID: 0}
   bodyParts: []
   frontBody: {fileID: 418407951}
@@ -41159,7 +41159,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   target: {fileID: 0}
-  sight: 200
+  sight: 50
   despawnWithDistance: 0
   bow: {fileID: 837776008}
 --- !u!61 &927495009
@@ -72522,11 +72522,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11491048, guid: 093ce3e31c4f9ad48b9750cdaaf7ad68, type: 2}
       propertyPath: thisAttributes.jump
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11491048, guid: 093ce3e31c4f9ad48b9750cdaaf7ad68, type: 2}
       propertyPath: thisAttributes.optTargetRange
-      value: 80
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11491048, guid: 093ce3e31c4f9ad48b9750cdaaf7ad68, type: 2}
       propertyPath: thisAttributes.flyAmount
@@ -72658,7 +72658,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11491048, guid: 093ce3e31c4f9ad48b9750cdaaf7ad68, type: 2}
       propertyPath: sight
-      value: 200
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11491048, guid: 093ce3e31c4f9ad48b9750cdaaf7ad68, type: 2}
       propertyPath: thisAttributes.maxSped
@@ -72675,6 +72675,14 @@ Prefab:
     - target: {fileID: 11491048, guid: 093ce3e31c4f9ad48b9750cdaaf7ad68, type: 2}
       propertyPath: thisAttributes.HP
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491048, guid: 093ce3e31c4f9ad48b9750cdaaf7ad68, type: 2}
+      propertyPath: whatGround.m_Bits
+      value: 4608
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491048, guid: 093ce3e31c4f9ad48b9750cdaaf7ad68, type: 2}
+      propertyPath: thisAttributes.moving
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 093ce3e31c4f9ad48b9750cdaaf7ad68, type: 2}

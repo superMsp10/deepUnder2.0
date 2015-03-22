@@ -122,6 +122,16 @@ public class Mob1 : Entity
 
 		protected void checkFacing ()
 		{
+
+				if (Mathf.Abs (rigidbody2D.velocity.x) > 1) {
+						thisAttributes.moving = true;
+			
+				} else if (attacking) {
+						thisAttributes.moving = true;
+				} else {
+						thisAttributes.moving = false;
+			
+				}
 				if (detectedFacing) {
 						if (thisAttributes.moving || attacking) {
 								front = false;
@@ -229,11 +239,7 @@ public class Mob1 : Entity
 				thisAnim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 				thisAnim.SetFloat ("hSpeed", Mathf.Abs (rigidbody2D.velocity.x));
 				thisAnim.SetBool ("Attack", attacking);
-				if (grounded && Mathf.Abs (rigidbody2D.velocity.x) > 0.1) {
-						thisAttributes.moving = true;
-				} else {
-						thisAttributes.moving = false;
-				}
+				thisAnim.SetBool ("moving", thisAttributes.moving);
 
 
 		}

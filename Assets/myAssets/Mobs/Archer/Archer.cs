@@ -48,7 +48,7 @@ public class Archer : Enemy
 						} else {
 								attacking = true;
 								bow.target = target;
-								bow.attack ();
+								//	bow.attack ();
 						}
 			
 						if (Vector2.Distance (target.transform.position, transform.position) > sight) {
