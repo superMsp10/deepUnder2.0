@@ -8231,6 +8231,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1352000856}
     m_Modifications:
+    - target: {fileID: 11449066, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: bombs.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 449062, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1134.40002
@@ -8261,7 +8265,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 449062, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11449066, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
       propertyPath: thisLevel
@@ -8299,6 +8303,10 @@ Prefab:
       propertyPath: movingClip
       value: 
       objectReference: {fileID: 8300000, guid: f49ac45b37662be4884f00361aebb99d, type: 3}
+    - target: {fileID: 11449066, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: bomb
+      value: 
+      objectReference: {fileID: 100000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
   m_RootGameObject: {fileID: 1123064965}
@@ -41049,7 +41057,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 426010, guid: 9d75ffa9cad4f894199ee69695b0d9df, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11426044, guid: 9d75ffa9cad4f894199ee69695b0d9df, type: 2}
       propertyPath: thisLevel
@@ -46823,6 +46831,7 @@ MonoBehaviour:
   arrow: {fileID: 472739831}
   bombPick: {fileID: 51931797}
   particle: {fileID: 1797468876}
+  bomb: {fileID: 100000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
 --- !u!1001 &1128179655
 Prefab:
   m_ObjectHideFlags: 0
@@ -52820,7 +52829,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e3fc77e893e65874bb37234464227238, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11468142, guid: e3fc77e893e65874bb37234464227238, type: 2}
       propertyPath: thisLevel
@@ -61204,8 +61213,8 @@ MonoBehaviour:
   currentLevel: {fileID: 0}
   levels: []
   dead: 1
-  loadDefault: 0
-  defaultLev: {fileID: 1350311599}
+  loadDefault: 1
+  defaultLev: {fileID: 824517291}
   currCamera: {fileID: 0}
   ins1: {fileID: 100000, guid: 08f594c7c40395d4593e569526ea6708, type: 2}
   ins2: {fileID: 149062, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
@@ -73889,7 +73898,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1828908646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23, y: 649, z: 0}
+  m_LocalPosition: {x: -23, y: 20, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1350311598}

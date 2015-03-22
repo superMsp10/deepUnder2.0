@@ -199,7 +199,7 @@ public class gameManager : MonoBehaviour
 				currCamera = currentLevel.camera1.camera;
 				RenderSettings.skybox = currentLevel.skybox;
 				if (currentLevel.killPlayerOnEnter && myPlayer != null)
-						Destroy (myPlayer);
+						die ();
 				if (currentLevel.spawnable) {
 						spawn ();
 						

@@ -19,30 +19,25 @@ public class Holdable : MonoBehaviour
 
 		public virtual bool  onUse ()
 		{
-				Debug.Log ("hifrom holdable");
 				return false;
 
 		}
 		public virtual void  onSelect ()
 		{
-				Debug.Log ("hifrom select");
-		
+
 		}
 		public virtual void  onDeselect ()
 		{
-				Debug.Log ("hifrom de select");
-		
+
 		}
 		public virtual void  onPickup ()
 		{
-				Debug.Log ("hifrom on pickup");
-		
+
 		}
 
 		public virtual void  onDrop ()
 		{
-				Debug.Log ("hifrom on drop");
-		
+
 		}
 
 
