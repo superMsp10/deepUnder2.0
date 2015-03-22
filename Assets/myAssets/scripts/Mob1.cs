@@ -123,7 +123,7 @@ public class Mob1 : Entity
 		protected void checkFacing ()
 		{
 				if (detectedFacing) {
-						if (thisAttributes.moving) {
+						if (thisAttributes.moving || attacking) {
 								front = false;
 								frontBody.gameObject.SetActive (false);
 								sideBody.gameObject.SetActive (true);
@@ -197,6 +197,7 @@ public class Mob1 : Entity
 				if (!grounded && ground) {
 						landed = true;
 						grounded = true;
+						falling = false;
 			
 						playLandSound ();
 			
@@ -230,9 +231,6 @@ public class Mob1 : Entity
 				thisAnim.SetBool ("Attack", attacking);
 				if (grounded && Mathf.Abs (rigidbody2D.velocity.x) > 0.1) {
 						thisAttributes.moving = true;
-				} else if (attacking) {
-						thisAttributes.moving = true;
-
 				} else {
 						thisAttributes.moving = false;
 				}

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Archer : Enemy
 {
-
+		public bow_Mob bow;
 
 		void Start ()
 		{
@@ -35,6 +35,34 @@ public class Archer : Enemy
 				healthbar.maxValue = thisAttributes.maxHP;
 				healthbar.value = thisAttributes.HP;
 		
+		}
+
+		protected override void TargetSight ()
+		{
+
+				if (target != null) {
+						if (Vector2.Distance (target.transform.position, transform.position)
+								> thisAttributes.optTargetRange) {
+								moveAi ();
+								attacking = false;
+						} else {
+								attacking = true;
+								bow.target = target;
+								bow.attack ();
+						}
+			
+						if (Vector2.Distance (target.transform.position, transform.position) > sight) {
+								target = null;
+								if (despawnWithDistance) {
+										gameObject.SetActive (false);
+								}
+				
+				
+						}
+				} else {
+						selectTarget ();
+				}
+
 		}
 
 }

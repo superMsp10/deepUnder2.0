@@ -12,7 +12,7 @@ public class Enemy : Mob1
 		public void selectTarget ()
 		{
 				Collider2D[] enemies = Physics2D.OverlapCircleAll (transform.position, sight, whatEnemy);
-				if (enemies.Length > 1) {
+				if (enemies.Length >= 1) {
 						getTarget:
 						target = enemies [Random.Range (0, enemies.Length)].gameObject;
 						if (target == this.gameObject) {
@@ -23,50 +23,19 @@ public class Enemy : Mob1
 
 		void FixedUpdate ()
 		{
-				checkGround ();
+				checkground ();
 				TargetSight ();
 
 		}
 
 
-		protected	void checkGround ()
-		{
-				int yGround = 0;
-				int nGround = 0;
-				foreach (Transform t in groundCheck) {
-						if (Physics2D.Linecast (transform.position, t.position, whatGround))
-								yGround++;
-						else
-								nGround ++;
-				}
-				bool ground;
-				if (yGround > nGround)
-						ground = true;
-				else
-						ground = false;
 		
-		
-				if (!grounded && ground) {
-						landed = true;
-						grounded = true;
-			
-			
-				} else if (!ground) {
-						grounded = false;
-						landed = false;
-			
-			
-				} else {
-						landed = false;
-				}
-
-		}
-		protected	void TargetSight ()
+		protected virtual void TargetSight ()
 		{
 				if (target != null) {
 						if (Vector2.Distance (target.transform.position, transform.position)
 								> thisAttributes.optTargetRange) {
-								moveAi ();
+								//moveAi ();
 						}
 			
 						if (Vector2.Distance (target.transform.position, transform.position) > sight) {
@@ -93,10 +62,11 @@ public class Enemy : Mob1
 						
 						if (targetPos.x < thisPos.x) {
 								move = (Vector2.right.x * -1);
+							
 						} else if (targetPos.x > thisPos.x) {
 								move = (Vector2.right.x);
+								
 						}
-			
 						if (move < 0 && turnR) {
 								flip ();
 						} else if (move > 0 && !turnR) {
@@ -105,7 +75,7 @@ public class Enemy : Mob1
 						moveX (move);
 				
 				}
-				if (targetPos.y > thisPos.y) {
+				if (targetPos.y > thisPos.y || targetPos.y < thisPos.y) {
 						jump (thisAttributes.jump * Random.Range (0, 30));
 
 

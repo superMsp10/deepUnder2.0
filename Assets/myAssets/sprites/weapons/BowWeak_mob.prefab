@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21205212}
   - 114: {fileID: 11444164}
   m_Layer: 0
-  m_Name: BowStrong
+  m_Name: BowWeak_mob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 105212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f207117110ad2ac44b0e02b83ff404a0, type: 3}
+  m_Script: {fileID: 11500000, guid: e67fff5e7be66b64e91330987f466863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   holdUI: {fileID: 21300000, guid: 54030ce01dd3cc04f80283d87035cd00, type: 3}
@@ -49,10 +49,11 @@ MonoBehaviour:
   anim: {fileID: 0}
   arrow: {fileID: 100000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
   rotate: 1
-  force: 5000
-  dir: {x: 545.030579, y: 1590.3158}
+  force: 1000
+  dir: {x: 758.388184, y: 1593.1488}
   recharging: 0
-  rof: .5
+  rof: 1
+  target: {fileID: 0}
 --- !u!212 &21205212
 SpriteRenderer:
   m_ObjectHideFlags: 1

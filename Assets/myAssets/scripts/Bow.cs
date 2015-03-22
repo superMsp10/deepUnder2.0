@@ -11,6 +11,8 @@ public class Bow : Weapon
 		public bool recharging;
 		public float rof;
 		
+
+	
 		public void Start ()
 		{
 				thisManage = gameManager.thisM;

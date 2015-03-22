@@ -56,6 +56,7 @@
      <Compile Include="Assets\myAssets\Levels\Tihs\Tihs.cs" />
      <Compile Include="Assets\myAssets\Levels\Tihs\playLevel.cs" />
      <Compile Include="Assets\myAssets\Mobs\Archer\Archer.cs" />
+     <Compile Include="Assets\myAssets\Mobs\Archer\Arrow.cs" />
      <Compile Include="Assets\myAssets\Mobs\Dummy\Dummy.cs" />
      <Compile Include="Assets\myAssets\Mobs\Oldman\NPC.cs" />
      <Compile Include="Assets\myAssets\Mobs\Oldman\OldMan.cs" />
@@ -82,6 +83,7 @@
      <Compile Include="Assets\myAssets\scripts\Teleport.cs" />
      <Compile Include="Assets\myAssets\scripts\UIslot.cs" />
      <Compile Include="Assets\myAssets\scripts\Weapon.cs" />
+     <Compile Include="Assets\myAssets\scripts\bow_Mob.cs" />
      <Compile Include="Assets\myAssets\scripts\collisionBoost.cs" />
      <Compile Include="Assets\myAssets\scripts\effectsManager.cs" />
      <Compile Include="Assets\myAssets\scripts\gameManager.cs" />

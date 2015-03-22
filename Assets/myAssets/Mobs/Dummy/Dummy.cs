@@ -18,14 +18,7 @@ public class Dummy : Enemy
 				thisAttributes.optTargetRange = Random.Range (1, 30);		
 		}
 
-		// Update is called once per frame
-		void FixedUpdate ()
-		{
 
-				checkGround ();
-				TargetSight ();
-		}
-	
 		
 	
 }
