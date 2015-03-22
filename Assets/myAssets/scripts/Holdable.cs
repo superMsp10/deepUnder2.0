@@ -17,9 +17,10 @@ public class Holdable : MonoBehaviour
 
 		
 
-		public virtual void  onUse ()
+		public virtual bool  onUse ()
 		{
 				Debug.Log ("hifrom holdable");
+				return false;
 
 		}
 		public virtual void  onSelect ()

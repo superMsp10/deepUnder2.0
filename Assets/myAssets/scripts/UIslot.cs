@@ -60,13 +60,14 @@ public class UIslot : MonoBehaviour
 
 		public void Use ()
 		{
-				holding.onUse ();
-				amount -= 1;
-				amountText.text = amount.ToString ();
+				if (holding.onUse ()) {
+						amount -= 1;
+						amountText.text = amount.ToString ();
 
-				if (amount <= 0) {
-						changeHolding (null);
-						amountText.text = "";
+						if (amount <= 0) {
+								changeHolding (null);
+								amountText.text = "";
+						}
 				}
 		}
 

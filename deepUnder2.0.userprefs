@@ -1,10 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\invManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Bomb.cs">
     <Files>
-      <File FileName="Assets\myAssets\scripts\Bow.cs" Line="55" Column="19" />
-      <File FileName="Assets\myAssets\scripts\Weapon.cs" Line="58" Column="1" />
+      <File FileName="Assets\myAssets\scripts\Bow.cs" Line="53" Column="18" />
+      <File FileName="Assets\myAssets\scripts\Weapon.cs" Line="22" Column="17" />
       <File FileName="Assets\myAssets\scripts\invManager.cs" Line="37" Column="84" />
+      <File FileName="Assets\myAssets\scripts\UIslot.cs" Line="72" Column="4" />
+      <File FileName="Assets\myAssets\scripts\Holdable.cs" Line="23" Column="18" />
+      <File FileName="Assets\Scripts\Bomb.cs" Line="29" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

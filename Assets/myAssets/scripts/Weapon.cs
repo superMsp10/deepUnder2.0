@@ -13,12 +13,13 @@ public class Weapon : Holdable
 		}
 
 
-		public override void  onUse ()
+		public override bool  onUse ()
 		{
 				anim.SetTrigger ("Attack");
 				thisManage = gameManager.thisM;
 				if (thisManage.myPlayer != null)
 						Instantiate (gameObject, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
+				return true;
 		
 		}
 		public override void  onSelect ()

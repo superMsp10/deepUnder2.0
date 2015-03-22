@@ -8,6 +8,8 @@ public class Bow : Weapon
 		
 		public float force;
 		public Vector2 dir;
+		public bool recharging;
+		public float rof;
 		
 		public void Start ()
 		{
@@ -29,22 +31,26 @@ public class Bow : Weapon
 
 		}
 
-		public override void  onUse ()
+		public override bool  onUse ()
 		{
-				Vector2 mousePos = Input.mousePosition * -1;
-				controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0, 0, mousePos.y / Mathf.PI);
-				dir = controller.attackArea.transform.position;
-				Vector2 pos = new Vector2 (controller.weaponHand.transform.position.x, controller.weaponHand.transform.position.y);
+				if (!recharging) {
+						Vector2 mousePos = Input.mousePosition * -1;
+						controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0, 0, mousePos.y / Mathf.PI);
+						dir = controller.attackArea.transform.position;
+						Vector2 pos = new Vector2 (controller.weaponHand.transform.position.x, controller.weaponHand.transform.position.y);
 						
-				GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
-				Vector2 dir2 = dir - pos;
-				float distance = dir2.magnitude;
-				Vector2 direction = dir2 / distance;
+						GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
+						Vector2 dir2 = dir - pos;
+						float distance = dir2.magnitude;
+						Vector2 direction = dir2 / distance;
 			
-				g.rigidbody2D.AddForce (dir2 * force);
-
-			
-	
+						g.rigidbody2D.AddForce (dir2 * force);
+						controller.rigidbody2D.AddForce (-dir2 * (force / controller.rigidbody2D.mass));
+						recharging = true;
+						Invoke ("resetShoot", rof);
+						return true;
+				}
+				return false;
 		}
 
 
@@ -71,6 +77,11 @@ public class Bow : Weapon
 				rotate = false;
 				
 		
+		}
+
+		public void resetShoot ()
+		{
+				recharging = false;
 		}
 
 		

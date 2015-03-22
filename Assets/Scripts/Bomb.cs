@@ -18,12 +18,15 @@ public class Bomb : Holdable
 
 
 		
-		public override void  onUse ()
+		public override bool  onUse ()
 		{
 				thisManage = gameManager.thisM;
 
-				if (thisManage.myPlayer != null)
+				if (thisManage.myPlayer != null) {
 						Instantiate (gameObject, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
+						return true;
+				}
+				return false;
 				
 		}
 

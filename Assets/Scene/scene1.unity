@@ -554,8 +554,8 @@ RectTransform:
   m_RootOrder: 11
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 224.899994, y: 450.700012}
-  m_SizeDelta: {x: 672.599976, y: 89.3899994}
+  m_AnchoredPosition: {x: 224.899994, y: 449.399994}
+  m_SizeDelta: {x: 672.599976, y: 141.800003}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &11534016
 MonoBehaviour:
@@ -582,8 +582,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Deselect the slots of the item and click it with your mouse to drop it on
-    the ground
+  m_Text: 'Deselect the slots of the item and click it with your mouse to drop it
+    on the ground
+
+    items will also drop where you died'
 --- !u!222 &11534017
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44073,7 +44075,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1060617501}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: 230.100006, y: 586.599976, z: 0}
+  m_LocalPosition: {x: 230.100006, y: 592.099976, z: 0}
   m_LocalScale: {x: 1, y: 1500.00098, z: 1}
   m_Children: []
   m_Father: {fileID: 2145335568}
@@ -63246,7 +63248,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1568676916}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 333.100006, y: 653.599976, z: 0}
+  m_LocalPosition: {x: 320, y: 653.599976, z: 0}
   m_LocalScale: {x: 1, y: 1004.12372, z: 1}
   m_Children: []
   m_Father: {fileID: 2145335568}
@@ -63601,7 +63603,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'To use this item left click with your mouse
 
-    and aim with your mosue cursor'
+    and aim with your mouse cursor'
 --- !u!222 &1575967841
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -73887,7 +73889,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1828908646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.1000004, y: 27, z: 0}
+  m_LocalPosition: {x: -23, y: 649, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1350311598}
@@ -76222,7 +76224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleTo: {fileID: 569833394}
   xOff: 0
-  yOff: 0
+  yOff: -50
   thisLev: {fileID: 1350311599}
   stage: 6
   whatPlayer:
