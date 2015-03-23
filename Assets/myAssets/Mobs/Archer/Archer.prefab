@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 459842}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: feets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 459844}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: feets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 22490996}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - 224: {fileID: 22490998}
   - 222: {fileID: 22290996}
   - 114: {fileID: 11490996}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 22491002}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - 224: {fileID: 22491004}
   - 222: {fileID: 22290998}
   - 114: {fileID: 11491002}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 22491000}
   - 114: {fileID: 11491004}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - 4: {fileID: 491004}
   - 212: {fileID: 21290996}
   - 114: {fileID: 11491010}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: SideHand2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - 212: {fileID: 21290998}
   - 61: {fileID: 6190996}
   - 114: {fileID: 11491014}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: sideLeg-1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - 212: {fileID: 21291000}
   - 60: {fileID: 6090996}
   - 114: {fileID: 11491016}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: SideBody
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - 212: {fileID: 21291002}
   - 58: {fileID: 5890996}
   - 114: {fileID: 11491018}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: HeadSide
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 490996}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: attackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 490998}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: holding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - 4: {fileID: 491012}
   - 212: {fileID: 21291004}
   - 114: {fileID: 11491020}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: SideHand
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   - 4: {fileID: 491036}
   - 58: {fileID: 5890998}
   - 114: {fileID: 11491022}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: SideParts
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - 212: {fileID: 21291006}
   - 61: {fileID: 6190998}
   - 114: {fileID: 11491024}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: sideLeg-2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   - 212: {fileID: 21291008}
   - 58: {fileID: 5891000}
   - 114: {fileID: 11491030}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Head
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   - 212: {fileID: 21291010}
   - 61: {fileID: 6191000}
   - 114: {fileID: 11491032}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: FrontLeg-2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - 212: {fileID: 21291012}
   - 61: {fileID: 6191002}
   - 114: {fileID: 11491034}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: FrontLeg-1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - 4: {fileID: 491030}
   - 212: {fileID: 21291014}
   - 114: {fileID: 11491036}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: FrontHand2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - 4: {fileID: 491032}
   - 212: {fileID: 21291016}
   - 114: {fileID: 11491038}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: FrontHand
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   - 212: {fileID: 21291018}
   - 60: {fileID: 6090998}
   - 114: {fileID: 11491040}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: frontBody
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   - 4: {fileID: 491038}
   - 58: {fileID: 5891002}
   - 114: {fileID: 11491044}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: FrontParts
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   - 223: {fileID: 22390996}
   - 114: {fileID: 11491000}
   - 114: {fileID: 11490998}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 491040}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: BodyParts
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -431,9 +431,26 @@ GameObject:
   - 95: {fileID: 9590996}
   - 114: {fileID: 11491048}
   - 61: {fileID: 6191004}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Archer
   m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &196134
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 496134}
+  - 212: {fileID: 21296134}
+  - 114: {fileID: 11496134}
+  m_Layer: 0
+  m_Name: BowWeak
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -445,7 +462,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.310000002, y: -3.30999994, z: 0}
+  m_LocalPosition: {x: -.310000002, y: -3.9000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 491038}
@@ -457,7 +474,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.620000005, y: -3.4000001, z: 0}
+  m_LocalPosition: {x: -.620000005, y: -3.58999991, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 491036}
@@ -480,10 +497,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191022}
-  m_LocalRotation: {x: 0, y: 0, z: .939692616, w: -.342020124}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
   m_LocalPosition: {x: 0, y: -3.8499999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 496134}
   m_Father: {fileID: 491012}
   m_RootOrder: 0
 --- !u!4 &491004
@@ -698,13 +716,25 @@ Transform:
   - {fileID: 22491006}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &496134
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196134}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 490998}
+  m_RootOrder: 0
 --- !u!50 &5090996
 Rigidbody2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191056}
-  m_Mass: 5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 2
@@ -851,7 +881,7 @@ Animator:
   m_GameObject: {fileID: 191056}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dd63782682e3a3646ba68a8854b51323, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
@@ -1284,18 +1314,18 @@ MonoBehaviour:
   stage: 0
   despawnWithStage: 0
   thisAttributes:
-    HP: 100
-    maxHP: 100
-    Dmg: 0
-    maxSped: 60
+    HP: 500
+    maxHP: 500
+    Dmg: 5
+    maxSped: 10
     moveForce: 1
     blunt: 283
     point: 43
     slash: 176
-    jump: 7000
+    jump: 100
     moving: 0
-    optTargetRange: 30
-    flyAmount: 2
+    optTargetRange: 50
+    flyAmount: .600000024
   grounded: 0
   turnR: 0
   groundCheck:
@@ -1304,7 +1334,7 @@ MonoBehaviour:
   centerOfMass: {x: 0, y: 0}
   whatGround:
     serializedVersion: 2
-    m_Bits: 5120
+    m_Bits: 4608
   thisAnim: {fileID: 0}
   bodyParts: []
   frontBody: {fileID: 491038}
@@ -1324,10 +1354,36 @@ MonoBehaviour:
   attackArea: {fileID: 191020}
   whatEnemy:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   target: {fileID: 0}
-  sight: 100
+  sight: 60
   despawnWithDistance: 0
+  bow: {fileID: 11496134}
+--- !u!114 &11496134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67fff5e7be66b64e91330987f466863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdUI: {fileID: 21300000, guid: 54030ce01dd3cc04f80283d87035cd00, type: 3}
+  thisManage: {fileID: 0}
+  phisical: {fileID: 11402394, guid: fb9268c6619cdec459e9ac8c2c7ed7ad, type: 2}
+  stackSize: 100
+  weapon: 1
+  controller: {fileID: 11491048}
+  anim: {fileID: 0}
+  arrow: {fileID: 103750, guid: 5fee344b6a979fb438b2a9b3e5e15452, type: 2}
+  rotate: 1
+  force: 2000
+  dir: {x: 758.388184, y: 1593.1488}
+  recharging: 0
+  rof: 2
+  target: {fileID: 0}
 --- !u!212 &21290996
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1591,6 +1647,28 @@ SpriteRenderer:
   m_SortingLayerID: 1526260043
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300002, guid: 67eb9e9cf7dec074ca019cd3a7eaa09a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!212 &21296134
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196134}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 149272721
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 54030ce01dd3cc04f80283d87035cd00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!222 &22290996
 CanvasRenderer:

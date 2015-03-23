@@ -7,7 +7,7 @@ public class Bow : Weapon
 		public bool rotate;
 		
 		public float force;
-		public Vector2 dir;
+		protected Vector2 dir;
 		public bool recharging;
 		public float rof;
 		
@@ -42,6 +42,7 @@ public class Bow : Weapon
 						Vector2 pos = new Vector2 (controller.weaponHand.transform.position.x, controller.weaponHand.transform.position.y);
 						
 						GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
+						g.GetComponent<Entity> ().thisLevel = thisManage.currentLevel;
 						Vector2 dir2 = dir - pos;
 						float distance = dir2.magnitude;
 						Vector2 direction = dir2 / distance;
