@@ -13,18 +13,21 @@ public class bow_Mob : Bow
 
 						Vector3 targetPos = target.transform.position;
 						Vector3 diff = targetPos - transform.position;
+
+						
 						diff.Normalize ();
 			
 						float rot_z = Mathf.Atan2 (diff.y, diff.x) * Mathf.Rad2Deg;
 						
 						if (controller.turnR) {
 								turnR = true;
-								controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0f, 0f, rot_z + 250);
+								controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0f, 0f, (rot_z - 270) * -1);
 						} else {
 								turnR = false;
 								controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0f, 0f, rot_z - 270);
-
 						}
+
+						
 				
 								
 				}

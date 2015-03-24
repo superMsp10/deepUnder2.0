@@ -102,7 +102,7 @@ public class OldMan : NPC
 				answer1Text.text = "Good";
 				answer2Text.text = "I dont care";
 				flyAway ();
-				for (int i = 0; i < 20; i++) {
+				for (int i = 0; i < 80; i++) {
 						Invoke ("insBomb", Random.Range (0, 2f));
 						
 
