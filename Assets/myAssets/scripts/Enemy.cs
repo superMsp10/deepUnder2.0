@@ -28,14 +28,49 @@ public class Enemy : Mob1
 
 		}
 
-
+		protected void checkFacing ()
+		{
+		
+				if (Mathf.Abs (rigidbody2D.velocity.x) > 1) {
+						thisAttributes.moving = true;
+			
+				} else if (attacking) {
+						thisAttributes.moving = true;
+				} else {
+						thisAttributes.moving = false;
+			
+				}
+				if (detectedFacing) {
+						if (thisAttributes.moving || attacking) {
+								front = false;
+								frontBody.gameObject.SetActive (false);
+								sideBody.gameObject.SetActive (true);
+						} else {
+								front = true;
+				
+								sideBody.gameObject.SetActive (false);
+								frontBody.gameObject.SetActive (true);
+						}
+						if (rigidbody2D.velocity.y < -20 && !attacking) {
+				
+								falling = true;
+								front = true;
+				
+								sideBody.gameObject.SetActive (false);
+								frontBody.gameObject.SetActive (true);
+						}
+				}
+		
+		}
 		
 		protected virtual void TargetSight ()
 		{
 				if (target != null) {
 						if (Vector2.Distance (target.transform.position, transform.position)
 								> thisAttributes.optTargetRange) {
-								//moveAi ();
+								moveAi ();
+						} else {
+								checkLooking ();
 						}
 			
 						if (Vector2.Distance (target.transform.position, transform.position) > sight) {
@@ -84,6 +119,31 @@ public class Enemy : Mob1
 
 				}
 
+
+		}
+
+		public void checkLooking ()
+		{
+				Vector2 targetPos = thisManage.transform.TransformPoint (target.transform.position);
+				Vector2 thisPos = thisManage.transform.TransformPoint (transform.position);
+
+				if (Mathf.Abs (targetPos.x - thisPos.x) > 0) {
+						float move = 0;
+			
+						if (targetPos.x < thisPos.x) {
+								move = (Vector2.right.x * -1);
+				
+						} else if (targetPos.x > thisPos.x) {
+								move = (Vector2.right.x);
+				
+						}
+						if (move < 0 && turnR) {
+								flip ();
+						} else if (move > 0 && !turnR) {
+								flip ();
+						}
+
+				}
 
 		}
 

@@ -107,6 +107,7 @@ public class OldMan : NPC
 						
 
 				}
+				Invoke ("insHenchMan", 5);
 		}
 		void teleport ()
 		{
@@ -124,8 +125,7 @@ public class OldMan : NPC
 
 		void insHenchMan ()
 		{
-				GameObject g = (GameObject)Instantiate (henchMan, transform.position, Quaternion.identity);
-				Mob1 hench = g.GetComponent<Mob1> ();
+				henchMan.SetActive (true);
 		}
 
 

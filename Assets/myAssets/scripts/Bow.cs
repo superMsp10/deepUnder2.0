@@ -7,7 +7,7 @@ public class Bow : Weapon
 		public bool rotate;
 		
 		public float force;
-		protected Vector2 dir;
+		protected Vector3 dir;
 		public bool recharging;
 		public float rof;
 		
@@ -36,16 +36,16 @@ public class Bow : Weapon
 		public override bool  onUse ()
 		{
 				if (!recharging) {
-						Vector2 mousePos = Input.mousePosition * -1;
+						Vector3 mousePos = Input.mousePosition * -1;
 						controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0, 0, mousePos.y / Mathf.PI);
 						dir = controller.attackArea.transform.position;
-						Vector2 pos = new Vector2 (controller.weaponHand.transform.position.x, controller.weaponHand.transform.position.y);
+						Vector3 pos = new Vector2 (controller.weaponHand.transform.position.x, controller.weaponHand.transform.position.y);
 						
 						GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
 						g.GetComponent<Entity> ().thisLevel = thisManage.currentLevel;
-						Vector2 dir2 = dir - pos;
+						Vector3 dir2 = dir - pos;
 						float distance = dir2.magnitude;
-						Vector2 direction = dir2 / distance;
+						Vector3 direction = dir2 / distance;
 			
 						g.rigidbody2D.AddForce (dir2 * force);
 						controller.rigidbody2D.AddForce (-dir2 * (force / controller.rigidbody2D.mass));

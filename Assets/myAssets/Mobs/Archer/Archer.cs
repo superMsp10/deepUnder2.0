@@ -40,29 +40,37 @@ public class Archer : Enemy
 		protected override void TargetSight ()
 		{
 
+
+
 				if (target != null) {
-						if (Vector2.Distance (target.transform.position, transform.position)
-								> thisAttributes.optTargetRange) {
-								moveAi ();
-								attacking = false;
-						} else {
-								attacking = true;
-								bow.target = target;
-								bow.attack ();
-						}
-			
+
 						if (Vector2.Distance (target.transform.position, transform.position) > sight) {
 								target = null;
 								if (despawnWithDistance) {
 										gameObject.SetActive (false);
 								}
-				
-				
+								goto end;
 						}
+						if (Vector2.Distance (target.transform.position, transform.position)
+								> thisAttributes.optTargetRange) {
+								moveAi ();
+								attacking = false;
+						} else {
+								checkLooking ();
+
+								attacking = true;
+								bow.target = target;
+								bow.attack ();
+						}
+						
 				} else {
 						selectTarget ();
 				}
+				end:
+				;
 
 		}
+
+
 
 }

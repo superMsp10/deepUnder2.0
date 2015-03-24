@@ -1899,7 +1899,7 @@ Transform:
   m_PrefabInternal: {fileID: 1304978142}
   m_GameObject: {fileID: 51931797}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1114.09998, y: -72.1699982, z: 0}
+  m_LocalPosition: {x: -1114.09998, y: -72.1699829, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 512208971}
@@ -1907,7 +1907,7 @@ Transform:
   - {fileID: 582391178}
   - {fileID: 1479138827}
   m_Father: {fileID: 1352000856}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &51931799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37304,10 +37304,11 @@ MonoBehaviour:
   anim: {fileID: 0}
   arrow: {fileID: 103750, guid: 5fee344b6a979fb438b2a9b3e5e15452, type: 2}
   rotate: 1
-  force: 500
+  force: 1000
   recharging: 0
   rof: 2
   target: {fileID: 0}
+  turnR: 0
 --- !u!212 &837776009
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40191,7 +40192,7 @@ Transform:
   - {fileID: 429186221}
   - {fileID: 540532425}
   m_Father: {fileID: 1352000856}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &927495008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40217,13 +40218,13 @@ MonoBehaviour:
     maxHP: 500
     Dmg: 5
     maxSped: 10
-    moveForce: 1
+    moveForce: 2
     blunt: 283
     point: 43
     slash: 176
     jump: 100
     moving: 0
-    optTargetRange: 50
+    optTargetRange: 40
     flyAmount: .600000024
   grounded: 0
   turnR: 0
@@ -40255,7 +40256,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   target: {fileID: 0}
-  sight: 60
+  sight: 200
   despawnWithDistance: 0
   bow: {fileID: 837776008}
 --- !u!61 &927495009
@@ -44293,11 +44294,15 @@ Prefab:
       objectReference: {fileID: 927495008}
     - target: {fileID: 11469778, guid: 6959341f877ae7648b2ef85b512cb350, type: 2}
       propertyPath: force
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 169778, guid: 6959341f877ae7648b2ef85b512cb350, type: 2}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 11469778, guid: 6959341f877ae7648b2ef85b512cb350, type: 2}
+      propertyPath: rotate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6959341f877ae7648b2ef85b512cb350, type: 2}
@@ -48176,7 +48181,7 @@ MonoBehaviour:
   bombPick: {fileID: 51931797}
   particle: {fileID: 1797468876}
   bomb: {fileID: 100000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
-  henchMan: {fileID: 0}
+  henchMan: {fileID: 927495006}
 --- !u!1001 &1126112045
 Prefab:
   m_ObjectHideFlags: 0
@@ -48244,6 +48249,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11449066, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: henchMan
+      value: 
+      objectReference: {fileID: 927495006}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
   m_RootGameObject: {fileID: 1123064965}
@@ -54313,7 +54322,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e3fc77e893e65874bb37234464227238, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -72.1699982
+      value: -72.1699829
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e3fc77e893e65874bb37234464227238, type: 2}
       propertyPath: m_LocalPosition.z
@@ -54337,7 +54346,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e3fc77e893e65874bb37234464227238, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11468142, guid: e3fc77e893e65874bb37234464227238, type: 2}
       propertyPath: thisLevel
@@ -56201,8 +56210,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1123064966}
-  - {fileID: 51931798}
   - {fileID: 927495007}
+  - {fileID: 51931798}
   m_Father: {fileID: 824517289}
   m_RootOrder: 3
 --- !u!1 &1352279450

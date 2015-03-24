@@ -5,6 +5,7 @@ public class bow_Mob : Bow
 {
 
 		public GameObject target;
+		public bool turnR;
 
 		void Update ()
 		{
@@ -15,8 +16,15 @@ public class bow_Mob : Bow
 						diff.Normalize ();
 			
 						float rot_z = Mathf.Atan2 (diff.y, diff.x) * Mathf.Rad2Deg;
-						controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0f, 0f, rot_z - 270);
+						
+						if (controller.turnR) {
+								turnR = true;
+								controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0f, 0f, rot_z + 250);
+						} else {
+								turnR = false;
+								controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0f, 0f, rot_z - 270);
 
+						}
 				
 								
 				}
@@ -29,14 +37,19 @@ public class bow_Mob : Bow
 				if (!recharging) {
 					
 						dir = controller.attackArea.transform.position;
-						Vector2 pos = new Vector2 (controller.weaponHand.transform.position.x + 2, controller.weaponHand.transform.position.y);
-			
+						int offSet;
+						if (turnR) {
+								offSet = 2;
+						} else {
+								offSet = -2;
+						}
+						Vector3 pos = new Vector3 (controller.weaponHand.transform.position.x + offSet, controller.weaponHand.transform.position.y);
 						GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
 						g.GetComponent<Entity> ().thisLevel = thisManage.currentLevel;
 						g.transform.rotation = controller.weaponHand.transform.parent.rotation;
-						Vector2 dir2 = dir - pos;
+						Vector3 dir2 = dir - g.transform.position;
 						float distance = dir2.magnitude;
-						Vector2 direction = dir2 / distance;
+						Vector3 direction = dir2 / distance;
 			
 						g.rigidbody2D.AddForce (dir2 * force);
 						controller.rigidbody2D.AddForce (-dir2 * (force / controller.rigidbody2D.mass));
