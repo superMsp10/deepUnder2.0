@@ -7723,6 +7723,14 @@ Prefab:
       propertyPath: stage
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11402394, guid: fb9268c6619cdec459e9ac8c2c7ed7ad, type: 2}
+      propertyPath: desD.destroyOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402394, guid: fb9268c6619cdec459e9ac8c2c7ed7ad, type: 2}
+      propertyPath: desD.awakeDestroyDelay
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb9268c6619cdec459e9ac8c2c7ed7ad, type: 2}
   m_RootGameObject: {fileID: 1002600895}
@@ -14213,7 +14221,7 @@ GameObject:
   - 61: {fileID: 373926836}
   m_Layer: 13
   m_Name: Leg
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16224,7 +16232,7 @@ GameObject:
   - 61: {fileID: 413338556}
   m_Layer: 13
   m_Name: hand
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22983,7 +22991,7 @@ GameObject:
   - 61: {fileID: 532497376}
   m_Layer: 13
   m_Name: chest
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37415,6 +37423,7 @@ MonoBehaviour:
   force: 1000
   recharging: 0
   rof: 2
+  intialize: 0
   target: {fileID: 0}
   turnR: 0
 --- !u!212 &837776009
@@ -40514,7 +40523,7 @@ GameObject:
   - 212: {fileID: 933659832}
   m_Layer: 13
   m_Name: hat
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43033,8 +43042,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desD:
-    destroyOnAwake: 1
-    awakeDestroyDelay: 60
+    destroyOnAwake: 0
+    awakeDestroyDelay: 0
   thisLevel: {fileID: 1350311599}
   thisManage: {fileID: 0}
   customHierarchy: 0
@@ -48162,7 +48171,7 @@ GameObject:
   - 58: {fileID: 1123064967}
   m_Layer: 13
   m_Name: OldMan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48361,6 +48370,46 @@ Prefab:
       propertyPath: henchMan
       value: 
       objectReference: {fileID: 927495006}
+    - target: {fileID: 149062, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 149054, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 149050, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 149052, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 149048, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 149066, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 149058, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 149060, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 149064, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 149056, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
   m_RootGameObject: {fileID: 1123064965}
@@ -62991,7 +63040,7 @@ MonoBehaviour:
   currentLevel: {fileID: 0}
   levels: []
   dead: 1
-  loadDefault: 0
+  loadDefault: 1
   defaultLev: {fileID: 824517291}
   currCamera: {fileID: 0}
   ins1: {fileID: 100000, guid: 08f594c7c40395d4593e569526ea6708, type: 2}
@@ -65066,7 +65115,7 @@ GameObject:
   - 4: {fileID: 1567687892}
   m_Layer: 13
   m_Name: body
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65561,7 +65610,7 @@ GameObject:
   - 58: {fileID: 1582648699}
   m_Layer: 13
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65625,7 +65674,7 @@ GameObject:
   - 61: {fileID: 1584511137}
   m_Layer: 13
   m_Name: hand
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75437,7 +75486,7 @@ GameObject:
   - 58: {fileID: 1818869197}
   m_Layer: 13
   m_Name: Feets
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87728,7 +87777,7 @@ GameObject:
   - 61: {fileID: 2094497109}
   m_Layer: 13
   m_Name: Leg
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

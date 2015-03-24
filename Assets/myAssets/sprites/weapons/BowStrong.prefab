@@ -50,9 +50,9 @@ MonoBehaviour:
   arrow: {fileID: 100000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
   rotate: 1
   force: 5000
-  dir: {x: 545.030579, y: 1590.3158}
   recharging: 0
-  rof: .5
+  rof: .100000001
+  intialize: 0
 --- !u!212 &21205212
 SpriteRenderer:
   m_ObjectHideFlags: 1

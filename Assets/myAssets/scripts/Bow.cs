@@ -10,6 +10,7 @@ public class Bow : Weapon
 		protected Vector3 dir;
 		public bool recharging;
 		public float rof;
+		public bool intialize;
 		
 
 	
@@ -42,7 +43,9 @@ public class Bow : Weapon
 						Vector3 pos = new Vector2 (controller.weaponHand.transform.position.x, controller.weaponHand.transform.position.y);
 						
 						GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
-						g.GetComponent<Entity> ().thisLevel = thisManage.currentLevel;
+						if (intialize) {
+								g.GetComponent<Entity> ().thisLevel = thisManage.currentLevel;
+						}
 						Vector3 dir2 = dir - pos;
 						float distance = dir2.magnitude;
 						Vector3 direction = dir2 / distance;
