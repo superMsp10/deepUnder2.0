@@ -103,9 +103,7 @@ public class OldMan : NPC
 				answer2Text.text = "I dont care";
 				flyAway ();
 				for (int i = 0; i < 80; i++) {
-						Invoke ("insBomb", Random.Range (0, 2f));
-						
-
+						Invoke ("insBomb", Random.Range (3f, 10f));
 				}
 				Invoke ("insHenchMan", 5);
 		}
@@ -119,7 +117,7 @@ public class OldMan : NPC
 
 		void insBomb ()
 		{
-				Vector2 pos = new Vector2 (transform.position.x + Random.Range (-50, 50), transform.position.y + Random.Range (0, 10));
+				Vector2 pos = new Vector2 (transform.position.x + Random.Range (-60, 100), transform.position.y + Random.Range (20, 80));
 				Instantiate (bomb, pos, Quaternion.identity);
 		}
 
