@@ -47,8 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Bomb.cs" />
-     <Compile Include="Assets\Scripts\BombPickup.cs" />
-     <Compile Include="Assets\Scripts\LayBombs.cs" />
      <Compile Include="Assets\myAssets\Entities\Door.cs" />
      <Compile Include="Assets\myAssets\Entities\cannon.cs" />
      <Compile Include="Assets\myAssets\Entities\nextLevelDoor.cs" />
