@@ -51,6 +51,9 @@ public class bow_Mob : Bow
 						GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
 						g.GetComponent<Arrow> ().thisLevel = thisManage.currentLevel;
 						g.transform.rotation = controller.weaponHand.transform.parent.rotation;
+
+						
+						
 						Vector3 dir2 = dir - g.transform.position;
 						
 			
