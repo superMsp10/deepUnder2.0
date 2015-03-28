@@ -5,12 +5,14 @@ public class Bow : Weapon
 {
 		public GameObject arrow;
 		public bool rotate;
-		
+		public AudioClip shoot;
+
 		public float force;
 		protected Vector3 dir;
 		public bool recharging;
 		public float rof;
 		public bool intialize;
+		protected AudioSource thisAudio;
 		
 
 	
@@ -18,10 +20,18 @@ public class Bow : Weapon
 		{
 				thisManage = gameManager.thisM;
 				anim = GetComponent<Animator > ();
-
+				thisAudio = AudioManager.thisAM.weapons;
 		}
 	
+		public virtual void shootSound ()
+		{
+				if (thisAudio == null) {
 
+						thisAudio = AudioManager.thisAM.weapons;
+				}
+				thisAudio.PlayOneShot (shoot);
+		
+		}
 		void Update ()
 		{
 
@@ -37,6 +47,7 @@ public class Bow : Weapon
 		public override bool  onUse ()
 		{
 				if (!recharging) {
+						shootSound ();
 						Vector3 mousePos = Input.mousePosition * -1;
 						controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0, 0, mousePos.y / Mathf.PI);
 						dir = controller.attackArea.transform.position;

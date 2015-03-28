@@ -33,6 +33,7 @@ public class Mob1 : Entity
 		//---------------------------------------
 		protected bool landed = false;
 		public bool grounded = false;
+
 		public bool turnR = false;
 		protected bool front = true;
 
@@ -278,8 +279,10 @@ public class Mob1 : Entity
 
 				if (grounded) {
 						rigidbody2D.AddForce (new Vector2 (0, jumpF));
+					
 						playJumpSound ();
 
+						
 				} 
 
 		}
@@ -342,6 +345,6 @@ public class Mob1 : Entity
 
 		}
 	
-
+		
 
 }

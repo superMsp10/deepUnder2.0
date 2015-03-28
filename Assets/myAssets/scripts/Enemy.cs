@@ -6,6 +6,8 @@ public class Enemy : Mob1
 		public LayerMask whatEnemy;
 		public GameObject target;
 		public float sight;
+		public bool jumpedSound = false;
+
 		public bool despawnWithDistance;
 
 
@@ -26,6 +28,22 @@ public class Enemy : Mob1
 				checkground ();
 				TargetSight ();
 
+		}
+
+		public override void jump (int jumpF)
+		{
+		
+				if (grounded) {
+						rigidbody2D.AddForce (new Vector2 (0, jumpF));
+						if (!jumpedSound) {
+								playJumpSound ();
+								jumpedSound = true;
+						} else {
+								Invoke ("resetJump", 0.5f);
+						}
+			
+				} 
+		
 		}
 
 		new protected void checkFacing ()
@@ -116,11 +134,12 @@ public class Enemy : Mob1
 				if (targetPos.y > thisPos.y || targetPos.y < thisPos.y) {
 						jump (thisAttributes.jump * Random.Range (0, 30));
 
-
-				}
+				} 
 
 
 		}
+
+		
 
 		public void checkLooking ()
 		{
@@ -145,6 +164,11 @@ public class Enemy : Mob1
 
 				}
 
+		}
+
+		public void resetJump ()
+		{
+				jumpedSound = false;
 		}
 
 }

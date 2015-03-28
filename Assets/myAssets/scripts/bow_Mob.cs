@@ -45,6 +45,8 @@ public class bow_Mob : Bow
 						} else {
 								offSet = -2;
 						}
+						shootSound ();
+
 						Vector3 pos = new Vector3 (controller.weaponHand.transform.position.x + offSet, controller.weaponHand.transform.position.y);
 						GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
 						g.GetComponent<Arrow> ().thisLevel = thisManage.currentLevel;

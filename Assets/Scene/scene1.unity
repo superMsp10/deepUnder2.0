@@ -582,8 +582,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Deselect the slots of the item and click it with your mouse to drop it
-    on the ground
+  m_Text: 'Deselect the slot of the item and click it with your mouse to drop it on
+    the ground
 
     items will also drop where you died'
 --- !u!222 &11534017
@@ -4067,8 +4067,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 107549300}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: -.699999988, y: -8.5, z: 0}
-  m_LocalScale: {x: 58.2440414, y: 1100, z: 1}
+  m_LocalPosition: {x: -1.69000006, y: -8.5, z: 0}
+  m_LocalScale: {x: 58.2440414, y: 1109.94019, z: 1}
   m_Children: []
   m_Father: {fileID: 1970260547}
   m_RootOrder: 3
@@ -5792,8 +5792,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 150176988}
   m_LocalRotation: {x: 0, y: 0, z: .706864893, w: .707348704}
-  m_LocalPosition: {x: 95.0999985, y: 12.1000004, z: 0}
-  m_LocalScale: {x: 19.8199558, y: 155.580505, z: 1}
+  m_LocalPosition: {x: 95.0999985, y: 6.9000001, z: 0}
+  m_LocalScale: {x: 8.70911312, y: 155.580505, z: 1}
   m_Children: []
   m_Father: {fileID: 155365408}
   m_RootOrder: 4
@@ -12094,7 +12094,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 87.4000015, y: 16.8000183}
+  m_AnchoredPosition: {x: 87.4000015, y: 11.8000002}
   m_SizeDelta: {x: .5, y: .5}
   m_Pivot: {x: .5, y: .5}
 --- !u!223 &310824845
@@ -37121,6 +37121,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   arrow: {fileID: 103750, guid: 5fee344b6a979fb438b2a9b3e5e15452, type: 2}
   rotate: 1
+  shoot: {fileID: 8300000, guid: fe40c8990060beb4684ffa4b15e1b967, type: 3}
   force: 1000
   recharging: 0
   rof: 2
@@ -39946,7 +39947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &927495007
 Transform:
   m_ObjectHideFlags: 0
@@ -39954,7 +39955,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 927495006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1113.5, y: -70.6999969, z: 0}
+  m_LocalPosition: {x: -1059.80005, y: -62.4000015, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429186221}
@@ -39979,7 +39980,7 @@ MonoBehaviour:
   thisLevel: {fileID: 824517291}
   thisManage: {fileID: 0}
   customHierarchy: 0
-  stage: 0
+  stage: 1
   despawnWithStage: 0
   thisAttributes:
     HP: 500
@@ -40010,9 +40011,9 @@ MonoBehaviour:
   animated: 0
   detectedFacing: 1
   thisAudio: {fileID: 623669439}
-  jumpClip: {fileID: 8300000, guid: 9e145e5e857f4aa47b140257255bc9b0, type: 3}
+  jumpClip: {fileID: 8300000, guid: a0c6227dc7327fe4582ba2b05e0aaed2, type: 3}
   stepClip: {fileID: 8300000, guid: bc3c59548c3aa8949a1906d519357093, type: 3}
-  landClip: {fileID: 8300000, guid: 206d6a9439900af4cae1c86ae94e19b9, type: 3}
+  landClip: {fileID: 8300000, guid: e9e61438290dd0545bd192046f645ab4, type: 3}
   dmgClip: {fileID: 8300000, guid: 4faa8d7582c39644f9b78c6736b1e36a, type: 3}
   movingClip: {fileID: 8300000, guid: 96bfec0684f02e444b7de028dc377a9e, type: 3}
   healthbar: {fileID: 155769102}
@@ -40025,6 +40026,7 @@ MonoBehaviour:
     m_Bits: 512
   target: {fileID: 0}
   sight: 200
+  jumpedSound: 0
   despawnWithDistance: 0
   bow: {fileID: 837776008}
 --- !u!61 &927495009
@@ -43644,7 +43646,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1018061194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 97.8600006, y: 18.0200005, z: 0}
+  m_LocalPosition: {x: 97.9000015, y: 11.8999996, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 443842709}
@@ -43936,7 +43938,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1025434312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.9000015, y: 22.8999996, z: 0}
+  m_LocalPosition: {x: 37.9000015, y: 8.30000019, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 443842709}
@@ -47710,7 +47712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1123064966
 Transform:
   m_ObjectHideFlags: 0
@@ -47899,7 +47901,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 149062, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11449066, guid: 63cb55d26c58c244589e923abd946b5f, type: 2}
       propertyPath: henchMan
@@ -49227,8 +49229,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1167807870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -106.699997, y: 63.5, z: 0}
-  m_LocalScale: {x: 44.0708923, y: 718.427917, z: 1}
+  m_LocalPosition: {x: -106.699997, y: 62, z: 0}
+  m_LocalScale: {x: 44.0708923, y: 703.809998, z: 1}
   m_Children: []
   m_Father: {fileID: 1970260547}
   m_RootOrder: 1
@@ -57173,7 +57175,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1384930487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.6000004, y: 9.10000038, z: 0}
+  m_LocalPosition: {x: -24.6000004, y: 7.80000019, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1470324603}
