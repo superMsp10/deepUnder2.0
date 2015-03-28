@@ -8,13 +8,11 @@ public class BodyParts : MonoBehaviour
 		//----------------------------
 		public int maxVelo = 10;
 		public Mob1 thisMob;
-		private Entity thisEn;
 		public BodyParts conBody;
 		public bool connected;
 		// Use this for initialization
 		void Start ()
 		{
-				thisEn = GetComponent<Entity> ();
 				thisJoint = GetComponent<DistanceJoint2D> ();
 				if (!connected) {
 						thisJoint.enabled = false;

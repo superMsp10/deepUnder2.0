@@ -6,7 +6,8 @@ public class Weapon : Holdable
 		public Mob1 controller;
 		public Animator anim;
 		protected	GameObject weaponIns ;
-		public void Start ()
+
+		new  void Start ()
 		{
 				thisManage = gameManager.thisM;
 				anim = GetComponent<Animator > ();

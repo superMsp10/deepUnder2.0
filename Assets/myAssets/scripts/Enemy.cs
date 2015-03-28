@@ -28,7 +28,7 @@ public class Enemy : Mob1
 
 		}
 
-		protected void checkFacing ()
+		new protected void checkFacing ()
 		{
 		
 				if (Mathf.Abs (rigidbody2D.velocity.x) > 1) {

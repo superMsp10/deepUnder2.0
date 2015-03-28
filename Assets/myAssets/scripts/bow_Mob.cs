@@ -51,8 +51,7 @@ public class bow_Mob : Bow
 						g.GetComponent<Entity> ().thisLevel = thisManage.currentLevel;
 						g.transform.rotation = controller.weaponHand.transform.parent.rotation;
 						Vector3 dir2 = dir - g.transform.position;
-						float distance = dir2.magnitude;
-						Vector3 direction = dir2 / distance;
+						
 			
 						g.rigidbody2D.AddForce (dir2 * force);
 						controller.rigidbody2D.AddForce (-dir2 * (force / controller.rigidbody2D.mass));

@@ -48,7 +48,6 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Bomb.cs" />
      <Compile Include="Assets\myAssets\Entities\Door.cs" />
-     <Compile Include="Assets\myAssets\Entities\cannon.cs" />
      <Compile Include="Assets\myAssets\Entities\nextLevelDoor.cs" />
      <Compile Include="Assets\myAssets\Entities\stageDoor.cs" />
      <Compile Include="Assets\myAssets\Levels\Tihs\Tihs.cs" />
@@ -83,9 +82,7 @@
      <Compile Include="Assets\myAssets\scripts\Weapon.cs" />
      <Compile Include="Assets\myAssets\scripts\bow_Mob.cs" />
      <Compile Include="Assets\myAssets\scripts\collisionBoost.cs" />
-     <Compile Include="Assets\myAssets\scripts\effectsManager.cs" />
      <Compile Include="Assets\myAssets\scripts\gameManager.cs" />
-     <Compile Include="Assets\myAssets\scripts\health.cs" />
      <Compile Include="Assets\myAssets\scripts\invManager.cs" />
      <Compile Include="Assets\myAssets\scripts\level.cs" />
      <Compile Include="Assets\myAssets\scripts\pickups.cs" />

@@ -37,14 +37,7 @@ public class pickups : Entity
 				}
 		
 		
-				if (other.gameObject.tag == "Cannon") {
-						cannon thisCannon = other.gameObject.GetComponent<cannon> ();
-						if (thisCannon == null)
-								Debug.LogError ("no cannon script attached");
-						thisCannon.shoot ();
 			
-			
-				}
 
 				if (other.gameObject.tag == "Player" && pickable) {
 						if (thisHolding.weapon) {

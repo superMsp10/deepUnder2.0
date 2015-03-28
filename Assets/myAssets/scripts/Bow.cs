@@ -14,7 +14,7 @@ public class Bow : Weapon
 		
 
 	
-		public void Start ()
+		new void Start ()
 		{
 				thisManage = gameManager.thisM;
 				anim = GetComponent<Animator > ();
@@ -47,9 +47,7 @@ public class Bow : Weapon
 								g.GetComponent<Entity> ().thisLevel = thisManage.currentLevel;
 						}
 						Vector3 dir2 = dir - pos;
-						float distance = dir2.magnitude;
-						Vector3 direction = dir2 / distance;
-			
+
 						g.rigidbody2D.AddForce (dir2 * force);
 						controller.rigidbody2D.AddForce (-dir2 * (force / controller.rigidbody2D.mass));
 						recharging = true;

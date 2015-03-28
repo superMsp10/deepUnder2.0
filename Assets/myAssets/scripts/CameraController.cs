@@ -23,7 +23,6 @@ public class CameraController : MonoBehaviour
 		{
 				thisManage = gameManager.thisM;
 				thisCam = thisManage.thisCamManange;
-				thisLevel = (playLevel)thisLevel;
 				if (dir.y != 0) {
 						yAxis = true;
 				} else {

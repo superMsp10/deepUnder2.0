@@ -30,7 +30,7 @@ public class Bomb : Holdable
 				
 		}
 
-		void Start ()
+		new void Start ()
 		{
 				thisManage = gameManager.thisM;
 				// If the bomb has no parent, it has been laid by the player and should detonate.
@@ -134,14 +134,7 @@ public class Bomb : Holdable
 				}
 		
 		
-				if (other.gameObject.tag == "Cannon") {
-						cannon thisCannon = other.gameObject.GetComponent<cannon> ();
-						if (thisCannon == null)
-								Debug.LogError ("no cannon script attached");
-						thisCannon.shoot ();
 			
-			
-				}
 		
 			
 

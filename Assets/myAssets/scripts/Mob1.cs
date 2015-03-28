@@ -308,15 +308,7 @@ public class Mob1 : Entity
 				}
 		
 				
-				if (other.gameObject.tag == "Cannon") {
-						cannon thisCannon = other.gameObject.GetComponent<cannon> ();
-						if (thisCannon == null)
-								Debug.LogError ("no cannon script attached");
-						thisCannon.shoot ();
 			
-			
-				}
-
 			
 		
 		

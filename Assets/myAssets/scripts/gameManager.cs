@@ -17,17 +17,10 @@ public class gameManager : MonoBehaviour
 		public bool loadDefault = false;
 		public level defaultLev;
 		public Camera currCamera;
-		public GameObject ins1;
-		public GameObject ins2;
-		private string version;
 		public GameObject myPlayerIns;
 		public GameObject myPlayer;
 		private SpawnSpot[] SS;
 		private SpawnSpot MySS;
-		private bool connecting = false;
-		List <string> chatMessages;
-		int MaxChatMess = 5;
-		private string status = "[newbie]";
 		public GameObject gameUI;
 		public GameObject pausedUi;
 		public GameObject deathScreen;
@@ -41,7 +34,6 @@ public class gameManager : MonoBehaviour
 
 		void Start ()
 		{		
-				version = "NetTest 0.2.2";
 //				PhotonNetwork.player.name = PlayerPrefs.GetString ("UserName", "EnterNameHere");
 				levels = FindObjectsOfType<level> ();
 				foreach (level l in levels) {
