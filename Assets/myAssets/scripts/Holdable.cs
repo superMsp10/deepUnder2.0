@@ -24,11 +24,9 @@ public class Holdable : MonoBehaviour
 		}
 		public virtual void  onSelect ()
 		{
-
 		}
 		public virtual void  onDeselect ()
 		{
-
 		}
 		public virtual void  onPickup ()
 		{

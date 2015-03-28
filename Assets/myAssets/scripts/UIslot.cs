@@ -55,6 +55,8 @@ public class UIslot : MonoBehaviour
 				amountText.text = amount.ToString ();
 				if (selected)
 						holding.onSelect ();
+				else
+						holding.onDeselect ();
 				
 		}
 

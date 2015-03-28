@@ -25,13 +25,13 @@ public class Weapon : Holdable
 		}
 		public override void  onSelect ()
 		{
-				thisManage.myPlayer.GetComponent<Mob1> ().attacking = true;
+				controller.attacking = true;
 				weaponIns.SetActive (true);
 		
 		}
 		public override void  onDeselect ()
 		{
-				thisManage.myPlayer.GetComponent<Mob1> ().attacking = false;
+				controller.attacking = false;
 				weaponIns.SetActive (false);
 
 
@@ -47,6 +47,7 @@ public class Weapon : Holdable
 	
 		public override void  onDrop ()
 		{
+				controller.attacking = false;
 				Destroy (weaponIns);
 		}
 

@@ -86,7 +86,7 @@ public class Bow : Weapon
 
 		public override void  onSelect ()
 		{
-				thisManage.myPlayer.GetComponent<Mob1> ().attacking = true;
+				controller.attacking = true;
 				if (weaponIns == null) {
 						insModel ();
 				} 
@@ -99,7 +99,7 @@ public class Bow : Weapon
 
 		public override void  onDeselect ()
 		{
-				thisManage.myPlayer.GetComponent<Mob1> ().attacking = false;
+				controller.attacking = false;
 				if (weaponIns == null) {
 						insModel ();
 				} 
