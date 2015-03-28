@@ -36,7 +36,6 @@ public class bow_Mob : Bow
 		public  void attack ()
 		{
 			
-
 				if (!recharging) {
 					
 						dir = controller.attackArea.transform.position;
@@ -48,7 +47,7 @@ public class bow_Mob : Bow
 						}
 						Vector3 pos = new Vector3 (controller.weaponHand.transform.position.x + offSet, controller.weaponHand.transform.position.y);
 						GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
-						g.GetComponent<Entity> ().thisLevel = thisManage.currentLevel;
+						g.GetComponent<Arrow> ().thisLevel = thisManage.currentLevel;
 						g.transform.rotation = controller.weaponHand.transform.parent.rotation;
 						Vector3 dir2 = dir - g.transform.position;
 						

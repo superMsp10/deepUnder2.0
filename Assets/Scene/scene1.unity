@@ -1955,7 +1955,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: .5
   m_AngularDrag: 0
-  m_GravityScale: -.00999999978
+  m_GravityScale: 10
   m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -15149,7 +15149,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4d6eea763b7dbd64592a210d5870ef9b, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 1
@@ -62165,7 +62165,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1524767619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -74.9000015, y: -47, z: 0}
+  m_LocalPosition: {x: -91.8000031, y: -52.9000015, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 364474421}
@@ -79797,8 +79797,7 @@ Prefab:
     - target: {fileID: 11400000, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 4d6eea763b7dbd64592a210d5870ef9b,
-        type: 3}
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 11400002, guid: e5f145320dafb55428a51cf78713600d, type: 2}
       propertyPath: m_Transition
       value: 3

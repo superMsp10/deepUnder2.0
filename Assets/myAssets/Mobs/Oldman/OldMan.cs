@@ -20,6 +20,7 @@ public class OldMan : NPC
 		}
 		protected override  void updateSpeech (bool answer)
 		{
+
 				if (speakStage == "started") {
 						if (answer) {
 								follow_talk ();
@@ -79,7 +80,7 @@ public class OldMan : NPC
 		{
 				answer1Text.text = "Yes";
 				answer2Text.text = "No";
-				talk.text = "Good choice, follow these arrows I have put down";
+				talk.text = "Good choice, follow these signs I have put down";
 				speakStage = "follow";
 				changeTalkBoxState (true);
 
@@ -103,7 +104,7 @@ public class OldMan : NPC
 				answer2Text.text = "I dont care";
 				flyAway ();
 				for (int i = 0; i < 80; i++) {
-						Invoke ("insBomb", Random.Range (3f, 10f));
+						Invoke ("insBomb", Random.Range (0.5f, 10f));
 				}
 				Invoke ("insHenchMan", 5);
 		}
@@ -117,8 +118,11 @@ public class OldMan : NPC
 
 		void insBomb ()
 		{
-				Vector2 pos = new Vector2 (transform.position.x + Random.Range (-60, 100), transform.position.y + Random.Range (20, 80));
+				Vector2 pos;
+				
+				pos = new Vector2 (transform.position.x + Random.Range (-60, 100), transform.position.y + Random.Range (20, 80));
 				Instantiate (bomb, pos, Quaternion.identity);
+				
 		}
 
 		void insHenchMan ()
