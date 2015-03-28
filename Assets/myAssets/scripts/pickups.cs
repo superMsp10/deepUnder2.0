@@ -19,6 +19,7 @@ public class pickups : Entity
 				thisManage = gameManager.thisM;
 				thisInv = invManager.thisInv;
 				thisLevel.addEntity (this);
+	
 		}
 		void OnTriggerEnter2D (Collider2D other)
 		{

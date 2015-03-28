@@ -18,8 +18,7 @@ public class Weapon : Holdable
 		{
 				anim.SetTrigger ("Attack");
 				thisManage = gameManager.thisM;
-				if (thisManage.myPlayer != null)
-						Instantiate (gameObject, gameManager.thisM.myPlayer.transform.position, Quaternion.identity);
+			
 				return true;
 		
 		}

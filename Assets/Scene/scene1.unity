@@ -45514,6 +45514,11 @@ Prefab:
       propertyPath: thisLevel
       value: 
       objectReference: {fileID: 1802177990}
+    - target: {fileID: 11487184, guid: f25a75fe5cb496d4b879ccf60cfff642, type: 2}
+      propertyPath: thisHolding
+      value: 
+      objectReference: {fileID: 11444164, guid: 26a2597d338607c4694ea83f7670ec17,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f25a75fe5cb496d4b879ccf60cfff642, type: 2}
   m_RootGameObject: {fileID: 1282757383}

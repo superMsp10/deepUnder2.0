@@ -14,7 +14,6 @@ public class UIslot : MonoBehaviour
 		gameManager thisM;
 		Vector2 playerPos;
 		pickups tmp;
-
 		void Start ()
 		{
 

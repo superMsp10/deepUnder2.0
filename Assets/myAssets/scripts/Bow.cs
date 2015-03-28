@@ -34,10 +34,10 @@ public class Bow : Weapon
 		}
 		void Update ()
 		{
-
 				if (rotate) {
 						Vector3 mousePos = Input.mousePosition * -1;
 						controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0, 0, mousePos.y / Mathf.PI);
+						Debug.Log ("hi");
 
 
 				}
