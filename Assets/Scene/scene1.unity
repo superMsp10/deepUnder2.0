@@ -1203,7 +1203,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 0e27fc0807100ce4cacf86eb6c5ca455, type: 2}
       propertyPath: teleTo
       value: 
-      objectReference: {fileID: 1084739820}
+      objectReference: {fileID: 56897878}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e27fc0807100ce4cacf86eb6c5ca455, type: 2}
   m_RootGameObject: {fileID: 546195229}
@@ -23500,7 +23500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202083523bbec3f4ab5924f0b3b97bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleTo: {fileID: 1084739820}
+  teleTo: {fileID: 56897878}
   xOff: 0
   yOff: 0
   thisLev: {fileID: 928617123}
@@ -29616,7 +29616,7 @@ MonoBehaviour:
   MultiplierY: 50
   boostAmount: 70
   randomrange: 0
-  dir: {x: 0, y: 100}
+  dir: {x: 5, y: 100}
   loc: {fileID: 0}
 --- !u!61 &701739228
 BoxCollider2D:
@@ -45519,6 +45519,10 @@ Prefab:
       value: 
       objectReference: {fileID: 11444164, guid: 26a2597d338607c4694ea83f7670ec17,
         type: 2}
+    - target: {fileID: 11487184, guid: f25a75fe5cb496d4b879ccf60cfff642, type: 2}
+      propertyPath: amount
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f25a75fe5cb496d4b879ccf60cfff642, type: 2}
   m_RootGameObject: {fileID: 1282757383}
@@ -53512,7 +53516,7 @@ MonoBehaviour:
   despawnWithStage: 0
   thisHolding: {fileID: 11444164, guid: 26a2597d338607c4694ea83f7670ec17, type: 2}
   pickable: 1
-  amount: 100
+  amount: 15
   resetPickup: 5
   pickup: {fileID: 8300000, guid: 23e6fa6537b7b4d4caaced58ebf13699, type: 3}
 --- !u!61 &1282757388
@@ -86917,6 +86921,10 @@ Prefab:
     - target: {fileID: 21200000, guid: f47598b10fba0f241a4211fbfa92e0bf, type: 2}
       propertyPath: m_SortingLayerID
       value: 1535931219
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f47598b10fba0f241a4211fbfa92e0bf, type: 2}
+      propertyPath: dir.x
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f47598b10fba0f241a4211fbfa92e0bf, type: 2}

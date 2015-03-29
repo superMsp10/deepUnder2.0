@@ -43,7 +43,7 @@ MonoBehaviour:
   holdUI: {fileID: 21300000, guid: 54030ce01dd3cc04f80283d87035cd00, type: 3}
   thisManage: {fileID: 0}
   phisical: {fileID: 11487184, guid: f25a75fe5cb496d4b879ccf60cfff642, type: 2}
-  stackSize: 100
+  stackSize: 500
   weapon: 1
   controller: {fileID: 0}
   anim: {fileID: 0}

@@ -26,6 +26,8 @@ public class UIslot : MonoBehaviour
 		public void changeHolding (Holdable h)
 		{
 				if (h == null) {
+						if (holding != null)
+								holding.onDrop ();
 						slot.sprite = empty;
 						holding = null;
 						amount = 0;
@@ -44,6 +46,15 @@ public class UIslot : MonoBehaviour
 
 		public void changeHolding (Holdable h, int amounts)
 		{
+
+				if (h == null) {
+						if (holding != null)
+								holding.onDrop ();
+						slot.sprite = empty;
+						holding = null;
+						amount = 0;
+						amountText.text = "";
+				} 
 				if (holding != h) {
 						holding = h;
 						holding.onPickup ();

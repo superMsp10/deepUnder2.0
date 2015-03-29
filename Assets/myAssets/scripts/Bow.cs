@@ -21,6 +21,8 @@ public class Bow : Weapon
 				thisManage = gameManager.thisM;
 				anim = GetComponent<Animator > ();
 				thisAudio = AudioManager.thisAM.weapons;
+				rotate = true;
+				recharging = false;
 		}
 	
 		public virtual void shootSound ()
@@ -37,7 +39,6 @@ public class Bow : Weapon
 				if (rotate) {
 						Vector3 mousePos = Input.mousePosition * -1;
 						controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0, 0, mousePos.y / Mathf.PI);
-						Debug.Log ("hi");
 
 
 				}
