@@ -25,7 +25,7 @@ public class Bow : Weapon
 				recharging = false;
 		}
 	
-		public virtual void shootSound ()
+		protected void shootSound ()
 		{
 				if (thisAudio == null) {
 

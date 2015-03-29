@@ -57,6 +57,7 @@ public class Weapon : Holdable
 		
 				weaponIns.transform.SetParent (controller.weaponHand.transform);
 				weaponIns.transform.rotation = new Quaternion (0, 0, 0, 0);
+				weaponIns.transform.localScale = gameObject.transform.localScale;
 		}
 
 }

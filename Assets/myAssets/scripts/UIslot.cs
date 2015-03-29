@@ -26,6 +26,8 @@ public class UIslot : MonoBehaviour
 		public void changeHolding (Holdable h)
 		{
 				if (h == null) {
+						amountText.transform.parent.gameObject.SetActive (false);
+
 						if (holding != null)
 								holding.onDrop ();
 						slot.sprite = empty;
@@ -54,20 +56,22 @@ public class UIslot : MonoBehaviour
 						holding = null;
 						amount = 0;
 						amountText.text = "";
-				} 
-				if (holding != h) {
-						holding = h;
-						holding.onPickup ();
-				}
+				} else { 
+						if (holding != h) {
+								holding = h;
+								holding.onPickup ();
+						}
 
-				amount = amounts;
-				slot.sprite = h.holdUI;
-				amountText.text = amount.ToString ();
-				if (selected)
-						holding.onSelect ();
-				else
-						holding.onDeselect ();
-				
+						amount = amounts;
+						slot.sprite = h.holdUI;
+						amountText.text = amount.ToString ();
+						amountText.transform.parent.gameObject.SetActive (true);
+
+						if (selected)
+								holding.onSelect ();
+						else
+								holding.onDeselect ();
+				}
 		}
 
 		public void Use ()
