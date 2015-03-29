@@ -44,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55.9142456, y: -58.5343628, z: 0}
+  m_LocalPosition: {x: -7.5, y: -55.9000015, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 487184}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desD:
-    destroyOnAwake: 1
+    destroyOnAwake: 0
     awakeDestroyDelay: 60
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
   despawnWithStage: 0
   thisHolding: {fileID: 11444164, guid: 26a2597d338607c4694ea83f7670ec17, type: 2}
   pickable: 1
-  amount: 100
+  amount: 50
   resetPickup: 5
   pickup: {fileID: 8300000, guid: 23e6fa6537b7b4d4caaced58ebf13699, type: 3}
 --- !u!212 &21287182
