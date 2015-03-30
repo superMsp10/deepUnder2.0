@@ -34,7 +34,6 @@ public class NPC : Mob1
 
 		protected virtual void speechStart ()
 		{
-				speakStage = "started";
 
 
 		}

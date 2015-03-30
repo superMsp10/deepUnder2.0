@@ -6,6 +6,8 @@ public class shopSlot : UIslot
 		public Color highlighted;
 		public Color normal;
 		public shop thisShop;
+		public Holdable price;
+		public int priceAmount;
 
 		void Start ()
 		{
