@@ -9,6 +9,7 @@ public class Holdable : MonoBehaviour
 		public pickups phisical;
 		public int stackSize;
 		public bool weapon = false;
+		public string description;
 		public void Start ()
 		{
 				thisManage = gameManager.thisM;

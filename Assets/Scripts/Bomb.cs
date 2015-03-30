@@ -12,7 +12,6 @@ public class Bomb : Holdable
 		public GameObject explosion;			// Prefab of explosion effect.
 		public LayerMask whatExplode;
 		public float dmg;
-
 		public ParticleSystem particleIns;
 		public static ParticleSystem explosionFX;		// Reference to the particle system of the explosion effect.
 
@@ -27,7 +26,7 @@ public class Bomb : Holdable
 						return true;
 				}
 				return false;
-				
+
 		}
 
 		new void Start ()

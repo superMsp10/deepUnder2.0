@@ -11,7 +11,7 @@ public class UIslot : MonoBehaviour
 		public int amount;
 		public Text amountText;
 		public bool selected = false;
-		gameManager thisM;
+		protected	gameManager thisM;
 		Vector2 playerPos;
 		pickups tmp;
 		void Start ()
@@ -87,7 +87,7 @@ public class UIslot : MonoBehaviour
 				}
 		}
 
-		public void onClick ()
+		public virtual void onClick ()
 		{
 				if (holding != null) {
 						holding.onDrop ();

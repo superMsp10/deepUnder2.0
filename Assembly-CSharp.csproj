@@ -88,6 +88,7 @@
      <Compile Include="Assets\myAssets\scripts\pickups.cs" />
      <Compile Include="Assets\myAssets\scripts\questManager.cs" />
      <Compile Include="Assets\myAssets\scripts\shop.cs" />
+     <Compile Include="Assets\myAssets\scripts\shopSlot.cs" />
      <Compile Include="Assets\myAssets\scripts\slotCollection.cs" />
      <Compile Include="Assets\myAssets\scripts\tree.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
