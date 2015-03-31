@@ -34,7 +34,7 @@ public class shopSlot : UIslot
 
 		public void onBuy (int button)
 		{
-
+				AudioManager.thisAM.playerFX.PlayOneShot (clickSound);
 
 		}
 	

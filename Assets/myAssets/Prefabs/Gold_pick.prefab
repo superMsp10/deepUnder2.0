@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.4382324, y: -54.2243042, z: 0}
+  m_LocalPosition: {x: -18.3199997, y: -54.2200012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 463858}
@@ -135,7 +135,7 @@ MonoBehaviour:
   despawnWithStage: 0
   thisHolding: {fileID: 11417454, guid: 469afc01758fe344680ef0f96dc67689, type: 2}
   pickable: 1
-  amount: 1
+  amount: 10
   resetPickup: 5
   pickup: {fileID: 8300000, guid: 04a02cc6de662854d872d80ab23bcf75, type: 3}
 --- !u!212 &21263858
@@ -178,7 +178,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 149272721
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: da48e41bb4709f0419c91e4d8ce580a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

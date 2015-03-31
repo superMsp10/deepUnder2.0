@@ -12,8 +12,11 @@ public class shop : slotCollection
 				foreach (UIslot s in slots) {
 						shopSlot slot = s as shopSlot;
 						if (slot.selected) {
-								if (slot.price != null && player.takeItem (slot.price))
-										Debug.Log ("hi");
+								int am = player.takeItem (slot.price, slot.priceAmount);
+								if (slot.price != null && am == 0) {
+										slot.onBuy (am);
+
+								}
 						}
 
 				}

@@ -48,14 +48,22 @@ public class slotCollection : MonoBehaviour
 				return returning;
 		}
 
-		public bool takeItem (Holdable h)
+		public int takeItem (Holdable h, int amount)
 		{
 				
 				foreach (UIslot u in slots) {
-						if (u.holding == h)
-								return true;
+						if (u.holding == h) {
+								if (u.amount > amount) {
+										u.changeHolding (u.holding, u.amount - amount);
+										return 0;
+								} else {
+										int am = u.amount;
+										u.changeHolding (null);
+										return amount - am;
+								}
+						}
 				}
-				return false;
+				return amount;
 
 		}
 		public void changeSlot (Holdable h, int i)

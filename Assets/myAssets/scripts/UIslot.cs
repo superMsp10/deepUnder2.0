@@ -11,6 +11,7 @@ public class UIslot : MonoBehaviour
 		public int amount;
 		public Text amountText;
 		public bool selected = false;
+		public AudioClip clickSound;
 		protected	gameManager thisM;
 		Vector2 playerPos;
 		pickups tmp;
@@ -79,7 +80,7 @@ public class UIslot : MonoBehaviour
 				if (holding.onUse ()) {
 						amount -= 1;
 						amountText.text = amount.ToString ();
-
+						AudioManager.thisAM.playerFX.PlayOneShot (clickSound);
 						if (amount <= 0) {
 								changeHolding (null);
 								amountText.text = "";
