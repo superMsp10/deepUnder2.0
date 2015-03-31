@@ -14,7 +14,7 @@ public class UIslot : MonoBehaviour
 		public AudioClip clickSound;
 		protected	gameManager thisM;
 		Vector2 playerPos;
-		pickups tmp;
+		protected pickups tmp;
 		void Start ()
 		{
 

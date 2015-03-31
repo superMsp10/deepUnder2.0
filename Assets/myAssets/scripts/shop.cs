@@ -16,6 +16,9 @@ public class shop : slotCollection
 								if (slot.price != null && am == 0) {
 										slot.onBuy (am);
 
+								} else {
+
+									
 								}
 						}
 

@@ -56,10 +56,14 @@ public class slotCollection : MonoBehaviour
 								if (u.amount > amount) {
 										u.changeHolding (u.holding, u.amount - amount);
 										return 0;
-								} else {
+								} else if (u.amount < amount) {
 										int am = u.amount;
-										u.changeHolding (null);
+										
 										return amount - am;
+								} else {
+
+										u.changeHolding (null);
+										return 0;
 								}
 						}
 				}

@@ -46,7 +46,8 @@ public class Weapon : Holdable
 	
 		public override void  onDrop ()
 		{
-				controller.attacking = false;
+				if (controller != null)
+						controller.attacking = false;
 				Destroy (weaponIns);
 		}
 
