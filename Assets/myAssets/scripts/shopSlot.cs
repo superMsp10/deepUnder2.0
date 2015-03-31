@@ -30,6 +30,13 @@ public class shopSlot : UIslot
 						thisShop.description.text = thisShop.descriptionDefault;
 				}
 		}
+
+
+		public void onBuy (int button)
+		{
+
+
+		}
 	
 }
 

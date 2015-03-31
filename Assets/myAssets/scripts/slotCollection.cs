@@ -5,6 +5,13 @@ using UnityEngine.UI;
 public class slotCollection : MonoBehaviour
 {
 		public List<UIslot> slots;
+		protected invManager player;
+
+		void Start ()
+		{
+				player = invManager.thisInv;
+
+		}
 
 		public bool changeNextSlot (Holdable h)
 		{
@@ -41,6 +48,16 @@ public class slotCollection : MonoBehaviour
 				return returning;
 		}
 
+		public bool takeItem (Holdable h)
+		{
+				
+				foreach (UIslot u in slots) {
+						if (u.holding == h)
+								return true;
+				}
+				return false;
+
+		}
 		public void changeSlot (Holdable h, int i)
 		{
 

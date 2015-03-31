@@ -9,9 +9,16 @@ public class shop : slotCollection
 		public string descriptionDefault = "Click on the item to select it for desciption, press buy to buy one of that object and press buy * 5 to buy 5 of that item. Click on the item again if you want to deselect.";
 		public void onBuy (int button)
 		{
+				foreach (UIslot s in slots) {
+						shopSlot slot = s as shopSlot;
+						if (slot.selected) {
+								if (slot.price != null && player.takeItem (slot.price))
+										Debug.Log ("hi");
+						}
 
-
-
+				}
+		
+		
 		}
 }
 
