@@ -80,9 +80,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Tes
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -323,7 +323,7 @@ public class Mob1 : Entity
 				
 				if (other.gameObject.tag == "Destroyable") {
 						Resource temp = other.gameObject.GetComponent<Resource> ();
-						temp.dropMadeOf (Random.Range (0, 5));
+						temp.dropMadeOf ();
 				}
 
 				if (other.gameObject.tag == "Enemy") {

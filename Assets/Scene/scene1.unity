@@ -1821,6 +1821,7 @@ MonoBehaviour:
   amount: 12
   resetPickup: 5
   pickup: {fileID: 8300000, guid: 23e6fa6537b7b4d4caaced58ebf13699, type: 3}
+  dropRandom: 0
 --- !u!61 &51931800
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4192,7 +4193,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
-          m_IntArgument: 2
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4346,8 +4347,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &111422066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4595,8 +4599,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &119227412
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -6750,8 +6757,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &158845480
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -6992,8 +7002,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &160795525
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -7579,8 +7592,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &181010371
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8353,8 +8369,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &197095469
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -10462,8 +10481,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &264184158
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -15124,8 +15146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &403502460
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16267,8 +16292,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &416871413
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20660,8 +20688,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &491830645
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21003,8 +21034,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &507589987
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23254,7 +23288,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1666446076}
-  m_RootOrder: 19
+  m_RootOrder: 16
 --- !u!58 &541077206
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -23291,8 +23325,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &541077209
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -23388,8 +23425,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &545418255
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23637,7 +23677,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64b5edafbf1333b48a54a7ab35974e12, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64b5edafbf1333b48a54a7ab35974e12, type: 2}
@@ -26667,7 +26707,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ac96753c3d005134da5bc7b0a7dce8d0, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac96753c3d005134da5bc7b0a7dce8d0, type: 2}
@@ -27427,7 +27467,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1666446076}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!58 &642088353
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -27452,8 +27492,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &642088355
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29621,8 +29664,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &700742079
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -32350,8 +32396,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &761232908
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -32519,8 +32568,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &764601607
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -35220,8 +35272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &803317559
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -36912,8 +36967,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &834290634
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37033,8 +37091,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &835723647
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -39127,7 +39188,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1666446076}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!58 &906115031
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -39164,8 +39225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &906115034
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -39367,7 +39431,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64b5edafbf1333b48a54a7ab35974e12, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64b5edafbf1333b48a54a7ab35974e12, type: 2}
@@ -40252,7 +40316,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1666446076}
-  m_RootOrder: 18
+  m_RootOrder: 14
 --- !u!58 &947384323
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -40277,8 +40341,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &947384325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42135,8 +42202,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &982616825
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42572,8 +42642,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &995865514
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42712,6 +42785,7 @@ MonoBehaviour:
   amount: 100
   resetPickup: 5
   pickup: {fileID: 8300000, guid: 23e6fa6537b7b4d4caaced58ebf13699, type: 3}
+  dropRandom: 0
 --- !u!61 &1002600900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42897,8 +42971,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &1004379372
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -43153,7 +43230,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1666446076}
-  m_RootOrder: 13
+  m_RootOrder: 15
 --- !u!58 &1009620071
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -43190,8 +43267,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &1009620074
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -47184,7 +47264,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1666446076}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!58 &1108885856
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -47221,8 +47301,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &1108885859
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -47363,7 +47446,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64b5edafbf1333b48a54a7ab35974e12, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64b5edafbf1333b48a54a7ab35974e12, type: 2}
@@ -47407,7 +47490,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64b5edafbf1333b48a54a7ab35974e12, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64b5edafbf1333b48a54a7ab35974e12, type: 2}
@@ -47470,8 +47553,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &1113832818
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53152,8 +53238,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &1270993342
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -55190,8 +55279,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &1338476861
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -55465,8 +55557,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &1344530891
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -57605,7 +57700,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ac96753c3d005134da5bc7b0a7dce8d0, type: 2}
       propertyPath: m_RootOrder
-      value: 30
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac96753c3d005134da5bc7b0a7dce8d0, type: 2}
@@ -58009,8 +58104,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &1400351250
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -62869,7 +62967,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1666446076}
-  m_RootOrder: 14
+  m_RootOrder: 19
 --- !u!58 &1561187643
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -62906,8 +63004,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &1561187646
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -65298,7 +65399,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64b5edafbf1333b48a54a7ab35974e12, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64b5edafbf1333b48a54a7ab35974e12, type: 2}
@@ -66111,8 +66212,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &1616800371
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66711,8 +66815,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &1635246033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -68033,19 +68140,19 @@ Transform:
   - {fileID: 403502457}
   - {fileID: 764601603}
   - {fileID: 416871410}
-  - {fileID: 906115030}
   - {fileID: 2051530556}
+  - {fileID: 906115030}
   - {fileID: 507589984}
-  - {fileID: 1108885855}
   - {fileID: 642088352}
+  - {fileID: 1108885855}
   - {fileID: 181010368}
-  - {fileID: 1009620070}
-  - {fileID: 1561187642}
-  - {fileID: 1780235404}
   - {fileID: 2141530468}
-  - {fileID: 1004379368}
   - {fileID: 947384322}
+  - {fileID: 1009620070}
   - {fileID: 541077205}
+  - {fileID: 1004379368}
+  - {fileID: 1780235404}
+  - {fileID: 1561187642}
   m_Father: {fileID: 2100006789}
   m_RootOrder: 0
 --- !u!1001 &1667525828
@@ -71232,8 +71339,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &1762483611
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -71557,7 +71667,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -71585,9 +71695,10 @@ MonoBehaviour:
   despawnWithStage: 0
   thisHolding: {fileID: 11417454, guid: 469afc01758fe344680ef0f96dc67689, type: 2}
   pickable: 1
-  amount: 10
+  amount: 5
   resetPickup: 5
   pickup: {fileID: 8300000, guid: 04a02cc6de662854d872d80ab23bcf75, type: 3}
+  dropRandom: 1
 --- !u!212 &1767912986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -72623,7 +72734,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1666446076}
-  m_RootOrder: 15
+  m_RootOrder: 18
 --- !u!58 &1780235405
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -72660,8 +72771,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &1780235408
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -74841,8 +74955,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &1815820782
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -77463,8 +77580,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &1865803152
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -78553,7 +78673,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ac96753c3d005134da5bc7b0a7dce8d0, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac96753c3d005134da5bc7b0a7dce8d0, type: 2}
@@ -78838,7 +78958,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64b5edafbf1333b48a54a7ab35974e12, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64b5edafbf1333b48a54a7ab35974e12, type: 2}
@@ -81441,8 +81561,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!50 &1967934206
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -82212,8 +82335,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &1981061098
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83809,7 +83935,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ac96753c3d005134da5bc7b0a7dce8d0, type: 2}
       propertyPath: m_RootOrder
-      value: 28
+      value: 17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac96753c3d005134da5bc7b0a7dce8d0, type: 2}
@@ -85767,7 +85893,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1666446076}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!58 &2051530557
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -85792,8 +85918,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &2051530559
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -88534,7 +88663,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1666446076}
-  m_RootOrder: 16
+  m_RootOrder: 13
 --- !u!58 &2141530469
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -88559,8 +88688,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 100000, guid: 6802e7448bebf0f449dc312f081c0681, type: 2}
+  madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
+  initailize: 1
+  amount: 1
+  randomDrop: 0
 --- !u!61 &2141530471
 BoxCollider2D:
   m_ObjectHideFlags: 0

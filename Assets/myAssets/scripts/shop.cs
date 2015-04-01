@@ -12,13 +12,12 @@ public class shop : slotCollection
 				foreach (UIslot s in slots) {
 						shopSlot slot = s as shopSlot;
 						if (slot.selected) {
-								int am = player.takeItem (slot.price, slot.priceAmount);
-								if (slot.price != null && am == 0) {
-										slot.onBuy (am);
+								for (int i = button; i>0; i--) {
+										int am = player.takeItem (slot.price, slot.priceAmount);
+										if (slot.price != null && am == 0) {
+												slot.onBuy (am);
 
-								} else {
-
-									
+										}
 								}
 						}
 

@@ -10,6 +10,7 @@ public class pickups : Entity
 		public int amount = 1;
 		public float resetPickup = 5;
 		public AudioClip pickup;
+		public bool dropRandom;
 
 
 		void Start ()
@@ -19,6 +20,10 @@ public class pickups : Entity
 				thisManage = gameManager.thisM;
 				thisInv = invManager.thisInv;
 				thisLevel.addEntity (this);
+				if (dropRandom)
+						amount = Random.Range (1, amount);
+				pickable = false;
+				Invoke ("resetPick", 1f);
 	
 		}
 		void OnTriggerEnter2D (Collider2D other)
@@ -45,6 +50,7 @@ public class pickups : Entity
 
 								thisHolding.gameObject.GetComponent<Weapon> ().controller = thisManage.myPlayer.GetComponent<Mob1> ();
 						}
+		
 						int returnA = thisInv.addHoldable (thisHolding, amount);
 						if (returnA == 0) {
 								AudioManager.thisAM.playerFX.PlayOneShot (pickup);
@@ -57,6 +63,11 @@ public class pickups : Entity
 				}
 
 
+		}
+
+		void resetPick ()
+		{
+				pickable = true;
 		}
 
 		
