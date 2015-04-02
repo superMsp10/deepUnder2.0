@@ -90,19 +90,28 @@ public class Mob1 : Entity
 		protected virtual void checkNecesseries ()
 		{
 
-				if (thisLevel == null)
+				bodyParts = GetComponentsInChildren<BodyPart> ();
+				if (thisLevel == null) {
 						Debug.LogError ("no Level referenced for this entity: " + gameObject.name);
+				} else {
+						foreach (BodyPart b in bodyParts) {
+								b.thisLevel = thisLevel;
+						}
+
+				}
 				if (thisAnim == null && animated) {
 						Debug.LogError ("no animator is provided");
 				}
 				if (groundCheck == null)
 						Debug.Log ("no feets included");
-				bodyParts = GetComponentsInChildren<BodyPart> ();
-				foreach (BodyPart b in bodyParts) {
-						b.thisLevel = thisLevel;
+				
+				if (healthbar != null) {
+						healthbar.maxValue = thisAttributes.maxHP;
+						healthbar.value = thisAttributes.HP;
+				} else {
+
+						Debug.Log ("no health bar provided");
 				}
-				healthbar.maxValue = thisAttributes.maxHP;
-				healthbar.value = thisAttributes.HP;
 		}
 		
 		void Update ()
