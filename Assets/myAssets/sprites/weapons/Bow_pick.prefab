@@ -135,9 +135,10 @@ MonoBehaviour:
   despawnWithStage: 0
   thisHolding: {fileID: 11444164, guid: e6fff0ac149dac243a8d15394f12d159, type: 2}
   pickable: 1
-  amount: 100
+  amount: 10
   resetPickup: 5
   pickup: {fileID: 8300000, guid: 23e6fa6537b7b4d4caaced58ebf13699, type: 3}
+  dropRandom: 0
 --- !u!212 &21202394
 SpriteRenderer:
   m_ObjectHideFlags: 1

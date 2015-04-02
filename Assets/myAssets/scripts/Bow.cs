@@ -100,7 +100,8 @@ public class Bow : Weapon
 
 		public override void  onDeselect ()
 		{
-				controller.attacking = false;
+				if (controller != null)
+						controller.attacking = false;
 				if (weaponIns == null) {
 						insModel ();
 				} 

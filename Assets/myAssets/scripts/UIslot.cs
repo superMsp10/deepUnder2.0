@@ -19,6 +19,7 @@ public class UIslot : MonoBehaviour
 		{
 
 				thisM = gameManager.thisM;
+				selected = false;
 		}
 
 
@@ -72,6 +73,35 @@ public class UIslot : MonoBehaviour
 								holding.onSelect ();
 						else
 								holding.onDeselect ();
+				}
+		}
+
+		public void changeHolding (Holdable h, int amounts, bool update)
+		{
+		
+				if (h == null) {
+						if (holding != null)
+								holding.onDrop ();
+						slot.sprite = empty;
+						holding = null;
+						amount = 0;
+						amountText.text = "";
+				} else { 
+						if (holding != h) {
+								holding = h;
+								holding.onPickup ();
+						}
+			
+						amount = amounts;
+						slot.sprite = h.holdUI;
+						amountText.text = amount.ToString ();
+						amountText.transform.parent.gameObject.SetActive (true);
+						if (update) {
+								if (selected)
+										holding.onSelect ();
+								else
+										holding.onDeselect ();
+						}
 				}
 		}
 

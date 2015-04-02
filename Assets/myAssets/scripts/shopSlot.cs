@@ -15,7 +15,9 @@ public class shopSlot : UIslot
 		
 				thisM = gameManager.thisM;
 				if (holding != null)
-						changeHolding (holding);
+						changeHolding (holding, amount, false);
+				selected = false;
+
 		}
 		public virtual void onClick ()
 		{
