@@ -14,12 +14,11 @@ public class Enemy : Mob1
 		public void selectTarget ()
 		{
 				Collider2D[] enemies = Physics2D.OverlapCircleAll (transform.position, sight, whatEnemy);
-				if (enemies.Length >= 1) {
-						getTarget:
-						target = enemies [Random.Range (0, enemies.Length)].gameObject;
-						if (target == this.gameObject) {
-								goto getTarget;
+				foreach (Collider2D c in enemies) {
+						if (c.gameObject != gameObject) {
+								target = c.gameObject;
 						}
+
 				}
 		}
 

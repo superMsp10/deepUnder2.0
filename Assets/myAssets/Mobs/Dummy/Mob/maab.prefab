@@ -28,9 +28,9 @@ GameObject:
   - 4: {fileID: 400004}
   - 212: {fileID: 21200002}
   - 61: {fileID: 6100000}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FrontHand
-  m_TagString: Enemy
+  m_TagString: BodyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,9 +44,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 114: {fileID: 11472232}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Hand
-  m_TagString: Enemy
+  m_TagString: BodyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,9 +61,9 @@ GameObject:
   - 4: {fileID: 400008}
   - 212: {fileID: 21200004}
   - 61: {fileID: 6100002}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FrontHand
-  m_TagString: Enemy
+  m_TagString: BodyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,9 +77,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 114: {fileID: 11472230}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Hand
-  m_TagString: Enemy
+  m_TagString: BodyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,9 +94,9 @@ GameObject:
   - 4: {fileID: 400010}
   - 212: {fileID: 21200000}
   - 58: {fileID: 5800000}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Chest
-  m_TagString: Enemy
+  m_TagString: BodyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85ea93ada9e9cfb4bb975ea70c24669c, type: 3}
   m_Name: 
@@ -381,11 +381,11 @@ MonoBehaviour:
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
   customHierarchy: 0
-  stage: 0
+  stage: 1
   despawnWithStage: 0
   thisAttributes:
-    HP: 64.0500031
-    maxHP: 0
+    HP: 100
+    maxHP: 100
     Dmg: 0
     maxSped: 10
     moveForce: 5
@@ -445,7 +445,7 @@ MonoBehaviour:
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
   customHierarchy: 1
-  stage: 0
+  stage: 1
   despawnWithStage: 0
   thisMob: {fileID: 11400000}
 --- !u!114 &11472232
@@ -465,7 +465,7 @@ MonoBehaviour:
   thisLevel: {fileID: 0}
   thisManage: {fileID: 0}
   customHierarchy: 1
-  stage: 0
+  stage: 1
   despawnWithStage: 0
   thisMob: {fileID: 11400000}
 --- !u!114 &11497950

@@ -2,9 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\Mobs\Dummy\Dummy.cs">
     <Files>
-      <File FileName="Assets\myAssets\Mobs\Dummy\Dummy.cs" Line="8" Column="2" />
-      <File FileName="Assets\myAssets\scripts\Enemy.cs" Line="30" Column="3" />
-      <File FileName="Assets\myAssets\scripts\Mob1.cs" Line="123" Column="4" />
+      <File FileName="Assets\myAssets\Mobs\Dummy\Dummy.cs" Line="7" Column="3" />
+      <File FileName="Assets\myAssets\scripts\Enemy.cs" Line="19" Column="31" />
+      <File FileName="Assets\myAssets\scripts\Mob1.cs" Line="75" Column="4" />
+      <File FileName="Assets\myAssets\Mobs\Archer\Archer.cs" Line="70" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
