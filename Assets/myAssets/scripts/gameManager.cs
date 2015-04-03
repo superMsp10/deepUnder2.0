@@ -1,6 +1,7 @@
 ﻿
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class gameManager : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class gameManager : MonoBehaviour
 		public GameObject gameUI;
 		public GameObject pausedUi;
 		public GameObject deathScreen;
+		public Text score;
+		public Text pre_score;
+		public Holdable currency;
+		float surviveTime;
 
 		void Awake ()
 		{
@@ -44,6 +49,7 @@ public class gameManager : MonoBehaviour
 				else
 						changeLvl ("startMenu");
 				thisInv = invManager.thisInv;
+				pre_score.text = PlayerPrefs.GetInt ("highScore", 0).ToString ();
 
 		}
 
@@ -102,7 +108,8 @@ public class gameManager : MonoBehaviour
 
 		public void die ()
 		{
-
+				surviveTime = Time.time - surviveTime;
+				setScore ();
 				if (myPlayer != null) {
 						Destroy (myPlayer);
 				}
@@ -113,13 +120,13 @@ public class gameManager : MonoBehaviour
 
 				paused = false;
 				thisInv.clearInv ();
-				
 
 
 		}
 
 		public void spawn ()
 		{
+				surviveTime = Time.time;
 				SS = FindObjectsOfType<SpawnSpot> ();
 
 				currentLevel.camera1.SetActive (false);
@@ -200,6 +207,21 @@ public class gameManager : MonoBehaviour
 				
 				
 		}
+
+		void setScore ()
+		{
+				int gold = 100000 - thisInv.takeItem (currency, 100000);
+				int score_ = (int)(((surviveTime / 10) * gold) + gold);
+				score.text = score_.ToString ();
+				if (int.Parse (pre_score.text) < score_)
+						pre_score.text = score_.ToString ();
+
+		}
 		
+		void OnDestroy ()
+		{
+				PlayerPrefs.SetInt ("highScore", int.Parse (pre_score.text));
+
+		}
 		
 }
