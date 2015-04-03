@@ -13,9 +13,9 @@ public class NPC : Mob1
 		public Text talk;
 		public GameObject responses;
 		public Button  answer1;
-		public Text  answer1Text;
+		protected	Text  answer1Text;
 		public Button  answer2;
-		public Text  answer2Text;
+		protected	Text  answer2Text;
 		public bool talking = true;
 		public string speakStage = "start";
 		

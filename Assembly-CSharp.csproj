@@ -57,6 +57,7 @@
      <Compile Include="Assets\myAssets\Mobs\Dummy\Dummy.cs" />
      <Compile Include="Assets\myAssets\Mobs\Oldman\NPC.cs" />
      <Compile Include="Assets\myAssets\Mobs\Oldman\OldMan.cs" />
+     <Compile Include="Assets\myAssets\Mobs\Oldman\Ranach.cs" />
      <Compile Include="Assets\myAssets\Mobs\Oldman\textFade.cs" />
      <Compile Include="Assets\myAssets\scripts\AudioManager.cs" />
      <Compile Include="Assets\myAssets\scripts\BodyPart.cs" />
