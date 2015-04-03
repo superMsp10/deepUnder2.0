@@ -8,7 +8,7 @@ public class Arrow : Entity
 		
 		void OnCollisionEnter2D (Collision2D coll)
 		{
-				if (!hit && coll.gameObject.tag == "Player" || coll.gameObject.tag == "NPC") {
+				if (!hit && coll.gameObject.GetComponent<Mob1> () != null) {
 						Mob1 player = coll.gameObject.GetComponent<Mob1> ();
 						player.takeDmg (damage);
 						hit = true;

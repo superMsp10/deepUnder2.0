@@ -114,6 +114,7 @@ public class OldMan : NPC
 		{
 
 				AudioSource.PlayClipAtPoint (movingClip, transform.position, 1);
+				gameObject.SetActive (false);
 				changeLevel (tele);
 				particle.SetActive (true);
 				transform.position = where.position;
