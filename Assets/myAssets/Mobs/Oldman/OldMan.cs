@@ -9,6 +9,8 @@ public class OldMan : NPC
 		public GameObject particle;
 		public GameObject bomb;
 		public GameObject henchMan;
+		public level tele;
+		public Transform where;
 
 
 		protected override void speechStart ()
@@ -112,8 +114,9 @@ public class OldMan : NPC
 		{
 
 				AudioSource.PlayClipAtPoint (movingClip, transform.position, 1);
-				Destroy (this.gameObject, 5);
+				changeLevel (tele);
 				particle.SetActive (true);
+				transform.position = where.position;
 		}
 
 		void insBomb ()
