@@ -191,8 +191,9 @@ public class Mob1 : Entity
 		
 		}
 
-		public void die ()
+		public virtual void die ()
 		{
+
 				Destroy (gameObject);
 
 		}
@@ -308,14 +309,7 @@ public class Mob1 : Entity
 						collisionBoost thisBoost = other.gameObject.GetComponent<collisionBoost> ();
 						if (thisBoost == null)
 								Debug.LogError ("no collision boost script attached");
-						/*	float thisX = rigidbody2D.velocity.x / 2;
-			float thisY = rigidbody2D.velocity.y / 2;
-			
-			Vector2 force = new Vector2 (thisX +((thisBoost.multiX) * thisBoost.boostAmount)
-			                             , thisY + ((-thisBoost.multiY) * thisBoost.boostAmount));
-			rigidbody2D.AddForceAtPosition (force, transform.position);
-
-*/
+				
 						thisBoost.boost (rigidbody2D);
 				}
 		

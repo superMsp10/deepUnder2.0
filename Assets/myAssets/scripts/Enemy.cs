@@ -9,6 +9,7 @@ public class Enemy : Mob1
 		public bool jumpedSound = false;
 
 		public bool despawnWithDistance;
+		public bool flipMob = true;
 
 
 		public void selectTarget ()
@@ -122,13 +123,15 @@ public class Enemy : Mob1
 								move = (Vector2.right.x);
 								
 						}
-						if (move < 0 && turnR) {
-								flip ();
-						} else if (move > 0 && !turnR) {
-								flip ();
-						}
-						moveX (move);
+						if (flipMob) {
+								if (move < 0 && turnR) {
+										flip ();
+								} else if (move > 0 && !turnR) {
+										flip ();
+								}
+								moveX (move);
 				
+						}
 				}
 				if (targetPos.y > thisPos.y || targetPos.y < thisPos.y) {
 						jump (thisAttributes.jump * Random.Range (0, 30));
