@@ -23409,7 +23409,7 @@ MonoBehaviour:
   slot: {fileID: 1335552969}
   empty: {fileID: 21300000, guid: ff3ab08f72a7f074b8f76a6eb2094c2b, type: 3}
   outline: {fileID: 477431316}
-  amount: 10
+  amount: 30
   amountText: {fileID: 425641649}
   selected: 0
   clickSound: {fileID: 8300000, guid: 23e6fa6537b7b4d4caaced58ebf13699, type: 3}
@@ -23417,7 +23417,7 @@ MonoBehaviour:
   normal: {r: 1, g: 1, b: 1, a: .392156869}
   thisShop: {fileID: 413714175}
   price: {fileID: 11417454, guid: 469afc01758fe344680ef0f96dc67689, type: 2}
-  priceAmount: 50
+  priceAmount: 100
 --- !u!114 &477431316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73285,6 +73285,18 @@ Prefab:
     - target: {fileID: 11496374, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
       propertyPath: stage
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493174, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
+      propertyPath: priceAmount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493174, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
+      propertyPath: amount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 167942, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
