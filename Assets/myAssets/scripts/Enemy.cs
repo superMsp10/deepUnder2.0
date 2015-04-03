@@ -115,7 +115,7 @@ public class Enemy : Mob1
 
 				if (Mathf.Abs (targetPos.x - thisPos.x) > 0) {
 						float move = 0;
-						
+
 						if (targetPos.x < thisPos.x) {
 								move = (Vector2.right.x * -1);
 							
@@ -129,9 +129,9 @@ public class Enemy : Mob1
 								} else if (move > 0 && !turnR) {
 										flip ();
 								}
-								moveX (move);
 				
 						}
+						moveX (move);
 				}
 				if (targetPos.y > thisPos.y || targetPos.y < thisPos.y) {
 						jump (thisAttributes.jump * Random.Range (0, 30));
