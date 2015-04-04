@@ -431,6 +431,7 @@ GameObject:
   - 95: {fileID: 9590996}
   - 114: {fileID: 11491048}
   - 61: {fileID: 6191004}
+  - 114: {fileID: 11486288}
   m_Layer: 10
   m_Name: Archer
   m_TagString: Player
@@ -887,6 +888,22 @@ Animator:
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11486288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  madeOf: {fileID: 172580, guid: b5adecbc3cbbbe94b8f2a5b8ff1c5ab6, type: 2}
+  destroyOnDrop: 1
+  initailize: 1
+  amount: 10
+  randomDrop: 1
 --- !u!114 &11490996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1314,8 +1331,8 @@ MonoBehaviour:
   stage: 0
   despawnWithStage: 0
   thisAttributes:
-    HP: 500
-    maxHP: 500
+    HP: 50
+    maxHP: 50
     Dmg: 5
     maxSped: 10
     moveForce: 1
@@ -1357,7 +1374,9 @@ MonoBehaviour:
     m_Bits: 512
   target: {fileID: 0}
   sight: 60
+  jumpedSound: 0
   despawnWithDistance: 0
+  flipMob: 1
   bow: {fileID: 11496134}
 --- !u!114 &11496134
 MonoBehaviour:
@@ -1375,15 +1394,18 @@ MonoBehaviour:
   phisical: {fileID: 11402394, guid: fb9268c6619cdec459e9ac8c2c7ed7ad, type: 2}
   stackSize: 100
   weapon: 1
+  description: 
   controller: {fileID: 11491048}
   anim: {fileID: 0}
   arrow: {fileID: 103750, guid: 5fee344b6a979fb438b2a9b3e5e15452, type: 2}
   rotate: 1
+  shoot: {fileID: 0}
   force: 2000
-  dir: {x: 758.388184, y: 1593.1488}
   recharging: 0
   rof: 2
+  intialize: 0
   target: {fileID: 0}
+  turnR: 0
 --- !u!212 &21290996
 SpriteRenderer:
   m_ObjectHideFlags: 1

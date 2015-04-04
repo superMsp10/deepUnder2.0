@@ -27,6 +27,8 @@ public class gameManager : MonoBehaviour
 		public GameObject deathScreen;
 		public Text score;
 		public Text pre_score;
+		int lvlPassed = 0;
+		int died;
 		public Holdable currency;
 		float surviveTime;
 
@@ -108,6 +110,7 @@ public class gameManager : MonoBehaviour
 
 		public void die ()
 		{
+				died += 1;
 				surviveTime = Time.time - surviveTime;
 				setScore ();
 				if (myPlayer != null) {
@@ -126,6 +129,7 @@ public class gameManager : MonoBehaviour
 
 		public void spawn ()
 		{
+				lvlPassed += 1;
 				surviveTime = Time.time;
 				SS = FindObjectsOfType<SpawnSpot> ();
 
@@ -160,6 +164,7 @@ public class gameManager : MonoBehaviour
 
 				MySS = SS [Random.Range (0, SS.Length)];
 				myPlayer.transform.position = MySS.transform.position;
+				lvlPassed += 1;
 
 
 		}
@@ -211,7 +216,11 @@ public class gameManager : MonoBehaviour
 		void setScore ()
 		{
 				int gold = 100000 - thisInv.takeItem (currency, 100000);
-				int score_ = (int)(((surviveTime / 10) * gold) + gold);
+
+				int deathPass = lvlPassed / died;
+			
+				int sclaeSurvivalTime = (int)surviveTime / 5;
+				int score_ = (sclaeSurvivalTime + gold) * deathPass;
 				score.text = score_.ToString ();
 				if (int.Parse (pre_score.text) < score_)
 						pre_score.text = score_.ToString ();

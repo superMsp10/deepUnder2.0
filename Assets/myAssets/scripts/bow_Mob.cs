@@ -39,19 +39,18 @@ public class bow_Mob : Bow
 				if (!recharging) {
 					
 						dir = controller.attackArea.transform.position;
-						int offSet;
-						if (turnR) {
-								offSet = 2;
-						} else {
-								offSet = -2;
-						}
+					
 						shootSound ();
 
-						Vector3 pos = new Vector3 (controller.weaponHand.transform.position.x + offSet, controller.weaponHand.transform.position.y);
+						Vector3 pos = new Vector3 (controller.weaponHand.transform.position.x, controller.weaponHand.transform.position.y);
 						GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
 						g.GetComponent<Arrow> ().thisLevel = thisManage.currentLevel;
-						g.transform.rotation = controller.weaponHand.transform.parent.rotation;
+						if (turnR) {
+								g.transform.rotation = Quaternion.Inverse (controller.weaponHand.transform.parent.rotation);
+						} else {
+								g.transform.rotation = controller.weaponHand.transform.parent.rotation;
 
+						}
 						
 						
 						Vector3 dir2 = dir - g.transform.position;

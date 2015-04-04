@@ -9,6 +9,10 @@ public class OldMan : NPC
 		public GameObject particle;
 		public GameObject bomb;
 		public GameObject henchMan;
+		public GameObject henchMan2;
+		public GameObject insPos;
+
+
 		public level tele;
 		public Transform where;
 
@@ -105,8 +109,8 @@ public class OldMan : NPC
 				answer1Text.text = "Good";
 				answer2Text.text = "I dont care";
 				flyAway ();
-				for (int i = 0; i < 80; i++) {
-						Invoke ("insBomb", Random.Range (0.5f, 10f));
+				for (int i = 0; i < 100; i++) {
+						Invoke ("insBomb", Random.Range (0.5f, 9f));
 				}
 				Invoke ("insHenchMan", 5);
 		}
@@ -114,17 +118,29 @@ public class OldMan : NPC
 		{
 
 				AudioSource.PlayClipAtPoint (movingClip, transform.position, 1);
-				gameObject.SetActive (false);
-				changeLevel (tele);
 				particle.SetActive (true);
+				Invoke ("changeLev", 2f);
+
+
+		}
+
+		void changeLev ()
+		{
+				changeLevel (tele);
+
 				transform.position = where.position;
+				particle.SetActive (false);
+				transform.FindChild ("particles").gameObject.SetActive (false);
+
+				rigidbody2D.gravityScale = 2f;
+
 		}
 
 		void insBomb ()
 		{
 				Vector2 pos;
 				
-				pos = new Vector2 (transform.position.x + Random.Range (-60, 100), transform.position.y + Random.Range (20, 80));
+				pos = new Vector2 (insPos.transform.position.x + Random.Range (-60, 100), insPos.transform.position.y + Random.Range (20, 80));
 				Instantiate (bomb, pos, Quaternion.identity);
 				
 		}
@@ -132,6 +148,8 @@ public class OldMan : NPC
 		void insHenchMan ()
 		{
 				henchMan.SetActive (true);
+				henchMan2.SetActive (true);
+
 		}
 
 

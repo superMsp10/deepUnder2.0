@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -25,12 +25,7 @@ public  class level : MonoBehaviour
 				audioM = AudioManager.thisAM;
 		}
 			
-		void OnEnable ()
-		{
-				//if (thisSound != null)
-				//		thisSound.volume = audioM.getBMV ();	
-		}
-			
+
 		public virtual  void startLevel ()
 		{
 				thisChannel.clip = startMusic;
@@ -45,7 +40,7 @@ public  class level : MonoBehaviour
 		}
 
 
-		// Update is called once per frame
+
 		public void addEntity (Entity e)
 		{
 				if (!e.customHierarchy) {
@@ -66,10 +61,7 @@ public  class level : MonoBehaviour
 		
 		}
 
-		void Update ()
-		{
-	
-		}
+		
 
 		public void clearAllEntities ()
 		{

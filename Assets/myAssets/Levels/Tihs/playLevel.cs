@@ -10,6 +10,7 @@ public class playLevel : level
 
 		public List<CameraController> allBoundries;
 		protected CameraManeger thisCam;
+		public float startStage = 1f;
 
 		
 
@@ -19,7 +20,7 @@ public class playLevel : level
 				thisCam = thisManage.thisCamManange;
 				audioM = AudioManager.thisAM;
 				thisCam = thisManage.thisCamManange;
-				changeStage (stage);
+				changeStage (startStage);
 				thisChannel.clip = startMusic;
 				thisChannel.Play ();
 

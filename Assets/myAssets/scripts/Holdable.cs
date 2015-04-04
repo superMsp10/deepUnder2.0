@@ -36,7 +36,7 @@ public class Holdable : MonoBehaviour
 
 		public virtual void  onDrop ()
 		{
-
+				
 		}
 
 
