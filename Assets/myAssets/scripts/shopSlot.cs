@@ -19,7 +19,7 @@ public class shopSlot : UIslot
 				selected = false;
 
 		}
-		public virtual void onClick ()
+		public override void onClick ()
 		{
 				selected = !selected;
 				if (selected) {
