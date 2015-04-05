@@ -7,8 +7,6 @@ public class NPC : Mob1
 {
 		public float talkDistance;
 		public GameObject Target;
-		public List<Quest> quests;
-		public Quest currQuest;
 		public LayerMask whatPlayer;
 		public Text talk;
 		public GameObject responses;

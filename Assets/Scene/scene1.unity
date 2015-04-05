@@ -3893,6 +3893,10 @@ Prefab:
       propertyPath: thisLevel
       value: 
       objectReference: {fileID: 928617123}
+    - target: {fileID: 11487184, guid: f25a75fe5cb496d4b879ccf60cfff642, type: 2}
+      propertyPath: amount
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f25a75fe5cb496d4b879ccf60cfff642, type: 2}
   m_RootGameObject: {fileID: 700196941}
@@ -33809,7 +33813,7 @@ MonoBehaviour:
   despawnWithStage: 0
   thisHolding: {fileID: 11444164, guid: 26a2597d338607c4694ea83f7670ec17, type: 2}
   pickable: 1
-  amount: 100
+  amount: 30
   resetPickup: 5
   pickup: {fileID: 8300000, guid: 23e6fa6537b7b4d4caaced58ebf13699, type: 3}
   dropRandom: 0
@@ -54483,8 +54487,6 @@ MonoBehaviour:
   attackArea: {fileID: 0}
   talkDistance: 0
   Target: {fileID: 0}
-  quests: []
-  currQuest: {fileID: 0}
   whatPlayer:
     serializedVersion: 2
     m_Bits: 512
@@ -90955,8 +90957,6 @@ MonoBehaviour:
   attackArea: {fileID: 0}
   talkDistance: 0
   Target: {fileID: 0}
-  quests: []
-  currQuest: {fileID: 0}
   whatPlayer:
     serializedVersion: 2
     m_Bits: 512
