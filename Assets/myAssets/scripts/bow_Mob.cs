@@ -44,7 +44,12 @@ public class bow_Mob : Bow
 
 						Vector3 pos = new Vector3 (controller.weaponHand.transform.position.x, controller.weaponHand.transform.position.y);
 						GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
-						g.GetComponent<Arrow> ().thisLevel = thisManage.currentLevel;
+						Arrow thisA = g.GetComponent<Arrow> ();
+						if (thisA != null) {
+								thisA.thisLevel = thisManage.currentLevel;
+								thisA.controller = controller.gameObject;
+						}
+						
 						if (turnR) {
 								g.transform.rotation = Quaternion.Inverse (controller.weaponHand.transform.parent.rotation);
 						} else {

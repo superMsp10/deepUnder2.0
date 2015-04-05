@@ -45,14 +45,15 @@ MonoBehaviour:
   phisical: {fileID: 11487184, guid: f25a75fe5cb496d4b879ccf60cfff642, type: 2}
   stackSize: 500
   weapon: 1
+  description: 
   controller: {fileID: 0}
   anim: {fileID: 0}
   arrow: {fileID: 103750, guid: 5fee344b6a979fb438b2a9b3e5e15452, type: 2}
-  rotate: 1
+  rotate: 0
   shoot: {fileID: 8300000, guid: fe40c8990060beb4684ffa4b15e1b967, type: 3}
-  force: 800
+  force: 500
   recharging: 0
-  rof: .200000003
+  rof: .800000012
   intialize: 1
 --- !u!212 &21205212
 SpriteRenderer:

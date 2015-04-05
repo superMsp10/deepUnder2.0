@@ -73,6 +73,11 @@ public class Bow : Weapon
 						if (intialize) {
 								g.GetComponent<Entity> ().thisLevel = thisManage.currentLevel;
 						}
+						Arrow thisA = g.GetComponent<Arrow> ();
+						if (thisA != null) {
+								thisA.thisLevel = thisManage.currentLevel;
+								thisA.controller = controller.gameObject;
+						}
 						Vector3 dir2 = dir - pos;
 
 						g.rigidbody2D.AddForce (dir2 * force);

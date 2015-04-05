@@ -23,7 +23,7 @@ public class pickups : Entity
 				if (dropRandom)
 						amount = Random.Range (1, amount);
 				pickable = false;
-				Invoke ("resetPick", 1f);
+				Invoke ("resetPick", 0.5f);
 	
 		}
 		void OnTriggerEnter2D (Collider2D other)
