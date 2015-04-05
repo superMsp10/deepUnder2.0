@@ -28,10 +28,10 @@ public class AudioManager : MonoBehaviour
 		
 		void Start ()
 		{
-				bMusic.volume = PlayerPrefs.GetFloat ("BackgroundMusic", 0.5f);
+				bMusic.volume = PlayerPrefs.GetFloat ("BackgroundMusic", 0.2f);
 				buttonFX.volume = PlayerPrefs.GetFloat ("buttonFX", 0.2f);
 				playerFX.volume = PlayerPrefs.GetFloat ("playerFX", 0.3f);
-				weapons.volume = PlayerPrefs.GetFloat ("weaponFX", 0.5f);
+				weapons.volume = PlayerPrefs.GetFloat ("weaponFX", 0.2f);
 				
 
 				foreach (Slider s in backgroundMusicSliders) {
