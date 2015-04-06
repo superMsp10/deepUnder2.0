@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\Bow.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\Mobs\Archer\Arrow.cs">
     <Files>
-      <File FileName="Assets\myAssets\scripts\Bow.cs" Line="34" Column="35" />
-      <File FileName="Assets\myAssets\scripts\bow_Mob.cs" Line="43" Column="21" />
+      <File FileName="Assets\myAssets\Mobs\Archer\Arrow.cs" Line="41" Column="2" />
+      <File FileName="Assets\myAssets\scripts\Mob1.cs" Line="315" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -2169,7 +2169,7 @@ MonoBehaviour:
   despawnWithStage: 0
   thisHolding: {fileID: 11400000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
   pickable: 1
-  amount: 20
+  amount: 5
   resetPickup: 5
   pickup: {fileID: 8300000, guid: 23e6fa6537b7b4d4caaced58ebf13699, type: 3}
   dropRandom: 0
@@ -6775,8 +6775,8 @@ Transform:
   m_PrefabParentObject: {fileID: 472398, guid: 262f48d9ece87ce40a37b1ff66fb6513, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 134637728}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 79.0808105, y: -11.097681, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: .0902979448, w: -.995914817}
+  m_LocalPosition: {x: 81.0999985, y: -11.8999996, z: 0}
   m_LocalScale: {x: 4.86754084, y: 2.69255996, z: 1}
   m_Children: []
   m_Father: {fileID: 637359568}
@@ -79166,8 +79166,8 @@ MonoBehaviour:
   currentLevel: {fileID: 0}
   levels: []
   dead: 1
-  loadDefault: 0
-  defaultLev: {fileID: 928617123}
+  loadDefault: 1
+  defaultLev: {fileID: 824517291}
   currCamera: {fileID: 0}
   myPlayerIns: {fileID: 100004, guid: c1ea0b1ed06925648a41f6f4e43f359a, type: 2}
   myPlayer: {fileID: 0}
@@ -113650,6 +113650,10 @@ Prefab:
     - target: {fileID: 431812, guid: 17b0364c6b4da6f41a6be45368d1bc45, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415670, guid: 17b0364c6b4da6f41a6be45368d1bc45, type: 2}
+      propertyPath: amount
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 17b0364c6b4da6f41a6be45368d1bc45, type: 2}
