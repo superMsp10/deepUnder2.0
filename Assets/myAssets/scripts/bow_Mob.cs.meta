@@ -2,7 +2,15 @@ fileFormatVersion: 2
 guid: e67fff5e7be66b64e91330987f466863
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - holdUI: {instanceID: 0}
+  - thisManage: {instanceID: 0}
+  - phisical: {instanceID: 0}
+  - controller: {instanceID: 0}
+  - anim: {instanceID: 0}
+  - arrow: {instanceID: 0}
+  - shoot: {fileID: 8300000, guid: 23e6fa6537b7b4d4caaced58ebf13699, type: 3}
+  - target: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

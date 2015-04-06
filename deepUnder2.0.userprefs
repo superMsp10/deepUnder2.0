@@ -1,10 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\Weapon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\Bow.cs">
     <Files>
-      <File FileName="Assets\myAssets\scripts\Bow.cs" Line="4" Column="26" />
-      <File FileName="Assets\myAssets\scripts\bow_Mob.cs" Line="1" Column="1" />
-      <File FileName="Assets\myAssets\scripts\Weapon.cs" Line="4" Column="1" />
+      <File FileName="Assets\myAssets\scripts\Bow.cs" Line="34" Column="35" />
+      <File FileName="Assets\myAssets\scripts\bow_Mob.cs" Line="43" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
