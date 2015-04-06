@@ -9,6 +9,11 @@ public class Arrow : Entity
 		
 		void OnCollisionEnter2D (Collision2D coll)
 		{
+
+				if (coll.gameObject.tag == "Destroyable") {
+						Resource temp = coll.gameObject.GetComponent<Resource> ();
+						temp.dropMadeOf ();
+				}
 				Mob1 mab = coll.gameObject.GetComponent<Mob1> ();
 				if (!hit && coll.gameObject != controller && mab != null) {
 						Mob1 player = coll.gameObject.GetComponent<Mob1> ();

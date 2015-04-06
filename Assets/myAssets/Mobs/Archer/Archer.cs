@@ -65,6 +65,8 @@ public class Archer : Enemy
 						
 				} else {
 						selectTarget ();
+						attacking = false;
+						thisAttributes.moving = false;
 				}
 				end:
 				;
