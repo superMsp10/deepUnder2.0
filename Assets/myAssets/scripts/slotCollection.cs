@@ -28,16 +28,17 @@ public class slotCollection : MonoBehaviour
 
 		public int addHoldable (Holdable h, int amount)
 		{
-				int returning = 0;
+				
 				for (int i = 0; i <  slots.Count; i ++) {
 
 						if (slots [i].holding == null || slots [i].holding == h && slots [i].amount < h.stackSize) {
-								int left = slots [i].amount + amount;
-								if (left > h.stackSize) {
-										amount = left - h.stackSize;
+								int total = slots [i].amount + amount;
+								if (total > h.stackSize) {
+										amount = total - h.stackSize;
 										slots [i].changeHolding (h, h.stackSize);
+									
 								} else {
-										slots [i].changeHolding (h, left);
+										slots [i].changeHolding (h, total);
 										amount = 0;
 										return 0; 
 								}
@@ -45,7 +46,7 @@ public class slotCollection : MonoBehaviour
 						
 
 				}
-				return returning;
+				return amount;
 		}
 
 		public int takeItem (Holdable h, int amount)

@@ -27,6 +27,7 @@ public class gameManager : MonoBehaviour
 		public GameObject deathScreen;
 		public Text score;
 		public Text pre_score;
+		public bool resetScore;
 		int lvlPassed = 0;
 		int died;
 		public Holdable currency;
@@ -41,6 +42,10 @@ public class gameManager : MonoBehaviour
 
 		void Start ()
 		{		
+
+				if (resetScore) {
+						PlayerPrefs.DeleteAll ();
+				}
 //				PhotonNetwork.player.name = PlayerPrefs.GetString ("UserName", "EnterNameHere");
 				levels = FindObjectsOfType<level> ();
 				foreach (level l in levels) {

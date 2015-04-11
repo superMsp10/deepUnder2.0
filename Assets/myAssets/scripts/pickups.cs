@@ -52,11 +52,15 @@ public class pickups : Entity
 						}
 		
 						int returnA = thisInv.addHoldable (thisHolding, amount);
+		
 						if (returnA == 0) {
 								AudioManager.thisAM.playerFX.PlayOneShot (pickup);
 								Destroy (gameObject);
+						} else if (amount == 0) {
+								Destroy (gameObject);
 						} else {
-
+								pickable = false;
+								Invoke ("resetPick", 5f);
 								amount -= returnA;
 						}
 			

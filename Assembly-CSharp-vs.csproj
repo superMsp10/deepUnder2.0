@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Bomb.cs" />
      <Compile Include="Assets\myAssets\Entities\Door.cs" />
+     <Compile Include="Assets\myAssets\Entities\caheckPoint.cs" />
      <Compile Include="Assets\myAssets\Entities\nextLevelDoor.cs" />
      <Compile Include="Assets\myAssets\Entities\stageDoor.cs" />
      <Compile Include="Assets\myAssets\Levels\Tihs\Tihs.cs" />
