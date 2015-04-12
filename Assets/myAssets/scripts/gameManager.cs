@@ -124,13 +124,19 @@ public class gameManager : MonoBehaviour
 				dead = true;
 				if (currentLevel != null) {
 						currentLevel.camera1.SetActive (true);
+						
+
 				}
 
 				paused = false;
 				thisInv.clearInv ();
-
+				
 
 		}
+
+		
+
+		
 
 		public void spawn ()
 		{
