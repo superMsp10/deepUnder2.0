@@ -27,7 +27,7 @@ public class NPC : Mob1
 				answer1Text = answer1.GetComponentInChildren<Text> ();
 				answer2Text = answer2.GetComponentInChildren<Text> ();
 				speechStart ();
-		
+
 		}
 
 		protected virtual void speechStart ()
@@ -66,18 +66,20 @@ public class NPC : Mob1
 			
 				if (other.gameObject.tag == "Player")
 						changeTalkBoxState (true);
-				if (other.gameObject.tag == "teleport") {
-						Teleport teleSpot = other.GetComponent<Teleport> ();
-						teleSpot.teleport (gameObject);
+				if (thisAttributes.teleports) {
+						if (other.gameObject.tag == "teleport") {
+								Teleport teleSpot = other.GetComponent<Teleport> ();
+								teleSpot.teleport (gameObject);
 			
-				}
-				if (other.gameObject.tag == "boost") {
-						collisionBoost thisBoost = other.gameObject.GetComponent<collisionBoost> ();
-						if (thisBoost == null)
-								Debug.LogError ("no collision boost script attached");
-						thisBoost.boost (rigidbody2D);
-				}
+						}
 
+						if (other.gameObject.tag == "boost") {
+								collisionBoost thisBoost = other.gameObject.GetComponent<collisionBoost> ();
+								if (thisBoost == null)
+										Debug.LogError ("no collision boost script attached");
+								thisBoost.boost (rigidbody2D);
+						}
+				}
 				if (other.gameObject.tag == "NPC") {
 						NPC thisCannon = other.gameObject.GetComponent<NPC> ();
 						if (thisCannon == null)

@@ -225,7 +225,7 @@ MonoBehaviour:
   despawnWithStage: 0
   thisHolding: {fileID: 11400000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
   pickable: 1
-  amount: 10
+  amount: 1
   resetPickup: 5
   pickup: {fileID: 8300000, guid: 23e6fa6537b7b4d4caaced58ebf13699, type: 3}
   dropRandom: 0

@@ -16,6 +16,7 @@ public class mobAtributes
 		public int blunt, point, slash;
 		public int jump = 100;
 		public bool moving = false;
+		public bool teleports = true;
 		public int optTargetRange = 30;
 		public float  flyAmount = 0.5f;
 
@@ -300,22 +301,24 @@ public class Mob1 : Entity
 		void OnTriggerEnter2D (Collider2D other)
 		{
 
-				if (other.gameObject.tag == "teleport") {
-						Teleport teleSpot = other.GetComponent<Teleport> ();
-						teleSpot.teleport (gameObject);
+
+				if (thisAttributes.teleports) {
+						if (other.gameObject.tag == "teleport") {
+								Teleport teleSpot = other.GetComponent<Teleport> ();
+								teleSpot.teleport (gameObject);
 						
-				}
-				if (other.gameObject.tag == "boost") {
-						collisionBoost thisBoost = other.gameObject.GetComponent<collisionBoost> ();
-						if (thisBoost == null)
-								Debug.LogError ("no collision boost script attached");
+						}
+						if (other.gameObject.tag == "boost") {
+								collisionBoost thisBoost = other.gameObject.GetComponent<collisionBoost> ();
+								if (thisBoost == null)
+										Debug.LogError ("no collision boost script attached");
 				
-						thisBoost.boost (rigidbody2D);
-				}
+								thisBoost.boost (rigidbody2D);
+						}
 		
 				
 			
-			
+				}
 		
 		
 		}

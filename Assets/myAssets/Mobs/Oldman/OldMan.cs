@@ -99,7 +99,7 @@ public class OldMan : NPC
 				arrow.SetActive (true);
 				transform.FindChild ("particles").gameObject.SetActive (true);
 				bombPick.SetActive (true);
-				AudioSource.PlayClipAtPoint (jumpClip, transform.position, 1);
+				AudioSource.PlayClipAtPoint (jumpClip, transform.position, AudioManager.thisAM.playerFX.volume);
 		}
 
 		void kill ()
@@ -117,7 +117,7 @@ public class OldMan : NPC
 		void teleport ()
 		{
 
-				AudioSource.PlayClipAtPoint (movingClip, transform.position, 1);
+				AudioSource.PlayClipAtPoint (movingClip, transform.position, AudioManager.thisAM.playerFX.volume);
 				particle.SetActive (true);
 				Invoke ("changeLev", 2f);
 
