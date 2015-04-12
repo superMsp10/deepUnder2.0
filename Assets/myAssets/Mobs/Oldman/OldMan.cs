@@ -19,14 +19,18 @@ public class OldMan : NPC
 
 		protected override void speechStart ()
 		{
-				talk.text = "I have been waiting for you" + "\n" + "Follow Me";
-				answer1Text.text = "Yes";
-				answer2Text.text = "No";
-				speakStage = "started";
+				updateSpeech (false);
 		}
 		protected override  void updateSpeech (bool answer)
 		{
 
+				if (speakStage == "awake") {
+						talk.text = "I have been waiting for you" + "\n" + "Follow Me";
+						answer1Text.text = "Yes";
+						answer2Text.text = "No";
+						speakStage = "started";
+			
+				}
 				if (speakStage == "started") {
 						if (answer) {
 								follow_talk ();
@@ -65,8 +69,73 @@ public class OldMan : NPC
 
 				}
 
-				if (speakStage == "kill") {
+				if (speakStage == "kill2") {
+			
+						changeTalkBoxState (true);
+						talk.text = "Final words";
+						answer1Text.text = "NO";
+						answer2Text.text = "whats the worst that can happen";
+						speakStage = "kill2";
+						goto end;
+				}
+			
+				
+				if (speakStage == "plan") {
+						if (answer) {
 
+								changeTalkBoxState (true);
+								talk.text = "Go gear up and follow the signs, when you see a monster";
+								answer1Text.text = "Ok";
+								answer2Text.text = "Are you a monster";
+								speakStage = "plan";
+								goto end;
+						} else {
+								speakStage = "kill";
+								kill ();
+								goto end;
+						}
+				}
+			
+
+
+				if (speakStage == "forgive") {
+			
+						if (answer) {
+								changeTalkBoxState (true);
+								talk.text = "OK, boy i will let you go if you work with me";
+								answer1Text.text = "Ok";
+								answer2Text.text = "Not happenening";
+								speakStage = "plan";
+								goto end;
+						} else {
+								changeTalkBoxState (true);
+								talk.text = "It will all be over before you know it";
+								answer1Text.text = "Baloney";
+								answer2Text.text = "You cant touch this!";
+								speakStage = "kill2";
+								goto end;
+						}
+				}
+			
+
+
+				if (speakStage == "kill") {
+						if (answer) {
+								changeTalkBoxState (true);
+								talk.text = "Thats right boy, Henchmen!!";
+								answer1Text.text = "Im sorry, :0";
+								answer2Text.text = "1v1 me";
+								speakStage = "forgive";
+
+								goto end;
+						} else {
+								changeTalkBoxState (true);
+								talk.text = "It will all be over before you know it";
+								answer1Text.text = "Baloney";
+								answer2Text.text = "You cant touch this!";
+								speakStage = "kill2";
+								goto end;
+						}
 						
 				}
 				end:
@@ -79,6 +148,11 @@ public class OldMan : NPC
 				talk.text = "BOY! stop mocking me";
 				answer1Text.text = "Im sorry";
 				answer2Text.text = "No";
+
+		}
+
+		void mock2 ()
+		{
 
 		}
 
@@ -131,8 +205,11 @@ public class OldMan : NPC
 				transform.position = where.position;
 				particle.SetActive (false);
 				transform.FindChild ("particles").gameObject.SetActive (false);
-
+				talk.text = "Boy welcome to my lab, Muhahahaw";
+				answer1Text.text = "Oh no, Noo!";
+				answer2Text.text = "Bring it!";
 				rigidbody2D.gravityScale = 2f;
+
 
 		}
 

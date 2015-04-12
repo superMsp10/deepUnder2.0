@@ -83,7 +83,7 @@ public class NPC : Mob1
 				if (other.gameObject.tag == "NPC") {
 						NPC thisCannon = other.gameObject.GetComponent<NPC> ();
 						if (thisCannon == null)
-								Debug.LogError ("no NPC script attached but tag is NPC");
+								Debug.LogError ("no NPC script attached but tag is NPC :" + gameObject.name);
 					
 			
 				}
