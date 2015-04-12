@@ -13,6 +13,7 @@ public class Bow : Weapon
 		public float rof;
 		public bool intialize;
 		protected AudioSource thisAudio;
+		public bool initRotate = true;
 		
 
 	
@@ -63,12 +64,12 @@ public class Bow : Weapon
 						Vector3 pos = new Vector3 (controller.weaponHand.transform.position.x + offSet, controller.weaponHand.transform.position.y);
 						
 						GameObject g = (GameObject)Instantiate (arrow, pos, Quaternion.identity);
-					
-						g.transform.rotation = controller.weaponHand.transform.parent.rotation;
-						if (controller.turnR) {
-								g.transform.rotation = Quaternion.Inverse (g.transform.rotation);
-						} 
-						
+						if (initRotate) {
+								g.transform.rotation = controller.weaponHand.transform.parent.rotation;
+								if (controller.turnR) {
+										g.transform.rotation = Quaternion.Inverse (g.transform.rotation);
+								} 
+						}
 							
 						if (intialize) {
 								g.GetComponent<Entity> ().thisLevel = thisManage.currentLevel;

@@ -72,6 +72,7 @@ public class Mob1 : Entity
 				thisLevel.addEntity (this);
 				rigidbody2D.centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
+				thisAudio = AudioManager.thisAM.playerFX;
 
 		}
 
@@ -175,13 +176,19 @@ public class Mob1 : Entity
 
 		public virtual void playJumpSound ()
 		{
-		
+				if (thisAudio == null) {
+			
+						thisAudio = AudioManager.thisAM.playerFX;
+				}
 				thisAudio.PlayOneShot (jumpClip);
 		
 		}
 		public virtual void playLandSound ()
 		{
-		
+				if (thisAudio == null) {
+			
+						thisAudio = AudioManager.thisAM.playerFX;
+				}
 				thisAudio.PlayOneShot (landClip);
 		
 		}
@@ -259,6 +266,10 @@ public class Mob1 : Entity
 		public virtual void takeDmg (float damage)
 		{
 				thisAttributes.HP -= damage;
+				if (thisAudio == null) {
+			
+						thisAudio = AudioManager.thisAM.playerFX;
+				}
 				thisAudio.PlayOneShot (dmgClip);
 				healthbar.value = thisAttributes.HP;
 		}

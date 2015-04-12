@@ -74,8 +74,10 @@ public class Archer : Enemy
 		}
 		public override  void die ()
 		{
-				Resource r = GetComponent<Resource> ();
-				r.dropMadeOf ();
+				if (dropMadeOF) {
+						Resource r = GetComponent<Resource> ();
+						r.dropMadeOf ();
+				}
 				Destroy (gameObject);
 		
 		}

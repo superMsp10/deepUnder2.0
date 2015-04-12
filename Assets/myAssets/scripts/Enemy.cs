@@ -7,6 +7,7 @@ public class Enemy : Mob1
 		public GameObject target;
 		public float sight;
 		public bool jumpedSound = false;
+		public bool dropMadeOF = true;
 
 		public bool despawnWithDistance;
 		public bool flipMob = true;
@@ -16,7 +17,8 @@ public class Enemy : Mob1
 		{
 				Collider2D[] enemies = Physics2D.OverlapCircleAll (transform.position, sight, whatEnemy);
 				foreach (Collider2D c in enemies) {
-						if (c.gameObject != gameObject) {
+						BodyPart b = c.GetComponent<BodyPart> ();
+						if (b != null && b.thisMob != this) {
 								target = c.gameObject;
 						}
 

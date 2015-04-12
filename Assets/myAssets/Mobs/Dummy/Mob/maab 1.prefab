@@ -10,11 +10,10 @@ GameObject:
   - 4: {fileID: 400000}
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11487090}
   - 114: {fileID: 11407064}
   - 58: {fileID: 5822760}
   m_Layer: 10
-  m_Name: maab
+  m_Name: maab 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +29,7 @@ GameObject:
   - 4: {fileID: 400010}
   - 212: {fileID: 21200000}
   - 61: {fileID: 6187090}
-  - 114: {fileID: 11434336}
+  - 114: {fileID: 11411240}
   m_Layer: 14
   m_Name: Chest
   m_TagString: Enemy
@@ -264,10 +263,10 @@ MonoBehaviour:
   stage: 1
   despawnWithStage: 0
   thisAttributes:
-    HP: 25
-    maxHP: 25
+    HP: 150
+    maxHP: 150
     Dmg: 0
-    maxSped: 5
+    maxSped: 20
     moveForce: 1
     blunt: 0
     point: 0
@@ -308,7 +307,7 @@ MonoBehaviour:
   target: {fileID: 0}
   sight: 50
   jumpedSound: 0
-  dropMadeOF: 1
+  dropMadeOF: 0
   despawnWithDistance: 0
   flipMob: 1
   dialog:
@@ -334,6 +333,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   responses: {fileID: 122760}
+--- !u!114 &11411240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0704ac097e09374184929b5c78a6389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desD:
+    destroyOnAwake: 0
+    awakeDestroyDelay: 0
+  thisLevel: {fileID: 0}
+  thisManage: {fileID: 0}
+  customHierarchy: 1
+  stage: 0
+  despawnWithStage: 0
+  thisMob: {fileID: 11400000}
 --- !u!114 &11422760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -360,42 +379,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
---- !u!114 &11434336
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0704ac097e09374184929b5c78a6389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desD:
-    destroyOnAwake: 0
-    awakeDestroyDelay: 0
-  thisLevel: {fileID: 0}
-  thisManage: {fileID: 0}
-  customHierarchy: 1
-  stage: 0
-  despawnWithStage: 0
-  thisMob: {fileID: 11400000}
---- !u!114 &11487090
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  madeOf: {fileID: 172580, guid: b5adecbc3cbbbe94b8f2a5b8ff1c5ab6, type: 2}
-  destroyOnDrop: 1
-  initailize: 1
-  amount: 2
-  randomDrop: 1
 --- !u!114 &11497950
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -191,7 +191,7 @@ GameObject:
   - 4: {fileID: 490996}
   m_Layer: 14
   m_Name: attackArea
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,7 +206,7 @@ GameObject:
   - 4: {fileID: 490998}
   m_Layer: 14
   m_Name: holding
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -412,7 +412,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 491040}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: BodyParts
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -431,9 +431,8 @@ GameObject:
   - 95: {fileID: 9590996}
   - 114: {fileID: 11491048}
   - 61: {fileID: 6191004}
-  - 114: {fileID: 11486288}
   m_Layer: 10
-  m_Name: Archer
+  m_Name: Archer 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -888,22 +887,6 @@ Animator:
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11486288
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 191056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  madeOf: {fileID: 172580, guid: b5adecbc3cbbbe94b8f2a5b8ff1c5ab6, type: 2}
-  destroyOnDrop: 1
-  initailize: 1
-  amount: 10
-  randomDrop: 1
 --- !u!114 &11490996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1372,14 +1355,14 @@ MonoBehaviour:
   attackArea: {fileID: 191020}
   whatEnemy:
     serializedVersion: 2
-    m_Bits: 16896
+    m_Bits: 17920
   target: {fileID: 0}
-  sight: 60
+  sight: 100
   jumpedSound: 0
   despawnWithDistance: 0
   flipMob: 1
   bow: {fileID: 11496134}
-  dropMadeOF: 1
+  dropMadeOF: 0
 --- !u!114 &11496134
 MonoBehaviour:
   m_ObjectHideFlags: 1
