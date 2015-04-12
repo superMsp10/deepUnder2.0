@@ -42,15 +42,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdUI: {fileID: 21300000, guid: 54030ce01dd3cc04f80283d87035cd00, type: 3}
   thisManage: {fileID: 0}
-  phisical: {fileID: 11402394, guid: fb9268c6619cdec459e9ac8c2c7ed7ad, type: 2}
+  phisical: {fileID: 11402394, guid: 596986ea19fec394dad22338d1716cac, type: 2}
   stackSize: 10
   weapon: 1
+  description: 
   controller: {fileID: 0}
   anim: {fileID: 0}
   arrow: {fileID: 100000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
   rotate: 1
   shoot: {fileID: 8300000, guid: fe40c8990060beb4684ffa4b15e1b967, type: 3}
-  force: 10000
+  force: 50000
   recharging: 0
   rof: .5
   intialize: 0

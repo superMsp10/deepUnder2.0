@@ -28,6 +28,9 @@ public class gameManager : MonoBehaviour
 		public Text score;
 		public Text pre_score;
 		public bool resetScore;
+		public bool storyEnd;
+		public level end;
+		public bool loseItem;
 		int lvlPassed = 0;
 		int died;
 		public Holdable currency;
@@ -129,9 +132,15 @@ public class gameManager : MonoBehaviour
 				}
 
 				paused = false;
-				thisInv.clearInv ();
+				if (loseItem)
+						thisInv.clearInv ();
 				
 
+		}
+
+		public void  loseItems (bool lose)
+		{
+				loseItem = lose;
 		}
 
 		
