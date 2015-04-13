@@ -16,6 +16,7 @@ public  class level : MonoBehaviour
 		public int deathHeight = -200;
 		public bool killPlayerOnEnter = false;
 		public bool menuLevel = false;
+		public bool calScore = true;
 
 
 		// Use this for initialization

@@ -49842,6 +49842,7 @@ MonoBehaviour:
   deathHeight: -200
   killPlayerOnEnter: 0
   menuLevel: 0
+  calScore: 1
   stage: 1
   stageBoundires: []
   xVisible: []
@@ -54349,6 +54350,7 @@ MonoBehaviour:
   deathHeight: -200
   killPlayerOnEnter: 0
   menuLevel: 0
+  calScore: 1
   stage: 1
   stageBoundires: []
   xVisible: []
@@ -66839,7 +66841,7 @@ MonoBehaviour:
   slot: {fileID: 459295106}
   empty: {fileID: 21300000, guid: ff3ab08f72a7f074b8f76a6eb2094c2b, type: 3}
   outline: {fileID: 1155747784}
-  amount: 30
+  amount: 5
   amountText: {fileID: 1861354755}
   selected: 0
   clickSound: {fileID: 8300000, guid: 23e6fa6537b7b4d4caaced58ebf13699, type: 3}
@@ -76912,6 +76914,7 @@ MonoBehaviour:
   deathHeight: -200
   killPlayerOnEnter: 0
   menuLevel: 0
+  calScore: 1
   stage: 1
   stageBoundires: []
   xVisible: []
@@ -82347,7 +82350,7 @@ MonoBehaviour:
   slot: {fileID: 2088541099}
   empty: {fileID: 21300000, guid: ff3ab08f72a7f074b8f76a6eb2094c2b, type: 3}
   outline: {fileID: 1457587520}
-  amount: 30
+  amount: 5
   amountText: {fileID: 1858762675}
   selected: 0
   clickSound: {fileID: 8300000, guid: 23e6fa6537b7b4d4caaced58ebf13699, type: 3}
@@ -83683,6 +83686,7 @@ MonoBehaviour:
   deathHeight: -200
   killPlayerOnEnter: 1
   menuLevel: 1
+  calScore: 1
 --- !u!95 &1459637421
 Animator:
   serializedVersion: 3
@@ -86714,7 +86718,6 @@ MonoBehaviour:
   resetScore: 0
   storyEnd: 0
   end: {fileID: 0}
-  loseItem: 1
   currency: {fileID: 11417454, guid: 469afc01758fe344680ef0f96dc67689, type: 2}
 --- !u!4 &1539869379
 Transform:
@@ -97334,6 +97337,7 @@ MonoBehaviour:
   deathHeight: -200
   killPlayerOnEnter: 0
   menuLevel: 0
+  calScore: 0
   stage: 1
   stageBoundires: []
   xVisible: []
@@ -102047,6 +102051,7 @@ MonoBehaviour:
   deathHeight: -200
   killPlayerOnEnter: 0
   menuLevel: 0
+  calScore: 1
   stage: 1
   stageBoundires: []
   xVisible: []
@@ -114810,6 +114815,7 @@ MonoBehaviour:
   deathHeight: -200
   killPlayerOnEnter: 0
   menuLevel: 1
+  calScore: 1
 --- !u!1 &1978528149
 GameObject:
   m_ObjectHideFlags: 0

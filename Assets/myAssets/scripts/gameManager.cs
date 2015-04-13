@@ -30,7 +30,6 @@ public class gameManager : MonoBehaviour
 		public bool resetScore;
 		public bool storyEnd;
 		public level end;
-		public bool loseItem;
 		int lvlPassed = 0;
 		int died;
 		public Holdable currency;
@@ -120,7 +119,8 @@ public class gameManager : MonoBehaviour
 		{
 				died += 1;
 				surviveTime = Time.time - surviveTime;
-				setScore ();
+				if (currentLevel.calScore)
+						setScore ();
 				if (myPlayer != null) {
 						Destroy (myPlayer);
 				}
@@ -132,16 +132,11 @@ public class gameManager : MonoBehaviour
 				}
 
 				paused = false;
-				if (loseItem)
-						thisInv.clearInv ();
+				thisInv.clearInv ();
 				
 
 		}
 
-		public void  loseItems (bool lose)
-		{
-				loseItem = lose;
-		}
 
 		
 
@@ -149,7 +144,6 @@ public class gameManager : MonoBehaviour
 
 		public void spawn ()
 		{
-				lvlPassed += 1;
 				surviveTime = Time.time;
 				SS = FindObjectsOfType<SpawnSpot> ();
 
@@ -237,7 +231,7 @@ public class gameManager : MonoBehaviour
 		{
 				int gold = 100000 - thisInv.takeItem (currency, 100000);
 
-				int deathPass = lvlPassed / died;
+				int deathPass = lvlPassed * 100 / died;
 			
 				int sclaeSurvivalTime = (int)surviveTime / 5;
 				int score_ = (sclaeSurvivalTime + gold) * deathPass;

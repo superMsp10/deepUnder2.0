@@ -48,10 +48,10 @@ MonoBehaviour:
   description: A strong bow that shoots bombs. 100 gold coins
   controller: {fileID: 0}
   anim: {fileID: 0}
-  arrow: {fileID: 100000, guid: 08f594c7c40395d4593e569526ea6708, type: 2}
+  arrow: {fileID: 100000, guid: 4e0b7170160e42f4d8e1790b10e2d81a, type: 2}
   rotate: 0
   shoot: {fileID: 8300000, guid: fe40c8990060beb4684ffa4b15e1b967, type: 3}
-  force: 5000
+  force: 8000
   recharging: 0
   rof: 2
   intialize: 1

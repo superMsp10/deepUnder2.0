@@ -265,7 +265,7 @@ MonoBehaviour:
   thisAttributes:
     HP: 150
     maxHP: 150
-    Dmg: 0
+    Dmg: 5
     maxSped: 20
     moveForce: 1
     blunt: 0
@@ -275,7 +275,7 @@ MonoBehaviour:
     moving: 0
     teleports: 1
     optTargetRange: 5
-    flyAmount: 1
+    flyAmount: .5
   grounded: 0
   turnR: 0
   groundCheck:
@@ -303,7 +303,7 @@ MonoBehaviour:
   attackArea: {fileID: 0}
   whatEnemy:
     serializedVersion: 2
-    m_Bits: 17920
+    m_Bits: 17921
   target: {fileID: 0}
   sight: 50
   jumpedSound: 0
