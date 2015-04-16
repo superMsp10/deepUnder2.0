@@ -13,7 +13,6 @@ public class mobAtributes
 		public int Dmg;
 		public float maxSped = 10f;
 		public float moveForce = 5;
-		public int blunt, point, slash;
 		public int jump = 100;
 		public bool moving = false;
 		public bool teleports = true;
@@ -345,15 +344,15 @@ public class Mob1 : Entity
 
 				if (other.gameObject.tag == "Enemy") {
 						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, (transform.position.y - other.transform.position.y) * Random.Range (0, 5));
-						rigidbody2D.AddForce (force * Random.Range (0, 50));
-						takeDmg (1);
+						rigidbody2D.AddForce (force * Random.Range (0, thisAttributes.moveForce * 50));
+						takeDmg (thisAttributes.Dmg);
 		
 				}
 
 				if (other.gameObject.tag == "Player") {
 						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, Random.Range (0, 5));
-						rigidbody2D.AddForce (force * Random.Range (0, 50));
-						takeDmg (1);
+						rigidbody2D.AddForce (force * Random.Range (0, thisAttributes.moveForce * 50));
+						takeDmg (thisAttributes.Dmg);
 
 				}
 

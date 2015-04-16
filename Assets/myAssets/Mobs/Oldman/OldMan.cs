@@ -29,6 +29,7 @@ public class OldMan : NPC
 						answer1Text.text = "Yes";
 						answer2Text.text = "No";
 						speakStage = "started";
+						goto end;
 			
 				}
 				if (speakStage == "started") {
@@ -38,7 +39,12 @@ public class OldMan : NPC
 						} else {
 								speakStage = "kill";
 								kill ();
-								
+								talk.text = "FINE HAVE IT YOUR WAY!";
+								answer1Text.text = "Good";
+								answer2Text.text = "I dont care";
+								talking = false;
+								goto end;
+
 						}
 
 				}
@@ -63,6 +69,9 @@ public class OldMan : NPC
 								goto end;
 						} else {
 								speakStage = "kill";
+								talk.text = "FINE HAVE IT YOUR WAY!";
+								answer1Text.text = "Good";
+								answer2Text.text = "I dont care";
 								kill ();
 								goto end;
 						}
@@ -168,6 +177,7 @@ public class OldMan : NPC
 
 		void flyAway ()
 		{
+				talking = false;
 				rigidbody2D.gravityScale = -0.2f;
 				Invoke ("teleport", 5);
 				arrow.SetActive (true);
@@ -178,15 +188,15 @@ public class OldMan : NPC
 
 		void kill ()
 		{
-				changeTalkBoxState (true);
-				talk.text = "FINE HAVE IT YOUR WAY!";
-				answer1Text.text = "Good";
-				answer2Text.text = "I dont care";
+
 				flyAway ();
-				for (int i = 0; i < 100; i++) {
-						Invoke ("insBomb", Random.Range (0.5f, 9f));
+				for (int i = 0; i < 50; i++) {
+						Invoke ("insBomb", Random.Range (0.5f, 10f));
+						Invoke ("insBomb", Random.Range (1, 5));
 				}
 				Invoke ("insHenchMan", 5);
+				Invoke ("labMad", 9f);
+
 		}
 		void teleport ()
 		{
@@ -198,6 +208,14 @@ public class OldMan : NPC
 
 		}
 
+		void labMad ()
+		{
+				talking = true;
+				talk.text = "Boy welcome to my lab, Muhahahaw";
+				answer1Text.text = "Oh no, Noo!";
+				answer2Text.text = "Bring it!";
+		}
+
 		void changeLev ()
 		{
 				changeLevel (tele);
@@ -205,10 +223,10 @@ public class OldMan : NPC
 				transform.position = where.position;
 				particle.SetActive (false);
 				transform.FindChild ("particles").gameObject.SetActive (false);
-				talk.text = "Boy welcome to my lab, Muhahahaw";
-				answer1Text.text = "Oh no, Noo!";
-				answer2Text.text = "Bring it!";
+				
 				rigidbody2D.gravityScale = 2f;
+
+
 
 
 		}

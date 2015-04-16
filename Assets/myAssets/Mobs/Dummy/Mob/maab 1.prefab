@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11407064}
   - 58: {fileID: 5822760}
+  - 61: {fileID: 6144252}
   m_Layer: 10
   m_Name: maab 1
   m_TagString: Enemy
@@ -232,6 +233,17 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 36.3800011
   m_Center: {x: 0, y: 0}
+--- !u!61 &6144252
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!61 &6187090
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -265,12 +277,9 @@ MonoBehaviour:
   thisAttributes:
     HP: 150
     maxHP: 150
-    Dmg: 5
+    Dmg: 1
     maxSped: 20
     moveForce: 1
-    blunt: 0
-    point: 0
-    slash: 0
     jump: 100
     moving: 0
     teleports: 1
@@ -303,13 +312,14 @@ MonoBehaviour:
   attackArea: {fileID: 0}
   whatEnemy:
     serializedVersion: 2
-    m_Bits: 17921
+    m_Bits: 1536
   target: {fileID: 0}
   sight: 50
   jumpedSound: 0
   dropMadeOF: 0
   despawnWithDistance: 0
   flipMob: 1
+  randomAttributes: 1
   dialog:
   - Who are you?
   - Where did you come from?

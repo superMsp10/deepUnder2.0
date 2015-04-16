@@ -1333,12 +1333,9 @@ MonoBehaviour:
   thisAttributes:
     HP: 50
     maxHP: 50
-    Dmg: 5
+    Dmg: 1
     maxSped: 10
     moveForce: 1
-    blunt: 283
-    point: 43
-    slash: 176
     jump: 100
     moving: 0
     teleports: 1
@@ -1372,14 +1369,15 @@ MonoBehaviour:
   attackArea: {fileID: 191020}
   whatEnemy:
     serializedVersion: 2
-    m_Bits: 16896
+    m_Bits: 512
   target: {fileID: 0}
   sight: 60
   jumpedSound: 0
+  dropMadeOF: 1
   despawnWithDistance: 0
   flipMob: 1
+  randomAttributes: 0
   bow: {fileID: 11496134}
-  dropMadeOF: 1
 --- !u!114 &11496134
 MonoBehaviour:
   m_ObjectHideFlags: 1

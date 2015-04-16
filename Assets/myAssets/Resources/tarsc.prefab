@@ -1227,14 +1227,12 @@ MonoBehaviour:
   thisAttributes:
     HP: 100
     maxHP: 100
-    Dmg: 0
+    Dmg: 1
     maxSped: 60
     moveForce: 1
-    blunt: 283
-    point: 43
-    slash: 176
     jump: 7000
     moving: 0
+    teleports: 1
     optTargetRange: 30
     flyAmount: 2
   grounded: 0

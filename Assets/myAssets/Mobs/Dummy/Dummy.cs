@@ -16,6 +16,8 @@ public class Dummy : Enemy
 				rigidbody2D.centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
 				InvokeRepeating ("updateDialog", 0, 5f);
+				if (randomAttributes)
+						resetAttributes ();
 		
 		}
 		public override  void die ()

@@ -13,6 +13,8 @@ public class Archer : Enemy
 				rigidbody2D.centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
 				checkNecesseries ();
+				if (randomAttributes)
+						resetAttributes ();
 	
 		}
 

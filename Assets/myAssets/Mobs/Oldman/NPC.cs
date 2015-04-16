@@ -50,16 +50,14 @@ public class NPC : Mob1
 
 		public void changeTalkBoxState (bool response)
 		{
-
 				if (response) {
 
-						responses.SetActive (response);
-						talking = true;
+						responses.SetActive (true);
 
 				} else {
 						responses.SetActive (false);
-						talking = false;
 				}
+				
 		}
 		void OnTriggerEnter2D (Collider2D other)
 		{
@@ -100,17 +98,21 @@ public class NPC : Mob1
 		public void button1Click ()
 		{
 
-			
-				changeTalkBoxState (false);
-				updateSpeech (true);
+				if (talking) {
+
+						changeTalkBoxState (false);
+						updateSpeech (true);
+				}
 		}
 
 		public void button2Click ()
 		{
 
-	
-				changeTalkBoxState (false);
-				updateSpeech (false);
+				if (talking) {
+
+						changeTalkBoxState (false);
+						updateSpeech (false);
+				}
 
 
 		}

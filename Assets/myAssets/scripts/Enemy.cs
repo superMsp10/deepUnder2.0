@@ -11,15 +11,46 @@ public class Enemy : Mob1
 
 		public bool despawnWithDistance;
 		public bool flipMob = true;
+		public bool randomAttributes;
 
 
+		new void Start ()
+		{
+		
+				thisManage = gameManager.thisM;
+				checkNecesseries ();
+				thisLevel.addEntity (this);
+				rigidbody2D.centerOfMass = centerOfMass;
+				thisAnim = GetComponent<Animator> ();
+				thisAudio = AudioManager.thisAM.playerFX;
+				if (randomAttributes)
+						resetAttributes ();
+		
+		}
+		public void resetAttributes ()
+		{
+				thisAttributes.Dmg = Random.Range (1, 10);
+				thisAttributes.flyAmount = Random.Range (0.1f, 0.9f);
+				thisAttributes.HP = Random.Range (50f, 500f);
+				thisAttributes.maxHP = thisAttributes.HP;
+				thisAttributes.jump = Random.Range (100, 1000);
+				thisAttributes.maxSped = Random.Range (5f, 20f);
+				thisAttributes.moveForce = Random.Range (0.2f, 3f);
+
+
+
+
+
+
+
+		}
 		public void selectTarget ()
 		{
 				Collider2D[] enemies = Physics2D.OverlapCircleAll (transform.position, sight, whatEnemy);
 				foreach (Collider2D c in enemies) {
-						BodyPart b = c.GetComponent<BodyPart> ();
-						if (b != null && b.thisMob != this) {
-								target = c.gameObject;
+						Mob1 b = c.GetComponent<Mob1> ();
+						if (b != null && b.gameObject != this.gameObject) {
+								target = b.gameObject;
 						}
 
 				}
