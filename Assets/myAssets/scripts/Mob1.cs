@@ -343,15 +343,15 @@ public class Mob1 : Entity
 				}
 
 				if (other.gameObject.tag == "Enemy") {
-						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, (transform.position.y - other.transform.position.y) * Random.Range (0, 5));
-						rigidbody2D.AddForce (force * Random.Range (0, thisAttributes.moveForce * 50));
+						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
+						rigidbody2D.AddForce (force * Random.Range (100, 1000));
 						takeDmg (thisAttributes.Dmg);
 		
 				}
 
 				if (other.gameObject.tag == "Player") {
-						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, Random.Range (0, 5));
-						rigidbody2D.AddForce (force * Random.Range (0, thisAttributes.moveForce * 50));
+						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
+						rigidbody2D.AddForce (force * Random.Range (100, 1000));
 						takeDmg (thisAttributes.Dmg);
 
 				}

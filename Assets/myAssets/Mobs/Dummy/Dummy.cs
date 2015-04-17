@@ -11,13 +11,13 @@ public class Dummy : Enemy
 		{
 		
 				thisManage = gameManager.thisM;
-				checkNecesseries ();
 				thisLevel.addEntity (this);
 				rigidbody2D.centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
 				InvokeRepeating ("updateDialog", 0, 5f);
 				if (randomAttributes)
 						resetAttributes ();
+				checkNecesseries ();
 		
 		}
 		public override  void die ()

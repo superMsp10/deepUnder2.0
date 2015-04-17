@@ -283,7 +283,7 @@ MonoBehaviour:
     jump: 100
     moving: 0
     teleports: 1
-    optTargetRange: 5
+    optTargetRange: 1
     flyAmount: .5
   grounded: 0
   turnR: 0

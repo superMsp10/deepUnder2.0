@@ -5,19 +5,7 @@ public class Archer : Enemy
 {
 		public bow_Mob bow;
 
-		void Start ()
-		{
-	
-				thisManage = gameManager.thisM;
-				thisLevel.addEntity (this);
-				rigidbody2D.centerOfMass = centerOfMass;
-				thisAnim = GetComponent<Animator> ();
-				if (randomAttributes)
-						resetAttributes ();
-				checkNecesseries ();
-	
-		}
-	
+
 
 		protected override void TargetSight ()
 		{

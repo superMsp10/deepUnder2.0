@@ -29,7 +29,7 @@ public class Enemy : Mob1
 		}
 		public void resetAttributes ()
 		{
-				thisAttributes.Dmg = Random.Range (1, 10);
+				thisAttributes.Dmg = Random.Range (1, 20);
 				thisAttributes.flyAmount = Random.Range (0.1f, 0.9f);
 				thisAttributes.HP = Random.Range (50f, 500f);
 				thisAttributes.maxHP = thisAttributes.HP;
