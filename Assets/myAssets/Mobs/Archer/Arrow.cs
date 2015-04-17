@@ -14,10 +14,16 @@ public class Arrow : Entity
 						Resource temp = coll.gameObject.GetComponent<Resource> ();
 						temp.dropMadeOf ();
 				}
+				BodyPart b = coll.gameObject.GetComponent<BodyPart> ();
+				if (!hit && coll.gameObject != controller && b != null) {
+			
+						b.thisMob.takeDmg (damage);
+						hit = true;
+				}
 				Mob1 mab = coll.gameObject.GetComponent<Mob1> ();
 				if (!hit && coll.gameObject != controller && mab != null) {
-						Mob1 player = coll.gameObject.GetComponent<Mob1> ();
-						player.takeDmg (damage);
+					
+						mab.takeDmg (damage);
 						hit = true;
 				}
 					

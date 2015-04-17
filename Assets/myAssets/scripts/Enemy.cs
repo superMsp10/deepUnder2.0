@@ -18,13 +18,13 @@ public class Enemy : Mob1
 		{
 		
 				thisManage = gameManager.thisM;
-				checkNecesseries ();
 				thisLevel.addEntity (this);
 				rigidbody2D.centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
 				thisAudio = AudioManager.thisAM.playerFX;
 				if (randomAttributes)
 						resetAttributes ();
+				checkNecesseries ();
 		
 		}
 		public void resetAttributes ()
