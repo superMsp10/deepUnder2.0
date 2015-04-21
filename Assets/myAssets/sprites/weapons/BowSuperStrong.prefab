@@ -45,7 +45,7 @@ MonoBehaviour:
   phisical: {fileID: 11402394, guid: 596986ea19fec394dad22338d1716cac, type: 2}
   stackSize: 10
   weapon: 1
-  description: 
+  description: A legendary weapon said to be used by Zues himelf!$100
   controller: {fileID: 0}
   anim: {fileID: 0}
   arrow: {fileID: 100000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
@@ -55,6 +55,7 @@ MonoBehaviour:
   recharging: 0
   rof: .5
   intialize: 0
+  initRotate: 1
 --- !u!212 &21200326
 SpriteRenderer:
   m_ObjectHideFlags: 1
