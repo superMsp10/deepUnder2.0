@@ -27,6 +27,8 @@ public class OldMan : NPC
 		protected override  void updateSpeech (bool answer)
 		{
 
+
+
 				if (speakStage == "awake") {
 						talk.text = "I have been waiting for you" + "\n" + "Follow Me";
 						answer1Text.text = "Yes";
@@ -96,8 +98,8 @@ public class OldMan : NPC
 								speakStage = "plan";
 								goto end;
 						} else {
-								speakStage = "kill";
-								kill ();
+								speakStage = "kill2";
+								mock2 ();
 								goto end;
 						}
 				}
@@ -154,10 +156,7 @@ public class OldMan : NPC
 		void attack ()
 		{
 				hostile = false;
-				changeTalkBoxState (true);
-				talk.text = "How dare you attack ME!Now meet your end!";
-				answer1Text.text = "Im sorry";
-				answer2Text.text = "No i didnt";
+				
 				thisManage.deathEnd = true;
 				for (int i = 0; i < 25; i++) {
 						Invoke ("insBomb", Random.Range (0.5f, 10f));
@@ -169,7 +168,11 @@ public class OldMan : NPC
 
 		void mock2 ()
 		{
-
+				talking = false;
+				talk.text = "How dare you insult ME!";
+				answer1Text.text = "I didnt mean it that way";
+				answer2Text.text = " Are you a monster";
+				attack ();
 		}
 
 		void follow_talk ()
@@ -184,6 +187,8 @@ public class OldMan : NPC
 
 		void labHappy ()
 		{
+				talking = true;
+
 				talk.text = "Gear up, Follow the signs, and when you see a monster attack it!";
 				answer1Text.text = "Ok";
 				answer2Text.text = "Are you a monster";
@@ -286,9 +291,14 @@ public class OldMan : NPC
 				thisAudio.PlayOneShot (dmgClip);
 				healthbar.value = thisAttributes.HP;
 
-				if (stage2 && hostile)
+				if (stage2 && hostile) {
+						changeTalkBoxState (true);
+						talk.text = "How dare you attack ME!Now meet your end!";
+						answer1Text.text = "Im sorry";
+						answer2Text.text = "No i didnt mean to..";
+						talking = false;
 						attack ();
-
+				}
 		}
 
 }
