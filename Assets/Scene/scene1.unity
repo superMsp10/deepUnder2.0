@@ -13031,7 +13031,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 251373698}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: -46.7999992, y: -49.3899994, z: 0}
+  m_LocalPosition: {x: -46.7999992, y: -48.9500008, z: 0}
   m_LocalScale: {x: .333333313, y: 1360.75891, z: 1}
   m_Children: []
   m_Father: {fileID: 792239364}
@@ -63062,8 +63062,8 @@ MonoBehaviour:
   henchMan2: {fileID: 1954480718}
   insPos: {fileID: 1912271066}
   enemies:
-  - {fileID: 191056, guid: 748cc6d4792cb6344889797d3319dcce, type: 2}
-  - {fileID: 100000, guid: 4e0b7170160e42f4d8e1790b10e2d81a, type: 2}
+  - {fileID: 191056, guid: 093ce3e31c4f9ad48b9750cdaaf7ad68, type: 2}
+  - {fileID: 100000, guid: 08f594c7c40395d4593e569526ea6708, type: 2}
   tele: {fileID: 928617123}
   where: {fileID: 717210593}
   stage2: 0
@@ -105108,8 +105108,8 @@ Transform:
   m_PrefabParentObject: {fileID: 416058, guid: 17b0364c6b4da6f41a6be45368d1bc45, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1897719774}
-  m_LocalRotation: {x: 0, y: 0, z: .0636429861, w: -.997972786}
-  m_LocalPosition: {x: -295, y: -49.2000008, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: .137593746, w: -.990488768}
+  m_LocalPosition: {x: -313.700012, y: -70.1999969, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 824517289}

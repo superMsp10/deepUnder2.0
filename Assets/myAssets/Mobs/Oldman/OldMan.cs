@@ -17,6 +17,7 @@ public class OldMan : NPC
 		public level tele;
 		public Transform where;
 		public bool stage2 = false;
+		bool hostile = true;
 
 
 		protected override void speechStart ()
@@ -52,7 +53,11 @@ public class OldMan : NPC
 				}
 				if (speakStage == "follow") {
 						if (answer) {
+								speakStage = "plan";
+
 								flyAway ();
+								Invoke ("labHappy", 7f);
+
 								goto end;
 
 						} else {
@@ -85,7 +90,7 @@ public class OldMan : NPC
 						if (answer) {
 
 								changeTalkBoxState (true);
-								talk.text = "Go gear up and follow the signs, when you see a monster";
+								talk.text = "Gear up, Follow the signs, and when you see a monster attack it!";
 								answer1Text.text = "Ok";
 								answer2Text.text = "Are you a monster";
 								speakStage = "plan";
@@ -109,16 +114,12 @@ public class OldMan : NPC
 								speakStage = "plan";
 								goto end;
 						} else {
-								thisManage.deathEnd = true;
 								changeTalkBoxState (true);
 								talk.text = "Final words";
 								answer1Text.text = "NO";
 								answer2Text.text = "whats the worst that can happen";
 								speakStage = "kill2";
-								for (int i = 0; i < 50; i++) {
-										Invoke ("insBomb", Random.Range (0.5f, 10f));
-										Invoke ("insBomb", Random.Range (1, 5));
-								}
+								attack ();
 								goto end;
 						}
 				}
@@ -152,10 +153,17 @@ public class OldMan : NPC
 
 		void attack ()
 		{
+				hostile = false;
 				changeTalkBoxState (true);
 				talk.text = "How dare you attack ME!Now meet your end!";
 				answer1Text.text = "Im sorry";
 				answer2Text.text = "No i didnt";
+				thisManage.deathEnd = true;
+				for (int i = 0; i < 25; i++) {
+						Invoke ("insBomb", Random.Range (0.5f, 10f));
+						Invoke ("insBomb", Random.Range (1, 5));
+						Invoke ("insEnemy", Random.Range (5f, 50f));
+				}
 			
 		}
 
@@ -171,6 +179,15 @@ public class OldMan : NPC
 				talk.text = "Good choice, follow these signs I have put down";
 				speakStage = "follow";
 				changeTalkBoxState (true);
+
+		}
+
+		void labHappy ()
+		{
+				talk.text = "Gear up, Follow the signs, and when you see a monster attack it!";
+				answer1Text.text = "Ok";
+				answer2Text.text = "Are you a monster";
+				speakStage = "plan";
 
 		}
 
@@ -254,7 +271,9 @@ public class OldMan : NPC
 
 		void insEnemy ()
 		{
-				GameObject g = (GameObject)Instantiate (enemies [Random.Range (0, enemies.Length)], where.position, Quaternion.identity);
+				Vector2 pos = where.position;
+				pos = new Vector2 (pos.x + Random.Range (-60, 100), pos.y + Random.Range (20, 80));
+				GameObject g = (GameObject)Instantiate (enemies [Random.Range (0, enemies.Length)], pos, Quaternion.identity);
 				g.GetComponent<Entity> ().thisLevel = thisLevel;
 		}
 		public override void takeDmg (float damage)
@@ -267,7 +286,7 @@ public class OldMan : NPC
 				thisAudio.PlayOneShot (dmgClip);
 				healthbar.value = thisAttributes.HP;
 
-				if (stage2)
+				if (stage2 && hostile)
 						attack ();
 
 		}
