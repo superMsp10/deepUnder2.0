@@ -30,6 +30,7 @@ public class gameManager : MonoBehaviour
 		public bool resetScore;
 		public bool storyEnd;
 		public level end;
+		public bool deathEnd;
 		int lvlPassed = 0;
 		int died;
 		public Holdable currency;
@@ -73,10 +74,12 @@ public class gameManager : MonoBehaviour
 				if (!currentLevel.menuLevel) {
 						
 						if (dead && deathScreen.activeSelf == false) {
-
+								if (deathEnd) {
+										levelex (end);
+								}
 								menuReset ();
 								deathScreen.SetActive (true);
-			
+							
 						} else if (Input.GetKeyDown (KeyCode.Escape) && !dead) {
 								paused = ! paused;
 								changeMenu ();

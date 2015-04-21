@@ -80,20 +80,6 @@ public class OldMan : NPC
 
 				}
 
-				if (speakStage == "kill2") {
-			
-						changeTalkBoxState (true);
-						talk.text = "Final words";
-						answer1Text.text = "NO";
-						answer2Text.text = "whats the worst that can happen";
-						speakStage = "kill2";
-						for (int i = 0; i < 200; i++) {
-								Invoke ("insBomb", Random.Range (0.5f, 10f));
-								Invoke ("insBomb", Random.Range (1, 5));
-						}
-						goto end;
-				}
-			
 				
 				if (speakStage == "plan") {
 						if (answer) {
@@ -123,11 +109,16 @@ public class OldMan : NPC
 								speakStage = "plan";
 								goto end;
 						} else {
+								thisManage.deathEnd = true;
 								changeTalkBoxState (true);
-								talk.text = "Final words?";
+								talk.text = "Final words";
 								answer1Text.text = "NO";
 								answer2Text.text = "whats the worst that can happen";
 								speakStage = "kill2";
+								for (int i = 0; i < 50; i++) {
+										Invoke ("insBomb", Random.Range (0.5f, 10f));
+										Invoke ("insBomb", Random.Range (1, 5));
+								}
 								goto end;
 						}
 				}
@@ -162,13 +153,10 @@ public class OldMan : NPC
 		void attack ()
 		{
 				changeTalkBoxState (true);
-				talk.text = "How dare you attack ME!";
+				talk.text = "How dare you attack ME!Now meet your end!";
 				answer1Text.text = "Im sorry";
 				answer2Text.text = "No i didnt";
-				for (int i = 0; i<30; i++) {
-						Invoke ("insEnemy", Random.Range (0, 20f));
-
-				}
+			
 		}
 
 		void mock2 ()
@@ -201,7 +189,7 @@ public class OldMan : NPC
 		{
 
 				flyAway ();
-				for (int i = 0; i < 200; i++) {
+				for (int i = 0; i < 100; i++) {
 						Invoke ("insBomb", Random.Range (0.5f, 10f));
 						Invoke ("insBomb", Random.Range (1, 5));
 				}
@@ -247,6 +235,7 @@ public class OldMan : NPC
 				Vector2 pos;
 				if (stage2) {
 						pos = transform.position;
+						pos = new Vector2 (pos.x + Random.Range (-60, 100), pos.y + Random.Range (20, 80));
 				} else {
 						pos = new Vector2 (insPos.transform.position.x + Random.Range (-60, 100), insPos.transform.position.y + Random.Range (20, 80));
 				}
