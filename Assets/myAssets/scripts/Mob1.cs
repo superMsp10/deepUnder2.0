@@ -356,6 +356,13 @@ public class Mob1 : Entity
 
 				}
 
+				if (other.gameObject.tag == "NPC") {
+						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
+						rigidbody2D.AddForce (force * Random.Range (100, 1000));
+						takeDmg (thisAttributes.Dmg);
+			
+				}
+
 				
 
 

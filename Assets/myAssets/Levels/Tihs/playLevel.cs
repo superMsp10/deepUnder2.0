@@ -12,6 +12,9 @@ public class playLevel : level
 		protected CameraManeger thisCam;
 		public float startStage = 1f;
 
+		public GameObject[] stageCams;
+		public bool switchCams;
+
 		
 
 		public override  void startLevel ()
@@ -42,6 +45,8 @@ public class playLevel : level
 
 						e.changeS (l);
 				}
+				if (switchCams)
+						camera1 = stageCams [(int)stage - 1];
 		}
 	
 		public void addController (CameraController cam)

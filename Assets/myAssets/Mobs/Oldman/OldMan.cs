@@ -12,9 +12,11 @@ public class OldMan : NPC
 		public GameObject henchMan2;
 		public GameObject insPos;
 
+		public GameObject[] enemies;
 
 		public level tele;
 		public Transform where;
+		public bool stage2 = false;
 
 
 		protected override void speechStart ()
@@ -85,6 +87,10 @@ public class OldMan : NPC
 						answer1Text.text = "NO";
 						answer2Text.text = "whats the worst that can happen";
 						speakStage = "kill2";
+						for (int i = 0; i < 200; i++) {
+								Invoke ("insBomb", Random.Range (0.5f, 10f));
+								Invoke ("insBomb", Random.Range (1, 5));
+						}
 						goto end;
 				}
 			
@@ -118,9 +124,9 @@ public class OldMan : NPC
 								goto end;
 						} else {
 								changeTalkBoxState (true);
-								talk.text = "It will all be over before you know it";
-								answer1Text.text = "Baloney";
-								answer2Text.text = "You cant touch this!";
+								talk.text = "Final words?";
+								answer1Text.text = "NO";
+								answer2Text.text = "whats the worst that can happen";
 								speakStage = "kill2";
 								goto end;
 						}
@@ -128,23 +134,16 @@ public class OldMan : NPC
 			
 
 
-				if (speakStage == "kill") {
-						if (answer) {
-								changeTalkBoxState (true);
-								talk.text = "Thats right boy, Henchmen!!";
-								answer1Text.text = "Im sorry, :0";
-								answer2Text.text = "1v1 me";
-								speakStage = "forgive";
 
-								goto end;
-						} else {
-								changeTalkBoxState (true);
-								talk.text = "It will all be over before you know it";
-								answer1Text.text = "Baloney";
-								answer2Text.text = "You cant touch this!";
-								speakStage = "kill2";
-								goto end;
-						}
+				if (speakStage == "kill") {
+						
+						changeTalkBoxState (true);
+						talk.text = "Thats right boy, HENCHMEN!!";
+						answer1Text.text = "Im sorry, :0";
+						answer2Text.text = "1v1 me";
+						speakStage = "forgive";
+
+						goto end;
 						
 				}
 				end:
@@ -158,6 +157,18 @@ public class OldMan : NPC
 				answer1Text.text = "Im sorry";
 				answer2Text.text = "No";
 
+		}
+
+		void attack ()
+		{
+				changeTalkBoxState (true);
+				talk.text = "How dare you attack ME!";
+				answer1Text.text = "Im sorry";
+				answer2Text.text = "No i didnt";
+				for (int i = 0; i<30; i++) {
+						Invoke ("insEnemy", Random.Range (0, 20f));
+
+				}
 		}
 
 		void mock2 ()
@@ -190,7 +201,7 @@ public class OldMan : NPC
 		{
 
 				flyAway ();
-				for (int i = 0; i < 50; i++) {
+				for (int i = 0; i < 200; i++) {
 						Invoke ("insBomb", Random.Range (0.5f, 10f));
 						Invoke ("insBomb", Random.Range (1, 5));
 				}
@@ -226,7 +237,7 @@ public class OldMan : NPC
 				
 				rigidbody2D.gravityScale = 2f;
 
-
+				stage2 = true;
 
 
 		}
@@ -234,9 +245,14 @@ public class OldMan : NPC
 		void insBomb ()
 		{
 				Vector2 pos;
-				
-				pos = new Vector2 (insPos.transform.position.x + Random.Range (-60, 100), insPos.transform.position.y + Random.Range (20, 80));
-				Instantiate (bomb, pos, Quaternion.identity);
+				if (stage2) {
+						pos = transform.position;
+				} else {
+						pos = new Vector2 (insPos.transform.position.x + Random.Range (-60, 100), insPos.transform.position.y + Random.Range (20, 80));
+				}
+				GameObject g = (GameObject)Instantiate (bomb, pos, Quaternion.identity);
+				g.rigidbody2D.AddForce (new Vector2 (Random.Range (-8000, 8000), Random.Range (0, 8000)));
+				g.rigidbody2D.AddTorque (Random.Range (-80, 80));
 				
 		}
 
@@ -247,6 +263,25 @@ public class OldMan : NPC
 
 		}
 
+		void insEnemy ()
+		{
+				GameObject g = (GameObject)Instantiate (enemies [Random.Range (0, enemies.Length)], where.position, Quaternion.identity);
+				g.GetComponent<Entity> ().thisLevel = thisLevel;
+		}
+		public override void takeDmg (float damage)
+		{
+				thisAttributes.HP -= damage;
+				if (thisAudio == null) {
+			
+						thisAudio = AudioManager.thisAM.playerFX;
+				}
+				thisAudio.PlayOneShot (dmgClip);
+				healthbar.value = thisAttributes.HP;
+
+				if (stage2)
+						attack ();
+
+		}
 
 }
 
