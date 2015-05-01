@@ -36,6 +36,7 @@ public class gameManager : MonoBehaviour
 		public Holdable currency;
 		float surviveTime;
 
+
 		void Awake ()
 		{
 				if (thisM == null) {
@@ -249,6 +250,23 @@ public class gameManager : MonoBehaviour
 				myPlayerIns.GetComponent<Tarsc> ().cameraM.playerCamera.orthographicSize = f;
 				
 
+		}
+
+		public void changeCamera ()
+		{
+				if (currCamera == thisCamManange.playerCamera) {
+						thisCamManange.playerCamera.gameObject.SetActive (false);
+						currentLevel.camera1.SetActive (true);
+						currCamera = currentLevel.camera1.camera;
+				} else {
+						thisCamManange.playerCamera.gameObject.SetActive (true);
+						currentLevel.camera1.SetActive (false);
+						currCamera = thisCamManange.playerCamera;
+
+
+				}
+		
+		
 		}
 		
 		void OnDestroy ()
