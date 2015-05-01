@@ -26,6 +26,9 @@ public class gameManager : MonoBehaviour
 		public GameObject pausedUi;
 		public GameObject deathScreen;
 		public Text score;
+		public Text diedAmount;
+
+		public Text pauseScore;
 		public Text pre_score;
 		public bool resetScore;
 		public bool storyEnd;
@@ -35,6 +38,8 @@ public class gameManager : MonoBehaviour
 		int died;
 		public Holdable currency;
 		float surviveTime;
+		float spawnTime;
+
 
 
 		void Awake ()
@@ -107,6 +112,8 @@ public class gameManager : MonoBehaviour
 						gameUI.SetActive (false);
 						pausedUi.SetActive (true);
 						deathScreen.SetActive (false);
+						if (currentLevel.calScore)
+								setScore ();
 				}
 				
 		}
@@ -121,8 +128,7 @@ public class gameManager : MonoBehaviour
 
 		public void die ()
 		{
-				died += 1;
-				surviveTime = Time.time - surviveTime;
+				died ++;
 				if (currentLevel.calScore)
 						setScore ();
 				if (myPlayer != null) {
@@ -148,7 +154,8 @@ public class gameManager : MonoBehaviour
 
 		public void spawn ()
 		{
-				surviveTime = Time.time;
+				spawnTime = Time.time;
+
 				SS = FindObjectsOfType<SpawnSpot> ();
 
 				currentLevel.camera1.SetActive (false);
@@ -233,13 +240,19 @@ public class gameManager : MonoBehaviour
 
 		void setScore ()
 		{
+				surviveTime = Time.time - spawnTime;
+
+
 				int gold = 100000 - thisInv.takeItem (currency, 100000);
 
-				int deathPass = lvlPassed * 100 / died;
-			
-				int sclaeSurvivalTime = (int)surviveTime / 5;
-				int score_ = (sclaeSurvivalTime + gold) * deathPass;
+				int deathPass = lvlPassed * (100);
+				int sclaeSurvivalTime = (int)surviveTime / 20;
+				int score_ = (sclaeSurvivalTime + gold) + deathPass;
+				diedAmount.text = died.ToString ();
+
 				score.text = score_.ToString ();
+				pauseScore.text = score_.ToString ();
+
 				if (int.Parse (pre_score.text) < score_)
 						pre_score.text = score_.ToString ();
 
