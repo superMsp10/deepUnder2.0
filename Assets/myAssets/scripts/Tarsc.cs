@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Tarsc : Mob1
 {
-		CameraManeger cameraM;
+		public CameraManeger cameraM;
 		public Transform[] fGroundCheck;
 		public Transform[] lGroundCheck;
 

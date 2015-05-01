@@ -243,6 +243,13 @@ public class gameManager : MonoBehaviour
 						pre_score.text = score_.ToString ();
 
 		}
+
+		public void changeCamSize (float f)
+		{
+				myPlayerIns.GetComponent<Tarsc> ().cameraM.playerCamera.orthographicSize = f;
+				
+
+		}
 		
 		void OnDestroy ()
 		{

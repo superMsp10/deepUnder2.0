@@ -1263,6 +1263,7 @@ MonoBehaviour:
   weaponHand: {fileID: 176484}
   attacking: 0
   attackArea: {fileID: 175744}
+  cameraM: {fileID: 11474726}
   fGroundCheck:
   - {fileID: 400000}
   - {fileID: 489410}
@@ -1624,7 +1625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisLevl: {fileID: 0}
   target: {fileID: 100004}
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 2000000}
   minSize: 0
   xOff: 0
   maxSize: 0
