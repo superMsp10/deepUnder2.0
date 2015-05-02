@@ -64815,7 +64815,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1084739819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1182, y: -14, z: 0}
+  m_LocalPosition: {x: -149.300003, y: -14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 928617122}
@@ -88486,7 +88486,7 @@ MonoBehaviour:
   currentLevel: {fileID: 0}
   levels: []
   dead: 1
-  loadDefault: 1
+  loadDefault: 0
   defaultLev: {fileID: 824517291}
   currCamera: {fileID: 0}
   myPlayerIns: {fileID: 100004, guid: c1ea0b1ed06925648a41f6f4e43f359a, type: 2}
@@ -112063,7 +112063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1897719775
 Transform:
   m_ObjectHideFlags: 0
