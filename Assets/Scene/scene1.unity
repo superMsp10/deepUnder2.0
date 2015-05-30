@@ -534,7 +534,7 @@ RectTransform:
   m_LocalScale: {x: .0500000007, y: .0500000007, z: 1}
   m_Children: []
   m_Father: {fileID: 1954881110}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 7.19999981, y: 453.200012}
@@ -28550,11 +28550,11 @@ RectTransform:
   m_LocalScale: {x: .0500000007, y: .0500000007, z: 1}
   m_Children: []
   m_Father: {fileID: 1954881110}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 23.5699997, y: 305.480011}
-  m_SizeDelta: {x: 588.200012, y: 71.1999969}
+  m_AnchoredPosition: {x: 14.3699999, y: 305.480011}
+  m_SizeDelta: {x: 956.099976, y: 71.1999969}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &464015622
 MonoBehaviour:
@@ -28582,7 +28582,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'After you are moving fast jump here
+  m_Text: 'After you have enough momenteum jump over the first door
 
 '
 --- !u!222 &464015623
@@ -38070,7 +38070,7 @@ RectTransform:
   m_LocalScale: {x: .0500000007, y: .0500000007, z: 1}
   m_Children: []
   m_Father: {fileID: 1954881110}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 222, y: 456.899994}
@@ -41799,7 +41799,7 @@ RectTransform:
   m_LocalScale: {x: .0500000007, y: .0500000007, z: 1}
   m_Children: []
   m_Father: {fileID: 1954881110}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 7.19999981, y: 461.799988}
@@ -43428,11 +43428,11 @@ RectTransform:
   m_LocalScale: {x: .0500000007, y: .0500000007, z: 1}
   m_Children: []
   m_Father: {fileID: 1954881110}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -5.65002441, y: 305.47998}
-  m_SizeDelta: {x: 588.200012, y: 71.1999969}
+  m_AnchoredPosition: {x: .360000014, y: 316.380005}
+  m_SizeDelta: {x: 655.880005, y: 71.1999969}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &713004238
 MonoBehaviour:
@@ -43460,7 +43460,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Infinite loops help you gain speed
+  m_Text: 'Infinite loops help you gain momenteum
 
 '
 --- !u!222 &713004239
@@ -70834,7 +70834,7 @@ RectTransform:
   m_LocalScale: {x: .0500000007, y: .0500000007, z: 1}
   m_Children: []
   m_Father: {fileID: 1954881110}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -40.2000008, y: 460.799988}
@@ -71339,7 +71339,7 @@ RectTransform:
   m_LocalScale: {x: .0500000007, y: .0500000007, z: 1}
   m_Children: []
   m_Father: {fileID: 1954881110}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 160.800003, y: 458}
@@ -79893,8 +79893,8 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 73.5999985, y: 152.899994}
-  m_SizeDelta: {x: 588.200012, y: 71.1999969}
+  m_AnchoredPosition: {x: 73.5100021, y: 152.360001}
+  m_SizeDelta: {x: 792.549988, y: 71.1999969}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1366101479
 MonoBehaviour:
@@ -79922,7 +79922,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'After you are moving fast jump here
+  m_Text: 'After you gain enough momenteum  jump here
 
 '
 --- !u!222 &1366101480
@@ -91731,7 +91731,7 @@ RectTransform:
   m_LocalScale: {x: .0500000007, y: .0500000007, z: 1}
   m_Children: []
   m_Father: {fileID: 1954881110}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -39.6749992, y: 453.21994}
@@ -98849,77 +98849,6 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 83b2d65e8ac1cf74ab08406f5fc0d072, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &1728945107
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 169608, guid: 131400fc0fdeb7f4bb02dc9a62924417, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1728945108}
-  - 222: {fileID: 1728945110}
-  - 114: {fileID: 1728945109}
-  m_Layer: 0
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1728945108
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22469740, guid: 131400fc0fdeb7f4bb02dc9a62924417,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1728945107}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .0500000007, y: .0500000007, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1954881110}
-  m_RootOrder: 8
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -5.6500001, y: 305.480011}
-  m_SizeDelta: {x: 588.200012, y: 71.1999969}
-  m_Pivot: {x: .5, y: .5}
---- !u!114 &1728945109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11469680, guid: 131400fc0fdeb7f4bb02dc9a62924417,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1728945107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 36
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Infinite loops help you gain speed
-
-'
---- !u!222 &1728945110
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22269750, guid: 131400fc0fdeb7f4bb02dc9a62924417,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1728945107}
 --- !u!1 &1731085051
 GameObject:
   m_ObjectHideFlags: 0
@@ -113256,7 +113185,7 @@ MonoBehaviour:
   thisLev: {fileID: 1350311599}
   tele: {fileID: 1697141418}
   teleM: {fileID: 1849405252}
-  stage: 0
+  stage: 4
 --- !u!61 &1914312330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -116105,7 +116034,6 @@ RectTransform:
   - {fileID: 272802605}
   - {fileID: 1366101478}
   - {fileID: 109930194}
-  - {fileID: 1728945108}
   - {fileID: 464015621}
   - {fileID: 1194588394}
   - {fileID: 1575967839}
@@ -122184,11 +122112,11 @@ RectTransform:
   m_LocalScale: {x: .0500000007, y: .0500000007, z: 1}
   m_Children: []
   m_Father: {fileID: 1954881110}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 282.600006, y: 446.600006}
-  m_SizeDelta: {x: 770, y: 89.4000015}
+  m_AnchoredPosition: {x: 282.5, y: 448.76001}
+  m_SizeDelta: {x: 773.869995, y: 175.759995}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2031882122
 MonoBehaviour:
@@ -122215,8 +122143,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You finished the tutorial, hit escape on your keyboard and click on main
-    menu to exit
+  m_Text: 'You finished the tutorial, To exit click on main menu in the paused menu.
+    To acess the paused menu you can either click on the menu button in the top right
+    or you can hit escape.
 
 '
 --- !u!222 &2031882123
