@@ -17,6 +17,8 @@ public class gameManager : MonoBehaviour
 		public bool dead = false;
 		public bool loadDefault = false;
 		public level defaultLev;
+
+		public bool resetPrefs;
 		public Camera currCamera;
 		public GameObject myPlayerIns;
 		public GameObject myPlayer;
@@ -30,7 +32,6 @@ public class gameManager : MonoBehaviour
 
 		public Text pauseScore;
 		public Text pre_score;
-		public bool resetScore;
 		public bool storyEnd;
 		public level end;
 		public bool deathEnd;
@@ -52,8 +53,9 @@ public class gameManager : MonoBehaviour
 		void Start ()
 		{		
 
-				if (resetScore) {
+				if (resetPrefs) {
 						PlayerPrefs.DeleteAll ();
+						changeCamSize (40);
 				}
 //				PhotonNetwork.player.name = PlayerPrefs.GetString ("UserName", "EnterNameHere");
 				levels = FindObjectsOfType<level> ();
