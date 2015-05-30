@@ -45592,7 +45592,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 745546597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 58, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1350311598}
@@ -45641,8 +45641,8 @@ Camera:
   near clip plane: .300000012
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 66.2699966
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -79042,7 +79042,9 @@ MonoBehaviour:
   yVisible: []
   allBoundries: []
   startStage: 1
-  stageCams: []
+  stageCams:
+  - {fileID: 745546597}
+  - {fileID: 745546597}
   switchCams: 0
 --- !u!1 &1352000855
 GameObject:
@@ -88552,8 +88554,8 @@ MonoBehaviour:
   currentLevel: {fileID: 0}
   levels: []
   dead: 1
-  loadDefault: 0
-  defaultLev: {fileID: 824517291}
+  loadDefault: 1
+  defaultLev: {fileID: 1350311599}
   resetPrefs: 0
   currCamera: {fileID: 0}
   myPlayerIns: {fileID: 100004, guid: c1ea0b1ed06925648a41f6f4e43f359a, type: 2}
