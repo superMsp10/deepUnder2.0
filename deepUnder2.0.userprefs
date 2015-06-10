@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\NetworkTest\Assets\Photon Unity Networking\Demos\Demo2DJumpAndRunWithPhysics\Scripts\JumpAndRunMovement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\Levels\Tihs\playLevel.cs">
     <Files>
-      <File FileName="..\NetworkTest\Assets\Photon Unity Networking\Demos\Demo2DJumpAndRunWithPhysics\Scripts\JumpAndRunMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\myAssets\Mobs\Archer\Archer.cs" Line="7" Column="2" />
+      <File FileName="Assets\myAssets\scripts\bow_Mob.cs" Line="19" Column="5" />
+      <File FileName="Assets\myAssets\scripts\Bow.cs" Line="16" Column="33" />
+      <File FileName="Assets\myAssets\Levels\Tihs\playLevel.cs" Line="34" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

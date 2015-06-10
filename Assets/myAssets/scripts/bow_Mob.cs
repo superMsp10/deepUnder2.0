@@ -6,30 +6,42 @@ public class bow_Mob : Bow
 
 		public GameObject target;
 		public bool turnR;
+		float rot_z;
+		public float followSpeed = 0.1f;
+
+		new void Start ()
+		{
+				thisManage = gameManager.thisM;
+				anim = GetComponent<Animator > ();
+				thisAudio = AudioManager.thisAM.weapons;
+				rotate = true;
+				recharging = false;
+				InvokeRepeating ("UpdateBow", 0, followSpeed);
+		}
 
 		void Update ()
 		{
+				if (controller.turnR) {
+						turnR = true;
+						controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0f, 0f, (rot_z - 270) * -1);
+				} else {
+						turnR = false;
+						controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0f, 0f, rot_z - 270);
+				}
+		}
+		void UpdateBow ()
+		{
 				if (target != null) {
-
 						Vector3 targetPos = target.transform.position;
 						Vector3 diff = targetPos - transform.position;
 
 						
+
+						diff = targetPos - transform.position;
 						diff.Normalize ();
 			
-						float rot_z = Mathf.Atan2 (diff.y, diff.x) * Mathf.Rad2Deg;
-						
-						if (controller.turnR) {
-								turnR = true;
-								controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0f, 0f, (rot_z - 270) * -1);
-						} else {
-								turnR = false;
-								controller.weaponHand.transform.parent.rotation = Quaternion.Euler (0f, 0f, rot_z - 270);
-						}
-
-						
-				
-								
+						rot_z = Mathf.Atan2 (diff.y, diff.x) * Mathf.Rad2Deg;
+					
 				}
 		}
 		
