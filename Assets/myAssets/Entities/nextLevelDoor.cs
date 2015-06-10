@@ -11,7 +11,7 @@ public class nextLevelDoor : Door
 				if (player.layer == LayerMask.NameToLayer ("Player")) {
 						gameManager.thisM.levelex (levelChange);
 						gameManager.thisM.transferLevelPlayer ();
-
+						Debug.Log (gameManager.thisM.currCamera.transform.parent.name);
 				}
 
 		

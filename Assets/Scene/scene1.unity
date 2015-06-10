@@ -2031,7 +2031,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11493160, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
       propertyPath: thisAttributes.Dmg
-      value: 1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 196376, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493160, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
+      propertyPath: thisAttributes.maxHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493160, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
+      propertyPath: thisAttributes.HP
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
@@ -10531,7 +10543,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 189448783}
   m_LocalRotation: {x: 0, y: 0, z: .00494578714, w: -.999987781}
-  m_LocalPosition: {x: -96.1000977, y: -64.8000031, z: 0}
+  m_LocalPosition: {x: -794, y: -67, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 11262493}
@@ -46764,7 +46776,6 @@ MonoBehaviour:
   flipMob: 1
   randomAttributes: 0
   bow: {fileID: 860997021}
-  aim: 0
 --- !u!61 &777231518
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55005,7 +55016,7 @@ Transform:
   m_PrefabParentObject: {fileID: 456470, guid: 262f48d9ece87ce40a37b1ff66fb6513, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 911476222}
-  m_LocalRotation: {x: 0, y: 0, z: .13576673, w: -.990740895}
+  m_LocalRotation: {x: 0, y: 0, z: -.1305262, w: .991444886}
   m_LocalPosition: {x: -62.5, y: -91.4000015, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -55967,7 +55978,6 @@ MonoBehaviour:
   flipMob: 1
   randomAttributes: 0
   bow: {fileID: 837776008}
-  aim: 0
 --- !u!61 &927495009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66988,7 +66998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1114050590
 Transform:
   m_ObjectHideFlags: 0
@@ -76201,9 +76211,9 @@ MonoBehaviour:
   stage: 1
   despawnWithStage: 0
   thisAttributes:
-    HP: 50
-    maxHP: 50
-    Dmg: 1
+    HP: 20
+    maxHP: 20
+    Dmg: 5
     maxSped: 5
     moveForce: 1
     jump: 100
@@ -84144,7 +84154,6 @@ MonoBehaviour:
   flipMob: 0
   randomAttributes: 0
   bow: {fileID: 803105925}
-  aim: 0
 --- !u!114 &1452768586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88711,7 +88720,6 @@ MonoBehaviour:
   flipMob: 1
   randomAttributes: 0
   bow: {fileID: 582085266}
-  aim: 0
 --- !u!114 &1543945379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115086,7 +115094,6 @@ MonoBehaviour:
   flipMob: 1
   randomAttributes: 0
   bow: {fileID: 256040737}
-  aim: 0
 --- !u!61 &1954480721
 BoxCollider2D:
   m_ObjectHideFlags: 0

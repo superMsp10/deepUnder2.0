@@ -218,6 +218,7 @@ public class gameManager : MonoBehaviour
 				//	menuReset ();
 				menuReset ();
 				if (currentLevel != null) {
+		
 						currentLevel.gameObject.SetActive (false);
 						
 						currentLevel.endLevel ();
