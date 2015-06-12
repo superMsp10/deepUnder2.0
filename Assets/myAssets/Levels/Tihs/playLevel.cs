@@ -31,9 +31,7 @@ public class playLevel : level
 	
 		public  override void endLevel ()
 		{
-				if (thisCam != null)
-						thisCam.gameObject.SetActive (false);
-
+			
 		}
 
 		public void changeStage (float l)

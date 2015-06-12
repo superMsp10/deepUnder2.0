@@ -166,7 +166,7 @@ public class gameManager : MonoBehaviour
 				myPlayer = (GameObject)Instantiate
 			(myPlayerIns, MySS.transform.position, MySS.transform.rotation);
 				myPlayer.SetActive (true);
-				currCamera = myPlayer.GetComponentInChildren<Camera> ();
+				currCameraChange (myPlayer.GetComponentInChildren<Camera> ());
 				thisCamManange = myPlayer.GetComponentInChildren<CameraManeger> ();
 				Entity e = myPlayer.GetComponent<Entity> ();
 				if (e == null)
@@ -183,7 +183,7 @@ public class gameManager : MonoBehaviour
 
 		public void transferLevelPlayer ()
 		{
-				currentLevel.camera1.SetActive (false);
+				currCameraChange (thisCamManange.playerCamera);
 				paused = true;
 				changeMenu ();
 				myPlayer.GetComponent<Mob1> ().changeLevel (currentLevel);
@@ -214,8 +214,7 @@ public class gameManager : MonoBehaviour
 
 		public void levelex (level lev)
 		{
-				//voted = false;
-				//	menuReset ();
+
 				menuReset ();
 				if (currentLevel != null) {
 		
@@ -227,8 +226,7 @@ public class gameManager : MonoBehaviour
 				currentLevel = lev;
 				AudioManager.thisAM.updateSliders ();
 				currentLevel.gameObject.SetActive (true);
-				currentLevel.camera1.SetActive (true);
-				currCamera = currentLevel.camera1.camera;
+				currCameraChange (currentLevel.camera1.camera);
 				RenderSettings.skybox = currentLevel.skybox;
 				if (currentLevel.killPlayerOnEnter && myPlayer != null)
 						die ();
@@ -268,6 +266,18 @@ public class gameManager : MonoBehaviour
 
 		}
 
+		public void currCameraChange (Camera c)
+		{
+
+				if (c == null)
+						Debug.LogError (c + " is not a Camera cannot switch cameras");
+				if (currCamera != null)
+						currCamera.gameObject.SetActive (false);
+				currCamera = c;
+				currCamera.gameObject.SetActive (true);
+
+		}
+
 		public void changeCamera ()
 		{
 				if (currCamera == thisCamManange.playerCamera) {
@@ -278,8 +288,8 @@ public class gameManager : MonoBehaviour
 						thisCamManange.playerCamera.gameObject.SetActive (true);
 						currentLevel.camera1.SetActive (false);
 						currCamera = thisCamManange.playerCamera;
-
-
+			
+			
 				}
 		
 		

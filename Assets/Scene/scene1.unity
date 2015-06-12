@@ -500,12 +500,12 @@ Transform:
   m_PrefabParentObject: {fileID: 456154, guid: 262f48d9ece87ce40a37b1ff66fb6513, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 11262492}
-  m_LocalRotation: {x: 0, y: 0, z: -.0680789575, w: .997680008}
-  m_LocalPosition: {x: 25.5699997, y: 34.5499992, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .0730124339, w: -.997331023}
+  m_LocalPosition: {x: -742.178955, y: 1.59076691, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 189448784}
-  m_RootOrder: 0
+  m_Father: {fileID: 1834357712}
+  m_RootOrder: 5
 --- !u!1 &11276301
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,6 +2044,10 @@ Prefab:
     - target: {fileID: 11493160, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
       propertyPath: thisAttributes.HP
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467976, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
+      propertyPath: yOff
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
@@ -10543,13 +10547,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 189448783}
   m_LocalRotation: {x: 0, y: 0, z: .00494578714, w: -.999987781}
-  m_LocalPosition: {x: -794, y: -67, z: 0}
+  m_LocalPosition: {x: -97.6999969, y: -64.6299973, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
-  - {fileID: 11262493}
   - {fileID: 1802510337}
   m_Father: {fileID: 1834357712}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!114 &189448785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42302,8 +42305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837dd47207d40cb4395d181c3b86fb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MultiplierX: 10
-  MultiplierY: 50
+  MultiplierX: 30
+  MultiplierY: 30
   boostAmount: 100
   randomrange: 0
   dir: {x: 5, y: 100}
@@ -104075,7 +104078,7 @@ RectTransform:
   - {fileID: 1691046378}
   - {fileID: 2124992344}
   m_Father: {fileID: 189448784}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 3.11999989, y: 1.24000001}
@@ -106347,6 +106350,7 @@ Transform:
   - {fileID: 1874497343}
   - {fileID: 1011357051}
   - {fileID: 1541538532}
+  - {fileID: 11262493}
   - {fileID: 189448784}
   m_Father: {fileID: 602302882}
   m_RootOrder: 1
@@ -121332,7 +121336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleTo: {fileID: 928617122}
   xOff: 0
-  yOff: 0
+  yOff: 100
   thisLev: {fileID: 1802177990}
   levelChange: {fileID: 928617123}
   whatPlayer:
