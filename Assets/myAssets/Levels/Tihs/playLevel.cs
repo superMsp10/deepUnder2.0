@@ -31,7 +31,7 @@ public class playLevel : level
 	
 		public  override void endLevel ()
 		{
-			
+				Debug.Log (camera1);
 		}
 
 		public void changeStage (float l)
@@ -44,8 +44,18 @@ public class playLevel : level
 
 						e.changeS (l);
 				}
-				if (switchCams)
-						camera1 = stageCams [(int)stage - 1];
+				if (switchCams) {
+
+						camera1.SetActive (false);
+						if (thisManage.currCamera == camera1) {
+								camera1 = stageCams [(int)stage - 1];
+								camera1.SetActive (true);
+								Debug.Log ("hi");
+						} else
+								camera1 = stageCams [(int)stage - 1];
+
+
+				}
 		}
 	
 		public void addController (CameraController cam)
