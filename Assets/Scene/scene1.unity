@@ -52703,7 +52703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3bbd777b8c02774baaba0a28ea57b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera1: {fileID: 2131264316}
+  camera1: {fileID: 2047921524}
   spawnable: 1
   votes: 0
   skybox: {fileID: 2100000, guid: 6663dd49fee03a743970c6a910557b45, type: 2}
@@ -90724,8 +90724,8 @@ MonoBehaviour:
   currentLevel: {fileID: 0}
   levels: []
   dead: 1
-  loadDefault: 0
-  defaultLev: {fileID: 928617123}
+  loadDefault: 1
+  defaultLev: {fileID: 824517291}
   resetPrefs: 0
   currCamera: {fileID: 0}
   myPlayerIns: {fileID: 100004, guid: c1ea0b1ed06925648a41f6f4e43f359a, type: 2}
@@ -124555,7 +124555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2047921525
 Transform:
   m_ObjectHideFlags: 0
@@ -128009,7 +128009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2131264317
 Transform:
   m_ObjectHideFlags: 0

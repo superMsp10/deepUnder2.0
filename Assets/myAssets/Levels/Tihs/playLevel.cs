@@ -45,11 +45,10 @@ public class playLevel : level
 				}
 				if (switchCams) {
 
-						camera1.SetActive (false);
-						if (thisManage.currCamera == camera1) {
+						if (camera1.activeSelf == true) {
+								camera1.SetActive (false);
 								camera1 = stageCams [(int)stage - 1];
 								camera1.SetActive (true);
-								Debug.Log ("hi");
 						} else
 								camera1 = stageCams [(int)stage - 1];
 
