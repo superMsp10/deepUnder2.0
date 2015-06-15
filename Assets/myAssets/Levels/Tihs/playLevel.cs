@@ -30,8 +30,7 @@ public class playLevel : level
 		}
 	
 		public  override void endLevel ()
-		{
-				Debug.Log (camera1);
+		{				
 		}
 
 		public void changeStage (float l)
