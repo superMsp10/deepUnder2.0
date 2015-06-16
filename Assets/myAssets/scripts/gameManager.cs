@@ -40,7 +40,9 @@ public class gameManager : MonoBehaviour
 		float surviveTime;
 		float spawnTime;
 
-
+		//DEV CONSOLE//
+		public bool showDevCon;
+		public GameObject devConsoleButton;
 
 		void Awake ()
 		{
@@ -66,7 +68,8 @@ public class gameManager : MonoBehaviour
 						changeLvl ("startMenu");
 				thisInv = invManager.thisInv;
 				pre_score.text = PlayerPrefs.GetInt ("highScore", 0).ToString ();
-
+				if (showDevCon)
+						devConsoleButton.SetActive (true);
 		}
 
 		public void restartLevel ()
