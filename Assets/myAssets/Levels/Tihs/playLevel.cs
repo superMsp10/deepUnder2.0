@@ -26,11 +26,12 @@ public class playLevel : level
 				changeStage (startStage);
 				thisChannel.clip = startMusic;
 				thisChannel.Play ();
-
+			
 		}
 	
 		public  override void endLevel ()
-		{				
+		{			
+				camera1.SetActive (false);
 		}
 
 		public void changeStage (float l)

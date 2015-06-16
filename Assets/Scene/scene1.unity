@@ -2160,6 +2160,10 @@ Prefab:
       propertyPath: yOff
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 196376, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
+      propertyPath: m_Name
+      value: marketCamera
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a5ee2f0d4fa1b2498937ce7bc9519fd, type: 2}
   m_RootGameObject: {fileID: 1802177988}
@@ -17364,7 +17368,7 @@ GameObject:
   - 92: {fileID: 304676188}
   - 81: {fileID: 304676187}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: rt4Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45714,12 +45718,12 @@ GameObject:
   - 92: {fileID: 722384434}
   - 81: {fileID: 722384433}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: ranachSt1Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &722384432
 Transform:
   m_ObjectHideFlags: 0
@@ -55298,7 +55302,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 885478094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -346.349976, y: -6.73999023, z: 0}
+  m_LocalPosition: {x: -345, y: -7, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 824517289}
@@ -66787,7 +66791,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1084739819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -132.399994, y: -14, z: 0}
+  m_LocalPosition: {x: -141, y: -14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 928617122}
@@ -68970,7 +68974,7 @@ GameObject:
   - 92: {fileID: 1114050592}
   - 81: {fileID: 1114050591}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: marketCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113922,7 +113926,7 @@ GameObject:
   - 92: {fileID: 1887931308}
   - 81: {fileID: 1887931307}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: rt3Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127357,7 +127361,7 @@ GameObject:
   - 92: {fileID: 2119233547}
   - 81: {fileID: 2119233546}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: ranacht2Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

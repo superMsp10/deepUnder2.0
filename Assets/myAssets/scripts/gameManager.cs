@@ -35,7 +35,6 @@ public class gameManager : MonoBehaviour
 		public bool storyEnd;
 		public level end;
 		public bool deathEnd;
-		int lvlPassed = 0;
 		int died;
 		public Holdable currency;
 		float surviveTime;
@@ -57,7 +56,6 @@ public class gameManager : MonoBehaviour
 						PlayerPrefs.DeleteAll ();
 						changeCamSize (40);
 				}
-//				PhotonNetwork.player.name = PlayerPrefs.GetString ("UserName", "EnterNameHere");
 				levels = FindObjectsOfType<level> ();
 				foreach (level l in levels) {
 						l.gameObject.SetActive (false);
@@ -166,8 +164,10 @@ public class gameManager : MonoBehaviour
 				myPlayer = (GameObject)Instantiate
 			(myPlayerIns, MySS.transform.position, MySS.transform.rotation);
 				myPlayer.SetActive (true);
-				currCameraChange (myPlayer.GetComponentInChildren<Camera> ());
 				thisCamManange = myPlayer.GetComponentInChildren<CameraManeger> ();
+				currCamera = thisCamManange.playerCamera;
+		
+
 				Entity e = myPlayer.GetComponent<Entity> ();
 				if (e == null)
 						Debug.LogError ("cannot spawn not a entity");
@@ -183,15 +183,19 @@ public class gameManager : MonoBehaviour
 
 		public void transferLevelPlayer ()
 		{
-				currCameraChange (thisCamManange.playerCamera);
+
 				paused = true;
+				currCamera = thisCamManange.playerCamera;
+
+				currCamera.gameObject.SetActive (true);
+
 				changeMenu ();
 				myPlayer.GetComponent<Mob1> ().changeLevel (currentLevel);
 				SS = FindObjectsOfType<SpawnSpot> ();
 
 				MySS = SS [Random.Range (0, SS.Length)];
 				myPlayer.transform.position = MySS.transform.position;
-				lvlPassed += 1;
+			
 
 
 		}
@@ -226,7 +230,6 @@ public class gameManager : MonoBehaviour
 				currentLevel = lev;
 				AudioManager.thisAM.updateSliders ();
 				currentLevel.gameObject.SetActive (true);
-				currCameraChange (currentLevel.camera1.camera);
 				RenderSettings.skybox = currentLevel.skybox;
 				if (currentLevel.killPlayerOnEnter && myPlayer != null)
 						die ();
@@ -246,9 +249,8 @@ public class gameManager : MonoBehaviour
 
 				int gold = 100000 - thisInv.takeItem (currency, 100000);
 
-				int deathPass = lvlPassed * (100);
 				int sclaeSurvivalTime = (int)surviveTime / 20;
-				int score_ = (sclaeSurvivalTime + gold) + deathPass;
+				int score_ = (sclaeSurvivalTime + gold);
 				diedAmount.text = died.ToString ();
 
 				score.text = score_.ToString ();
@@ -266,17 +268,7 @@ public class gameManager : MonoBehaviour
 
 		}
 
-		public void currCameraChange (Camera c)
-		{
 
-				if (c == null)
-						Debug.LogError (c + " is not a Camera cannot switch cameras");
-				if (currCamera != null)
-						currCamera.gameObject.SetActive (false);
-				currCamera = c;
-				currCamera.gameObject.SetActive (true);
-
-		}
 
 		public void changeCamera ()
 		{
