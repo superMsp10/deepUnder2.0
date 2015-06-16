@@ -155,13 +155,8 @@ public class OldMan : NPC
 
 		void attack ()
 		{
-				hostile = false;
-				
-				thisManage.deathEnd = true;
-				for (int i = 0; i < 25; i++) {
-						Invoke ("insBomb", Random.Range (0.5f, 10f));
-						Invoke ("insBomb", Random.Range (1, 5));
-						Invoke ("insEnemy", Random.Range (5f, 50f));
+				foreach (GameObject g in enemies) {
+						g.SetActive (true);
 				}
 			
 		}
@@ -274,13 +269,6 @@ public class OldMan : NPC
 
 		}
 
-		void insEnemy ()
-		{
-				Vector2 pos = where.position;
-				pos = new Vector2 (pos.x + Random.Range (-60, 100), pos.y + Random.Range (20, 80));
-				GameObject g = (GameObject)Instantiate (enemies [Random.Range (0, enemies.Length)], pos, Quaternion.identity);
-				g.GetComponent<Entity> ().thisLevel = thisLevel;
-		}
 		public override void takeDmg (float damage)
 		{
 				thisAttributes.HP -= damage;
