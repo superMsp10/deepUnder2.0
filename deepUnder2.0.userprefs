@@ -1,8 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\gameManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\scripts\invManager.cs">
     <Files>
-      <File FileName="Assets\myAssets\scripts\gameManager.cs" Line="72" Column="41" />
+      <File FileName="Assets\myAssets\scripts\gameManager.cs" Line="319" Column="4" />
+      <File FileName="Assets\myAssets\Entities\nextLevelDoor.cs" Line="12" Column="47" />
+      <File FileName="Assets\myAssets\scripts\Tarsc.cs" Line="39" Column="47" />
+      <File FileName="Assets\myAssets\scripts\invManager.cs" Line="76" Column="16" />
+      <File FileName="Assets\myAssets\scripts\slotCollection.cs" Line="27" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

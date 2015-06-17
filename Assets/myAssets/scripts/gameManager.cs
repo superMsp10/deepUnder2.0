@@ -43,6 +43,9 @@ public class gameManager : MonoBehaviour
 		//DEV CONSOLE//
 		public bool showDevCon;
 		public GameObject devConsoleButton;
+		public Text levelChangeString;
+		public Text giveGoldAmount;
+		public Text giveHealthAmount;
 
 		void Awake ()
 		{
@@ -150,10 +153,6 @@ public class gameManager : MonoBehaviour
 
 		}
 
-
-		
-
-		
 
 		public void spawn ()
 		{
@@ -295,5 +294,33 @@ public class gameManager : MonoBehaviour
 				PlayerPrefs.SetInt ("highScore", int.Parse (pre_score.text));
 
 		}
+
+
+		//------------------------------------------------DEV CONSOLE----------------------------------------------------------\\
+
+
+		public void dc_changeLevelThroughString ()
+		{
+				changeLvl (levelChangeString.text);
+				transferLevelPlayer ();
+		
+		}
+	
+		public void dc_giveHealth ()
+		{
+				myPlayer.GetComponent<Tarsc> ().thisAttributes.HP += int.Parse (giveHealthAmount.text);
+		
+		}
+	
+		public void dc_giveGold ()
+		{
+				thisInv.addHoldable (currency,
+		                     int.Parse (giveGoldAmount.text));
+		}
+
+
+
+
+
 		
 }
