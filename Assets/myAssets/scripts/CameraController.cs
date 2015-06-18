@@ -12,10 +12,12 @@ public class CameraController : MonoBehaviour
 		public bool paused = false;
 		private Vector2 camPos;
 		public bool yAxis = false;
+		bool addedToStage = false;
 
 		void Awake ()
 		{
 				thisLevel.addController (this);
+				addedToStage = false;
 
 		}
 	
@@ -63,11 +65,12 @@ public class CameraController : MonoBehaviour
 		public void changeS (float  lev)
 		{
 
-				if (lev == stage) {
-
+				if (lev == stage && !addedToStage) {
+						addedToStage = true;
 						gameObject.SetActive (true);
 						thisLevel.addToStage (this);
 				} else {
+						addedToStage = false;
 						gameObject.SetActive (false);
 						thisLevel.removeFromStage (this);
 				}

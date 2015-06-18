@@ -47,6 +47,8 @@ public class gameManager : MonoBehaviour
 		public Text giveGoldAmount;
 		public Text giveHealthAmount;
 
+
+		//-----------------------------------------Mono-----Methods-----------------------------------------\\
 		void Awake ()
 		{
 				if (thisM == null) {
@@ -75,31 +77,40 @@ public class gameManager : MonoBehaviour
 						devConsoleButton.SetActive (true);
 		}
 
-		public void restartLevel ()
-		{
-				Application.LoadLevel (Application.loadedLevel);
-		}
-
 		public void Update ()
 		{
-
+		
 				if (!currentLevel.menuLevel) {
-						
+			
 						if (dead && deathScreen.activeSelf == false) {
 								if (deathEnd) {
 										levelex (end);
 								}
 								menuReset ();
 								deathScreen.SetActive (true);
-							
+				
 						} else if (Input.GetKeyDown (KeyCode.Escape) && !dead) {
 								paused = ! paused;
 								changeMenu ();
 						}
-								
+			
 				}
 		}
 
+
+		void OnDestroy ()
+		{
+				PlayerPrefs.SetInt ("highScore", int.Parse (pre_score.text));
+		
+		}
+
+
+		//--------------------------------MY---------UI-----Methods-----------------------------------------\\
+
+
+
+
+		
 		public void setPaused ()
 		{
 				paused = !paused;
@@ -132,8 +143,12 @@ public class gameManager : MonoBehaviour
 
 		}
 
+		//--------------------------------MY---------Player-----Methods-----------------------------------------\\
+
+
 		public void die ()
 		{
+
 				died ++;
 				if (currentLevel.calScore)
 						setScore ();
@@ -143,8 +158,6 @@ public class gameManager : MonoBehaviour
 				dead = true;
 				if (currentLevel != null) {
 						currentLevel.camera1.SetActive (true);
-						
-
 				}
 
 				paused = false;
@@ -178,7 +191,6 @@ public class gameManager : MonoBehaviour
 				dead = false;
 				paused = true;
 				changeMenu ();
-				(currentLevel as playLevel).changeStage (1);
 
 
 		}
@@ -200,6 +212,60 @@ public class gameManager : MonoBehaviour
 			
 
 
+		}
+
+		void setScore ()
+		{
+				surviveTime = Time.time - spawnTime;
+		
+		
+				int gold = 100000 - thisInv.takeItem (currency, 100000);
+		
+				int sclaeSurvivalTime = (int)surviveTime / 20;
+				int score_ = (sclaeSurvivalTime + gold);
+				diedAmount.text = died.ToString ();
+		
+				score.text = score_.ToString ();
+				pauseScore.text = score_.ToString ();
+		
+				if (int.Parse (pre_score.text) < score_)
+						pre_score.text = score_.ToString ();
+		
+		}
+	
+		public void changeCamSize (float f)
+		{
+				myPlayerIns.GetComponent<Tarsc> ().cameraM.playerCamera.orthographicSize = f;
+		
+		
+		}
+	
+	
+	
+		public void changeCamera ()
+		{
+				if (currCamera == thisCamManange.playerCamera) {
+						thisCamManange.playerCamera.gameObject.SetActive (false);
+						currentLevel.camera1.SetActive (true);
+						currCamera = currentLevel.camera1.camera;
+				} else {
+						thisCamManange.playerCamera.gameObject.SetActive (true);
+						currentLevel.camera1.SetActive (false);
+						currCamera = thisCamManange.playerCamera;
+			
+			
+				}
+		
+		
+		}
+
+
+		//--------------------------------MY---------Level-----Methods-----------------------------------------\\
+
+
+		public void restartLevel ()
+		{
+				Application.LoadLevel (Application.loadedLevel);
 		}
 
 		public void changeLvl (int i)
@@ -244,56 +310,7 @@ public class gameManager : MonoBehaviour
 				
 		}
 
-		void setScore ()
-		{
-				surviveTime = Time.time - spawnTime;
-
-
-				int gold = 100000 - thisInv.takeItem (currency, 100000);
-
-				int sclaeSurvivalTime = (int)surviveTime / 20;
-				int score_ = (sclaeSurvivalTime + gold);
-				diedAmount.text = died.ToString ();
-
-				score.text = score_.ToString ();
-				pauseScore.text = score_.ToString ();
-
-				if (int.Parse (pre_score.text) < score_)
-						pre_score.text = score_.ToString ();
-
-		}
-
-		public void changeCamSize (float f)
-		{
-				myPlayerIns.GetComponent<Tarsc> ().cameraM.playerCamera.orthographicSize = f;
-				
-
-		}
-
-
-
-		public void changeCamera ()
-		{
-				if (currCamera == thisCamManange.playerCamera) {
-						thisCamManange.playerCamera.gameObject.SetActive (false);
-						currentLevel.camera1.SetActive (true);
-						currCamera = currentLevel.camera1.camera;
-				} else {
-						thisCamManange.playerCamera.gameObject.SetActive (true);
-						currentLevel.camera1.SetActive (false);
-						currCamera = thisCamManange.playerCamera;
-			
-			
-				}
 		
-		
-		}
-		
-		void OnDestroy ()
-		{
-				PlayerPrefs.SetInt ("highScore", int.Parse (pre_score.text));
-
-		}
 
 
 		//------------------------------------------------DEV CONSOLE----------------------------------------------------------\\

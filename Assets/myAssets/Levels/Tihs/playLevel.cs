@@ -32,6 +32,7 @@ public class playLevel : level
 		public  override void endLevel ()
 		{			
 				camera1.SetActive (false);
+				changeStage (startStage);
 		}
 
 		public void changeStage (float l)
