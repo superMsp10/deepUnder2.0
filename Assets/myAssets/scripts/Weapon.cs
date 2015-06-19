@@ -38,9 +38,7 @@ public class Weapon : Holdable
 		public override void  onPickup ()
 		{
 				thisManage = gameManager.thisM;
-				if (thisManage.myPlayer != null) {
-						insModel ();
-				}
+
 		
 		}
 	

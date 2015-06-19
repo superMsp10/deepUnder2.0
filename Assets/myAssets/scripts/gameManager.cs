@@ -325,7 +325,10 @@ public class gameManager : MonoBehaviour
 	
 		public void dc_giveHealth ()
 		{
-				myPlayer.GetComponent<Tarsc> ().thisAttributes.HP += int.Parse (giveHealthAmount.text);
+				Tarsc player = myPlayer.GetComponent<Tarsc> ();
+				player.thisAttributes.HP += int.Parse (giveHealthAmount.text);
+				player.healthbar.value = player.thisAttributes.HP;
+
 		
 		}
 	
