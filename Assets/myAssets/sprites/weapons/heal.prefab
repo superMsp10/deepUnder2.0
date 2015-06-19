@@ -103,7 +103,7 @@ MonoBehaviour:
   holdUI: {fileID: 21300000, guid: cb37840e70ab82141a271278988b41f3, type: 3}
   thisManage: {fileID: 0}
   phisical: {fileID: 11486686, guid: 645ffc278e4eed94b9c2549c78bd6dba, type: 2}
-  stackSize: 1
+  stackSize: 2
   weapon: 0
   description: A healing object of sorts...
   healingEffect: {fileID: 0}

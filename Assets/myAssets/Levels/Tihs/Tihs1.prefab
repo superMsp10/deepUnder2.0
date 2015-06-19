@@ -4892,7 +4892,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &131842
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -4908,7 +4908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &163990
 GameObject:
   m_ObjectHideFlags: 1
@@ -6084,6 +6084,44 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &167180
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 467180}
+  - 20: {fileID: 2067180}
+  - 124: {fileID: 12467180}
+  - 92: {fileID: 9267180}
+  - 81: {fileID: 8167180}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 0
+--- !u!1 &167182
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 467182}
+  - 20: {fileID: 2067182}
+  - 124: {fileID: 12467182}
+  - 92: {fileID: 9267182}
+  - 81: {fileID: 8167182}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 0
 --- !u!1 &182740
 GameObject:
   m_ObjectHideFlags: 1
@@ -6240,7 +6278,6 @@ Transform:
   m_LocalPosition: {x: -1000, y: 1000, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 431842}
   - {fileID: 414168}
   - {fileID: 431826}
   - {fileID: 414280}
@@ -6272,7 +6309,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 414128}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &414280
 Transform:
   m_ObjectHideFlags: 1
@@ -6289,7 +6326,7 @@ Transform:
   - {fileID: 415914}
   - {fileID: 464078}
   m_Father: {fileID: 414128}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &415670
 Transform:
   m_ObjectHideFlags: 1
@@ -6306,7 +6343,7 @@ Transform:
   - {fileID: 22415672}
   - {fileID: 22415710}
   m_Father: {fileID: 414128}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!4 &415672
 Transform:
   m_ObjectHideFlags: 1
@@ -7463,8 +7500,9 @@ Transform:
   - {fileID: 415712}
   - {fileID: 415674}
   - {fileID: 415824}
+  - {fileID: 431842}
   m_Father: {fileID: 414128}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!4 &415842
 Transform:
   m_ObjectHideFlags: 1
@@ -9328,8 +9366,9 @@ Transform:
   - {fileID: 431812}
   - {fileID: 431810}
   - {fileID: 22415688}
+  - {fileID: 467182}
   m_Father: {fileID: 414128}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!4 &431806
 Transform:
   m_ObjectHideFlags: 1
@@ -9487,7 +9526,7 @@ Transform:
   - {fileID: 482740}
   - {fileID: 497878}
   m_Father: {fileID: 414128}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &431828
 Transform:
   m_ObjectHideFlags: 1
@@ -9579,11 +9618,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 705, y: 57, z: -10}
+  m_LocalPosition: {x: 70, y: 75, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 414128}
-  m_RootOrder: 0
+  m_Father: {fileID: 415840}
+  m_RootOrder: 3
 --- !u!4 &463990
 Transform:
   m_ObjectHideFlags: 1
@@ -9613,6 +9652,7 @@ Transform:
   - {fileID: 464076}
   - {fileID: 415736}
   - {fileID: 415768}
+  - {fileID: 467180}
   m_Father: {fileID: 415670}
   m_RootOrder: 0
 --- !u!4 &463994
@@ -10359,6 +10399,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 415744}
   m_RootOrder: 2
+--- !u!4 &467180
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -33.5999985, y: 13.3999996, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 463992}
+  m_RootOrder: 7
+--- !u!4 &467182
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167182}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -35, y: 14, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 431804}
+  m_RootOrder: 4
 --- !u!4 &482740
 Transform:
   m_ObjectHideFlags: 1
@@ -10488,6 +10552,70 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 154.001129
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
+--- !u!20 &2067180
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167180}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .131055355, g: .148716822, b: .176470578, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 2
+    height: 2
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 76.1222076
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
+--- !u!20 &2067182
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167182}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .131055355, g: .148716822, b: .176470578, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 2
+    height: 2
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 75.0874329
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -12969,12 +13097,40 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131842}
   m_Enabled: 1
+--- !u!81 &8167180
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167180}
+  m_Enabled: 1
+--- !u!81 &8167182
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167182}
+  m_Enabled: 1
 --- !u!92 &9231782
 Behaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131842}
+  m_Enabled: 1
+--- !u!92 &9267180
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167180}
+  m_Enabled: 1
+--- !u!92 &9267182
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167182}
   m_Enabled: 1
 --- !u!95 &9515670
 Animator:
@@ -13082,7 +13238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3bbd777b8c02774baaba0a28ea57b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera1: {fileID: 131842}
+  camera1: {fileID: 167182}
   spawnable: 1
   votes: 0
   skybox: {fileID: 2100000, guid: 6663dd49fee03a743970c6a910557b45, type: 2}
@@ -13099,8 +13255,11 @@ MonoBehaviour:
   yVisible: []
   allBoundries: []
   startStage: 1
-  stageCams: []
-  switchCams: 0
+  stageCams:
+  - {fileID: 167182}
+  - {fileID: 167180}
+  - {fileID: 131842}
+  switchCams: 1
 --- !u!114 &11414124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13341,6 +13500,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13430,6 +13591,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13476,6 +13639,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13542,6 +13707,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13598,6 +13765,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13810,6 +13979,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14008,6 +14179,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14061,6 +14234,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14149,6 +14324,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14371,6 +14548,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14387,6 +14566,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14484,11 +14665,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 101692, guid: 86bca9f279732da479f4800e8825350b, type: 2}
+  madeOf: {fileID: 172580, guid: b5adecbc3cbbbe94b8f2a5b8ff1c5ab6, type: 2}
   destroyOnDrop: 1
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14764,6 +14947,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14835,6 +15020,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14851,6 +15038,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14908,6 +15097,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11415840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15427,11 +15618,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ecbb7c6707a6f4987e788386d7b643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  madeOf: {fileID: 101692, guid: 86bca9f279732da479f4800e8825350b, type: 2}
+  madeOf: {fileID: 172580, guid: b5adecbc3cbbbe94b8f2a5b8ff1c5ab6, type: 2}
   destroyOnDrop: 1
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11463992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15468,6 +15661,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11463996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15510,6 +15705,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11464000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15546,6 +15743,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11464004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15769,6 +15968,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11464020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15805,6 +16006,8 @@ MonoBehaviour:
   initailize: 1
   amount: 1
   randomDrop: 0
+  res: []
+  dropMany: 0
 --- !u!114 &11464024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15859,10 +16062,10 @@ MonoBehaviour:
   desD:
     destroyOnAwake: 0
     awakeDestroyDelay: 0
-  thisLevel: {fileID: 0}
+  thisLevel: {fileID: 11414118}
   thisManage: {fileID: 0}
   customHierarchy: 0
-  stage: 0
+  stage: 1
   despawnWithStage: 0
   thisHolding: {fileID: 11401692, guid: 86bca9f279732da479f4800e8825350b, type: 2}
   pickable: 1
@@ -15876,6 +16079,20 @@ Behaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131842}
+  m_Enabled: 1
+--- !u!124 &12467180
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167180}
+  m_Enabled: 1
+--- !u!124 &12467182
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167182}
   m_Enabled: 1
 --- !u!198 &19815670
 ParticleSystem:

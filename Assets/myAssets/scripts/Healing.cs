@@ -5,7 +5,7 @@ public class Healing : Holdable
 {
 		public ParticleSystem healingEffect;
 
-		int healAmount = 10;
+		int healAmount = 20;
 		public AudioClip sound;
 		protected	GameObject weaponIns ;
 
@@ -71,9 +71,10 @@ public class Healing : Holdable
 
 		void resetParticles ()
 		{
-				healingEffect.Stop ();
-				Destroy (weaponIns);
-
+				if (healingEffect != null) {
+						healingEffect.Stop ();
+						Destroy (weaponIns);
+				}
 		}
 	
 }
