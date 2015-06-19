@@ -6,6 +6,7 @@ public class caheckPoint : Door
 		public Door tele;
 		public Transform teleM;
 		public int stage = 0;
+		public bool disableStgeChange = false;
 
 		public override  void teleport (GameObject player)
 		{
@@ -18,7 +19,8 @@ public class caheckPoint : Door
 						} else {
 								tele.teleTo = teleM;
 						}
-						thisLev.changeStage (stage);
+						if (!disableStgeChange)
+								thisLev.changeStage (stage);
 						gameObject.SetActive (false);
 						Vector3 telepos = new Vector2 (teleTo.position.x - xOff,
 		                               teleTo.position.y - yOff);

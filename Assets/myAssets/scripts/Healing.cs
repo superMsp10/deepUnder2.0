@@ -6,13 +6,15 @@ public class Healing : Holdable
 		public ParticleSystem healingEffect;
 
 		int healAmount = 10;
+		public AudioClip sound;
 		protected	GameObject weaponIns ;
 
 		public override bool  onUse ()
 		{
 				thisManage = gameManager.thisM;
+	
 				Tarsc palyer = thisManage.myPlayer.GetComponent<Tarsc> ();
-
+				AudioManager.thisAM.weapons.PlayOneShot (sound);
 				if (palyer.thisAttributes.maxHP > (palyer.thisAttributes.HP + healAmount)) {
 						palyer.thisAttributes.HP += healAmount;
 				} else {
