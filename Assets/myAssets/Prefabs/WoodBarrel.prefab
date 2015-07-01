@@ -83,8 +83,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
+  res: []
+  dropManyTypesOfItems: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

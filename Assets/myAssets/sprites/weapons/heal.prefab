@@ -105,7 +105,7 @@ MonoBehaviour:
   phisical: {fileID: 11486686, guid: 645ffc278e4eed94b9c2549c78bd6dba, type: 2}
   stackSize: 2
   weapon: 0
-  description: A healing object of sorts...
+  description: A healing object of sorts... $50
   healingEffect: {fileID: 0}
   sound: {fileID: 8300000, guid: 3644e203a17fa7045ad21b5cbde8839d, type: 3}
 --- !u!198 &19838562

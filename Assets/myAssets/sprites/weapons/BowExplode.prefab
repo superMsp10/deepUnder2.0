@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21205212}
   - 114: {fileID: 11444164}
   m_Layer: 0
-  m_Name: BowStrong
+  m_Name: BowExplode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,6 +55,7 @@ MonoBehaviour:
   recharging: 0
   rof: .100000001
   intialize: 0
+  initRotate: 1
 --- !u!212 &21205212
 SpriteRenderer:
   m_ObjectHideFlags: 1

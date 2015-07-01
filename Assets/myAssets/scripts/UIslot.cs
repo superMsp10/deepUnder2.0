@@ -59,6 +59,8 @@ public class UIslot : MonoBehaviour
 						amount = 0;
 						amountText.text = "";
 				} else { 
+						if (holding != null)
+								holding.onDrop ();
 						if (holding != h) {
 								holding = h;
 								holding.onPickup ();

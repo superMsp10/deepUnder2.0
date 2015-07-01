@@ -72,7 +72,10 @@ public class invManager : slotCollection
 				for (int i = 0; i <  slots.Count; i ++) {
 			
 						if (slots [i].holding == null) {
-								slots [i].changeHolding (give, 50);
+								slots [i].changeHolding (give, 500);
+								if (give.weapon) {
+										slots [i].onClick ();
+								}
 								return;
 						}
 				}

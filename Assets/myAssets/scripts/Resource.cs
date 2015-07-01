@@ -8,17 +8,17 @@ public class Resource : MonoBehaviour
 		public bool destroyOnDrop = true;
 		public bool initailize;
 		Rigidbody2D thisRigid;
-		public int amount;
-		public bool randomDrop;
+		public int amountOfDrops;
+		public bool randomAmountOfDrops;
 		public GameObject[] res;
-		public	bool dropMany = false;
+		public	bool dropManyTypesOfItems = false;
 
 		// Use this for initialization
 		void Start ()
 		{
 				thisRigid = GetComponent<Rigidbody2D> ();
-				if (randomDrop)
-						amount = Random.Range (1, amount);
+				if (randomAmountOfDrops)
+						amountOfDrops = Random.Range (1, amountOfDrops);
 		}
 	
 
@@ -27,9 +27,9 @@ public class Resource : MonoBehaviour
 		{
 
 
-				for (int i = 0; i < amount; i++) {
+				for (int i = 0; i < amountOfDrops; i++) {
 
-						if (dropMany)
+						if (dropManyTypesOfItems)
 								madeOf = res [Random.Range (0, res.Length)];
 						Vector3 pos = new Vector3 (gameObject.transform.position.x + Random.Range (0, 10)
 			                          , gameObject.transform.position.y);

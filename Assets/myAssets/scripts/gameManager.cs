@@ -75,6 +75,8 @@ public class gameManager : MonoBehaviour
 				pre_score.text = PlayerPrefs.GetInt ("highScore", 0).ToString ();
 				if (showDevCon)
 						devConsoleButton.SetActive (true);
+
+			
 		}
 
 		public void Update ()
