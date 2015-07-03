@@ -2909,7 +2909,7 @@ GameObject:
   - 114: {fileID: 11415802}
   - 58: {fileID: 5815720}
   m_Layer: 12
-  m_Name: WoodBarrel
+  m_Name: WoodBarrel GoldPick
   m_TagString: Destroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5020,7 +5020,7 @@ GameObject:
   - 114: {fileID: 11463990}
   - 58: {fileID: 5863990}
   m_Layer: 12
-  m_Name: WoodBarrel
+  m_Name: WoodBarrel GoldPick
   m_TagString: Destroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6292,12 +6292,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114142}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 69, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -.176815078, w: .984244108}
+  m_LocalPosition: {x: 20, y: 60.7000008, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 431826}
-  m_RootOrder: 0
+  m_RootOrder: 3
 --- !u!4 &414168
 Transform:
   m_ObjectHideFlags: 1
@@ -9469,7 +9469,7 @@ Transform:
   m_LocalScale: {x: 8.40991211, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 431826}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &431820
 Transform:
   m_ObjectHideFlags: 1
@@ -9517,14 +9517,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131826}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -344.799988, y: -72.3799973, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: .176815078, w: .984244108}
+  m_LocalPosition: {x: -344.800049, y: -72.3800049, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 414144}
   - {fileID: 431818}
   - {fileID: 482740}
   - {fileID: 497878}
+  - {fileID: 414144}
   m_Father: {fileID: 414128}
   m_RootOrder: 1
 --- !u!4 &431828
@@ -10434,7 +10434,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 431826}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &497878
 Transform:
   m_ObjectHideFlags: 1
@@ -10446,7 +10446,7 @@ Transform:
   m_LocalScale: {x: -1, y: -1, z: -1}
   m_Children: []
   m_Father: {fileID: 431826}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &497880
 Transform:
   m_ObjectHideFlags: 1
@@ -13498,10 +13498,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13589,10 +13589,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13637,10 +13637,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13705,10 +13705,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13763,10 +13763,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13977,10 +13977,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14177,10 +14177,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14232,10 +14232,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14322,10 +14322,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14546,10 +14546,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14564,10 +14564,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14668,10 +14668,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: b5adecbc3cbbbe94b8f2a5b8ff1c5ab6, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14945,10 +14945,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15018,10 +15018,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15036,10 +15036,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15095,10 +15095,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11415840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15621,10 +15621,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: b5adecbc3cbbbe94b8f2a5b8ff1c5ab6, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11463992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15659,10 +15659,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11463996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15703,10 +15703,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11464000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15741,10 +15741,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11464004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15966,10 +15966,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11464020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16004,10 +16004,10 @@ MonoBehaviour:
   madeOf: {fileID: 172580, guid: c85aa6432c7bf4c46b839e8e101d2341, type: 2}
   destroyOnDrop: 1
   initailize: 1
-  amount: 1
-  randomDrop: 0
+  amountOfDrops: 1
+  randomAmountOfDrops: 0
   res: []
-  dropMany: 0
+  dropManyTypesOfItems: 0
 --- !u!114 &11464024
 MonoBehaviour:
   m_ObjectHideFlags: 1
