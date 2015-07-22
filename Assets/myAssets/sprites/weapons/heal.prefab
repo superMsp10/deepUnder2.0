@@ -107,6 +107,7 @@ MonoBehaviour:
   weapon: 0
   description: A healing object of sorts... $50
   healingEffect: {fileID: 0}
+  healAmount: 60
   sound: {fileID: 8300000, guid: 3644e203a17fa7045ad21b5cbde8839d, type: 3}
 --- !u!198 &19838562
 ParticleSystem:

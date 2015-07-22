@@ -5,7 +5,7 @@ public class Healing : Holdable
 {
 		public ParticleSystem healingEffect;
 
-		int healAmount = 20;
+		public	int healAmount = 60;
 		public AudioClip sound;
 		protected	GameObject weaponIns ;
 
