@@ -13,25 +13,17 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
- .DS_Store
- Library/AssetImportState
- Library/AssetServerCacheV3
- Library/FailedAssetImports.txt
- Library/ScriptAssemblies
- Library/ScriptMapper
- Library/assetDatabase3
- Library/cache
- Library/expandedItems
- Library/metadata
- Library/previews
- Library/guidmapper
- Temp
+
+ $PROJDIR/Temp/
+ $PROJDIR/Library/
+ $PROJDIR/Obj/
+ 
  *.csproj
- *.pidb
+ *.unityproj
  *.sln
- build
- *.goutputstream*
+ *.user
  *.userprefs
+ *.DS_store
 
 # Thumbnails
 ._*
