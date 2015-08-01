@@ -102,12 +102,12 @@ TextureImporter:
     - name: Leg_Boss
       rect:
         serializedVersion: 2
-        x: 355
+        x: 353
         y: 67
-        width: 41
-        height: 121
+        width: 43
+        height: 125
       alignment: 9
-      pivot: {x: .781002879, y: .981625021}
+      pivot: {x: .666992903, y: 1.00000012}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

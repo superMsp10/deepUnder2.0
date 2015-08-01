@@ -1245,7 +1245,7 @@ MonoBehaviour:
   centerOfMass: {x: 0, y: 0}
   whatGround:
     serializedVersion: 2
-    m_Bits: 13312
+    m_Bits: 46080
   thisAnim: {fileID: 0}
   bodyParts: []
   frontBody: {fileID: 405232}
