@@ -16,6 +16,7 @@ public class Enemy : Mob1
 
 		new void Start ()
 		{
+
 		
 				thisManage = gameManager.thisM;
 				thisLevel.addEntity (this);
@@ -58,6 +59,8 @@ public class Enemy : Mob1
 
 		void FixedUpdate ()
 		{
+
+
 				checkground ();
 				TargetSight ();
 
@@ -116,6 +119,8 @@ public class Enemy : Mob1
 		
 		protected virtual void TargetSight ()
 		{
+
+
 				if (target != null) {
 						if (Vector2.Distance (target.transform.position, transform.position)
 								> thisAttributes.optTargetRange) {
@@ -140,8 +145,10 @@ public class Enemy : Mob1
 
 		}
 		
-		public void moveAi ()
+		public virtual void moveAi ()
 		{
+
+
 
 				Vector2 targetPos = thisManage.transform.TransformPoint (target.transform.position);
 				Vector2 thisPos = thisManage.transform.TransformPoint (transform.position);

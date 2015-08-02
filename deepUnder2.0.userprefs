@@ -1,11 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myAssets\Mobs\Dummy\Dummy.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\groth.cs">
     <Files>
-      <File FileName="Assets\groth.cs" Line="4" Column="27" />
-      <File FileName="Assets\myAssets\Mobs\Dummy\Dummy.cs" Line="10" Column="16" />
-      <File FileName="Assets\myAssets\scripts\Mob1.cs" Line="273" Column="1" />
-      <File FileName="Assets\myAssets\scripts\Enemy.cs" Line="63" Column="1" />
+      <File FileName="Assets\groth.cs" Line="38" Column="32" />
+      <File FileName="Assets\myAssets\Mobs\Dummy\Dummy.cs" Line="5" Column="27" />
+      <File FileName="Assets\myAssets\scripts\Enemy.cs" Line="64" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
