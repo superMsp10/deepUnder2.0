@@ -8,6 +8,8 @@ TextureImporter:
     21300006: Hand_Boss
     21300008: Body_Boss
     21300010: Leg_Boss
+    21300012: energyBall
+    21300014: energyball1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -72,8 +74,8 @@ TextureImporter:
     - name: spriteSheet_Boss_4
       rect:
         serializedVersion: 2
-        x: 46
-        y: 326
+        x: 118
+        y: 362
         width: 21
         height: 26
       alignment: 7
@@ -108,6 +110,26 @@ TextureImporter:
         height: 125
       alignment: 9
       pivot: {x: .666992903, y: 1.00000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 199
+        width: 171
+        height: 151
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyball1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 197
+        width: 171
+        height: 151
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
