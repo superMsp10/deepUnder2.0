@@ -40,6 +40,61 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
+--- !u!1101 &110151600
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110213124}
+  m_DstState: {fileID: 110251980}
+  m_TransitionDuration: .0625
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
+    m_ConditionEvent: 
+    m_EventTreshold: 0
+    m_ExitTime: .9375
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110157252
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110278412}
+  m_DstState: {fileID: 110213124}
+  m_TransitionDuration: .714285672
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
+    m_ConditionEvent: 
+    m_EventTreshold: 0
+    m_ExitTime: 30
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1102 &110213124
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: explosion
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 7af0cc87fdfa9db4a8b257766ea4e3e7, type: 2}
+  m_ParentStateMachine: {fileID: 110761310}
+  m_Position: {x: -96, y: 120, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1102 &110251980
 State:
   m_ObjectHideFlags: 3
@@ -81,13 +136,22 @@ StateMachine:
   m_States:
   - {fileID: 110278412}
   - {fileID: 110251980}
+  - {fileID: 110213124}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
+      first: {fileID: 110213124}
+      second:
+      - {fileID: 110151600}
+    data:
       first: {fileID: 110251980}
       second:
       - {fileID: 110140542}
+    data:
+      first: {fileID: 110278412}
+      second:
+      - {fileID: 110157252}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 168, y: -84, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
