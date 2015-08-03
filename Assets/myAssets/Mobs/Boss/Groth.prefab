@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11465122}
   m_Layer: 10
   m_Name: Body_Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,9 +29,10 @@ GameObject:
   - 114: {fileID: 11416790}
   - 50: {fileID: 5065108}
   - 114: {fileID: 11479336}
+  - 61: {fileID: 6180424}
   m_Layer: 10
   m_Name: Groth
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,7 +50,7 @@ GameObject:
   - 114: {fileID: 11465128}
   m_Layer: 10
   m_Name: Head_Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +68,7 @@ GameObject:
   - 114: {fileID: 11465130}
   m_Layer: 10
   m_Name: Boss_NEck
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +86,7 @@ GameObject:
   - 114: {fileID: 11465120}
   m_Layer: 10
   m_Name: Hand_Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +104,7 @@ GameObject:
   - 114: {fileID: 11465124}
   m_Layer: 10
   m_Name: Hand_Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,9 +120,10 @@ GameObject:
   - 212: {fileID: 21244206}
   - 61: {fileID: 6116792}
   - 114: {fileID: 11465118}
+  - 58: {fileID: 5880422}
   m_Layer: 10
   m_Name: Leg_Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,9 +139,10 @@ GameObject:
   - 212: {fileID: 21244208}
   - 61: {fileID: 6116794}
   - 114: {fileID: 11465126}
+  - 58: {fileID: 5880424}
   m_Layer: 10
   m_Name: Leg_Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,7 +192,7 @@ GameObject:
   - 114: {fileID: 11465112}
   m_Layer: 10
   m_Name: Slider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,7 +210,7 @@ GameObject:
   - 114: {fileID: 11465116}
   m_Layer: 10
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,6 +287,36 @@ GameObject:
   - 114: {fileID: 11479338}
   m_Layer: 10
   m_Name: Text
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &180422
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 480422}
+  m_Layer: 10
+  m_Name: feets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &180424
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 480424}
+  m_Layer: 10
+  m_Name: feets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -308,7 +341,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 677.799988, y: -7.82999992, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 444194}
@@ -379,6 +412,7 @@ Transform:
   m_LocalPosition: {x: -2, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 480422}
   - {fileID: 465108}
   m_Father: {fileID: 444196}
   m_RootOrder: 5
@@ -393,6 +427,7 @@ Transform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 465110}
+  - {fileID: 480424}
   m_Father: {fileID: 444196}
   m_RootOrder: 6
 --- !u!4 &465108
@@ -402,11 +437,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -12, z: 0}
+  m_LocalPosition: {x: -5, y: -15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 444206}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &465110
 Transform:
   m_ObjectHideFlags: 1
@@ -414,18 +449,42 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -12, z: 0}
+  m_LocalPosition: {x: 0, y: -15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 444208}
   m_RootOrder: 0
+--- !u!4 &480422
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 444206}
+  m_RootOrder: 0
+--- !u!4 &480424
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: -15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 444208}
+  m_RootOrder: 1
 --- !u!50 &5065108
 Rigidbody2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144196}
-  m_Mass: 10
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -434,6 +493,28 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!58 &5880422
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144206}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 1
+  m_Center: {x: -.200000003, y: -11.5799999}
+--- !u!58 &5880424
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144208}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 1
+  m_Center: {x: -.200000003, y: -11.5799999}
 --- !u!61 &6116790
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -454,8 +535,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 4.30000019, y: 12.5}
-  m_Center: {x: -.718069494, y: -6.25000191}
+  m_Size: {x: 2.47119141, y: 10.5781708}
+  m_Center: {x: .19631958, y: -5.2891016}
 --- !u!61 &6116794
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -465,8 +546,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 4.30000019, y: 12.5}
-  m_Center: {x: -.718069494, y: -6.25000191}
+  m_Size: {x: 2.47119141, y: 10.5781708}
+  m_Center: {x: .19631958, y: -5.2891016}
 --- !u!61 &6116796
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -511,6 +592,17 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 5, y: 4}
   m_Center: {x: 0, y: 2}
+--- !u!61 &6180424
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144196}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!114 &11416790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -535,17 +627,19 @@ MonoBehaviour:
     maxHP: 500
     Dmg: 5
     maxSped: 20
-    moveForce: 5
-    jump: 100
+    moveForce: 10
+    jump: 5000
     moving: 0
     teleports: 0
-    optTargetRange: 100
-    flyAmount: 1
+    optTargetRange: 1
+    flyAmount: .5
   grounded: 0
   turnR: 0
   groundCheck:
-  - {fileID: 465108}
+  - {fileID: 480422}
   - {fileID: 465110}
+  - {fileID: 465108}
+  - {fileID: 480424}
   centerOfMass: {x: 0, y: 0}
   whatGround:
     serializedVersion: 2
@@ -569,7 +663,7 @@ MonoBehaviour:
   landClip: {fileID: 0}
   dmgClip: {fileID: 0}
   movingClip: {fileID: 0}
-  healthbar: {fileID: 0}
+  healthbar: {fileID: 11465112}
   falling: 0
   weaponHand: {fileID: 0}
   attacking: 0
@@ -578,7 +672,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   target: {fileID: 0}
-  sight: 100
+  sight: 500
   jumpedSound: 0
   dropMadeOF: 0
   despawnWithDistance: 0
@@ -586,6 +680,10 @@ MonoBehaviour:
   randomAttributes: 0
   dialog:
   - Hello
+  - H
+  - He
+  - Hel
+  - Helli
 --- !u!114 &11465108
 MonoBehaviour:
   m_ObjectHideFlags: 1

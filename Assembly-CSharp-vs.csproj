@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Bomb.cs" />
+     <Compile Include="Assets\energyball.cs" />
      <Compile Include="Assets\groth.cs" />
      <Compile Include="Assets\myAssets\Entities\Door.cs" />
      <Compile Include="Assets\myAssets\Entities\caheckPoint.cs" />
