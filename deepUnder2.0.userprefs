@@ -2,8 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\energyball.cs">
     <Files>
-      <File FileName="Assets\groth.cs" Line="16" Column="37" />
-      <File FileName="Assets\energyball.cs" Line="4" Column="32" />
+      <File FileName="Assets\groth.cs" Line="25" Column="3" />
+      <File FileName="Assets\energyball.cs" Line="88" Column="50" />
+      <File FileName="Assets\myAssets\Mobs\Dummy\Dummy.cs" Line="41" Column="3" />
+      <File FileName="Assets\Scripts\Bomb.cs" Line="8" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

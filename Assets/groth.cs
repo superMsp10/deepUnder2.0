@@ -5,6 +5,7 @@ public class groth : Dummy
 {
 		public GameObject energyBall;
 		public energyball energyBallScript;
+		public bool charging = false;
 
 
 		
@@ -14,9 +15,14 @@ public class groth : Dummy
 				energyBall.rigidbody2D.isKinematic = false;
 				energyBallScript.standByParticle.Play ();
 				energyBallScript.enabled = true;
-				Vector2 dir = transform.position - target.transform.position;
-				energyBall.rigidbody2D.AddForce (dir * 1000);
-		
+				Vector2 dir;
+				if (target != null)
+						dir = target.transform.position - transform.position;
+				else {
+						dir = transform.position;
+				}
+				energyBall.rigidbody2D.AddForce (dir * 15000);
+
 		}
 
 		public void prepareEnergyBall ()
@@ -30,12 +36,27 @@ public class groth : Dummy
 	
 		public void chargeEnergyBall ()
 		{
+
+				energyBall.transform.position = energyBallScript.resetPos.position;
+
+				charging = true;
 				energyBallScript.enabled = false;
 				energyBall.SetActive (true);
 				energyBall.rigidbody2D.isKinematic = true;
 				energyBallScript.bootUpParticle.Play ();
 
 		}
+
+		void FixedUpdate ()
+		{
+		
+		
+				checkground ();
+				if (!charging)
+						TargetSight ();
+		
+		}
+
 
 		protected override void TargetSight ()
 		{
@@ -93,6 +114,26 @@ public class groth : Dummy
 		
 		
 		}
+
+
+		void OnCollisionEnter2D (Collision2D other)
+		{
+
+		
+				if (other.gameObject.tag == "Player") {
+						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
+						rigidbody2D.AddForce (force * Random.Range (1000, 10000));
+						takeDmg (thisAttributes.Dmg);
+			
+				}
+		
+
+		
+		
+		
+		
+		}
+
 		
 
 }
