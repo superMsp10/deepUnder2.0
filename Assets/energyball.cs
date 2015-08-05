@@ -7,7 +7,19 @@ public class energyball : Arrow
 		public LayerMask gravityEffect;
 		public int distance;
 		public int force = 1000;
+		public Animation thisAnim;
+		public AnimationClip bootUp;
+		public ParticleSystem bootUpParticle;
+		public ParticleSystem standByParticle;
+		public ParticleSystem explodeParticle;
 
+
+		
+
+		public void startUp ()
+		{
+				bootUpParticle.Play ();
+		}
 
 		void FixedUpdate ()
 		{
@@ -23,4 +35,16 @@ public class energyball : Arrow
 				}
 	
 		}
+
+
+
+
+		public void explodeEnergyBall ()
+		{
+		
+		
+		
+		}
+
+
 }
