@@ -11,7 +11,7 @@ public class groth : Dummy
 		
 		public void throwEnergyBall ()
 		{
-		
+				takeDmg (100.0f);
 				energyBall.rigidbody2D.isKinematic = false;
 				energyBallScript.standByParticle.Play ();
 				energyBallScript.enabled = true;
@@ -50,7 +50,7 @@ public class groth : Dummy
 		void FixedUpdate ()
 		{
 		
-		
+				
 				checkground ();
 				if (!charging)
 						TargetSight ();
@@ -63,21 +63,13 @@ public class groth : Dummy
 		
 		
 				if (target != null) {
+
+				
 						if (Vector2.Distance (target.transform.position, transform.position)
 								> thisAttributes.optTargetRange) {
 								moveAi ();
-						} else {
-								checkLooking ();
-						}
-			
-						if (Vector2.Distance (target.transform.position, transform.position) > sight) {
-								target = null;
-								if (despawnWithDistance) {
-										gameObject.SetActive (false);
-								}
-				
-				
-						}
+						} 
+					
 				} else {
 						selectTarget ();
 						attacking = false;
@@ -102,6 +94,15 @@ public class groth : Dummy
 						move = (Vector2.right.x);
 			
 				}
+
+			
+
+				if (targetPos.y > thisPos.y) {
+						if (!charging)
+								prepareEnergyBall ();
+				} else {
+						groundPound ();
+				}
 		
 				moveX (move);
 		
@@ -113,6 +114,12 @@ public class groth : Dummy
 		
 		
 		
+		}
+
+		public void groundPound ()
+		{
+
+
 		}
 
 
