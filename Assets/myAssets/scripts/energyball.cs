@@ -92,7 +92,6 @@ public class energyball : Arrow
 												rb.AddForce (force2, ForceMode2D.Impulse);
 												if (mab != null) {
 														mab.takeDmg (damage * distanceForce);
-														Debug.Log (damage * distanceForce);
 												}
 										}
 				
@@ -110,7 +109,7 @@ public class energyball : Arrow
 				transform.position = resetPos.position;
 				rigidbody2D.isKinematic = true;
 				gameObject.SetActive (false);
-				timeTillExplosion = 500;
+				timeTillExplosion = 300;
 				GetComponent<SpriteRenderer> ().enabled = true;
 				controller.GetComponent<groth> ().charging = false;
 
