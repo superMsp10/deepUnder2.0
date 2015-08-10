@@ -6,6 +6,10 @@ public class groth : Dummy
 		public GameObject energyBall;
 		public energyball energyBallScript;
 		public bool charging = false;
+		bool punded = false;
+		bool particleInPos = false;
+
+		public ParticleSystem poundParticles;
 
 
 		
@@ -86,21 +90,22 @@ public class groth : Dummy
 			
 		
 				float move = 0;
+				float xDiff = targetPos.x - thisPos.x;
 		
-				if (targetPos.x < thisPos.x) {
+				if (xDiff < 0) {
 						move = (Vector2.right.x * -1);
 			
-				} else if (targetPos.x > thisPos.x) {
+				} else if (xDiff > 0) {
 						move = (Vector2.right.x);
 			
 				}
 
 			
-
-				if (targetPos.y > thisPos.y) {
-						if (!charging)
-								prepareEnergyBall ();
-				} else {
+				float yDiff = targetPos.y - thisPos.y;
+				if (yDiff > 0) {
+						//if (!charging)
+						//	prepareEnergyBall ();
+				} else if (!punded && yDiff < 0 && Mathf.Abs (xDiff) < 10) {
 						groundPound ();
 				}
 		
@@ -118,7 +123,23 @@ public class groth : Dummy
 
 		public void groundPound ()
 		{
+				rigidbody2D.AddForce (new Vector2 (0, -100000));
+			
+				poundParticles.Play ();
+				foreach (Transform t in groundCheck) {
+						
+						if (Physics2D.OverlapCircleAll (t.position, 0.5f, whatEnemy) != null) {
+								if (!particleInPos) {
+										poundParticles.transform.position = t.position;
+										particleInPos = true;
+								}
+								target.GetComponent<Mob1> ().takeDmg (20);
+								Debug.Log ("hello");
 
+						}
+				}
+				punded = true;
+				Invoke ("resetPounded", 5f);
 
 		}
 
@@ -139,6 +160,14 @@ public class groth : Dummy
 		
 		
 		
+		}
+
+		void resetPounded ()
+		{
+				poundParticles.Stop ();
+				punded = false;
+				particleInPos = false;
+
 		}
 
 		
