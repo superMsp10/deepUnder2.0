@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &103656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 403656}
+  m_Layer: 10
+  m_Name: poundPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &144194
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,6 +45,7 @@ GameObject:
   - 50: {fileID: 5065108}
   - 114: {fileID: 11479336}
   - 61: {fileID: 6180424}
+  - 95: {fileID: 9528950}
   m_Layer: 10
   m_Name: Groth
   m_TagString: Enemy
@@ -85,7 +101,7 @@ GameObject:
   - 61: {fileID: 6116798}
   - 114: {fileID: 11465120}
   m_Layer: 10
-  m_Name: Hand_Boss
+  m_Name: Hand_Boss_Left
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +119,7 @@ GameObject:
   - 61: {fileID: 6116796}
   - 114: {fileID: 11465124}
   m_Layer: 10
-  m_Name: Hand_Boss
+  m_Name: Hand_Boss_Right
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,7 +138,7 @@ GameObject:
   - 114: {fileID: 11465118}
   - 58: {fileID: 5880422}
   m_Layer: 10
-  m_Name: Leg_Boss
+  m_Name: Leg_Boss_Left
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,7 +157,7 @@ GameObject:
   - 114: {fileID: 11465126}
   - 58: {fileID: 5880424}
   m_Layer: 10
-  m_Name: Leg_Boss
+  m_Name: Leg_Boss_Right
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,7 +422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &180794
 GameObject:
   m_ObjectHideFlags: 1
@@ -475,6 +491,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &403656
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103656}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -22.6000004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 444196}
+  m_RootOrder: 10
 --- !u!4 &444194
 Transform:
   m_ObjectHideFlags: 1
@@ -507,6 +535,7 @@ Transform:
   - {fileID: 22465114}
   - {fileID: 480786}
   - {fileID: 480788}
+  - {fileID: 403656}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &444198
@@ -899,6 +928,21 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!95 &9528950
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144196}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1eb9e3a38849896479b19e87175e392a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11416790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -940,7 +984,7 @@ MonoBehaviour:
   whatGround:
     serializedVersion: 2
     m_Bits: 4096
-  thisAnim: {fileID: 0}
+  thisAnim: {fileID: 9528950}
   bodyParts:
   - {fileID: 11465122}
   - {fileID: 11465128}
@@ -951,7 +995,7 @@ MonoBehaviour:
   - {fileID: 11465126}
   frontBody: {fileID: 0}
   sideBody: {fileID: 0}
-  animated: 0
+  animated: 1
   detectedFacing: 0
   thisAudio: {fileID: 0}
   jumpClip: {fileID: 0}
@@ -983,6 +1027,7 @@ MonoBehaviour:
   energyBall: {fileID: 180788}
   energyBallScript: {fileID: 11480784}
   charging: 0
+  poundPos: {fileID: 403656}
   poundParticles: {fileID: 0}
 --- !u!114 &11465108
 MonoBehaviour:

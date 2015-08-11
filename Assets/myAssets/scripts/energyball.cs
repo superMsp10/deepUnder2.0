@@ -25,7 +25,7 @@ public class energyball : Arrow
 	
 				Mob1 mab = coll.gameObject.GetComponent<Mob1> ();
 				if (mab != null) {
-						controller.GetComponent<groth> ().takeDmg (-100.0f);
+						controller.GetComponent<groth> ().takeDmg (-100);
 
 						explodeEnergyBall ();
 				}

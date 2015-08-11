@@ -117,6 +117,7 @@ public class Mob1 : Entity
 		
 		void Update ()
 		{
+
 				if (animated)
 						updateAnim ();
 				checkDead ();
@@ -241,14 +242,6 @@ public class Mob1 : Entity
 		void FixedUpdate ()
 		{
 				checkground ();
-				/*if (move < 0 && turnR) {
-			flip ();
-		} else if (move > 0 && !turnR) {
-			flip ();
-		}
-				if (rigidbody2D.velocity.x < thisAttributes.maxSped)
-						rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x + (move * moveForce), rigidbody2D.velocity.y);
-				*/
 		}
 
 		public virtual void updateAnim ()

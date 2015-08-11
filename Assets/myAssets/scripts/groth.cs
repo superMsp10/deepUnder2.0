@@ -6,8 +6,9 @@ public class groth : Dummy
 		public GameObject energyBall;
 		public energyball energyBallScript;
 		public bool charging = false;
+		bool bootUp = false;
 		bool punded = false;
-		bool particleInPos = false;
+		public	Transform poundPos;
 
 		public ParticleSystem poundParticles;
 
@@ -26,6 +27,14 @@ public class groth : Dummy
 						dir = transform.position;
 				}
 				energyBall.rigidbody2D.AddForce (dir * 15000);
+				bootUp = false;
+		}
+
+		public override void updateAnim ()
+		{
+				thisAnim.SetBool ("chargingUp", bootUp);
+				thisAnim.SetBool ("aliveBall", charging);
+
 
 		}
 
@@ -34,6 +43,7 @@ public class groth : Dummy
 		
 				chargeEnergyBall ();
 				Invoke ("throwEnergyBall", 10f);		
+				bootUp = true;
 		}
 
 
@@ -103,8 +113,8 @@ public class groth : Dummy
 			
 				float yDiff = targetPos.y - thisPos.y;
 				if (yDiff > 0) {
-						//if (!charging)
-						//	prepareEnergyBall ();
+						if (!charging)
+								prepareEnergyBall ();
 				} else if (!punded && yDiff < 0 && Mathf.Abs (xDiff) < 10) {
 						groundPound ();
 				}
@@ -126,15 +136,15 @@ public class groth : Dummy
 				rigidbody2D.AddForce (new Vector2 (0, -100000));
 			
 				poundParticles.Play ();
-				foreach (Transform t in groundCheck) {
+
+				Collider2D[] hit = Physics2D.OverlapCircleAll (poundPos.position, 20f, whatEnemy);
+				foreach (Collider2D t in hit) {
 						
-						if (Physics2D.OverlapCircleAll (t.position, 0.5f, whatEnemy) != null) {
-								if (!particleInPos) {
-										poundParticles.transform.position = t.position;
-										particleInPos = true;
-								}
+						if (t.gameObject == target) {
+						
+								poundParticles.transform.position = poundPos.position;
+							
 								target.GetComponent<Mob1> ().takeDmg (20);
-								Debug.Log ("hello");
 
 						}
 				}
@@ -166,7 +176,6 @@ public class groth : Dummy
 		{
 				poundParticles.Stop ();
 				punded = false;
-				particleInPos = false;
 
 		}
 
