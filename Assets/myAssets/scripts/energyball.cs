@@ -10,12 +10,11 @@ public class energyball : Arrow
 		public int explodeDistance;
 		public int explodeForce = 1000;
 		public int timeTillExplosion;
-		public Animation thisAnim;
-		public AnimationClip bootUp;
 		public ParticleSystem bootUpParticle;
 		public ParticleSystem standByParticle;
 		public ParticleSystem explodeParticle;
 		public Transform resetPos;
+		public GameObject image;
 		public bool exploding = false;
 
 
@@ -64,7 +63,7 @@ public class energyball : Arrow
 						exploding = true;
 						standByParticle.Stop ();
 						explodeParticle.Play ();
-						GetComponent<SpriteRenderer> ().enabled = false;
+						image.GetComponent<SpriteRenderer> ().enabled = false;
 
 						Collider2D[] enemies = Physics2D.OverlapCircleAll (transform.position, explodeDistance);
 		
@@ -96,7 +95,7 @@ public class energyball : Arrow
 										}
 				
 								}	
-								Invoke ("reset", 2f);
+								Invoke ("reset", 1f);
 			
 			
 						}
@@ -110,7 +109,7 @@ public class energyball : Arrow
 				rigidbody2D.isKinematic = true;
 				gameObject.SetActive (false);
 				timeTillExplosion = 300;
-				GetComponent<SpriteRenderer> ().enabled = true;
+				image.GetComponent<SpriteRenderer> ().enabled = true;
 				controller.GetComponent<groth> ().charging = false;
 
 
