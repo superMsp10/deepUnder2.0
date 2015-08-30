@@ -279,5 +279,38 @@ public class OldMan : NPC
 				}
 		}
 
+
+		void OnCollisionEnter2D (Collision2D other)
+		{
+		
+		
+				if (other.gameObject.tag == "Destroyable") {
+						Resource temp = other.gameObject.GetComponent<Resource> ();
+						temp.dropMadeOf ();
+				}
+		
+				if (other.gameObject.tag == "Enemy") {
+						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
+						takeDmg (thisAttributes.Dmg);
+			
+				}
+		
+				if (other.gameObject.tag == "Player") {
+						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
+						takeDmg (thisAttributes.Dmg);
+			
+				}
+		
+				if (other.gameObject.tag == "NPC") {
+						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
+						rigidbody2D.AddForce (force * Random.Range (100, 1000));
+						takeDmg (thisAttributes.Dmg);
+			
+				}
+		
+		
+		
+		
+		}
 }
 

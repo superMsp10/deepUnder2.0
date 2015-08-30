@@ -20,6 +20,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: "\t\t\t\tthisAnim.SetBool (\"aliveBall\", charging);\r\npunded"
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -32,7 +38,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1101 &110139118
+--- !u!1101 &110101214
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
@@ -52,27 +58,7 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110144560
-Transition:
-  serializedVersion: 2
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110203814}
-  m_DstState: {fileID: 110249374}
-  m_TransitionDuration: .0249584038
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: chargingUp
-    m_EventTreshold: 0
-    m_ExitTime: .975041568
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
-  m_CanTransitionToSelf: 0
---- !u!1101 &110158148
+--- !u!1101 &110157012
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
@@ -92,7 +78,7 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110168634
+--- !u!1101 &110157536
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
@@ -104,8 +90,8 @@ Transition:
   m_TransitionDuration: .0249584038
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: chargingUp
     m_EventTreshold: 0
     m_ExitTime: .975041568
   m_Atomic: 1
@@ -123,7 +109,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: c7fc181d342de444b8351d738e228e42, type: 2}
   m_ParentStateMachine: {fileID: 110730820}
-  m_Position: {x: -36, y: 240, z: 0}
+  m_Position: {x: -120, y: 228, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -139,6 +125,21 @@ State:
   - {fileID: 7400000, guid: 0fd9e6aea96461a498374b156a367c7f, type: 2}
   m_ParentStateMachine: {fileID: 0}
   m_Position: {x: 36, y: 108, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110243954
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: pund
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 67c08661a998a8e4b8f223c859834d3c, type: 2}
+  m_ParentStateMachine: {fileID: 110730820}
+  m_Position: {x: 23, y: 425, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -184,22 +185,22 @@ StateMachine:
   - {fileID: 110249374}
   - {fileID: 110203814}
   - {fileID: 110295178}
+  - {fileID: 110243954}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
       first: {fileID: 110249374}
       second:
-      - {fileID: 110158148}
+      - {fileID: 110157012}
     data:
       first: {fileID: 110203814}
       second:
-      - {fileID: 110168634}
-      - {fileID: 110144560}
+      - {fileID: 110157536}
     data:
       first: {fileID: 110295178}
       second:
-      - {fileID: 110139118}
+      - {fileID: 110101214}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

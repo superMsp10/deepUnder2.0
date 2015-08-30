@@ -7,6 +7,7 @@ public class groth : Dummy
 		public energyball energyBallScript;
 		public bool charging = false;
 		bool bootUp = false;
+		public	bool  recharged = true;
 		bool punded = false;
 		public	Transform poundPos;
 
@@ -34,6 +35,7 @@ public class groth : Dummy
 		{
 				thisAnim.SetBool ("chargingUp", bootUp);
 				thisAnim.SetBool ("aliveBall", charging);
+				thisAnim.SetBool ("punded", punded);
 
 
 		}
@@ -44,15 +46,15 @@ public class groth : Dummy
 				chargeEnergyBall ();
 				Invoke ("throwEnergyBall", 10f);		
 				bootUp = true;
+				recharged = false;
+
 		}
 
 
 	
 		public void chargeEnergyBall ()
 		{
-
 				energyBall.transform.position = energyBallScript.resetPos.position;
-
 				charging = true;
 				energyBallScript.enabled = false;
 				energyBall.SetActive (true);
@@ -112,10 +114,9 @@ public class groth : Dummy
 
 			
 				float yDiff = targetPos.y - thisPos.y;
-				if (yDiff > 0) {
-						if (!charging)
-								prepareEnergyBall ();
-				} else if (!punded && yDiff < 0 && Mathf.Abs (xDiff) < 10) {
+				if (yDiff > 20 && recharged) {
+						prepareEnergyBall ();
+				} else if (!punded && yDiff < -20 && Mathf.Abs (xDiff) < 10) {
 						groundPound ();
 				}
 		
@@ -178,6 +179,8 @@ public class groth : Dummy
 				punded = false;
 
 		}
+
+
 
 		
 

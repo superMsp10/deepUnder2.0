@@ -23,7 +23,7 @@ public class energyball : Arrow
 		
 	
 				Mob1 mab = coll.gameObject.GetComponent<Mob1> ();
-				if (mab != null) {
+				if (mab != null && mab.gameObject.layer != gameObject.layer) {
 						controller.GetComponent<groth> ().takeDmg (-100);
 
 						explodeEnergyBall ();
@@ -47,7 +47,7 @@ public class energyball : Arrow
 
 				foreach (Collider2D c in hit) {
 						Rigidbody2D r = c.rigidbody2D;
-						if (r != null) {
+						if (r != null && r != rigidbody2D) {
 								r.AddForce ((transform.position - c.transform.position) * (force / Vector2.Distance (transform.position, c.transform.position)));
 						}
 				}
@@ -112,8 +112,14 @@ public class energyball : Arrow
 				image.GetComponent<SpriteRenderer> ().enabled = true;
 				controller.GetComponent<groth> ().charging = false;
 
+				Invoke ("resetCharged", 10f);
 
 				enabled = false;
+		}
+
+		public void resetCharged ()
+		{
+				controller.GetComponent<groth> ().recharged = true;
 		}
 
 
