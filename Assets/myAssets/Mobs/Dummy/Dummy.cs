@@ -18,6 +18,8 @@ public class Dummy : Enemy
 				if (randomAttributes)
 						resetAttributes ();
 				checkNecesseries ();
+
+
 		
 		}
 		public override  void die ()
@@ -46,14 +48,14 @@ public class Dummy : Enemy
 		
 				if (other.gameObject.tag == "Enemy") {
 						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
-						rigidbody2D.AddForce (force * Random.Range (100, 1000));
+//						rigidbody2D.AddForce (force * Random.Range (100, 1000));
 						takeDmg (thisAttributes.Dmg);
 			
 				}
 		
 				if (other.gameObject.tag == "Player") {
 						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
-						rigidbody2D.AddForce (force * Random.Range (100, 1000));
+//						rigidbody2D.AddForce (force * Random.Range (100, 1000));
 						takeDmg (thisAttributes.Dmg);
 			
 				}
@@ -69,7 +71,68 @@ public class Dummy : Enemy
 		
 		
 		}
+	
+		protected override void TargetSight ()
+		{
+		
+				if (target != null) {
+						
+						moveAi ();
 
+//						checkLooking ();
+
+			
+						if (Vector2.Distance (target.transform.position, transform.position) > sight) {
+								target = null;
+								if (despawnWithDistance) {
+										gameObject.SetActive (false);
+								}
+				
+				
+						}
+				} else {
+						selectTarget ();
+						attacking = false;
+						thisAttributes.moving = false;
+				}
+		
+		}
+
+		public override void moveAi ()
+		{
+		
+		
+		
+				Vector2 targetPos = thisManage.transform.TransformPoint (target.transform.position);
+				Vector2 thisPos = thisManage.transform.TransformPoint (transform.position);
+		
+				float move = 0;
+		
+				if (targetPos.x < thisPos.x) {
+						move = (Vector2.right.x * -1);
+			
+				} else if (targetPos.x > thisPos.x) {
+						move = (Vector2.right.x);
+				}
+		
+				if (flipMob) {
+						if (move < 0 && turnR) {
+								flip ();
+						} else if (move > 0 && !turnR) {
+								flip ();
+						}
+			
+				}
+				moveX (move);
+		
+		
+				if (targetPos.y != thisPos.y) {
+						jump (thisAttributes.jump * Random.Range (1, 30));
+			
+				} 
+		
+		
+		}
 
 		
 	

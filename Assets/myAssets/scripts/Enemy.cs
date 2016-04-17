@@ -160,20 +160,21 @@ public class Enemy : Mob1
 							
 				} else if (targetPos.x > thisPos.x) {
 						move = (Vector2.right.x);
-								
-						
-						if (flipMob) {
-								if (move < 0 && turnR) {
-										flip ();
-								} else if (move > 0 && !turnR) {
-										flip ();
-								}
-				
-						}
-						moveX (move);
 				}
-				if (targetPos.y > thisPos.y || targetPos.y < thisPos.y) {
-						jump (thisAttributes.jump * Random.Range (0, 30));
+						
+				if (flipMob) {
+						if (move < 0 && turnR) {
+								flip ();
+						} else if (move > 0 && !turnR) {
+								flip ();
+						}
+				
+				}
+				moveX (move);
+
+				
+				if (targetPos.y != thisPos.y) {
+						jump (thisAttributes.jump);
 
 				} 
 
