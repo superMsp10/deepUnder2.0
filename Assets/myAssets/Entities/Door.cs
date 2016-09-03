@@ -6,10 +6,12 @@ public class Door : Teleport
 
 		public override  void teleport (GameObject player)
 		{
-				Vector3 telepos = new Vector2 (teleTo.position.x - xOff,
+				if (teleTo != null) {
+						Vector3 telepos = new Vector2 (teleTo.position.x - xOff,
 			                               teleTo.position.y - yOff);
-				player.transform.position = telepos;
-				extra (player);
+						player.transform.position = telepos;
+						extra (player);
+				}
 		}
 
 		protected virtual void extra (GameObject player)

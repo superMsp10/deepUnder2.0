@@ -100,7 +100,8 @@ public class Dummy : Enemy
 
 		public override void moveAi ()
 		{
-		
+				if (target.transform.position.y != transform.position.y)
+						jump (thisAttributes.jump * Random.Range (1, 30));
 		
 		
 				Vector2 targetPos = thisManage.transform.TransformPoint (target.transform.position);
@@ -125,12 +126,12 @@ public class Dummy : Enemy
 				}
 				moveX (move);
 		
-		
-				if (targetPos.y != thisPos.y) {
-						jump (thisAttributes.jump * Random.Range (1, 30));
-			
-				} 
-		
+
+		}
+
+		void OnTriggerEnter2D (Collider2D other)
+		{
+
 		
 		}
 

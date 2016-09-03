@@ -49,11 +49,11 @@ MonoBehaviour:
   controller: {fileID: 0}
   anim: {fileID: 0}
   arrow: {fileID: 103750, guid: 5fee344b6a979fb438b2a9b3e5e15452, type: 2}
-  rotate: 1
+  rotate: 0
   shoot: {fileID: 8300000, guid: fe40c8990060beb4684ffa4b15e1b967, type: 3}
   force: 500
   recharging: 0
-  rof: .5
+  rof: .400000006
   intialize: 1
   initRotate: 1
 --- !u!212 &21205212

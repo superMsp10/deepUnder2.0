@@ -94,10 +94,11 @@ public class OldMan : NPC
 						if (answer) {
 
 								changeTalkBoxState (true);
-								talk.text = "Alright, you must kill the groth and get its shard. The signs will lead you to it";
+								talk.text = "Alright, you must kill the groth. The signs will lead you to it, GO NOW!";
 								answer1Text.text = "Ok";
 								answer2Text.text = "No never!";
 								speakStage = "plan";
+								hostile = false;
 								goto end;
 						} else {
 								speakStage = "kill2";
@@ -307,9 +308,15 @@ public class OldMan : NPC
 						takeDmg (thisAttributes.Dmg);
 			
 				}
+
+		}
+
+		void OnTriggerEnter2D (Collider2D other)
+		{
 		
-		
-		
+				if (other.gameObject.tag == "Player")
+						changeTalkBoxState (true);
+	
 		
 		}
 }
