@@ -12,7 +12,7 @@ public class Dummy : Enemy
 		
 				thisManage = gameManager.thisM;
 				thisLevel.addEntity (this);
-				rigidbody2D.centerOfMass = centerOfMass;
+				GetComponent<Rigidbody2D>().centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
 				InvokeRepeating ("updateDialog", 0, 5f);
 				if (randomAttributes)
@@ -62,7 +62,7 @@ public class Dummy : Enemy
 		
 				if (other.gameObject.tag == "NPC") {
 						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
-						rigidbody2D.AddForce (force * Random.Range (100, 1000));
+						GetComponent<Rigidbody2D>().AddForce (force * Random.Range (100, 1000));
 						takeDmg (thisAttributes.Dmg);
 			
 				}

@@ -69,7 +69,7 @@ public class Mob1 : Entity
 				thisManage = gameManager.thisM;
 				checkNecesseries ();
 				thisLevel.addEntity (this);
-				rigidbody2D.centerOfMass = centerOfMass;
+				GetComponent<Rigidbody2D>().centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
 				thisAudio = AudioManager.thisAM.playerFX;
 
@@ -135,7 +135,7 @@ public class Mob1 : Entity
 		protected void checkFacing ()
 		{
 
-				if (Mathf.Abs (rigidbody2D.velocity.x) > 1) {
+				if (Mathf.Abs (GetComponent<Rigidbody2D>().velocity.x) > 1) {
 						thisAttributes.moving = true;
 			
 				} else if (attacking) {
@@ -155,7 +155,7 @@ public class Mob1 : Entity
 								sideBody.gameObject.SetActive (false);
 								frontBody.gameObject.SetActive (true);
 						}
-						if (rigidbody2D.velocity.y < -20 && !attacking) {
+						if (GetComponent<Rigidbody2D>().velocity.y < -20 && !attacking) {
 				
 								falling = true;
 								front = true;
@@ -247,8 +247,8 @@ public class Mob1 : Entity
 		public virtual void updateAnim ()
 		{
 				thisAnim.SetBool ("grounded", grounded);
-				thisAnim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
-				thisAnim.SetFloat ("hSpeed", Mathf.Abs (rigidbody2D.velocity.x));
+				thisAnim.SetFloat ("vSpeed", GetComponent<Rigidbody2D>().velocity.y);
+				thisAnim.SetFloat ("hSpeed", Mathf.Abs (GetComponent<Rigidbody2D>().velocity.x));
 				thisAnim.SetBool ("Attack", attacking);
 				thisAnim.SetBool ("moving", thisAttributes.moving);
 
@@ -283,8 +283,8 @@ public class Mob1 : Entity
 						xMove /= thisAttributes.flyAmount;
 				}
 
-				if (Mathf.Abs (rigidbody2D.velocity.x) < thisAttributes.maxSped)
-						rigidbody2D.velocity = new Vector2 (xMove + rigidbody2D.velocity.x, rigidbody2D.velocity.y);
+				if (Mathf.Abs (GetComponent<Rigidbody2D>().velocity.x) < thisAttributes.maxSped)
+						GetComponent<Rigidbody2D>().velocity = new Vector2 (xMove + GetComponent<Rigidbody2D>().velocity.x, GetComponent<Rigidbody2D>().velocity.y);
 		
 		}
 			
@@ -292,7 +292,7 @@ public class Mob1 : Entity
 		{
 
 				if (grounded) {
-						rigidbody2D.AddForce (new Vector2 (0, jumpF));
+						GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, jumpF));
 					
 						playJumpSound ();
 
@@ -316,7 +316,7 @@ public class Mob1 : Entity
 								if (thisBoost == null)
 										Debug.LogError ("no collision boost script attached");
 				
-								thisBoost.boost (rigidbody2D);
+								thisBoost.boost (GetComponent<Rigidbody2D>());
 						}
 		
 				
@@ -337,21 +337,21 @@ public class Mob1 : Entity
 
 				if (other.gameObject.tag == "Enemy") {
 						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
-						rigidbody2D.AddForce (force * Random.Range (100, 1000));
+						GetComponent<Rigidbody2D>().AddForce (force * Random.Range (100, 1000));
 						takeDmg (thisAttributes.Dmg);
 		
 				}
 
 				if (other.gameObject.tag == "Player") {
 						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
-						rigidbody2D.AddForce (force * Random.Range (100, 1000));
+						GetComponent<Rigidbody2D>().AddForce (force * Random.Range (100, 1000));
 						takeDmg (thisAttributes.Dmg);
 
 				}
 
 				if (other.gameObject.tag == "NPC") {
 						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
-						rigidbody2D.AddForce (force * Random.Range (100, 1000));
+						GetComponent<Rigidbody2D>().AddForce (force * Random.Range (100, 1000));
 						takeDmg (thisAttributes.Dmg);
 			
 				}

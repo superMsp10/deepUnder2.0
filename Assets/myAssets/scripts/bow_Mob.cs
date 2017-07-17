@@ -73,8 +73,8 @@ public class bow_Mob : Bow
 						Vector3 dir2 = dir - g.transform.position;
 						
 			
-						g.rigidbody2D.AddForce (dir2 * force);
-						controller.rigidbody2D.AddForce (-dir2 * (force / controller.rigidbody2D.mass));
+						g.GetComponent<Rigidbody2D>().AddForce (dir2 * force);
+						controller.GetComponent<Rigidbody2D>().AddForce (-dir2 * (force / controller.GetComponent<Rigidbody2D>().mass));
 						recharging = true;
 						Invoke ("resetShoot", rof);
 				}

@@ -18,7 +18,7 @@ public class groth : Dummy
 		public void throwEnergyBall ()
 		{
 				takeDmg (100.0f);
-				energyBall.rigidbody2D.isKinematic = false;
+				energyBall.GetComponent<Rigidbody2D>().isKinematic = false;
 				energyBallScript.standByParticle.Play ();
 				energyBallScript.enabled = true;
 				Vector2 dir;
@@ -27,7 +27,7 @@ public class groth : Dummy
 				else {
 						dir = transform.position;
 				}
-				energyBall.rigidbody2D.AddForce (dir * 15000);
+				energyBall.GetComponent<Rigidbody2D>().AddForce (dir * 15000);
 				bootUp = false;
 		}
 
@@ -58,7 +58,7 @@ public class groth : Dummy
 				charging = true;
 				energyBallScript.enabled = false;
 				energyBall.SetActive (true);
-				energyBall.rigidbody2D.isKinematic = true;
+				energyBall.GetComponent<Rigidbody2D>().isKinematic = true;
 				energyBallScript.bootUpParticle.Play ();
 
 		}
@@ -134,7 +134,7 @@ public class groth : Dummy
 
 		public void groundPound ()
 		{
-				rigidbody2D.AddForce (new Vector2 (0, -100000));
+				GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, -100000));
 			
 				poundParticles.Play ();
 
@@ -161,7 +161,7 @@ public class groth : Dummy
 		
 				if (other.gameObject.tag == "Player") {
 						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
-						rigidbody2D.AddForce (force * Random.Range (1000, 10000));
+						GetComponent<Rigidbody2D>().AddForce (force * Random.Range (1000, 10000));
 						takeDmg (thisAttributes.Dmg);
 			
 				}

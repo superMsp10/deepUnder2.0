@@ -22,7 +22,7 @@ public class NPC : Mob1
 				thisManage = gameManager.thisM;
 				checkNecesseries ();
 				thisLevel.addEntity (this);
-				rigidbody2D.centerOfMass = centerOfMass;
+				GetComponent<Rigidbody2D>().centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
 				answer1Text = answer1.GetComponentInChildren<Text> ();
 				answer2Text = answer2.GetComponentInChildren<Text> ();
@@ -75,7 +75,7 @@ public class NPC : Mob1
 								collisionBoost thisBoost = other.gameObject.GetComponent<collisionBoost> ();
 								if (thisBoost == null)
 										Debug.LogError ("no collision boost script attached");
-								thisBoost.boost (rigidbody2D);
+								thisBoost.boost (GetComponent<Rigidbody2D>());
 						}
 				}
 				if (other.gameObject.tag == "NPC") {

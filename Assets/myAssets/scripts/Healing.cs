@@ -64,7 +64,7 @@ public class Healing : Holdable
 				weaponIns = (GameObject)Instantiate (gameObject, player.transform.position, Quaternion.identity);
 				weaponIns.transform.SetParent (player.transform);
 				weaponIns.transform.Translate (0, 10, 0);
-				GameObject partiicleChild = weaponIns.transform.FindChild ("healing").gameObject;
+				GameObject partiicleChild = weaponIns.transform.Find ("healing").gameObject;
 				healingEffect = partiicleChild.GetComponent<ParticleSystem> ();
 				
 		}

@@ -38,7 +38,7 @@ public class Bomb : Holdable
 		if (explosionFX == null) {
 						 
 			GameObject g = (GameObject)Instantiate (particleIns.gameObject);
-			explosionFX = g.particleSystem;
+			explosionFX = g.GetComponent<ParticleSystem>();
 
 		}
 	}
@@ -71,7 +71,7 @@ public class Bomb : Holdable
 			if (en.gameObject.GetInstanceID () != gameObject.GetInstanceID ()) {
 								
 					
-				Rigidbody2D rb = en.rigidbody2D;
+				Rigidbody2D rb = en.GetComponent<Rigidbody2D>();
 				Mob1 mab = en.GetComponent<Mob1> ();
 				if (rb != null) {
 					// Find the Enemy script and set the enemy's health to zero.
@@ -129,7 +129,7 @@ public class Bomb : Holdable
 			rigidbody2D.AddForceAtPosition (force, transform.position);
 
 */
-			thisBoost.boost (rigidbody2D);
+			thisBoost.boost (GetComponent<Rigidbody2D>());
 		}
 		
 		

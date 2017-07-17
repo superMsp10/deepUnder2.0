@@ -249,7 +249,7 @@ public class gameManager : MonoBehaviour
 				if (currCamera == thisCamManange.playerCamera) {
 						thisCamManange.playerCamera.gameObject.SetActive (false);
 						currentLevel.camera1.SetActive (true);
-						currCamera = currentLevel.camera1.camera;
+						currCamera = currentLevel.camera1.GetComponent<Camera>();
 				} else {
 						thisCamManange.playerCamera.gameObject.SetActive (true);
 						currentLevel.camera1.SetActive (false);

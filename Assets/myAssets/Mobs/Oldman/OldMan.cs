@@ -185,10 +185,10 @@ public class OldMan : NPC
 		void flyAway ()
 		{
 				talking = false;
-				rigidbody2D.gravityScale = -0.2f;
+				GetComponent<Rigidbody2D>().gravityScale = -0.2f;
 				Invoke ("teleport", 5);
 				arrow.SetActive (true);
-				transform.FindChild ("particles").gameObject.SetActive (true);
+				transform.Find ("particles").gameObject.SetActive (true);
 				bombPick.SetActive (true);
 				AudioSource.PlayClipAtPoint (jumpClip, transform.position, AudioManager.thisAM.playerFX.volume);
 		}
@@ -229,9 +229,9 @@ public class OldMan : NPC
 
 				transform.position = where.position;
 				particle.SetActive (false);
-				transform.FindChild ("particles").gameObject.SetActive (false);
+				transform.Find ("particles").gameObject.SetActive (false);
 				
-				rigidbody2D.gravityScale = 2f;
+				GetComponent<Rigidbody2D>().gravityScale = 2f;
 
 				stage2 = true;
 
@@ -248,8 +248,8 @@ public class OldMan : NPC
 						pos = new Vector2 (insPos.transform.position.x + Random.Range (-60, 100), insPos.transform.position.y + Random.Range (20, 80));
 				}
 				GameObject g = (GameObject)Instantiate (bomb, pos, Quaternion.identity);
-				g.rigidbody2D.AddForce (new Vector2 (Random.Range (-8000, 8000), Random.Range (0, 8000)));
-				g.rigidbody2D.AddTorque (Random.Range (-80, 80));
+				g.GetComponent<Rigidbody2D>().AddForce (new Vector2 (Random.Range (-8000, 8000), Random.Range (0, 8000)));
+				g.GetComponent<Rigidbody2D>().AddTorque (Random.Range (-80, 80));
 				
 		}
 
@@ -304,7 +304,7 @@ public class OldMan : NPC
 		
 				if (other.gameObject.tag == "NPC") {
 						Vector2 force = new Vector2 (transform.position.x - other.transform.position.x, transform.position.y + 10 - other.transform.position.y);
-						rigidbody2D.AddForce (force * Random.Range (100, 1000));
+						GetComponent<Rigidbody2D>().AddForce (force * Random.Range (100, 1000));
 						takeDmg (thisAttributes.Dmg);
 			
 				}

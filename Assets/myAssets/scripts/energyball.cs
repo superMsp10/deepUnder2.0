@@ -46,8 +46,8 @@ public class energyball : Arrow
 		                                               gravityEffect);
 
 				foreach (Collider2D c in hit) {
-						Rigidbody2D r = c.rigidbody2D;
-						if (r != null && r != rigidbody2D) {
+						Rigidbody2D r = c.GetComponent<Rigidbody2D>();
+						if (r != null && r != GetComponent<Rigidbody2D>()) {
 								r.AddForce ((transform.position - c.transform.position) * (force / Vector2.Distance (transform.position, c.transform.position)));
 						}
 				}
@@ -73,7 +73,7 @@ public class energyball : Arrow
 								if (en.gameObject.GetInstanceID () != gameObject.GetInstanceID ()) {
 				
 				
-										Rigidbody2D rb = en.rigidbody2D;
+										Rigidbody2D rb = en.GetComponent<Rigidbody2D>();
 										Mob1 mab = en.GetComponent<Mob1> ();
 										if (rb != null) {
 												// Find the Enemy script and set the enemy's health to zero.
@@ -106,7 +106,7 @@ public class energyball : Arrow
 		{
 				exploding = false;
 				transform.position = resetPos.position;
-				rigidbody2D.isKinematic = true;
+				GetComponent<Rigidbody2D>().isKinematic = true;
 				gameObject.SetActive (false);
 				timeTillExplosion = 300;
 				image.GetComponent<SpriteRenderer> ().enabled = true;

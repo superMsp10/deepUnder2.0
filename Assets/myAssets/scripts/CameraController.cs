@@ -43,19 +43,19 @@ public class CameraController : MonoBehaviour
 		{
 
 				if (yAxis) {
-						if (renderer.isVisible && !visible) {
+						if (GetComponent<Renderer>().isVisible && !visible) {
 								visible = true;
 								thisLevel.yVisible.Add (this);
-						} else if (!renderer.isVisible) {
+						} else if (!GetComponent<Renderer>().isVisible) {
 								visible = false;
 								thisLevel.yVisible.Remove (this);
 						}
 				}
 				if (!yAxis) { 
-						if (renderer.isVisible && !visible) {
+						if (GetComponent<Renderer>().isVisible && !visible) {
 								visible = true;
 								thisLevel.xVisible.Add (this);
-						} else if (!renderer.isVisible) {
+						} else if (!GetComponent<Renderer>().isVisible) {
 								visible = false;
 								thisLevel.xVisible.Remove (this);
 						}

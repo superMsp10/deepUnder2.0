@@ -39,7 +39,7 @@ public class pickups : Entity
 						if (thisBoost == null)
 								Debug.LogError ("no collision boost script attached");
 						
-						thisBoost.boost (rigidbody2D);
+						thisBoost.boost (GetComponent<Rigidbody2D>());
 				}
 		
 		

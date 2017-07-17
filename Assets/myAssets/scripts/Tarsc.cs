@@ -12,7 +12,7 @@ public class Tarsc : Mob1
 		
 				thisManage = gameManager.thisM;
 				thisLevel.addEntity (this);
-				rigidbody2D.centerOfMass = centerOfMass;
+				GetComponent<Rigidbody2D>().centerOfMass = centerOfMass;
 				thisAnim = GetComponent<Animator> ();
 				thisAudio = AudioManager.thisAM.playerFX;
 				cameraM = GetComponentInChildren<CameraManeger> ();

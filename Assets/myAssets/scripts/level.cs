@@ -46,7 +46,7 @@ public  class level : MonoBehaviour
 		{
 				if (!e.customHierarchy) {
 		
-						e.gameObject.transform.parent = transform.FindChild ("Entities");
+						e.gameObject.transform.parent = transform.Find ("Entities");
 				}
 
 				entities.Add (e);
